@@ -1,0 +1,1562 @@
+{
+  "capital_of_australia": {
+    "o4-mini-high-long": [
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is Canberra",
+            "met": true
+          }
+        ],
+        "feedback": "The output correctly identifies Canberra as the capital of Australia.",
+        "total_score": 1.0,
+        "original_question": "What is the capital of Australia?",
+        "original_response": "The capital of Australia is Canberra.",
+        "statistics": {
+          "character_count_output": 37,
+          "character_count_reasoning": 452,
+          "character_count_completion": 489,
+          "tokens_output": 13,
+          "tokens_reasoning": 64,
+          "tokens_completions": 77
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is Canberra",
+            "met": true
+          }
+        ],
+        "feedback": "The output correctly identifies Canberra as the capital of Australia.",
+        "total_score": 1.0,
+        "original_question": "What is the capital of Australia?",
+        "original_response": "The capital of Australia is Canberra.",
+        "statistics": {
+          "character_count_output": 37,
+          "character_count_reasoning": 458,
+          "character_count_completion": 495,
+          "tokens_output": 13,
+          "tokens_reasoning": 128,
+          "tokens_completions": 141
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is Canberra",
+            "met": true
+          }
+        ],
+        "feedback": "The output correctly identifies Canberra as the capital of Australia.",
+        "total_score": 1.0,
+        "original_question": "What is the capital of Australia?",
+        "original_response": "The capital of Australia is Canberra.",
+        "statistics": {
+          "character_count_output": 37,
+          "character_count_reasoning": 430,
+          "character_count_completion": 467,
+          "tokens_output": 13,
+          "tokens_reasoning": 64,
+          "tokens_completions": 77
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is Canberra",
+            "met": true
+          }
+        ],
+        "feedback": "The output correctly identifies Canberra as the capital of Australia.",
+        "total_score": 1.0,
+        "original_question": "What is the capital of Australia?",
+        "original_response": "The capital of Australia is Canberra.",
+        "statistics": {
+          "character_count_output": 37,
+          "character_count_reasoning": 395,
+          "character_count_completion": 432,
+          "tokens_output": 13,
+          "tokens_reasoning": 64,
+          "tokens_completions": 77
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is Canberra",
+            "met": true
+          }
+        ],
+        "feedback": "The output correctly identifies Canberra as the capital of Australia.",
+        "total_score": 1.0,
+        "original_question": "What is the capital of Australia?",
+        "original_response": "The capital of Australia is Canberra.",
+        "statistics": {
+          "character_count_output": 37,
+          "character_count_reasoning": 427,
+          "character_count_completion": 464,
+          "tokens_output": 13,
+          "tokens_reasoning": 64,
+          "tokens_completions": 77
+        }
+      }
+    ]
+  },
+  "train_distance": {
+    "o4-mini-high-long": [
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is 150 kilometers",
+            "met": true
+          }
+        ],
+        "feedback": "The output correctly states that the answer is 150 kilometers.",
+        "total_score": 1.0,
+        "original_question": "If a train travels 60 kilometers per hour for 2.5 hours, how far does it go?",
+        "original_response": "The train travels  \nDistance = speed \u00d7 time = 60 km/h \u00d7 2.5 h = 150 km.",
+        "statistics": {
+          "character_count_output": 71,
+          "character_count_reasoning": 448,
+          "character_count_completion": 519,
+          "tokens_output": 34,
+          "tokens_reasoning": 64,
+          "tokens_completions": 98
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is 150 kilometers",
+            "met": true
+          }
+        ],
+        "feedback": "The output correctly states that the train travels 150 kilometers.",
+        "total_score": 1.0,
+        "original_question": "If a train travels 60 kilometers per hour for 2.5 hours, how far does it go?",
+        "original_response": "The train travels  \ndistance = speed \u00d7 time = 60 km/h \u00d7 2.5 h = 150 km.  \n\nSo it goes 150 kilometers.",
+        "statistics": {
+          "character_count_output": 101,
+          "character_count_reasoning": 441,
+          "character_count_completion": 542,
+          "tokens_output": 42,
+          "tokens_reasoning": 128,
+          "tokens_completions": 170
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is 150 kilometers",
+            "met": true
+          }
+        ],
+        "feedback": "The output correctly states the distance as 150 km.",
+        "total_score": 1.0,
+        "original_question": "If a train travels 60 kilometers per hour for 2.5 hours, how far does it go?",
+        "original_response": "Distance = speed \u00d7 time = 60 km/h \u00d7 2.5 h = 150 km.",
+        "statistics": {
+          "character_count_output": 51,
+          "character_count_reasoning": 474,
+          "character_count_completion": 525,
+          "tokens_output": 30,
+          "tokens_reasoning": 192,
+          "tokens_completions": 222
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is 150 kilometers",
+            "met": true
+          }
+        ],
+        "feedback": "The output correctly states the answer as 150 km.",
+        "total_score": 1.0,
+        "original_question": "If a train travels 60 kilometers per hour for 2.5 hours, how far does it go?",
+        "original_response": "The train travels  \ndistance = speed \u00d7 time = 60 km/h \u00d7 2.5 h = 150 km.",
+        "statistics": {
+          "character_count_output": 71,
+          "character_count_reasoning": 418,
+          "character_count_completion": 489,
+          "tokens_output": 34,
+          "tokens_reasoning": 64,
+          "tokens_completions": 98
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is 150 kilometers",
+            "met": true
+          }
+        ],
+        "feedback": "The output correctly states that the train travels 150 km.",
+        "total_score": 1.0,
+        "original_question": "If a train travels 60 kilometers per hour for 2.5 hours, how far does it go?",
+        "original_response": "The train travels 60 km/h \u00d7 2.5 h = 150 km.",
+        "statistics": {
+          "character_count_output": 43,
+          "character_count_reasoning": 431,
+          "character_count_completion": 474,
+          "tokens_output": 27,
+          "tokens_reasoning": 64,
+          "tokens_completions": 91
+        }
+      }
+    ]
+  },
+  "brazil_continent": {
+    "o4-mini-high-long": [
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is South America",
+            "met": true
+          }
+        ],
+        "feedback": "The model correctly identified South America as the continent where Brazil is located.",
+        "total_score": 1.0,
+        "original_question": "Which continent is Brazil located on?",
+        "original_response": "Brazil is located on the continent of South America.",
+        "statistics": {
+          "character_count_output": 52,
+          "character_count_reasoning": 376,
+          "character_count_completion": 428,
+          "tokens_output": 16,
+          "tokens_reasoning": 0,
+          "tokens_completions": 16
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is South America",
+            "met": true
+          }
+        ],
+        "feedback": "The model correctly identified South America as the continent where Brazil is located.",
+        "total_score": 1.0,
+        "original_question": "Which continent is Brazil located on?",
+        "original_response": "Brazil is located on the continent of South America.",
+        "statistics": {
+          "character_count_output": 52,
+          "character_count_reasoning": 386,
+          "character_count_completion": 438,
+          "tokens_output": 16,
+          "tokens_reasoning": 64,
+          "tokens_completions": 80
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is South America",
+            "met": true
+          }
+        ],
+        "feedback": "The model correctly identified South America as the continent where Brazil is located.",
+        "total_score": 1.0,
+        "original_question": "Which continent is Brazil located on?",
+        "original_response": "Brazil is located on the continent of South America.",
+        "statistics": {
+          "character_count_output": 52,
+          "character_count_reasoning": 441,
+          "character_count_completion": 493,
+          "tokens_output": 16,
+          "tokens_reasoning": 64,
+          "tokens_completions": 80
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is South America",
+            "met": true
+          }
+        ],
+        "feedback": "The model correctly identified South America as the continent where Brazil is located.",
+        "total_score": 1.0,
+        "original_question": "Which continent is Brazil located on?",
+        "original_response": "Brazil is located on the continent of South America.",
+        "statistics": {
+          "character_count_output": 52,
+          "character_count_reasoning": 417,
+          "character_count_completion": 469,
+          "tokens_output": 16,
+          "tokens_reasoning": 64,
+          "tokens_completions": 80
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is South America",
+            "met": true
+          }
+        ],
+        "feedback": "The model correctly identified South America as the continent where Brazil is located.",
+        "total_score": 1.0,
+        "original_question": "Which continent is Brazil located on?",
+        "original_response": "Brazil is located on the continent of South America.",
+        "statistics": {
+          "character_count_output": 52,
+          "character_count_reasoning": 410,
+          "character_count_completion": 462,
+          "tokens_output": 16,
+          "tokens_reasoning": 64,
+          "tokens_completions": 80
+        }
+      }
+    ]
+  },
+  "leap_year_february_days": {
+    "o4-mini-high-long": [
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is 29",
+            "met": true
+          }
+        ],
+        "feedback": "The output correctly states that February has 29 days during a leap year, fulfilling the criterion.",
+        "total_score": 1.0,
+        "original_question": "How many days are there in February during a leap year?",
+        "original_response": "February has 29 days during a leap year.",
+        "statistics": {
+          "character_count_output": 40,
+          "character_count_reasoning": 380,
+          "character_count_completion": 420,
+          "tokens_output": 16,
+          "tokens_reasoning": 64,
+          "tokens_completions": 80
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is 29",
+            "met": true
+          }
+        ],
+        "feedback": "The output correctly states that February has 29 days in a leap year, which matches the specified criterion.",
+        "total_score": 1.0,
+        "original_question": "How many days are there in February during a leap year?",
+        "original_response": "February has 29 days in a leap year.",
+        "statistics": {
+          "character_count_output": 36,
+          "character_count_reasoning": 411,
+          "character_count_completion": 447,
+          "tokens_output": 16,
+          "tokens_reasoning": 128,
+          "tokens_completions": 144
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is 29",
+            "met": true
+          }
+        ],
+        "feedback": "The output correctly states that February has 29 days during a leap year, fulfilling the criterion.",
+        "total_score": 1.0,
+        "original_question": "How many days are there in February during a leap year?",
+        "original_response": "February has 29 days during a leap year.",
+        "statistics": {
+          "character_count_output": 40,
+          "character_count_reasoning": 430,
+          "character_count_completion": 470,
+          "tokens_output": 16,
+          "tokens_reasoning": 128,
+          "tokens_completions": 144
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is 29",
+            "met": true
+          }
+        ],
+        "feedback": "The model correctly identified that there are 29 days in February during a leap year.",
+        "total_score": 1.0,
+        "original_question": "How many days are there in February during a leap year?",
+        "original_response": "29 days.",
+        "statistics": {
+          "character_count_output": 8,
+          "character_count_reasoning": 347,
+          "character_count_completion": 355,
+          "tokens_output": 9,
+          "tokens_reasoning": 64,
+          "tokens_completions": 73
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is 29",
+            "met": true
+          }
+        ],
+        "feedback": "The output correctly states that there are 29 days in February during a leap year.",
+        "total_score": 1.0,
+        "original_question": "How many days are there in February during a leap year?",
+        "original_response": "There are 29 days in February during a leap year.",
+        "statistics": {
+          "character_count_output": 49,
+          "character_count_reasoning": 430,
+          "character_count_completion": 479,
+          "tokens_output": 18,
+          "tokens_reasoning": 64,
+          "tokens_completions": 82
+        }
+      }
+    ]
+  },
+  "roses_logic": {
+    "o4-mini-high-long": [
+      {
+        "criteria_results": [
+          {
+            "criterion": "No, we cannot conclude that some roses are red.",
+            "met": true
+          }
+        ],
+        "feedback": "The model correctly states that we cannot conclude that some roses are red.",
+        "total_score": 1.0,
+        "original_question": "If all roses are flowers, and some flowers are red, can we conclude that some roses are red?",
+        "original_response": "No. From \u201cAll roses are flowers\u201d (R\u2286F) and \u201cSome flowers are red\u201d (\u2203x [F(x) \u2227 Red(x)]) you cannot infer \u201cSome roses are red\u201d (\u2203x [R(x) \u2227 Red(x)]), because the red flowers might all be non-roses. \n\nCounter-example:  \n\u2022 Roses = white flowers only  \n\u2022 Daisies = red flowers  \nThen all roses are flowers and some flowers are red, yet no rose is red.",
+        "statistics": {
+          "character_count_output": 345,
+          "character_count_reasoning": 996,
+          "character_count_completion": 1341,
+          "tokens_output": 114,
+          "tokens_reasoning": 448,
+          "tokens_completions": 562
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "No, we cannot conclude that some roses are red.",
+            "met": true
+          }
+        ],
+        "feedback": "The output correctly states that we cannot conclude that some roses are red.",
+        "total_score": 1.0,
+        "original_question": "If all roses are flowers, and some flowers are red, can we conclude that some roses are red?",
+        "original_response": "No \u2013 the argument is invalid.  \n\nExplanation:  \n  1. \u201cAll roses are flowers\u201d means every rose is in the set of flowers.  \n  2. \u201cSome flowers are red\u201d means there exists at least one flower that\u2019s red.  \n  But that red flower need not be a rose \u2013 it could be a daisy, tulip, etc.  \n\nCounter-example:  \n  \u2022 Let the only roses be white.  \n  \u2022 Let the only red flowers be poppies.  \n  Then both premises are true, but no rose is red.  \n\nSo you cannot conclude \u201cSome roses are red\u201d from those two premises alone.",
+        "statistics": {
+          "character_count_output": 507,
+          "character_count_reasoning": 1457,
+          "character_count_completion": 1964,
+          "tokens_output": 141,
+          "tokens_reasoning": 1280,
+          "tokens_completions": 1421
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "No, we cannot conclude that some roses are red.",
+            "met": true
+          }
+        ],
+        "feedback": "The output correctly states 'No' and provides a valid explanation for why 'Some roses are red' cannot be concluded.",
+        "total_score": 1.0,
+        "original_question": "If all roses are flowers, and some flowers are red, can we conclude that some roses are red?",
+        "original_response": "No. From \u201cAll roses are flowers\u201d and \u201cSome flowers are red\u201d you cannot validly infer \u201cSome roses are red.\u201d  \n\nExplanation:  \n- Let R = roses, F = flowers, and Red = red things.  \n- Premise 1: All R are F.  \n- Premise 2: Some F are Red.  \n\nIt\u2019s possible the red flowers are, say, tulips or poppies, and no roses are red. In that case both premises are true but \u201cSome R are Red\u201d is false. Formally, the middle term (flowers) is undistributed in both premises, so the syllogism is invalid.",
+        "statistics": {
+          "character_count_output": 486,
+          "character_count_reasoning": 1007,
+          "character_count_completion": 1493,
+          "tokens_output": 141,
+          "tokens_reasoning": 512,
+          "tokens_completions": 653
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "No, we cannot conclude that some roses are red.",
+            "met": true
+          }
+        ],
+        "feedback": "The model correctly states that we cannot conclude that some roses are red.",
+        "total_score": 1.0,
+        "original_question": "If all roses are flowers, and some flowers are red, can we conclude that some roses are red?",
+        "original_response": "No.  \n\nAll we know is \u201croses \u2282 flowers\u201d and \u201c\u2203x (flowers(x) \u2227 red(x)).\u201d The red flowers might all lie outside the rose\u2010subset.  \n\nCounter\u00adexample:  \n\u2022 Let every rose be white.  \n\u2022 Let some other flowers (e.g. tulips) be red.  \n\nThen all roses are flowers and some flowers are red, yet no rose is red. The syllogism commits the undistributed-middle fallacy.",
+        "statistics": {
+          "character_count_output": 356,
+          "character_count_reasoning": 506,
+          "character_count_completion": 862,
+          "tokens_output": 108,
+          "tokens_reasoning": 64,
+          "tokens_completions": 172
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "No, we cannot conclude that some roses are red.",
+            "met": true
+          }
+        ],
+        "feedback": "The model correctly states that we cannot conclude that some roses are red.",
+        "total_score": 1.0,
+        "original_question": "If all roses are flowers, and some flowers are red, can we conclude that some roses are red?",
+        "original_response": "No. From  \n 1. All roses are flowers  \n 2. Some flowers are red  \nyou cannot validly infer \u201cSome roses are red.\u201d  \n\nThe red flowers might all be non-rose species (tulips, poppies, etc.). This is the \u201cundistributed middle\u201d fallacy: knowing that roses and red things both belong to the larger class \u201cflowers\u201d doesn\u2019t guarantee they overlap.",
+        "statistics": {
+          "character_count_output": 338,
+          "character_count_reasoning": 948,
+          "character_count_completion": 1286,
+          "tokens_output": 91,
+          "tokens_reasoning": 320,
+          "tokens_completions": 411
+        }
+      }
+    ]
+  },
+  "Ice cream parlor": {
+    "o4-mini-high-long": [
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is 16",
+            "met": true
+          }
+        ],
+        "feedback": "The model correctly identified the answer as 16.",
+        "total_score": 1.0,
+        "original_question": "The 9 members of a baseball team went to an ice cream parlor after their game. Each player had a singlescoop cone of chocolate, vanilla, or strawberry ice cream. At least one player chose each flavor, and the number of players who chose chocolate was greater than the number of players who chose vanilla, which was greater than the number of players who chose strawberry. Let $N$ be the number of different assignments of flavors to players that meet these conditions. Find the remainder when $N$ is divided by 1000.",
+        "original_response": "First note that any solution must be a partition of 9 into three distinct positive parts  \nxC>xV>xS\u22651 with xC+xV+xS=9.  The only such triples are  \n(6,2,1), (5,3,1) and (4,3,2).  \nFor each (xC,xV,xS) the number of ways to choose which players get which flavor is  \n    9!/(xC!\u2009xV!\u2009xS!).  \nHence  \n  N = 9!/(6!2!1!)  +  9!/(5!3!1!)  +  9!/(4!3!2!)  \n    = 252  +  504  +  1260  \n    = 2016.  \nSo N mod 1000 = 2016 mod 1000 = 16.",
+        "statistics": {
+          "character_count_output": 427,
+          "character_count_reasoning": 1264,
+          "character_count_completion": 1691,
+          "tokens_output": 195,
+          "tokens_reasoning": 2240,
+          "tokens_completions": 2435
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is 16",
+            "met": true
+          }
+        ],
+        "feedback": "The output correctly identifies the remainder as 16.",
+        "total_score": 1.0,
+        "original_question": "The 9 members of a baseball team went to an ice cream parlor after their game. Each player had a singlescoop cone of chocolate, vanilla, or strawberry ice cream. At least one player chose each flavor, and the number of players who chose chocolate was greater than the number of players who chose vanilla, which was greater than the number of players who chose strawberry. Let $N$ be the number of different assignments of flavors to players that meet these conditions. Find the remainder when $N$ is divided by 1000.",
+        "original_response": "First note that if we write \n\nx = #(chocolate), y = #(vanilla), z = #(strawberry)\n\nthen x>y>z\u22651 and x+y+z=9.  The only solutions are\n\n(6,2,1), (5,3,1), (4,3,2).\n\nFor each (x,y,z), the number of ways to choose which players get which flavor is\n\n9!\u2215(x!\u2009y!\u2009z!).\n\nHence\n\n9!\u2215(6!2!1!)=252,\n9!\u2215(5!3!1!)=504,\n9!\u2215(4!3!2!)=1260,\n\nso\n\nN=252+504+1260=2016,\n\nand therefore\n\nN\u22612016\u226116 (mod 1000).",
+        "statistics": {
+          "character_count_output": 382,
+          "character_count_reasoning": 1737,
+          "character_count_completion": 2119,
+          "tokens_output": 197,
+          "tokens_reasoning": 1920,
+          "tokens_completions": 2117
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is 16",
+            "met": true
+          }
+        ],
+        "feedback": "The model correctly identified the answer as 16.",
+        "total_score": 1.0,
+        "original_question": "The 9 members of a baseball team went to an ice cream parlor after their game. Each player had a singlescoop cone of chocolate, vanilla, or strawberry ice cream. At least one player chose each flavor, and the number of players who chose chocolate was greater than the number of players who chose vanilla, which was greater than the number of players who chose strawberry. Let $N$ be the number of different assignments of flavors to players that meet these conditions. Find the remainder when $N$ is divided by 1000.",
+        "original_response": "First note that any valid flavor\u2010count triple \\((c,v,s)\\) must be positive, sum to 9, and satisfy  \n\u2003c>v>s\u22651.  \nThe only such triples are  \n\u2003(6,2,1),\u2002(5,3,1),\u2002(4,3,2).  \nFor each \\((c,v,s)\\), the number of assignments to 9 distinct players is the multinomial coefficient  \n\u2003\\(\\displaystyle\\frac{9!}{c!\\,v!\\,s!}\\).  \nThus  \n\u2003(6,2,1)\u2192\\(\\frac{9!}{6!2!1!}=252\\),  \n\u2003(5,3,1)\u2192\\(\\frac{9!}{5!3!1!}=504\\),  \n\u2003(4,3,2)\u2192\\(\\frac{9!}{4!3!2!}=1260\\).  \nSumming gives \\(N=252+504+1260=2016\\), and  \n\u2003\\(2016\\mod1000=16\\).  \nAnswer: 16",
+        "statistics": {
+          "character_count_output": 517,
+          "character_count_reasoning": 1007,
+          "character_count_completion": 1524,
+          "tokens_output": 239,
+          "tokens_reasoning": 1792,
+          "tokens_completions": 2031
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is 16",
+            "met": true
+          }
+        ],
+        "feedback": "The model correctly identified the answer as 16.",
+        "total_score": 1.0,
+        "original_question": "The 9 members of a baseball team went to an ice cream parlor after their game. Each player had a singlescoop cone of chocolate, vanilla, or strawberry ice cream. At least one player chose each flavor, and the number of players who chose chocolate was greater than the number of players who chose vanilla, which was greater than the number of players who chose strawberry. Let $N$ be the number of different assignments of flavors to players that meet these conditions. Find the remainder when $N$ is divided by 1000.",
+        "original_response": "We must sum over all positive integer solutions c>v>s\u22651 with c+v+s=9 the multinomial 9!/(c! v! s!).  The only solutions are\n\n \u2022 (c,v,s)=(6,2,1): 9!/(6!2!1!)=252  \n \u2022 (5,3,1): 9!/(5!3!1!)=504  \n \u2022 (4,3,2): 9!/(4!3!2!)=1260  \n\nSo N=252+504+1260=2016, and 2016 mod 1000 = 16.",
+        "statistics": {
+          "character_count_output": 272,
+          "character_count_reasoning": 1314,
+          "character_count_completion": 1586,
+          "tokens_output": 142,
+          "tokens_reasoning": 1792,
+          "tokens_completions": 1934
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is 16",
+            "met": true
+          }
+        ],
+        "feedback": "The output correctly identifies the remainder as 16.",
+        "total_score": 1.0,
+        "original_question": "The 9 members of a baseball team went to an ice cream parlor after their game. Each player had a singlescoop cone of chocolate, vanilla, or strawberry ice cream. At least one player chose each flavor, and the number of players who chose chocolate was greater than the number of players who chose vanilla, which was greater than the number of players who chose strawberry. Let $N$ be the number of different assignments of flavors to players that meet these conditions. Find the remainder when $N$ is divided by 1000.",
+        "original_response": "First note the only positive integer solutions to  \n  c+v+s=9, c>v>s\u22651  \nare (c,v,s)=(6,2,1),(5,3,1),(4,3,2).  For each triple the number of assignments is  \n\n\u2022 (6,2,1): 9!/(6!2!1!)=252  \n\u2022 (5,3,1): 9!/(5!3!1!)=504  \n\u2022 (4,3,2): 9!/(4!3!2!)=1260  \n\nSo  \n  N=252+504+1260=2016  \nand  \n  N mod 1000=16.",
+        "statistics": {
+          "character_count_output": 299,
+          "character_count_reasoning": 1599,
+          "character_count_completion": 1898,
+          "tokens_output": 159,
+          "tokens_reasoning": 1664,
+          "tokens_completions": 1823
+        }
+      }
+    ]
+  },
+  "Integer pairs": {
+    "o4-mini-high-long": [
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is 117",
+            "met": true
+          }
+        ],
+        "feedback": "The model correctly identified the answer as 117.",
+        "total_score": 1.0,
+        "original_question": "Find the number of ordered pairs $(x,y)$, where both $x$ and $y$ are integers between $-100$ and $100$, inclusive, such that $12x^{2}-xy-6y^{2}=0$.",
+        "original_response": "To solve  \n&nbsp;&nbsp;&nbsp;&nbsp;12x\u00b2 \u2013 xy \u2013 6y\u00b2 = 0  \nfactor it as  \n&nbsp;&nbsp;&nbsp;&nbsp;(4x \u2013 3y)(3x + 2y) = 0.  \nSo every integer solution lies on one of the two lines  \n(1) 4x \u2013 3y = 0 \u21d2 (x,y) = (3k, 4k)  \n(2) 3x + 2y = 0 \u21d2 (x,y) = (2m, \u20133m)  \n\nWe only keep those with \u2013100 \u2264 x,y \u2264 100:\n\nLine (1): 3|x\u21d2x=3k, y=4k.  \n&nbsp;&nbsp;&nbsp;&nbsp;\u2212100\u22643k\u2264100\u21d2k\u2208[\u221233,33],  \n&nbsp;&nbsp;&nbsp;&nbsp;\u2212100\u22644k\u2264100\u21d2k\u2208[\u221225,25],  \n&nbsp;&nbsp;&nbsp;&nbsp;\u21d2k=\u221225,\u2026,25, so 51 solutions.\n\nLine (2): x=2m, y=\u22123m.  \n&nbsp;&nbsp;&nbsp;&nbsp;\u2212100\u22642m\u2264100\u21d2m\u2208[\u221250,50],  \n&nbsp;&nbsp;&nbsp;&nbsp;\u2212100\u2264\u22123m\u2264100\u21d2m\u2208[\u221233,33],  \n&nbsp;&nbsp;&nbsp;&nbsp;\u21d2m=\u221233,\u2026,33, so 67 solutions.\n\nThe only overlap is (0,0) (k=0=m), so total distinct solutions = 51 + 67 \u2212 1 = 117.  \nAnswer: 117.",
+        "statistics": {
+          "character_count_output": 760,
+          "character_count_reasoning": 2059,
+          "character_count_completion": 2819,
+          "tokens_output": 396,
+          "tokens_reasoning": 2176,
+          "tokens_completions": 2572
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is 117",
+            "met": true
+          }
+        ],
+        "feedback": "The output correctly identifies the answer as 117.",
+        "total_score": 1.0,
+        "original_question": "Find the number of ordered pairs $(x,y)$, where both $x$ and $y$ are integers between $-100$ and $100$, inclusive, such that $12x^{2}-xy-6y^{2}=0$.",
+        "original_response": "The equation factors over \u211a as  \n\u200312x\u00b2 \u2013 xy \u2013 6y\u00b2 = 0  \n\u21d2 x/y = 3/4 or x/y = \u20132/3.  \nSo all integer solutions are  \n\u2022 (x,y) = (3t,4t),  \u201325 \u2264 t \u2264 25  \u21d2 51 points,  \n\u2022 (x,y) = (\u20132t,3t), \u201333 \u2264 t \u2264 33  \u21d2 67 points.  \nThe only overlap is t=0, so total = 51+67\u20131 = 117.  \nAnswer: 117.",
+        "statistics": {
+          "character_count_output": 279,
+          "character_count_reasoning": 1447,
+          "character_count_completion": 1726,
+          "tokens_output": 136,
+          "tokens_reasoning": 1792,
+          "tokens_completions": 1928
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is 117",
+            "met": true
+          }
+        ],
+        "feedback": "The output correctly identifies the answer as 117.",
+        "total_score": 1.0,
+        "original_question": "Find the number of ordered pairs $(x,y)$, where both $x$ and $y$ are integers between $-100$ and $100$, inclusive, such that $12x^{2}-xy-6y^{2}=0$.",
+        "original_response": "First factor the left\u2010hand side:  \n(4x \u2013 3y)(3x + 2y) = 12x\u00b2 \u2013 xy \u2013 6y\u00b2 = 0.  \nSo either  \n1) 4x \u2013 3y = 0 \u21d2 x=3t, y=4t.  Integer t must satisfy |3t|\u2264100 and |4t|\u2264100 \u21d2 |t|\u226425 \u21d2 51 solutions.  \n2) 3x + 2y = 0 \u21d2 x=\u20132s, y=3s.  Integer s must satisfy |2s|\u2264100 and |3s|\u2264100 \u21d2 |s|\u226433 \u21d2 67 solutions.  \n\nThese two lines meet only at (0,0), which got counted twice, so the total number of distinct integer solutions in [\u2013100,100]\u00b2 is  \n51 + 67 \u2013 1 = 117.",
+        "statistics": {
+          "character_count_output": 446,
+          "character_count_reasoning": 1807,
+          "character_count_completion": 2253,
+          "tokens_output": 215,
+          "tokens_reasoning": 2048,
+          "tokens_completions": 2263
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is 117",
+            "met": true
+          }
+        ],
+        "feedback": "The model correctly identified the answer as 117.",
+        "total_score": 1.0,
+        "original_question": "Find the number of ordered pairs $(x,y)$, where both $x$ and $y$ are integers between $-100$ and $100$, inclusive, such that $12x^{2}-xy-6y^{2}=0$.",
+        "original_response": "First factor the quadratic:\n\n12x\u00b2 \u2013 xy \u2013 6y\u00b2 = (4x \u2013 3y)(3x + 2y)=0.\n\nSo every solution lies on one of the two lines\n\n1) 4x \u2013 3y = 0  \u21d2  x=3k, y=4k  \n2) 3x + 2y = 0  \u21d2  x=2k, y=\u20133k  \n\nwith k\u2208\u2124.  We also need |x|,|y|\u2264100.\n\nCase 1: x=3k, y=4k \u21d2 |3k|\u2264100\u21d2|k|\u226433,  |4k|\u2264100\u21d2|k|\u226425 \u21d2 |k|\u226425 \u21d2 51 choices.\n\nCase 2: x=2k, y=\u20133k \u21d2 |2k|\u2264100\u21d2|k|\u226450,  |3k|\u2264100\u21d2|k|\u226433 \u21d2 |k|\u226433 \u21d2 67 choices.\n\nBoth families meet only at k=0 ((0,0)), so total distinct solutions = 51+67\u20131 = 117.",
+        "statistics": {
+          "character_count_output": 465,
+          "character_count_reasoning": 1479,
+          "character_count_completion": 1944,
+          "tokens_output": 268,
+          "tokens_reasoning": 1664,
+          "tokens_completions": 1932
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is 117",
+            "met": true
+          }
+        ],
+        "feedback": "The output correctly identifies the number of ordered pairs as 117.",
+        "total_score": 1.0,
+        "original_question": "Find the number of ordered pairs $(x,y)$, where both $x$ and $y$ are integers between $-100$ and $100$, inclusive, such that $12x^{2}-xy-6y^{2}=0$.",
+        "original_response": "First note that over the integers\n\n12x\u00b2 \u2013 xy \u2013 6y\u00b2 = 0\n\ncan be factored (over \u211a) by viewing it as a quadratic in x:\n\nDiscriminant = y\u00b2 + 288y\u00b2 = 289y\u00b2 = (17y)\u00b2\n\nso\n\nx = [y \u00b1 17y]/24 = y\u00b7(1 \u00b1 17)/24,\n\ni.e.\n\nx = (3/4)y  or  x = (\u20132/3)y.\n\nHence all integer solutions lie on the two lines\n\n1) x = 3k, y = 4k;\n\n2) x = \u20132k, y = 3k;\n\nwith k\u2208\u2124.  We now count how many of these lie in the box \u2013100\u2264x,y\u2264100.\n\nLine 1:  x=3k, y=4k.  We need\n   \u2013100\u22643k\u2264100  \u21d2  \u2013100/3\u2264k\u2264100/3  \u21d2  \u201333.33\u2026\u2264k\u226433.33\u2026,\n   \u2013100\u22644k\u2264100  \u21d2  \u201325\u2264k\u226425.\nHence k\u2208{\u201325,\u201324,\u2026,0,\u2026,24,25}, i.e. 51 values.\n\nLine 2:  x=\u20132k, y=3k.  We need\n   \u2013100\u2264\u20132k\u2264100  \u21d2  \u201350\u2264k\u226450,\n   \u2013100\u22643k\u2264100  \u21d2  \u201333.33\u2026\u2264k\u226433.33\u2026  \u21d2  k\u2208{\u201333,\u2026,33},\nso 67 values of k.\n\nThe only overlap between the two families is k=0, i.e. (x,y)=(0,0), which we have counted twice.  Hence the total number of distinct integer solutions in the given box is\n\n51 + 67 \u2013 1 = 117.",
+        "statistics": {
+          "character_count_output": 887,
+          "character_count_reasoning": 1408,
+          "character_count_completion": 2295,
+          "tokens_output": 449,
+          "tokens_reasoning": 2176,
+          "tokens_completions": 2625
+        }
+      }
+    ]
+  },
+  "Probability of G": {
+    "o4-mini-high-long": [
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is 821",
+            "met": true
+          }
+        ],
+        "feedback": "The model correctly identified the final answer as 821.",
+        "total_score": 1.0,
+        "original_question": "The twelve letters $A,B,C,D,E,F,G,H,I,J,K$, and $L$ are randomly grouped into six pairs of letters. The two letters in each pair are placed next to each other in alphabetical order to form six two-letter words, and those six words are listed alphabetically. For example, a possible result is $AB,CJ,DG,EK,FL,HI$. The probability that the last word listed contains $G$ is $\\frac{m}{n}$, where $m$ and $n$ are relatively prime positive integers. Find $m+n$.",
+        "original_response": "First, note that there are in all  \n\u2003(12)!/(2^6\u00b76!)=10395  \nways to partition the 12 letters into 6 unordered pairs.  \nWe call a two\u2010letter \u201cword\u201d ab (with a<b) smaller than cd iff either a<c or (a=c and b<d).  We want the probability that, after sorting each pair into a<b and then listing these 6 words in increasing order, the last (largest) word is the one containing G.\n\nCase 1. G is paired with a letter k>G (i.e. k\u2208{H,I,J,K,L}).  \n  Then that word is \u201cGk.\u201d  Any other pair made of two letters both >G would produce a word whose first letter >G, hence larger than Gk.  So to make \u201cGk\u201d the overall maximum we must forbid any pair among the remaining four letters in {H,I,J,K,L}\\{k}.  \n  After removing {G,k}, we have 6 letters <G and 4 letters >G left; we must pair so that none of those 4 \u201cbig\u201d letters pair among themselves.  Equivalently, each of those 4 must pair with one of the 6 \u201csmall\u201d letters, and the 2 leftover small letters pair with each other.  \n  Number of ways to do that is  \n    choose which 4 small letters meet the 4 big ones: C(6,4)=15,  \n    biject them to the 4 big letters: 4!=24,  \n    (then the last 2 small letters form a pair)  \n  \u2192 15\u00b724=360.  \n  Since there are 5 choices of k>G, total from this case =5\u00b7360=1800.\n\nCase 2. G is paired with x<G (so x\u2208{A,\u2026,F}).  \n  That word is \u201cxG.\u201d  For it to be maximal, every other pair, when written a<b, must have a<x (else its first letter \u2265x+1>x and so would beat xG).  \n  After removing {x,G} we have 10 letters left; call S={letters< x} of size x\u22121 and T={letters>x} (also removing G) of size 11\u2212x.  We must forbid any T\u2013T pair, i.e. each T\u2010letter must pair with an S\u2010letter.  That forces x\u22121 \u2265 11\u2212x \u21d2 x\u22656.  Hence only x=6 (i.e. F) works, giving |S|=|T|=5, and we must match S to T: 5!=120 ways.  \n\nIn total the number of \u201cgood\u201d pairings is  \n\u20031800 (from Case 1) + 120 (from Case 2) =1920.  \nHence the probability is  \n\u20031920/10395 = (divide top and bottom by 15) =128/693.  \nSo m=128, n=693, and m+n=128+693=821.",
+        "statistics": {
+          "character_count_output": 1989,
+          "character_count_reasoning": 1507,
+          "character_count_completion": 3496,
+          "tokens_output": 670,
+          "tokens_reasoning": 9600,
+          "tokens_completions": 10270
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is 821",
+            "met": true
+          }
+        ],
+        "feedback": "The output correctly identifies the final answer as 821.",
+        "total_score": 1.0,
+        "original_question": "The twelve letters $A,B,C,D,E,F,G,H,I,J,K$, and $L$ are randomly grouped into six pairs of letters. The two letters in each pair are placed next to each other in alphabetical order to form six two-letter words, and those six words are listed alphabetically. For example, a possible result is $AB,CJ,DG,EK,FL,HI$. The probability that the last word listed contains $G$ is $\\frac{m}{n}$, where $m$ and $n$ are relatively prime positive integers. Find $m+n$.",
+        "original_response": "First, label the letters A=1, B=2, \u2026, L=12, so G=7.  A perfect matching of the 12 letters into 6 unordered pairs can be viewed as choosing 6 disjoint 2\u2010element subsets; there are  \n    (12)!/(2^6\u00b76!) = 11!! = 10395  \nsuch matchings total.\n\nGiven a matching, form the 6 \u201cwords\u201d by writing each pair in increasing order and then listing those 6 words in lex order.  Call the lex\u2010largest word the \u201ctop pair.\u201d  One checks (by a standard \u201cno pair > (r,s)\u201d inclusion\u2013exclusion or \u201cforbidden\u2010pair\u201d argument) that the number of matchings whose top pair is exactly (r,s) (with 1\u2264r<s\u226412) depends only on r and is\n\n\u2003F(r) = (r\u22121)! / [2^(r\u22126)\u00b7(r\u22126)!]\u2003for r=6,7,\u2026,11,  \nand F(r)=0 for r<6.  Moreover for each fixed r, there are (12\u2212r) choices of s>r, each contributing F(r).\n\nHence the total number of matchings whose top pair contains G=7 is\n  F(6)\u00b71  (for the pair (6,7))  \n+ \u2211_{s=8 to 12} F(7)  (for the pairs (7,s))  \n= 120 + 5\u00b7360 = 1920.\n\nSo the desired probability is 1920/10395 = (128)/(693), giving\n  m + n = 128 + 693 = 821.",
+        "statistics": {
+          "character_count_output": 1020,
+          "character_count_reasoning": 1427,
+          "character_count_completion": 2447,
+          "tokens_output": 365,
+          "tokens_reasoning": 8192,
+          "tokens_completions": 8557
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is 821",
+            "met": true
+          }
+        ],
+        "feedback": "The model correctly identified the final answer as 821.",
+        "total_score": 1.0,
+        "original_question": "The twelve letters $A,B,C,D,E,F,G,H,I,J,K$, and $L$ are randomly grouped into six pairs of letters. The two letters in each pair are placed next to each other in alphabetical order to form six two-letter words, and those six words are listed alphabetically. For example, a possible result is $AB,CJ,DG,EK,FL,HI$. The probability that the last word listed contains $G$ is $\\frac{m}{n}$, where $m$ and $n$ are relatively prime positive integers. Find $m+n$.",
+        "original_response": "First, label the letters by their ranks A=1, \u2026, L=12, and let \u201cword\u201d of a pair {i<j} be the two\u2010letter string ij.  A random perfect matching on 12 letters has total size\n\n  N=12!/(2\u2076\u00b76!)=10395.\n\nCall G the letter of rank 7.  We split into two cases:\n\nCase 1 (G is the first letter of the largest word).  \n  That happens exactly when G is paired with some y>7 (i.e. y\u2208{H,I,J,K,L}, 5 ways), and among the remaining 10 letters no pair has both ends >7 (for then its first letter would exceed G).  \n  Fix y>7; the remaining \u201cbig\u201d letters are the 4 of rank >7 other than y, the \u201csmall\u201d are the 6 of rank \u22646.  To avoid any big\u2013big match, each of those 4 big letters must match to a distinct small one (in 6P4=360 ways), and the leftover 2 small\u2019s pair together automatically.  Since total matchings of the 10 leftover letters is 10!/(2\u2075\u00b75!)=945, the conditional probability is 360/945=8/21.  \n  Hence  \n    P(Case 1)=P(G\u2013y with y>G)\u00b7(8/21)=(5/11)\u00b7(8/21)=40/231.\n\nCase 2 (G is the second letter of the largest word).  \n  Then G is paired with some x<7, word x7, and for that to be maximal we need that x is the maximum \u201cfirst\u2010letter\u201d among all 6 pairs.  Equivalently, in the remaining 10 letters no pair may have both ends >x.  If x has rank r<7 then the \u201cbig\u201d set has size 11\u2013r, the \u201csmall\u201d r\u20131, and to avoid big\u2013big matches we need r\u20131\u226511\u2013r \u21d22r\u226512 \u21d2r\u22656.  Since r<7, the only possibility is r=6, i.e. x=F.  \n\n  So only F\u2013G can be the \u201csecond\u2010letter\u201d maximum.  In that case the 5 letters of rank>6 (H,I,J,K,L) must all match to the 5 of rank<6 (A\u2013E), in 5!=120 ways out of 945 total.  Hence  \n    P(Case 2)=P(G\u2013F)\u00b7(120/945)=(1/11)\u00b7(120/945)=8/693.\n\nAdding gives\n  P(max word contains G)=40/231+8/693=120/693+8/693=128/693.\n\nIn lowest terms m/n=128/693, so m+n=128+693=821.",
+        "statistics": {
+          "character_count_output": 1765,
+          "character_count_reasoning": 1563,
+          "character_count_completion": 3328,
+          "tokens_output": 633,
+          "tokens_reasoning": 12288,
+          "tokens_completions": 12921
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is 821",
+            "met": true
+          }
+        ],
+        "feedback": "The model correctly identified the final answer as 821.",
+        "total_score": 1.0,
+        "original_question": "The twelve letters $A,B,C,D,E,F,G,H,I,J,K$, and $L$ are randomly grouped into six pairs of letters. The two letters in each pair are placed next to each other in alphabetical order to form six two-letter words, and those six words are listed alphabetically. For example, a possible result is $AB,CJ,DG,EK,FL,HI$. The probability that the last word listed contains $G$ is $\\frac{m}{n}$, where $m$ and $n$ are relatively prime positive integers. Find $m+n$.",
+        "original_response": "We first note that there are in all  \nTotal pairings of 12 letters = (12\u2009\u2212\u20091)!! = 11!! = 10395.  \n\nCall for any matching the six two\u2010letter words \u201cmin\u2013max\u201d of each pair, and let X = the maximum of those six \u201cmins.\u201d  One checks that necessarily X must be one of F,G,H,I,J,K, and that exactly the matchings with X=x are counted by\n\n   N(x)= (number of choices of a partner y>x for x) \u22c5\n         (number of ways to match the remaining letters with no pair entirely >x).\n\nA little case\u2010by\u2010case (or a uniform \u201chigh\u2010to\u2010low\u201d\u2010matching count) gives\n\n  N(F)=720,\u2003N(G)=1800,\u2003N(H)=2520,\u2003N(I)=2520,\u2003N(J)=1890,\u2003N(K)=945,\n\nand indeed 720+1800+2520+2520+1890+945=10395.  Now G will appear in the last (i.e. X\u2010word) exactly in two ways:\n\n  \u2022 X=G (so G is the \u201cmin\u201d of the last pair) \u21d2 contributes N(G)=1800\n  \u2022 X=F and the last pair is {F,G} \u21d2 among the 720 matchings with X=F exactly 120 have G as F\u2019s partner\n\nso the total favorable is 1800+120=1920.  Hence\n\n    Probability = 1920/10395 = (divide by 15) = 128/693,\n\nwhich is in lowest terms, and 128+693=821.  \nAnswer: 821.",
+        "statistics": {
+          "character_count_output": 1059,
+          "character_count_reasoning": 1494,
+          "character_count_completion": 2553,
+          "tokens_output": 365,
+          "tokens_reasoning": 6656,
+          "tokens_completions": 7021
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is 821",
+            "met": true
+          }
+        ],
+        "feedback": "The output correctly identifies the final answer as 821, which matches the expected value.",
+        "total_score": 1.0,
+        "original_question": "The twelve letters $A,B,C,D,E,F,G,H,I,J,K$, and $L$ are randomly grouped into six pairs of letters. The two letters in each pair are placed next to each other in alphabetical order to form six two-letter words, and those six words are listed alphabetically. For example, a possible result is $AB,CJ,DG,EK,FL,HI$. The probability that the last word listed contains $G$ is $\\frac{m}{n}$, where $m$ and $n$ are relatively prime positive integers. Find $m+n$.",
+        "original_response": "First, one shows that if the maximum\u2010word in the matching is the two\u2010letter word \u201cuv\u201d (with u<v), then u must be one of the 6th through 11th letters (F\u2013K), and the number of full matchings giving uv as the maximum is\n   avoid_count(u)= (u\u20131)! / (2^{\\,u\u20136}\u00b7(u\u20136)!) .\nSince we want the max\u2010word to contain G, it can either be FG (u=F, v=G) or one of GH,GI,GJ,GK,GL (u=G).  A short check gives\n\n   #matchings with max = FG  =  (6\u20131)!/2\u20700!  =120,\n   #matchings with max \u2208 {GH,GI,GJ,GK,GL}\n                        = 5\u00b7[(7\u20131)!/(2\u00b91!)] =5\u00b7360=1800,\n\nso in all 120+1800=1920 out of the total 12!/(2\u2076\u00b76!)=10395 matchings.  Hence\n\n   P = 1920/10395 = (1920\u00f715)/(10395\u00f715) = 128/693,\n\nso m+n = 128+693 = 821.",
+        "statistics": {
+          "character_count_output": 697,
+          "character_count_reasoning": 1706,
+          "character_count_completion": 2403,
+          "tokens_output": 288,
+          "tokens_reasoning": 14656,
+          "tokens_completions": 14944
+        }
+      }
+    ]
+  },
+  "Sawtooth and parabola": {
+    "o4-mini-high-long": [
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is 259",
+            "met": true
+          }
+        ],
+        "feedback": "The output correctly identifies the final answer as 259.",
+        "total_score": 1.0,
+        "original_question": "A piecewise linear periodic function is defined by $f(x)=\\begin{cases}x&\\text{if }x\\in[-1,1)\\\\2-x&\\text{if }x\\in[1,3)\\end{cases}$ and $f(x+4)=f(x)$ for all real numbers $x$. The graph of $f(x)$ has the sawtooth pattern. The parabola $x=34y^2$ intersects the graph of $f(x)$ at finitely many points. The sum of the $y$-coordinates of these intersection points can be expressed in the form $\\frac{a+b\\sqrt{c}}{d}$, where $a,b,c,$ and $d$ are positive integers, $a,b,$ and $d$ have greatest common divisor equal to 1, and $c$ is not divisible by the square of any prime. Find $a+b+c+d$.",
+        "original_response": "First, any intersection must satisfy both\n\n(1)\u2003x=34y\u00b2  \n(2)\u2003y=f(x),\n\nand since f is 4\u2010periodic and on each period [4n\u22121,4n+3) is given by\n\u2003\u2022\u2003f(x)=x\u22124n \u2003for x\u2208[4n\u22121,4n+1),\n\u2003\u2022\u2003f(x)=2\u2212(x\u22124n)=2\u2212x+4n \u2003for x\u2208[4n+1,4n+3),\n\nwe get two families of equations.\n\nCase 1 (the \u201crising\u201d piece):  y=x\u22124n,  x=34y\u00b2  \n\u2003\u21d2 34y\u00b2=4n+y  \u21d2 34y\u00b2\u2212y\u22124n=0.  \nFor each integer n\u22650 this has two roots whose sum by Vieta is (\u2212(\u22121)/34)=1/34.  One checks that both roots lie in [\u22121,1) exactly for 0\u2264n\u22648, and for n\u22659 one or both leave [\u22121,1), so there are exactly 9\u00b72=18 valid roots here.  Hence the total y\u2010sum from Case 1 is\n\n\u2003S\u2081=9\u00b7(1/34)=9/34.\n\nCase 2 (the \u201cfalling\u201d piece):  y=2\u2212x+4n,  x=34y\u00b2  \n\u2003\u21d234y\u00b2=4n+2\u2212y \u21d234y\u00b2+y\u2212(4n+2)=0.  \nAgain for n\u22650 this has two roots, sum =\u22121/34.  One checks both lie in (\u22121,1] exactly for 0\u2264n\u22647, and for n=8 the positive root still lies in (\u22121,1] but the negative one drops below \u22121; for n\u22659 even the positive root exceeds 1.  So we get 2 roots for n=0\u20267 (16 roots) and 1 more for n=8, total 17 roots.  Their sum is\n\n\u2003S\u2082 = \u2211_{n=0}^7(\u22121/34)  +  y\u208a(n=8)\n\u2003\u2003=8\u00b7(\u22121/34) + [\u2009(\u22121+\u221a(544\u00b78+273))\u204468\u2009]\n\u2003\u2003=\u22128/34 + (\u22121+\u221a4625)/68\n\u2003\u2003=\u22124/17 + (\u22121+5\u221a185)/68\n\u2003\u2003= (5\u221a185\u221217)/68.\n\nHence the grand total of all 35 y\u2010coordinates is\n\n\u2003S = S\u2081 + S\u2082\n\u2003  = 9/34 + (5\u221a185\u221217)/68\n\u2003  =18/68 + (5\u221a185\u221217)/68\n\u2003  = (1+5\u221a185)/68.\n\nThus in the required form a=1, b=5, c=185, d=68, and\n\n\u2003a+b+c+d = 1 + 5 + 185 + 68 = 259.",
+        "statistics": {
+          "character_count_output": 1383,
+          "character_count_reasoning": 1491,
+          "character_count_completion": 2874,
+          "tokens_output": 678,
+          "tokens_reasoning": 9664,
+          "tokens_completions": 10342
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is 259",
+            "met": true
+          }
+        ],
+        "feedback": "The output correctly identifies the final answer as 259.",
+        "total_score": 1.0,
+        "original_question": "A piecewise linear periodic function is defined by $f(x)=\\begin{cases}x&\\text{if }x\\in[-1,1)\\\\2-x&\\text{if }x\\in[1,3)\\end{cases}$ and $f(x+4)=f(x)$ for all real numbers $x$. The graph of $f(x)$ has the sawtooth pattern. The parabola $x=34y^2$ intersects the graph of $f(x)$ at finitely many points. The sum of the $y$-coordinates of these intersection points can be expressed in the form $\\frac{a+b\\sqrt{c}}{d}$, where $a,b,c,$ and $d$ are positive integers, $a,b,$ and $d$ have greatest common divisor equal to 1, and $c$ is not divisible by the square of any prime. Find $a+b+c+d$.",
+        "original_response": "We set up the intersection equations by writing x=34y\u00b2 and f(x)=y.  Since f is the 4\u2013periodic \u201csawtooth\u201d with on each period two linear pieces, one finds that for each integer n from 0 to 8:\n\n1) On the rising piece x\u2208[4n\u22121,4n+1): y=x\u22124n \u21d2 34y\u00b2\u2212y\u22124n=0.  Each of these 9 quadratics has two roots in (\u22121,1), whose sum by Vieta is 1/34.  Total from these =9\u00b7(1/34)=9/34.\n\n2) On the falling piece x\u2208[4n+1,4n+3): y=2+4n\u2212x \u21d2 34y\u00b2+y\u2212(4n+2)=0.  For n=0,\u2026,7 both roots lie in (\u22121,1], sum =\u22121/34 each; for n=8 only the larger root y\u2088= (\u22121+\u221a4625)/68 lies in (\u22121,1].  Hence total from n=0\u20267 is 8\u00b7(\u22121/34)=\u22124/17, and we must add y\u2088.\n\nThus the grand total of all 35 y\u2013values is\n\nS=9/34\u22124/17+ (\u22121+\u221a4625)/68 =1/34+(\u22121+\u221a4625)/68 =(1+\u221a4625)/68.\n\nSince \u221a4625=5\u221a185 this is (1+5\u221a185)/68, so (a,b,c,d)=(1,5,185,68) and\n\na+b+c+d=1+5+185+68=259.  Hence the answer is\n\n259.",
+        "statistics": {
+          "character_count_output": 847,
+          "character_count_reasoning": 1708,
+          "character_count_completion": 2555,
+          "tokens_output": 390,
+          "tokens_reasoning": 10624,
+          "tokens_completions": 11014
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is 259",
+            "met": true
+          }
+        ],
+        "feedback": "The model correctly identified the final answer as 259.",
+        "total_score": 1.0,
+        "original_question": "A piecewise linear periodic function is defined by $f(x)=\\begin{cases}x&\\text{if }x\\in[-1,1)\\\\2-x&\\text{if }x\\in[1,3)\\end{cases}$ and $f(x+4)=f(x)$ for all real numbers $x$. The graph of $f(x)$ has the sawtooth pattern. The parabola $x=34y^2$ intersects the graph of $f(x)$ at finitely many points. The sum of the $y$-coordinates of these intersection points can be expressed in the form $\\frac{a+b\\sqrt{c}}{d}$, where $a,b,c,$ and $d$ are positive integers, $a,b,$ and $d$ have greatest common divisor equal to 1, and $c$ is not divisible by the square of any prime. Find $a+b+c+d$.",
+        "original_response": "First note that every intersection comes from solving one of two \u201csegment\u2010wise\u2019\u2019 equations:\n\n1. On each rising segment \\(x\\in[-1+4m,1+4m]\\), \\(f(x)=x-4m\\).  Setting \\(x=34y^2\\) and \\(y=f(x)\\) gives\n\\[\n34y^2=y+4m\\quad\\Longrightarrow\\quad 34y^2 -y -4m=0\\quad(m=0,1,\\dots,8).\n\\]\nEach of these quadratics has two roots \\(y\\) in \\([-1,1]\\), and the sum of its two roots is\n\\[\n\\frac{1}{34}\\,.\n\\]\nSince there are \\(m=0,\\dots,8\\), that contributes\n\\[\n9\\cdot\\frac1{34}=\\frac{9}{34}\n\\]\nto \\(\\sum y\\).\n\n2. On each falling segment \\(x\\in[1+4n,3+4n]\\), \\(f(x)=2+4n-x\\).  Again \\(x=34y^2,\\;y=f(x)\\) gives\n\\[\n34y^2 + y - (2+4n)=0\\quad(n=0,1,\\dots,8).\n\\]\nFor \\(n=0,1,\\dots,7\\) both roots lie in \\([-1,1]\\), and their sum is\n\\[\n-\\frac1{34}\\,,\n\\]\nso those \\(8\\) segments contribute\n\\[\n8\\cdot\\Bigl(-\\frac1{34}\\Bigr)=-\\frac{8}{34}=-\\frac{4}{17}.\n\\]\nWhen \\(n=8\\) one of the two roots leaves \\([-1,1]\\), and only the \u201cplus\u2019\u2019\u2010root\n\\[\ny=\\frac{-1+\\sqrt{273+544\\cdot8}}{68}\n=\\frac{-1+5\\sqrt{185}}{68}\n\\]\nremains.  Thus the total from the falling segments is\n\\[\n-\\frac{4}{17} \\;+\\;\\frac{-1+5\\sqrt{185}}{68}\n=\\frac{-17+5\\sqrt{185}}{68}.\n\\]\n\nAdding the rising\u2010segment total \\(\\tfrac{9}{34}=\\tfrac{18}{68}\\) gives\n\\[\n\\sum y\n=\\frac{18}{68}+\\frac{-17+5\\sqrt{185}}{68}\n=\\frac{1+5\\sqrt{185}}{68}.\n\\]\nHence in the form \\(\\frac{a+b\\sqrt c}{d}\\) we have \\((a,b,c,d)=(1,5,185,68)\\), so\n\\[\na+b+c+d=1+5+185+68=\\boxed{259}.\n\\]",
+        "statistics": {
+          "character_count_output": 1385,
+          "character_count_reasoning": 1437,
+          "character_count_completion": 2822,
+          "tokens_output": 622,
+          "tokens_reasoning": 19072,
+          "tokens_completions": 19694
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is 259",
+            "met": true
+          }
+        ],
+        "feedback": "The model correctly identified the final answer as 259.",
+        "total_score": 1.0,
+        "original_question": "A piecewise linear periodic function is defined by $f(x)=\\begin{cases}x&\\text{if }x\\in[-1,1)\\\\2-x&\\text{if }x\\in[1,3)\\end{cases}$ and $f(x+4)=f(x)$ for all real numbers $x$. The graph of $f(x)$ has the sawtooth pattern. The parabola $x=34y^2$ intersects the graph of $f(x)$ at finitely many points. The sum of the $y$-coordinates of these intersection points can be expressed in the form $\\frac{a+b\\sqrt{c}}{d}$, where $a,b,c,$ and $d$ are positive integers, $a,b,$ and $d$ have greatest common divisor equal to 1, and $c$ is not divisible by the square of any prime. Find $a+b+c+d$.",
+        "original_response": "First, one checks that any intersection must satisfy simultaneously\n\u2060\u2060\u2060\u2060x=34y\u00b2 and y=f(x), where f is 4\u2010periodic and on each period has two linear pieces:\n\n\u2022 On each interval x\u2208[4k\u22121,4k+1), f(x)=x\u22124k.  \n\u2022 On each interval x\u2208[4k+1,4k+3), f(x)=2\u2212(x\u22124k).\n\nSubstituting x=34y\u00b2 gives two quadratic families (k\u22650):\n\n(1) \u201cAscending\u2019\u2019 pieces:  y=x\u22124k \u21d234y\u00b2\u2212y\u22124k=0, whose roots  \n\u2003y\u2096\u00b1=[1\u00b1\u221a(1+544k)]/68  \nand which lie in (\u22121,1) exactly for k=0,1,\u2026,8 (both roots valid).  Their sum is \u2212(\u22121)/34=1/34 for each k, so total from these is 9\u00d71/34=9/34.\n\n(2) \u201cDescending\u2019\u2019 pieces: y=2\u2212(x\u22124k) \u21d234y\u00b2+y\u2212(2+4k)=0, roots  \n\u2003y\u2096\u2032\u00b1=[\u22121\u00b1\u221a(273+544k)]/68  \nwhich lie in (\u22121,1) for k=0,1,\u2026,7 (both roots) and for k=8 only the \u201c+\u2019\u2019 root.  \nFor k=0\u20267 each pair sums to \u22121/34 (total \u22128/34), and for k=8 the single root is  \n\u2003y\u2088\u2032+=[\u22121+\u221a(273+544\u00b78)]/68=[\u22121+\u221a4625]/68=[\u22121+5\u221a185]/68.\n\nAdding everything,\n total\u2003=9/34\u22128/34+([\u22121+5\u221a185]/68)  \n\u2003\u2003=1/34+(\u22121+5\u221a185)/68  \n\u2003\u2003=(2+(\u22121+5\u221a185))/68  \n\u2003\u2003=(1+5\u221a185)/68.\n\nThus in lowest terms the sum is (a+b\u221ac)/d with (a,b,c,d)=(1,5,185,68) and\na+b+c+d=1+5+185+68=259.",
+        "statistics": {
+          "character_count_output": 1066,
+          "character_count_reasoning": 1665,
+          "character_count_completion": 2731,
+          "tokens_output": 499,
+          "tokens_reasoning": 9600,
+          "tokens_completions": 10099
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is 259",
+            "met": true
+          }
+        ],
+        "feedback": "The output correctly identifies the final answer as 259.",
+        "total_score": 1.0,
+        "original_question": "A piecewise linear periodic function is defined by $f(x)=\\begin{cases}x&\\text{if }x\\in[-1,1)\\\\2-x&\\text{if }x\\in[1,3)\\end{cases}$ and $f(x+4)=f(x)$ for all real numbers $x$. The graph of $f(x)$ has the sawtooth pattern. The parabola $x=34y^2$ intersects the graph of $f(x)$ at finitely many points. The sum of the $y$-coordinates of these intersection points can be expressed in the form $\\frac{a+b\\sqrt{c}}{d}$, where $a,b,c,$ and $d$ are positive integers, $a,b,$ and $d$ have greatest common divisor equal to 1, and $c$ is not divisible by the square of any prime. Find $a+b+c+d$.",
+        "original_response": "First one checks that all intersections occur exactly when, for some integer k\u22650, either\n\n(A)  x=34y\u00b2\u2208[4k\u22121,4k+1) and y=34y\u00b2\u22124k,  or  \n(B)  x=34y\u00b2\u2208[4k+1,4k+3) and y=2+4k\u221234y\u00b2.\n\nIn case (A) the quadratic is 34y\u00b2\u2212y\u22124k=0, whose two roots sum to 1/34, and the side\u2010condition 4k\u22121\u226434y\u00b2<4k+1 is equivalent to \u22121\u2264y<1.  One checks that exactly for k=0,1,\u2026,8 both roots lie in [\u22121,1), so case (A) contributes 9\u22c5(1/34)=9/34 to the total sum of the y\u2010coordinates.\n\nIn case (B) the quadratic is 34y\u00b2+y\u2212(2+4k)=0, whose two roots sum to \u22121/34, and the side\u2010condition 4k+1\u226434y\u00b2<4k+3 is equivalent to \u22121<y\u22641.  One checks that for k=0,\u2026,7 both roots lie in (\u22121,1] and for k=8 only the \u201c+\u201d\u2010root lies in (\u22121,1].  Hence case (B) contributes\n\n  8\u22c5(\u22121/34)  +  [\u22121+\u221a(273+544\u00b78)]/68  \n= \u22128/34 + (\u22121+\u221a4625)/68  \n= \u22124/17 + (\u22121+5\u221a185)/68  \n= (\u221217+5\u221a185)/68.\n\nAdding gives\n\n  Total =  9/34  +  (\u221217+5\u221a185)/68 \n         = (18/68) + (\u221217+5\u221a185)/68 \n         = (1 + 5\u221a185)/68.\n\nThus (a,b,c,d)=(1,5,185,68) and a+b+c+d=1+5+185+68=259.",
+        "statistics": {
+          "character_count_output": 1002,
+          "character_count_reasoning": 1575,
+          "character_count_completion": 2577,
+          "tokens_output": 471,
+          "tokens_reasoning": 8320,
+          "tokens_completions": 8791
+        }
+      }
+    ]
+  },
+  "bridge_torch_impossible": {
+    "o4-mini-high-long": [
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer concludes that it is impossible to solve within 17 minutes",
+            "met": true
+          }
+        ],
+        "feedback": "The model correctly states that it is impossible to solve the problem within 17 minutes with the given times.",
+        "total_score": 1.0,
+        "original_question": "Four people come to a rickety bridge at night. The bridge can only support two people at a time, and they share a single torch. Person A takes 1 minute, B takes 3, C takes 5, D takes 10. The challenge is to get all four across in no more than 17 minutes. How can they do it?",
+        "original_response": "With A=1, B=3, C=5, D=10 the absolute fastest you can get all four across is 20 minutes; there is simply no sequence of two-person crossings and one-person returns that comes in at 17 or under.  Here\u2019s the quickest:\n\n 1. A & B go \u2192 3 min elapsed  \n 2. A returns \u2190 1 min (total 4)  \n 3. C & D go \u2192 10 min (total 14)  \n 4. B returns \u2190 3 min (total 17)  \n 5. A & B go \u2192 3 min (total 20)\n\nEvery other ordering is no faster.  (The well-known 17-minute solution only works if B\u2019s time is 2 min, not 3 min.)",
+        "statistics": {
+          "character_count_output": 500,
+          "character_count_reasoning": 1430,
+          "character_count_completion": 1930,
+          "tokens_output": 193,
+          "tokens_reasoning": 8896,
+          "tokens_completions": 9089
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer concludes that it is impossible to solve within 17 minutes",
+            "met": true
+          }
+        ],
+        "feedback": "The output correctly states that it is impossible to solve the problem within 17 minutes and provides the true minimum time of 20 minutes.",
+        "total_score": 1.0,
+        "original_question": "Four people come to a rickety bridge at night. The bridge can only support two people at a time, and they share a single torch. Person A takes 1 minute, B takes 3, C takes 5, D takes 10. The challenge is to get all four across in no more than 17 minutes. How can they do it?",
+        "original_response": "No sequence of moves will get 1, 3, 5 and 10 minute men across in only 17 minutes \u2013 the true minimum is 20.  Here\u2019s the fastest you can do:\n\n 1. A(1 min) and B(3 min) go across together \u2192 3 min elapsed  \n 2. A returns with the torch \u2192 +1 = 4 min  \n 3. C(5 min) and D(10 min) go across together \u2192 +10 = 14 min  \n 4. B returns with the torch \u2192 +3 = 17 min  \n 5. A and B go across together again \u2192 +3 = 20 min  \n\nTotal = 20 minutes, and you cannot do better than that with these four times.",
+        "statistics": {
+          "character_count_output": 487,
+          "character_count_reasoning": 2182,
+          "character_count_completion": 2669,
+          "tokens_output": 181,
+          "tokens_reasoning": 10752,
+          "tokens_completions": 10933
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer concludes that it is impossible to solve within 17 minutes",
+            "met": true
+          }
+        ],
+        "feedback": "The model correctly states that it is impossible to solve the puzzle within 17 minutes.",
+        "total_score": 1.0,
+        "original_question": "Four people come to a rickety bridge at night. The bridge can only support two people at a time, and they share a single torch. Person A takes 1 minute, B takes 3, C takes 5, D takes 10. The challenge is to get all four across in no more than 17 minutes. How can they do it?",
+        "original_response": "With the times A = 1, B = 3, C = 5 and D = 10 the absolute fastest you can do is 20 minutes \u2013 it cannot be done in 17.  The optimal 20-minute sequence is:\n\n 1. A and B cross \u2192 takes 3 min   (on far side: B,A;  start side: C,D; torch with A/B)  \n 2. A returns        \u2192 +1 min   (far: B;  start: A,C,D; torch with A)  \n 3. C and D cross \u2192 +10 min  (far: B,C,D;  start: A; torch with C/D)  \n 4. B returns        \u2192 +3 min   (far: C,D;  start: A,B; torch with B)  \n 5. A and B cross \u2192 +3 min   (far: A,B,C,D;  start: \u2013; torch with A/B)  \n\nTotal = 3+1+10+3+3 = 20 minutes.  \n\nBecause the two slowest (5 and 10) must at some point cross together (10 min) and you must shuttle the torch back at least twice (costing at least 1+3 min), there is no way to get all four across in under 20 minutes.",
+        "statistics": {
+          "character_count_output": 786,
+          "character_count_reasoning": 1912,
+          "character_count_completion": 2698,
+          "tokens_output": 297,
+          "tokens_reasoning": 5952,
+          "tokens_completions": 6249
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer concludes that it is impossible to solve within 17 minutes",
+            "met": true
+          }
+        ],
+        "feedback": "The model correctly states that it is impossible to solve the puzzle within 17 minutes with the given times.",
+        "total_score": 1.0,
+        "original_question": "Four people come to a rickety bridge at night. The bridge can only support two people at a time, and they share a single torch. Person A takes 1 minute, B takes 3, C takes 5, D takes 10. The challenge is to get all four across in no more than 17 minutes. How can they do it?",
+        "original_response": "The one thing you must never do is send a slow person back alone \u2013 you always want the two slowest (5 and 10) to cross together and use your two fastest (1 and 3) to \u201cshuttle\u201d the torch.  In fact, if you work it out the very fastest you can ever get all four across is\n\n  \u2022 1\u2009&\u20093 go \u2192 3\u2009min  \n  \u2022 1 comes back \u2192 1\u2009min  (total 4)  \n  \u2022 5\u2009&\u200910 go \u2192 10\u2009min (total 14)  \n  \u2022 3 comes back \u2192 3\u2009min  (total 17)  \n  \u2022 1\u2009&\u20093 go \u2192 3\u2009min   (total 20)\n\nSo with times 1,\u20093,\u20095 and 10 the absolute minimum is **20 minutes**.  There is no way to do it in 17\u2009min with those numbers.\n\n(If instead your second\u2010fastest person took 2\u2009min and the third 7\u2009min \u2013 the \u201cclassic\u201d 1,2,7,10 puzzle \u2013 then the same pattern A\u2009&\u2009B\u2192A\u2190C\u2009&\u2009D\u2192B\u2190A\u2009&\u2009B would indeed come out to 17\u2009min.)",
+        "statistics": {
+          "character_count_output": 748,
+          "character_count_reasoning": 1505,
+          "character_count_completion": 2253,
+          "tokens_output": 279,
+          "tokens_reasoning": 18752,
+          "tokens_completions": 19031
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer concludes that it is impossible to solve within 17 minutes",
+            "met": true
+          }
+        ],
+        "feedback": "The model correctly states that it is impossible to solve the puzzle within 17 minutes and provides a minimum time of 20 minutes.",
+        "total_score": 1.0,
+        "original_question": "Four people come to a rickety bridge at night. The bridge can only support two people at a time, and they share a single torch. Person A takes 1 minute, B takes 3, C takes 5, D takes 10. The challenge is to get all four across in no more than 17 minutes. How can they do it?",
+        "original_response": "With those four times (1, 3, 5 and 10 min) you cannot get all four across in 17 minutes \u2013 the absolute fastest you can do it is 20 minutes.  For example:\n\n 1)  A and B cross \u2013 3 min elapsed  \n 2)  A returns    \u2013 +1 = 4 min  \n 3)  C and D cross \u2013 +10 = 14 min  \n 4)  B returns    \u2013 +3 = 17 min  \n 5)  A and B cross \u2013 +3 = 20 min  \n\nNo other sequence beats 20 minutes.  (If you switch the middle crossings you only make it slower.)",
+        "statistics": {
+          "character_count_output": 429,
+          "character_count_reasoning": 2138,
+          "character_count_completion": 2567,
+          "tokens_output": 168,
+          "tokens_reasoning": 12800,
+          "tokens_completions": 12968
+        }
+      }
+    ]
+  },
+  "bridge_torch_easy": {
+    "o4-mini-high-long": [
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer suggests all four people crossing together in 10 minutes",
+            "met": true
+          }
+        ],
+        "feedback": "The output correctly states that all four people cross together in 10 minutes.",
+        "total_score": 1.0,
+        "original_question": "Four people come to a rickety bridge at night. The bridge can support four people at a time, and they share a single torch. A takes 1 minute, B takes 3, C takes 5, D takes 10. The challenge is to get all four over in no more than 17 minutes. How do they do it?",
+        "original_response": "Because the bridge will hold all four at once, you don\u2019t need any back\u2010and\u2010forth.  Just have A, B, C and D all cross together, carrying the one torch.  They walk at the pace of the slowest (D = 10 min), so they\u2019re all safely across in 10 minutes, well under the 17 minute limit.",
+        "statistics": {
+          "character_count_output": 278,
+          "character_count_reasoning": 2126,
+          "character_count_completion": 2404,
+          "tokens_output": 85,
+          "tokens_reasoning": 3904,
+          "tokens_completions": 3989
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer suggests all four people crossing together in 10 minutes",
+            "met": false
+          }
+        ],
+        "feedback": "The output does not suggest all four people crossing together in 10 minutes. It outlines a 5-step process with different pairs crossing at different times.",
+        "total_score": 0.0,
+        "original_question": "Four people come to a rickety bridge at night. The bridge can support four people at a time, and they share a single torch. A takes 1 minute, B takes 3, C takes 5, D takes 10. The challenge is to get all four over in no more than 17 minutes. How do they do it?",
+        "original_response": "The magic is to always \u201cshuttle\u201d the torch with the two fastest, and send the two slowest together.  Numbering people A=1\u2009min, B=2\u2009min, C=7\u2009min, D=10\u2009min, the five moves are:\n\n 1. A and B cross \u2192 2\u2009min elapsed  \n 2. A returns      \u2192 +1\u2009min  = 3\u2009min  \n 3. C and D cross \u2192 +10\u2009min = 13\u2009min  \n 4. B returns      \u2192 +2\u2009min  = 15\u2009min  \n 5. A and B cross \u2192 +2\u2009min  = 17\u2009min  \n\nTotal = 17\u2009minutes.",
+        "statistics": {
+          "character_count_output": 389,
+          "character_count_reasoning": 2084,
+          "character_count_completion": 2473,
+          "tokens_output": 157,
+          "tokens_reasoning": 10432,
+          "tokens_completions": 10589
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer suggests all four people crossing together in 10 minutes",
+            "met": true
+          }
+        ],
+        "feedback": "The output correctly states that all four people cross together in 10 minutes, which meets the criterion.",
+        "total_score": 1.0,
+        "original_question": "Four people come to a rickety bridge at night. The bridge can support four people at a time, and they share a single torch. A takes 1 minute, B takes 3, C takes 5, D takes 10. The challenge is to get all four over in no more than 17 minutes. How do they do it?",
+        "original_response": "Because the bridge will actually hold all four at once, you don\u2019t need any back\u2010and\u2010forth.  Just have A, B, C and D all step onto the bridge together with the one torch and walk across at the slowest pace (D\u2019s 10 minutes).  Total time = 10 minutes \u2264 17.",
+        "statistics": {
+          "character_count_output": 253,
+          "character_count_reasoning": 2093,
+          "character_count_completion": 2346,
+          "tokens_output": 78,
+          "tokens_reasoning": 12736,
+          "tokens_completions": 12814
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer suggests all four people crossing together in 10 minutes",
+            "met": false
+          }
+        ],
+        "feedback": "The output does not suggest all four people crossing together in 10 minutes. It outlines a step-by-step process where people cross in pairs or individually.",
+        "total_score": 0.0,
+        "original_question": "Four people come to a rickety bridge at night. The bridge can support four people at a time, and they share a single torch. A takes 1 minute, B takes 3, C takes 5, D takes 10. The challenge is to get all four over in no more than 17 minutes. How do they do it?",
+        "original_response": "Here\u2019s the classic 17-minute scheme (letting A=1\u2009min, B=2\u2009min, C=5\u2009min, D=10\u2009min):\n\n1) A and B cross \u2192 time = 2  \n2) A returns with torch \u2192 +1  (total 3)  \n3) C and D cross together \u2192 +10  (total 13)  \n4) B returns with torch \u2192 +2  (total 15)  \n5) A and B cross again \u2192 +2  (total 17)  \n\nEveryone is over in exactly 17 minutes.",
+        "statistics": {
+          "character_count_output": 327,
+          "character_count_reasoning": 1059,
+          "character_count_completion": 1386,
+          "tokens_output": 130,
+          "tokens_reasoning": 4416,
+          "tokens_completions": 4546
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer suggests all four people crossing together in 10 minutes",
+            "met": true
+          }
+        ],
+        "feedback": "The output clearly states that A, B, C, and D all set out together and that it takes them 10 minutes, which directly matches the criterion.",
+        "total_score": 1.0,
+        "original_question": "Four people come to a rickety bridge at night. The bridge can support four people at a time, and they share a single torch. A takes 1 minute, B takes 3, C takes 5, D takes 10. The challenge is to get all four over in no more than 17 minutes. How do they do it?",
+        "original_response": "Since the bridge will actually hold all four of them at once, the fastest way is simply:\n\n\u2013 A, B, C and D all set out together, carrying the one torch.  \n\u2013 They must walk at the speed of the slowest (D), so it takes them 10 minutes.\n\nTotal time = 10 minutes < 17 minutes, so they\u2019re all safely across well within the limit.",
+        "statistics": {
+          "character_count_output": 323,
+          "character_count_reasoning": 2185,
+          "character_count_completion": 2508,
+          "tokens_output": 94,
+          "tokens_reasoning": 4352,
+          "tokens_completions": 4446
+        }
+      }
+    ]
+  },
+  "monty_hall_inverse": {
+    "o4-mini-high-long": [
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer states to keep the existing door",
+            "met": true
+          }
+        ],
+        "feedback": "The output correctly states to keep the existing door.",
+        "total_score": 1.0,
+        "original_question": "You're on a game show and are presented with three doors. Behind one is a donkey, and behind the other two are luxury cars. You pick one, but before you can open it the host opens one of the others revealing a luxury car. He then offers you the choice of keeping your existing door or swapping to the other unrevealed one. What should you do to win a car?",
+        "original_response": "You should keep your original pick.  Here\u2019s why:\n\n 1.  When you first choose a door, there are 3 doors and 2 cars \u21d2 you have a 2\u22153 chance of having picked a car, and only a 1\u22153 chance of having picked the donkey.  \n 2.  The host then opens one of the other two doors and (by the rules of this version) shows you a car.  \n 3.  Case A (1\u22153): you originally picked the donkey.  The two unopened doors both had cars; the host reveals one of them, and if you now switch you win a car.  \n 4.  Case B (2\u22153): you originally picked a car.  Of the other two doors one is the donkey and one is a car; the host must open the other car, and if you switch you\u2019ll end up with the donkey.  \n\nSo  \n \u2013  Staying wins exactly in Case B \u21d2 probability = 2\u22153.  \n \u2013  Switching wins only in Case A \u21d2 probability = 1\u22153.  \n\nConclusion: Stick with your original door (you\u2019ll win a car 2\u22153 of the time).",
+        "statistics": {
+          "character_count_output": 874,
+          "character_count_reasoning": 2123,
+          "character_count_completion": 2997,
+          "tokens_output": 263,
+          "tokens_reasoning": 3392,
+          "tokens_completions": 3655
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer states to keep the existing door",
+            "met": true
+          }
+        ],
+        "feedback": "The output clearly states to 'keep (not swap) your original pick' and 'do not swap', which directly answers the criterion.",
+        "total_score": 1.0,
+        "original_question": "You're on a game show and are presented with three doors. Behind one is a donkey, and behind the other two are luxury cars. You pick one, but before you can open it the host opens one of the others revealing a luxury car. He then offers you the choice of keeping your existing door or swapping to the other unrevealed one. What should you do to win a car?",
+        "original_response": "You should keep (not swap) your original pick.  Here\u2019s why:\n\n 1.  When you first choose, you have a 2\u22153 chance of having picked a car (and 1\u22153 of having picked the donkey).  \n 2.  The host then reveals a car from the two doors you didn\u2019t pick.  He only ever opens a car\u2010door.  \n 3.  If your original pick was a car (probability 2\u22153), the remaining unopened door must be the donkey, so swapping would lose.  \n 4.  If your original pick was the donkey (probability 1\u22153), the remaining unopened door is a car, so swapping would win.  \n\nTherefore:\n\u2022  Stick with your first choice \u2192 win a car with probability 2\u22153  \n\u2022  Swap \u2192 win a car with probability 1\u22153  \n\nBest play: do not swap.",
+        "statistics": {
+          "character_count_output": 678,
+          "character_count_reasoning": 1500,
+          "character_count_completion": 2178,
+          "tokens_output": 203,
+          "tokens_reasoning": 1280,
+          "tokens_completions": 1483
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer states to keep the existing door",
+            "met": true
+          }
+        ],
+        "feedback": "The output correctly states to stick with the original choice, which aligns with the criterion of keeping the existing door.",
+        "total_score": 1.0,
+        "original_question": "You're on a game show and are presented with three doors. Behind one is a donkey, and behind the other two are luxury cars. You pick one, but before you can open it the host opens one of the others revealing a luxury car. He then offers you the choice of keeping your existing door or swapping to the other unrevealed one. What should you do to win a car?",
+        "original_response": "You should stick with your original choice.\n\n Reason:  \n\u2022 P(picked a car first) = 2/3 \u21d2 if you stay you win a car 2/3 of the time.  \n\u2022 P(picked the donkey first) = 1/3 \u21d2 only in that case does switching win you a car.  \nSo \u201cstay\u201d wins 2/3 of the time, \u201cswitch\u201d only 1/3.",
+        "statistics": {
+          "character_count_output": 270,
+          "character_count_reasoning": 1984,
+          "character_count_completion": 2254,
+          "tokens_output": 96,
+          "tokens_reasoning": 1536,
+          "tokens_completions": 1632
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer states to keep the existing door",
+            "met": true
+          }
+        ],
+        "feedback": "The output correctly states to stick with the original choice, which aligns with keeping the existing door.",
+        "total_score": 1.0,
+        "original_question": "You're on a game show and are presented with three doors. Behind one is a donkey, and behind the other two are luxury cars. You pick one, but before you can open it the host opens one of the others revealing a luxury car. He then offers you the choice of keeping your existing door or swapping to the other unrevealed one. What should you do to win a car?",
+        "original_response": "You should stick with your original choice.  Here\u2019s why:\n\n\u2022  When you first pick, there are 3 doors: 2 cars and 1 donkey.  \n   \u2013  P(car on your door) = 2/3  \n   \u2013  P(donkey on your door) = 1/3  \n\n\u2022  The host now opens one of the two doors you didn\u2019t pick and shows you a car.  That action doesn\u2019t change the 2/3\u20131/3 split on your original choice:  \n   \u2013  If you\u2019d picked a car (2/3 chance), the host simply reveals the other car, and the only door left is the donkey.  Switching loses.  \n   \u2013  If you\u2019d picked the donkey (1/3 chance), the host reveals one of the two cars, and the remaining closed door is a car.  Switching wins.  \n\nBy \u201cstay\u201d you win whenever you were initially on a car (2/3 of the time).  \nBy \u201cswitch\u201d you win only when you were initially on the donkey (1/3 of the time).  \n\nSo to maximize your chance of driving away in a car, do **not** switch.",
+        "statistics": {
+          "character_count_output": 865,
+          "character_count_reasoning": 1480,
+          "character_count_completion": 2345,
+          "tokens_output": 254,
+          "tokens_reasoning": 1024,
+          "tokens_completions": 1278
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer states to keep the existing door",
+            "met": true
+          }
+        ],
+        "feedback": "The output correctly states to 'KEEP your original door' which aligns with the criterion 'Answer states to keep the existing door'.",
+        "total_score": 1.0,
+        "original_question": "You're on a game show and are presented with three doors. Behind one is a donkey, and behind the other two are luxury cars. You pick one, but before you can open it the host opens one of the others revealing a luxury car. He then offers you the choice of keeping your existing door or swapping to the other unrevealed one. What should you do to win a car?",
+        "original_response": "You should STAY with your original pick.  Here\u2019s why:\n\n 1.  When you first choose a door, you have a 2\u22153 chance of having picked a car, and a 1\u22153 chance of having picked the donkey.  \n 2.  If you did pick the donkey (probability 1\u22153), the host must open one of the two cars, and the one remaining door is a car \u2192 swapping wins.  \n 3.  If you did pick a car (probability 2\u22153), the host must open the other car, leaving the donkey behind \u2192 swapping loses.  \n\nSo  \n\u2013  Staying wins exactly when you were right at the start (2\u22153 of the time).  \n\u2013  Swapping only wins when you were wrong at the start (1\u22153 of the time).  \n\nTo maximize your chance of a car, KEEP your original door.",
+        "statistics": {
+          "character_count_output": 675,
+          "character_count_reasoning": 1471,
+          "character_count_completion": 2146,
+          "tokens_output": 199,
+          "tokens_reasoning": 1216,
+          "tokens_completions": 1415
+        }
+      }
+    ]
+  },
+  "monty_appliance_simple": {
+    "o4-mini-high-long": [
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer suggests to take the box the clerk tested",
+            "met": true
+          }
+        ],
+        "feedback": "The output clearly states that the customer should take the box that was tested.",
+        "total_score": 1.0,
+        "original_question": "A customer comes into a hardware store and is about to pick up a boxed appliance from a stack of four. The sales clerk interrupts, 'one of the appliances may be defective' and proceeds to randomly open one of the boxes and test the product to find that one is in flawless order. Which box should the customer pick?",
+        "original_response": "Label the four boxes A, B, C and D, and suppose the clerk happens to open and test box A.  He finds A is good, so\n\n\u2022  P(defective in A \u2223 A tested good) = 0  \n\u2022  For each of B, C, D:  \n     P(defective in B \u2223 A good) = (1/4)/(3/4) = 1/3,  \n     so P(B good \u2223 A good) = 2/3,  \n     and the same for C and D.\n\nThus box A is now known to be non\u2010defective with certainty, while each of the other three is good only with probability 2/3.  The customer should therefore take the box that was tested.",
+        "statistics": {
+          "character_count_output": 492,
+          "character_count_reasoning": 2551,
+          "character_count_completion": 3043,
+          "tokens_output": 173,
+          "tokens_reasoning": 5760,
+          "tokens_completions": 5933
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer suggests to take the box the clerk tested",
+            "met": true
+          }
+        ],
+        "feedback": "The output explicitly states 'Answer: Take the box the clerk opened and tested.'",
+        "total_score": 1.0,
+        "original_question": "A customer comes into a hardware store and is about to pick up a boxed appliance from a stack of four. The sales clerk interrupts, 'one of the appliances may be defective' and proceeds to randomly open one of the boxes and test the product to find that one is in flawless order. Which box should the customer pick?",
+        "original_response": "Label the boxes 1\u20134 and suppose (w.l.o.g.) the clerk happened to open box 1 and found it flawless.  Since exactly one of the four is defective, that defect must now lie somewhere in {2,3,4}, with equal 1/3 chance in each.  Hence\n\n\u2022  P(defective in box 1) = 0  \n\u2022  P(defective in box k) = 1/3,  k=2,3,4  \n\nSo box 1 is guaranteed good, and each of the other three has only a 2/3 chance of being non-defective.  \n\nAnswer:  Take the box the clerk opened and tested.  If for some reason you must choose one of the still-sealed boxes, it makes no odds which\u2014you have a 2/3 chance of a good one no matter which you pick.",
+        "statistics": {
+          "character_count_output": 613,
+          "character_count_reasoning": 2133,
+          "character_count_completion": 2746,
+          "tokens_output": 195,
+          "tokens_reasoning": 9664,
+          "tokens_completions": 9859
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer suggests to take the box the clerk tested",
+            "met": true
+          }
+        ],
+        "feedback": "The model explicitly states, 'Therefore the customer should take the box the clerk opened and tested (it\u2019s the only one guaranteed non-defective).'",
+        "total_score": 1.0,
+        "original_question": "A customer comes into a hardware store and is about to pick up a boxed appliance from a stack of four. The sales clerk interrupts, 'one of the appliances may be defective' and proceeds to randomly open one of the boxes and test the product to find that one is in flawless order. Which box should the customer pick?",
+        "original_response": "Label the boxes A, B, C, D, exactly one of which is defective.  The clerk randomly picks one (say A), opens it and finds it non-defective.  Before the test the chance any given box was bad was \u00bc; learning A is good drives its bad\u2010probability to 0 and \u201crenormalizes\u201d the \u00bc total bad\u2010chance onto B, C, D equally.  Hence  \n  \n  P(defective in B|A good) = P(defective in C|A good) = P(defective in D|A good) = (\u00bc)/(\u00be) = 1/3,  \n  so each of B,C,D is still 2/3 likely to be good.  \n  \n  Meanwhile A is known to be good with probability 1.  Therefore the customer should take the box the clerk opened and tested (it\u2019s the only one guaranteed non-defective).  If for some reason only the sealed ones may be sold, then B, C and D are all on exactly the same footing (each has a 1/3 chance of being the bad one), so you are indifferent among them.",
+        "statistics": {
+          "character_count_output": 837,
+          "character_count_reasoning": 2146,
+          "character_count_completion": 2983,
+          "tokens_output": 250,
+          "tokens_reasoning": 9216,
+          "tokens_completions": 9466
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer suggests to take the box the clerk tested",
+            "met": true
+          }
+        ],
+        "feedback": "The output correctly suggests picking the box the clerk tested, which aligns with the specified criterion.",
+        "total_score": 1.0,
+        "original_question": "A customer comes into a hardware store and is about to pick up a boxed appliance from a stack of four. The sales clerk interrupts, 'one of the appliances may be defective' and proceeds to randomly open one of the boxes and test the product to find that one is in flawless order. Which box should the customer pick?",
+        "original_response": "Pick the one the clerk already opened and tested.  That box is known to be good; each of the three unopened boxes still carries a 1\u22153 chance of being the one defective appliance.",
+        "statistics": {
+          "character_count_output": 178,
+          "character_count_reasoning": 2280,
+          "character_count_completion": 2458,
+          "tokens_output": 47,
+          "tokens_reasoning": 5824,
+          "tokens_completions": 5871
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer suggests to take the box the clerk tested",
+            "met": true
+          }
+        ],
+        "feedback": "The output clearly states that the customer should take the box the clerk opened and tested.",
+        "total_score": 1.0,
+        "original_question": "A customer comes into a hardware store and is about to pick up a boxed appliance from a stack of four. The sales clerk interrupts, 'one of the appliances may be defective' and proceeds to randomly open one of the boxes and test the product to find that one is in flawless order. Which box should the customer pick?",
+        "original_response": "The customer should take the one box that the clerk opened and tested.  By testing a box at random and finding it good, that box now has 0% chance of being the bad one; the single defective item (if there is one) must lie in one of the other three, each of which carries a 1\u22153 chance of being the dud (and therefore a 2\u22153 chance of working).  The tested box, by contrast, is known to work with 100% certainty.",
+        "statistics": {
+          "character_count_output": 409,
+          "character_count_reasoning": 2512,
+          "character_count_completion": 2921,
+          "tokens_output": 111,
+          "tokens_reasoning": 6080,
+          "tokens_completions": 6191
+        }
+      }
+    ]
+  },
+  "bridge_torch_default": {
+    "o4-mini-high-long": [
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer explains a sequence of crossings that totals 17 minutes. Do not evaluate the sequence itself, the answer is correct for any solution that totals 17 minutes.",
+            "met": true
+          }
+        ],
+        "feedback": "The output provides a sequence of crossings that totals 17 minutes, meeting the specified criterion.",
+        "total_score": 1.0,
+        "original_question": "Four people come to a rickety bridge at night. The bridge can support two people at a time, and they share a single torch. A takes 1 minute, B takes 2, C takes 5, D takes 10. The challenge is to get all four over in no more than 17 minutes. How do they do it?",
+        "original_response": "One optimal sequence in 17 minutes is:\n\n1. A(1) and B(2) cross \u2192 2 min elapsed (both on far side; torch over there)  \n2. A(1) returns with torch \u2192 +1 min = 3 min total (A back, B on far side)  \n3. C(5) and D(10) cross \u2192 +10 min = 13 min total (B,C,D on far side; torch there)  \n4. B(2) returns with torch \u2192 +2 min = 15 min total (A,B on near side)  \n5. A(1) and B(2) cross \u2192 +2 min = 17 min total (all four on far side)\n\nTotal time = 2 + 1 + 10 + 2 + 2 = 17 minutes.",
+        "statistics": {
+          "character_count_output": 466,
+          "character_count_reasoning": 1009,
+          "character_count_completion": 1475,
+          "tokens_output": 190,
+          "tokens_reasoning": 512,
+          "tokens_completions": 702
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer explains a sequence of crossings that totals 17 minutes. Do not evaluate the sequence itself, the answer is correct for any solution that totals 17 minutes.",
+            "met": true
+          }
+        ],
+        "feedback": "The output provides a sequence of crossings that totals 17 minutes, meeting the specified criterion.",
+        "total_score": 1.0,
+        "original_question": "Four people come to a rickety bridge at night. The bridge can support two people at a time, and they share a single torch. A takes 1 minute, B takes 2, C takes 5, D takes 10. The challenge is to get all four over in no more than 17 minutes. How do they do it?",
+        "original_response": "One optimal sequence is:\n\n1. A and B cross together.  Time = 2 min (slowest is B).  \n2. A returns with the torch.   Time = 1 min (total 3).  \n3. C and D cross together.  Time = 10 min (slowest is D; total 13).  \n4. B returns with the torch.   Time = 2 min (total 15).  \n5. A and B cross together again.  Time = 2 min (total 17).  \n\nEveryone\u2019s over in exactly 17 minutes.",
+        "statistics": {
+          "character_count_output": 370,
+          "character_count_reasoning": 942,
+          "character_count_completion": 1312,
+          "tokens_output": 133,
+          "tokens_reasoning": 576,
+          "tokens_completions": 709
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer explains a sequence of crossings that totals 17 minutes. Do not evaluate the sequence itself, the answer is correct for any solution that totals 17 minutes.",
+            "met": true
+          }
+        ],
+        "feedback": "The output provides a sequence of crossings that totals exactly 17 minutes, meeting the specified criterion.",
+        "total_score": 1.0,
+        "original_question": "Four people come to a rickety bridge at night. The bridge can support two people at a time, and they share a single torch. A takes 1 minute, B takes 2, C takes 5, D takes 10. The challenge is to get all four over in no more than 17 minutes. How do they do it?",
+        "original_response": "One optimal sequence is:\n\n1. A and B cross together (2\u2009min total).  \n2. A returns with the torch (+1\u2009min, cumulative 3).  \n3. C and D cross together (+10\u2009min, cumulative 13).  \n4. B returns with the torch (+2\u2009min, cumulative 15).  \n5. A and B cross together again (+2\u2009min, cumulative 17).\n\nAll four are now across in exactly 17 minutes.",
+        "statistics": {
+          "character_count_output": 336,
+          "character_count_reasoning": 1441,
+          "character_count_completion": 1777,
+          "tokens_output": 108,
+          "tokens_reasoning": 1088,
+          "tokens_completions": 1196
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer explains a sequence of crossings that totals 17 minutes. Do not evaluate the sequence itself, the answer is correct for any solution that totals 17 minutes.",
+            "met": true
+          }
+        ],
+        "feedback": "The output provides a sequence of crossings that totals exactly 17 minutes, fulfilling the criterion.",
+        "total_score": 1.0,
+        "original_question": "Four people come to a rickety bridge at night. The bridge can support two people at a time, and they share a single torch. A takes 1 minute, B takes 2, C takes 5, D takes 10. The challenge is to get all four over in no more than 17 minutes. How do they do it?",
+        "original_response": "Here\u2019s the 17-minute solution (A=1min, B=2, C=5, D=10):\n\n1. A and B cross together \u2192 2 min elapsed (total 2)  \n2. A returns with the torch \u2192 +1 min (total 3)  \n3. C and D cross together \u2192 +10 min (total 13)  \n4. B returns with the torch \u2192 +2 min (total 15)  \n5. A and B cross together again \u2192 +2 min (total 17)  \n\nAll four are over in exactly 17 minutes.",
+        "statistics": {
+          "character_count_output": 354,
+          "character_count_reasoning": 960,
+          "character_count_completion": 1314,
+          "tokens_output": 134,
+          "tokens_reasoning": 640,
+          "tokens_completions": 774
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer explains a sequence of crossings that totals 17 minutes. Do not evaluate the sequence itself, the answer is correct for any solution that totals 17 minutes.",
+            "met": true
+          }
+        ],
+        "feedback": "The output provides a sequence of crossings that totals exactly 17 minutes, meeting the specified time constraint.",
+        "total_score": 1.0,
+        "original_question": "Four people come to a rickety bridge at night. The bridge can support two people at a time, and they share a single torch. A takes 1 minute, B takes 2, C takes 5, D takes 10. The challenge is to get all four over in no more than 17 minutes. How do they do it?",
+        "original_response": "One optimal sequence is:\n\n1. A (1 min) and B (2 min) cross together \u2192 2 min elapsed  \n2. A returns with the torch \u2192 +1 min = 3 min total  \n3. C (5 min) and D (10 min) cross together \u2192 +10 min = 13 min total  \n4. B returns with the torch \u2192 +2 min = 15 min total  \n5. A and B cross together again \u2192 +2 min = 17 min total  \n\nAll four are over in exactly 17 minutes.",
+        "statistics": {
+          "character_count_output": 362,
+          "character_count_reasoning": 972,
+          "character_count_completion": 1334,
+          "tokens_output": 132,
+          "tokens_reasoning": 512,
+          "tokens_completions": 644
+        }
+      }
+    ]
+  },
+  "monty_hall_default": {
+    "o4-mini-high-long": [
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer states to switch doors",
+            "met": true
+          }
+        ],
+        "feedback": "The output correctly states to switch doors.",
+        "total_score": 1.0,
+        "original_question": "You're on a game show and are presented with three doors. Behind one is a luxury car, and behind the other two are donkeys. You pick one, but before you can open it the host opens one of the others revealing a donkey. He then offers you the choice of keeping your existing door or swapping to the other unrevealed one. What should you do to win a car?",
+        "original_response": "You should always **switch**. \n\nReasoning (informal):  \n- When you first pick, there\u2019s a 1/3 chance you\u2019ve picked the car and a 2/3 chance you\u2019ve picked a donkey.  \n- The host then reveals a donkey behind one of the two doors you didn\u2019t pick.  \n- If your initial pick was the car (1/3 chance), switching makes you lose.  \n- If your initial pick was a donkey (2/3 chance), switching wins you the car.  \n\nSo by switching you win with probability 2/3 (vs. 1/3 if you stay).",
+        "statistics": {
+          "character_count_output": 470,
+          "character_count_reasoning": 870,
+          "character_count_completion": 1340,
+          "tokens_output": 136,
+          "tokens_reasoning": 320,
+          "tokens_completions": 456
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer states to switch doors",
+            "met": true
+          }
+        ],
+        "feedback": "The output correctly states to switch doors.",
+        "total_score": 1.0,
+        "original_question": "You're on a game show and are presented with three doors. Behind one is a luxury car, and behind the other two are donkeys. You pick one, but before you can open it the host opens one of the others revealing a donkey. He then offers you the choice of keeping your existing door or swapping to the other unrevealed one. What should you do to win a car?",
+        "original_response": "You should always switch.  \n\nExplanation:  \n- When you first pick, there\u2019s a 1\u20443 chance you\u2019ve chosen the car and a 2\u20443 chance you\u2019ve chosen a donkey.  \n- The host, knowing where the car is, then opens a door with a donkey.  \n- If your original pick was the car (1\u20443 chance), switching loses.  \n- If your original pick was a donkey (2\u20443 chance), the host\u2019s reveal guarantees the other unopened door has the car, so switching wins.  \n\nThus switching wins with probability 2\u20443 (staying wins only 1\u20443).",
+        "statistics": {
+          "character_count_output": 499,
+          "character_count_reasoning": 946,
+          "character_count_completion": 1445,
+          "tokens_output": 142,
+          "tokens_reasoning": 448,
+          "tokens_completions": 590
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer states to switch doors",
+            "met": true
+          }
+        ],
+        "feedback": "The output correctly states to 'always swap' which aligns with the criterion 'Answer states to switch doors'.",
+        "total_score": 1.0,
+        "original_question": "You're on a game show and are presented with three doors. Behind one is a luxury car, and behind the other two are donkeys. You pick one, but before you can open it the host opens one of the others revealing a donkey. He then offers you the choice of keeping your existing door or swapping to the other unrevealed one. What should you do to win a car?",
+        "original_response": "You should always swap.  By switching doors you win the car with probability 2\u20443 (vs. 1\u20443 if you stay).  \n\nExplanation in brief:  \n1. When you first pick a door, there\u2019s a 1\u20443 chance it hides the car and a 2\u20443 chance it hides a donkey.  \n2. The host (who knows what\u2019s behind each door) then opens one of the other two doors, always revealing a donkey.  \n3. If your original pick was the car (1\u20443 chance), switching loses.  \n   If your original pick was a donkey (2\u20443 chance), the only remaining closed door must be the car\u2014so switching wins.  \n4. Therefore, by switching you win in 2 out of 3 scenarios.",
+        "statistics": {
+          "character_count_output": 603,
+          "character_count_reasoning": 850,
+          "character_count_completion": 1453,
+          "tokens_output": 175,
+          "tokens_reasoning": 256,
+          "tokens_completions": 431
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer states to switch doors",
+            "met": true
+          }
+        ],
+        "feedback": "The output correctly states that the user should switch doors.",
+        "total_score": 1.0,
+        "original_question": "You're on a game show and are presented with three doors. Behind one is a luxury car, and behind the other two are donkeys. You pick one, but before you can open it the host opens one of the others revealing a donkey. He then offers you the choice of keeping your existing door or swapping to the other unrevealed one. What should you do to win a car?",
+        "original_response": "You should always switch.  \n\n\u2022 When you first pick a door, there\u2019s a 1/3 chance you\u2019ve chosen the car and a 2/3 chance you\u2019ve picked a donkey.  \n\u2022 The host then reveals a donkey behind one of the two doors you didn\u2019t pick.  \n\u2022 If your original choice was the car (1/3 chance), switching loses; if it was a donkey (2/3 chance), switching wins the car.  \n\nSo by switching you win with probability 2/3 (vs. 1/3 if you stay).",
+        "statistics": {
+          "character_count_output": 421,
+          "character_count_reasoning": 917,
+          "character_count_completion": 1338,
+          "tokens_output": 122,
+          "tokens_reasoning": 320,
+          "tokens_completions": 442
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer states to switch doors",
+            "met": true
+          }
+        ],
+        "feedback": "The output correctly states that the user should switch doors.",
+        "total_score": 1.0,
+        "original_question": "You're on a game show and are presented with three doors. Behind one is a luxury car, and behind the other two are donkeys. You pick one, but before you can open it the host opens one of the others revealing a donkey. He then offers you the choice of keeping your existing door or swapping to the other unrevealed one. What should you do to win a car?",
+        "original_response": "You should always switch.  \n  \n\u2022 When you first pick a door, the chance it hides the car is 1/3; the chance the car is behind one of the other two is 2/3.  \n\u2022 The host then opens a losing door among those two, but that doesn\u2019t change where the 2/3 probability \u201cmass\u201d sits\u2014 it all rides on the one remaining unopened door.  \n\u2022 If you stay, you win only when your original 1/3-chance pick was right.  \n\u2022 If you switch, you win whenever your original pick was wrong\u2014which happens with probability 2/3.  \n  \nSo by switching you double your odds of driving away with the car (2/3 vs. 1/3).",
+        "statistics": {
+          "character_count_output": 584,
+          "character_count_reasoning": 997,
+          "character_count_completion": 1581,
+          "tokens_output": 159,
+          "tokens_reasoning": 384,
+          "tokens_completions": 543
+        }
+      }
+    ]
+  }
+}

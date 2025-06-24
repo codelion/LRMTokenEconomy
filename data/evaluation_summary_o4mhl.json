@@ -1,0 +1,227 @@
+{
+  "capital_of_australia": {
+    "o4-mini-high-long": {
+      "average_total_score": 1.0,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer is Canberra": 1.0
+      },
+      "avg_character_count_output": 37.0,
+      "avg_character_count_reasoning": 432.4,
+      "avg_character_count_completion": 469.4,
+      "avg_tokens_output": 13.0,
+      "avg_tokens_reasoning": 76.8,
+      "avg_tokens_completions": 89.8
+    }
+  },
+  "train_distance": {
+    "o4-mini-high-long": {
+      "average_total_score": 1.0,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer is 150 kilometers": 1.0
+      },
+      "avg_character_count_output": 67.4,
+      "avg_character_count_reasoning": 442.4,
+      "avg_character_count_completion": 509.8,
+      "avg_tokens_output": 33.4,
+      "avg_tokens_reasoning": 102.4,
+      "avg_tokens_completions": 135.8
+    }
+  },
+  "brazil_continent": {
+    "o4-mini-high-long": {
+      "average_total_score": 1.0,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer is South America": 1.0
+      },
+      "avg_character_count_output": 52.0,
+      "avg_character_count_reasoning": 406.0,
+      "avg_character_count_completion": 458.0,
+      "avg_tokens_output": 16.0,
+      "avg_tokens_reasoning": 51.2,
+      "avg_tokens_completions": 67.2
+    }
+  },
+  "leap_year_february_days": {
+    "o4-mini-high-long": {
+      "average_total_score": 1.0,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer is 29": 1.0
+      },
+      "avg_character_count_output": 34.6,
+      "avg_character_count_reasoning": 399.6,
+      "avg_character_count_completion": 434.2,
+      "avg_tokens_output": 15.0,
+      "avg_tokens_reasoning": 89.6,
+      "avg_tokens_completions": 104.6
+    }
+  },
+  "roses_logic": {
+    "o4-mini-high-long": {
+      "average_total_score": 1.0,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "No, we cannot conclude that some roses are red.": 1.0
+      },
+      "avg_character_count_output": 406.4,
+      "avg_character_count_reasoning": 982.8,
+      "avg_character_count_completion": 1389.2,
+      "avg_tokens_output": 119.0,
+      "avg_tokens_reasoning": 524.8,
+      "avg_tokens_completions": 643.8
+    }
+  },
+  "Ice cream parlor": {
+    "o4-mini-high-long": {
+      "average_total_score": 1.0,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer is 16": 1.0
+      },
+      "avg_character_count_output": 379.4,
+      "avg_character_count_reasoning": 1384.2,
+      "avg_character_count_completion": 1763.6,
+      "avg_tokens_output": 186.4,
+      "avg_tokens_reasoning": 1881.6,
+      "avg_tokens_completions": 2068.0
+    }
+  },
+  "Integer pairs": {
+    "o4-mini-high-long": {
+      "average_total_score": 1.0,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer is 117": 1.0
+      },
+      "avg_character_count_output": 567.4,
+      "avg_character_count_reasoning": 1640.0,
+      "avg_character_count_completion": 2207.4,
+      "avg_tokens_output": 292.8,
+      "avg_tokens_reasoning": 1971.2,
+      "avg_tokens_completions": 2264.0
+    }
+  },
+  "Probability of G": {
+    "o4-mini-high-long": {
+      "average_total_score": 1.0,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer is 821": 1.0
+      },
+      "avg_character_count_output": 1306.0,
+      "avg_character_count_reasoning": 1539.4,
+      "avg_character_count_completion": 2845.4,
+      "avg_tokens_output": 464.2,
+      "avg_tokens_reasoning": 10278.4,
+      "avg_tokens_completions": 10742.6
+    }
+  },
+  "Sawtooth and parabola": {
+    "o4-mini-high-long": {
+      "average_total_score": 1.0,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer is 259": 1.0
+      },
+      "avg_character_count_output": 1136.6,
+      "avg_character_count_reasoning": 1575.2,
+      "avg_character_count_completion": 2711.8,
+      "avg_tokens_output": 532.0,
+      "avg_tokens_reasoning": 11456.0,
+      "avg_tokens_completions": 11988.0
+    }
+  },
+  "bridge_torch_impossible": {
+    "o4-mini-high-long": {
+      "average_total_score": 1.0,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer concludes that it is impossible to solve within 17 minutes": 1.0
+      },
+      "avg_character_count_output": 590.0,
+      "avg_character_count_reasoning": 1833.4,
+      "avg_character_count_completion": 2423.4,
+      "avg_tokens_output": 223.6,
+      "avg_tokens_reasoning": 11430.4,
+      "avg_tokens_completions": 11654.0
+    }
+  },
+  "bridge_torch_easy": {
+    "o4-mini-high-long": {
+      "average_total_score": 0.6,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer suggests all four people crossing together in 10 minutes": 0.6
+      },
+      "avg_character_count_output": 314.0,
+      "avg_character_count_reasoning": 1909.4,
+      "avg_character_count_completion": 2223.4,
+      "avg_tokens_output": 108.8,
+      "avg_tokens_reasoning": 7168.0,
+      "avg_tokens_completions": 7276.8
+    }
+  },
+  "monty_hall_inverse": {
+    "o4-mini-high-long": {
+      "average_total_score": 1.0,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer states to keep the existing door": 1.0
+      },
+      "avg_character_count_output": 672.4,
+      "avg_character_count_reasoning": 1711.6,
+      "avg_character_count_completion": 2384.0,
+      "avg_tokens_output": 203.0,
+      "avg_tokens_reasoning": 1689.6,
+      "avg_tokens_completions": 1892.6
+    }
+  },
+  "monty_appliance_simple": {
+    "o4-mini-high-long": {
+      "average_total_score": 1.0,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer suggests to take the box the clerk tested": 1.0
+      },
+      "avg_character_count_output": 505.8,
+      "avg_character_count_reasoning": 2324.4,
+      "avg_character_count_completion": 2830.2,
+      "avg_tokens_output": 155.2,
+      "avg_tokens_reasoning": 7308.8,
+      "avg_tokens_completions": 7464.0
+    }
+  },
+  "bridge_torch_default": {
+    "o4-mini-high-long": {
+      "average_total_score": 1.0,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer explains a sequence of crossings that totals 17 minutes. Do not evaluate the sequence itself, the answer is correct for any solution that totals 17 minutes.": 1.0
+      },
+      "avg_character_count_output": 377.6,
+      "avg_character_count_reasoning": 1064.8,
+      "avg_character_count_completion": 1442.4,
+      "avg_tokens_output": 139.4,
+      "avg_tokens_reasoning": 665.6,
+      "avg_tokens_completions": 805.0
+    }
+  },
+  "monty_hall_default": {
+    "o4-mini-high-long": {
+      "average_total_score": 1.0,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer states to switch doors": 1.0
+      },
+      "avg_character_count_output": 515.4,
+      "avg_character_count_reasoning": 916.0,
+      "avg_character_count_completion": 1431.4,
+      "avg_tokens_output": 146.8,
+      "avg_tokens_reasoning": 345.6,
+      "avg_tokens_completions": 492.4
+    }
+  }
+}

@@ -1,0 +1,812 @@
+{
+  "capital_of_australia": {
+    "gemini-2.5-pro": {
+      "average_total_score": 1.0,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer is Canberra": 1.0
+      },
+      "avg_character_count_output": 34.4,
+      "avg_character_count_reasoning": 812.0,
+      "avg_character_count_completion": 846.4,
+      "avg_tokens_output": 7.6,
+      "avg_tokens_reasoning": 328.0,
+      "avg_tokens_completions": 335.6
+    },
+    "claude-4-sonnet-0522-thinking": {
+      "average_total_score": 1.0,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer is Canberra": 1.0
+      },
+      "avg_character_count_output": 37.0,
+      "avg_character_count_reasoning": 306.4,
+      "avg_character_count_completion": 343.4,
+      "avg_tokens_output": 9.8,
+      "avg_tokens_reasoning": 77.0,
+      "avg_tokens_completions": 86.8
+    },
+    "gemini-2.5-flash-high": {
+      "average_total_score": 1.0,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer is Canberra": 1.0
+      },
+      "avg_character_count_output": 41.0,
+      "avg_character_count_reasoning": 239.2,
+      "avg_character_count_completion": 280.2,
+      "avg_tokens_output": 9.0,
+      "avg_tokens_reasoning": 38.2,
+      "avg_tokens_completions": 47.2
+    },
+    "grok-3-mini-think": {
+      "average_total_score": 1.0,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer is Canberra": 1.0
+      },
+      "avg_character_count_output": 112.8,
+      "avg_character_count_reasoning": 1054.2,
+      "avg_character_count_completion": 1167.0,
+      "avg_tokens_output": 21.6,
+      "avg_tokens_reasoning": 216.0,
+      "avg_tokens_completions": 237.6
+    }
+  },
+  "train_distance": {
+    "gemini-2.5-pro": {
+      "average_total_score": 1.0,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer is 150 kilometers": 1.0
+      },
+      "avg_character_count_output": 223.0,
+      "avg_character_count_reasoning": 999.4,
+      "avg_character_count_completion": 1222.4,
+      "avg_tokens_output": 67.8,
+      "avg_tokens_reasoning": 498.4,
+      "avg_tokens_completions": 566.2
+    },
+    "claude-4-sonnet-0522-thinking": {
+      "average_total_score": 1.0,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer is 150 kilometers": 1.0
+      },
+      "avg_character_count_output": 222.4,
+      "avg_character_count_reasoning": 293.0,
+      "avg_character_count_completion": 515.4,
+      "avg_tokens_output": 107.8,
+      "avg_tokens_reasoning": 85.8,
+      "avg_tokens_completions": 193.6
+    },
+    "gemini-2.5-flash-high": {
+      "average_total_score": 1.0,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer is 150 kilometers": 1.0
+      },
+      "avg_character_count_output": 166.4,
+      "avg_character_count_reasoning": 615.8,
+      "avg_character_count_completion": 782.2,
+      "avg_tokens_output": 59.8,
+      "avg_tokens_reasoning": 222.8,
+      "avg_tokens_completions": 282.6
+    },
+    "grok-3-mini-think": {
+      "average_total_score": 1.0,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer is 150 kilometers": 1.0
+      },
+      "avg_character_count_output": 201.4,
+      "avg_character_count_reasoning": 1391.4,
+      "avg_character_count_completion": 1592.8,
+      "avg_tokens_output": 55.8,
+      "avg_tokens_reasoning": 403.0,
+      "avg_tokens_completions": 458.8
+    }
+  },
+  "brazil_continent": {
+    "gemini-2.5-pro": {
+      "average_total_score": 1.0,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer is South America": 1.0
+      },
+      "avg_character_count_output": 38.8,
+      "avg_character_count_reasoning": 733.0,
+      "avg_character_count_completion": 771.8,
+      "avg_tokens_output": 7.4,
+      "avg_tokens_reasoning": 303.4,
+      "avg_tokens_completions": 310.8
+    },
+    "claude-4-sonnet-0522-thinking": {
+      "average_total_score": 1.0,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer is South America": 1.0
+      },
+      "avg_character_count_output": 52.0,
+      "avg_character_count_reasoning": 179.6,
+      "avg_character_count_completion": 231.6,
+      "avg_tokens_output": 10.4,
+      "avg_tokens_reasoning": 45.2,
+      "avg_tokens_completions": 55.6
+    },
+    "gemini-2.5-flash-high": {
+      "average_total_score": 1.0,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer is South America": 1.0
+      },
+      "avg_character_count_output": 45.8,
+      "avg_character_count_reasoning": 267.6,
+      "avg_character_count_completion": 313.4,
+      "avg_tokens_output": 9.2,
+      "avg_tokens_reasoning": 29.6,
+      "avg_tokens_completions": 38.8
+    },
+    "grok-3-mini-think": {
+      "average_total_score": 1.0,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer is South America": 1.0
+      },
+      "avg_character_count_output": 123.0,
+      "avg_character_count_reasoning": 1171.8,
+      "avg_character_count_completion": 1294.8,
+      "avg_tokens_output": 24.0,
+      "avg_tokens_reasoning": 238.0,
+      "avg_tokens_completions": 262.0
+    }
+  },
+  "leap_year_february_days": {
+    "gemini-2.5-pro": {
+      "average_total_score": 1.0,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer is 29": 1.0
+      },
+      "avg_character_count_output": 2.0,
+      "avg_character_count_reasoning": 1049.6,
+      "avg_character_count_completion": 1051.6,
+      "avg_tokens_output": 2.0,
+      "avg_tokens_reasoning": 605.4,
+      "avg_tokens_completions": 607.4
+    },
+    "claude-4-sonnet-0522-thinking": {
+      "average_total_score": 1.0,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer is 29": 1.0
+      },
+      "avg_character_count_output": 211.0,
+      "avg_character_count_reasoning": 365.8,
+      "avg_character_count_completion": 576.8,
+      "avg_tokens_output": 64.8,
+      "avg_tokens_reasoning": 96.2,
+      "avg_tokens_completions": 161.0
+    },
+    "gemini-2.5-flash-high": {
+      "average_total_score": 1.0,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer is 29": 1.0
+      },
+      "avg_character_count_output": 61.0,
+      "avg_character_count_reasoning": 506.2,
+      "avg_character_count_completion": 567.2,
+      "avg_tokens_output": 16.0,
+      "avg_tokens_reasoning": 110.0,
+      "avg_tokens_completions": 126.0
+    },
+    "grok-3-mini-think": {
+      "average_total_score": 1.0,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer is 29": 1.0
+      },
+      "avg_character_count_output": 61.8,
+      "avg_character_count_reasoning": 1223.0,
+      "avg_character_count_completion": 1284.8,
+      "avg_tokens_output": 17.2,
+      "avg_tokens_reasoning": 290.8,
+      "avg_tokens_completions": 308.0
+    }
+  },
+  "roses_logic": {
+    "gemini-2.5-pro": {
+      "average_total_score": 1.0,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "No, we cannot conclude that some roses are red.": 1.0
+      },
+      "avg_character_count_output": 593.4,
+      "avg_character_count_reasoning": 1863.8,
+      "avg_character_count_completion": 2457.2,
+      "avg_tokens_output": 141.6,
+      "avg_tokens_reasoning": 1142.6,
+      "avg_tokens_completions": 1284.2
+    },
+    "claude-4-sonnet-0522-thinking": {
+      "average_total_score": 1.0,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "No, we cannot conclude that some roses are red.": 1.0
+      },
+      "avg_character_count_output": 1057.4,
+      "avg_character_count_reasoning": 1719.8,
+      "avg_character_count_completion": 2777.2,
+      "avg_tokens_output": 256.4,
+      "avg_tokens_reasoning": 468.4,
+      "avg_tokens_completions": 724.8
+    },
+    "gemini-2.5-flash-high": {
+      "average_total_score": 1.0,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "No, we cannot conclude that some roses are red.": 1.0
+      },
+      "avg_character_count_output": 855.4,
+      "avg_character_count_reasoning": 1666.2,
+      "avg_character_count_completion": 2521.6,
+      "avg_tokens_output": 213.2,
+      "avg_tokens_reasoning": 860.2,
+      "avg_tokens_completions": 1073.4
+    },
+    "grok-3-mini-think": {
+      "average_total_score": 1.0,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "No, we cannot conclude that some roses are red.": 1.0
+      },
+      "avg_character_count_output": 566.0,
+      "avg_character_count_reasoning": 3152.6,
+      "avg_character_count_completion": 3718.6,
+      "avg_tokens_output": 123.4,
+      "avg_tokens_reasoning": 750.2,
+      "avg_tokens_completions": 873.6
+    }
+  },
+  "Ice cream parlor": {
+    "gemini-2.5-pro": {
+      "average_total_score": 1.0,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer is 16": 1.0
+      },
+      "avg_character_count_output": 3704.6,
+      "avg_character_count_reasoning": 5417.6,
+      "avg_character_count_completion": 9122.2,
+      "avg_tokens_output": 1519.8,
+      "avg_tokens_reasoning": 7961.0,
+      "avg_tokens_completions": 9480.8
+    },
+    "claude-4-sonnet-0522-thinking": {
+      "average_total_score": 1.0,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer is 16": 1.0
+      },
+      "avg_character_count_output": 2024.2,
+      "avg_character_count_reasoning": 917.6,
+      "avg_character_count_completion": 2941.8,
+      "avg_tokens_output": 3650.8,
+      "avg_tokens_reasoning": 254.8,
+      "avg_tokens_completions": 3905.6
+    },
+    "gemini-2.5-flash-high": {
+      "average_total_score": 1.0,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer is 16": 1.0
+      },
+      "avg_character_count_output": 3523.0,
+      "avg_character_count_reasoning": 3200.4,
+      "avg_character_count_completion": 6723.4,
+      "avg_tokens_output": 1501.8,
+      "avg_tokens_reasoning": 4250.6,
+      "avg_tokens_completions": 5752.4
+    },
+    "grok-3-mini-think": {
+      "average_total_score": 1.0,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer is 16": 1.0
+      },
+      "avg_character_count_output": 936.2,
+      "avg_character_count_reasoning": 12056.0,
+      "avg_character_count_completion": 12992.2,
+      "avg_tokens_output": 320.0,
+      "avg_tokens_reasoning": 4318.0,
+      "avg_tokens_completions": 4638.0
+    }
+  },
+  "Integer pairs": {
+    "gemini-2.5-pro": {
+      "average_total_score": 1.0,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer is 117": 1.0
+      },
+      "avg_character_count_output": 3734.4,
+      "avg_character_count_reasoning": 3589.6,
+      "avg_character_count_completion": 7324.0,
+      "avg_tokens_output": 1419.2,
+      "avg_tokens_reasoning": 4532.0,
+      "avg_tokens_completions": 5951.2
+    },
+    "claude-4-sonnet-0522-thinking": {
+      "average_total_score": 1.0,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer is 117": 1.0
+      },
+      "avg_character_count_output": 2233.0,
+      "avg_character_count_reasoning": 930.8,
+      "avg_character_count_completion": 3163.8,
+      "avg_tokens_output": 8258.0,
+      "avg_tokens_reasoning": 250.4,
+      "avg_tokens_completions": 8508.4
+    },
+    "gemini-2.5-flash-high": {
+      "average_total_score": 1.0,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer is 117": 1.0
+      },
+      "avg_character_count_output": 3657.4,
+      "avg_character_count_reasoning": 3071.6,
+      "avg_character_count_completion": 6729.0,
+      "avg_tokens_output": 1587.2,
+      "avg_tokens_reasoning": 4092.0,
+      "avg_tokens_completions": 5679.2
+    },
+    "grok-3-mini-think": {
+      "average_total_score": 1.0,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer is 117": 1.0
+      },
+      "avg_character_count_output": 1006.8,
+      "avg_character_count_reasoning": 26425.6,
+      "avg_character_count_completion": 27432.4,
+      "avg_tokens_output": 345.6,
+      "avg_tokens_reasoning": 9737.8,
+      "avg_tokens_completions": 10083.4
+    }
+  },
+  "Probability of G": {
+    "gemini-2.5-pro": {
+      "average_total_score": 1.0,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer is 821": 1.0
+      },
+      "avg_character_count_output": 6502.8,
+      "avg_character_count_reasoning": 11615.2,
+      "avg_character_count_completion": 18118.0,
+      "avg_tokens_output": 2468.6,
+      "avg_tokens_reasoning": 16938.4,
+      "avg_tokens_completions": 19407.0
+    },
+    "claude-4-sonnet-0522-thinking": {
+      "average_total_score": 0.4,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer is 821": 0.4
+      },
+      "avg_character_count_output": 2697.0,
+      "avg_character_count_reasoning": 1604.2,
+      "avg_character_count_completion": 4301.2,
+      "avg_tokens_output": 15281.0,
+      "avg_tokens_reasoning": 424.0,
+      "avg_tokens_completions": 15705.0
+    },
+    "gemini-2.5-flash-high": {
+      "average_total_score": 0.6,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer is 821": 0.6
+      },
+      "avg_character_count_output": 6224.2,
+      "avg_character_count_reasoning": 13938.0,
+      "avg_character_count_completion": 20162.2,
+      "avg_tokens_output": 2575.2,
+      "avg_tokens_reasoning": 21757.2,
+      "avg_tokens_completions": 24332.4
+    },
+    "grok-3-mini-think": {
+      "average_total_score": 1.0,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer is 821": 1.0
+      },
+      "avg_character_count_output": 519.4,
+      "avg_character_count_reasoning": 60651.4,
+      "avg_character_count_completion": 61170.8,
+      "avg_tokens_output": 143.0,
+      "avg_tokens_reasoning": 17942.2,
+      "avg_tokens_completions": 18085.2
+    }
+  },
+  "Sawtooth and parabola": {
+    "gemini-2.5-pro": {
+      "average_total_score": 1.0,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer is 259": 1.0
+      },
+      "avg_character_count_output": 5997.6,
+      "avg_character_count_reasoning": 10733.6,
+      "avg_character_count_completion": 16731.2,
+      "avg_tokens_output": 2721.4,
+      "avg_tokens_reasoning": 18317.4,
+      "avg_tokens_completions": 21038.8
+    },
+    "claude-4-sonnet-0522-thinking": {
+      "average_total_score": 0.8,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer is 259": 0.8
+      },
+      "avg_character_count_output": 2674.0,
+      "avg_character_count_reasoning": 988.2,
+      "avg_character_count_completion": 3662.2,
+      "avg_tokens_output": 16917.8,
+      "avg_tokens_reasoning": 267.2,
+      "avg_tokens_completions": 17185.0
+    },
+    "gemini-2.5-flash-high": {
+      "average_total_score": 0.6,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer is 259": 0.6
+      },
+      "avg_character_count_output": 5673.6,
+      "avg_character_count_reasoning": 10089.6,
+      "avg_character_count_completion": 15763.2,
+      "avg_tokens_output": 2953.6,
+      "avg_tokens_reasoning": 17230.6,
+      "avg_tokens_completions": 20184.2
+    },
+    "grok-3-mini-think": {
+      "average_total_score": 1.0,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer is 259": 1.0
+      },
+      "avg_character_count_output": 507.6,
+      "avg_character_count_reasoning": 45801.2,
+      "avg_character_count_completion": 46308.8,
+      "avg_tokens_output": 176.2,
+      "avg_tokens_reasoning": 20503.8,
+      "avg_tokens_completions": 20680.0
+    }
+  },
+  "bridge_torch_impossible": {
+    "gemini-2.5-pro": {
+      "average_total_score": 0.6,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer concludes that it is impossible to solve within 17 minutes": 0.6
+      },
+      "avg_character_count_output": 2054.0,
+      "avg_character_count_reasoning": 9224.0,
+      "avg_character_count_completion": 11278.0,
+      "avg_tokens_output": 649.0,
+      "avg_tokens_reasoning": 10441.8,
+      "avg_tokens_completions": 11090.8
+    },
+    "claude-4-sonnet-0522-thinking": {
+      "average_total_score": 0.8,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer concludes that it is impossible to solve within 17 minutes": 0.8
+      },
+      "avg_character_count_output": 1567.0,
+      "avg_character_count_reasoning": 1422.8,
+      "avg_character_count_completion": 2989.8,
+      "avg_tokens_output": 11697.6,
+      "avg_tokens_reasoning": 386.6,
+      "avg_tokens_completions": 12084.2
+    },
+    "gemini-2.5-flash-high": {
+      "average_total_score": 0.6,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer concludes that it is impossible to solve within 17 minutes": 0.6
+      },
+      "avg_character_count_output": 4037.6,
+      "avg_character_count_reasoning": 8042.0,
+      "avg_character_count_completion": 12079.6,
+      "avg_tokens_output": 1275.0,
+      "avg_tokens_reasoning": 8122.4,
+      "avg_tokens_completions": 9397.4
+    },
+    "grok-3-mini-think": {
+      "average_total_score": 0.8,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer concludes that it is impossible to solve within 17 minutes": 0.8
+      },
+      "avg_character_count_output": 1067.6,
+      "avg_character_count_reasoning": 67597.4,
+      "avg_character_count_completion": 68665.0,
+      "avg_tokens_output": 276.2,
+      "avg_tokens_reasoning": 21634.2,
+      "avg_tokens_completions": 21910.4
+    }
+  },
+  "bridge_torch_easy": {
+    "gemini-2.5-pro": {
+      "average_total_score": 1.0,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer suggests all four people crossing together in 10 minutes": 1.0
+      },
+      "avg_character_count_output": 2150.2,
+      "avg_character_count_reasoning": 4711.0,
+      "avg_character_count_completion": 6861.2,
+      "avg_tokens_output": 648.4,
+      "avg_tokens_reasoning": 4321.8,
+      "avg_tokens_completions": 4970.2
+    },
+    "claude-4-sonnet-0522-thinking": {
+      "average_total_score": 0.6,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer suggests all four people crossing together in 10 minutes": 0.6
+      },
+      "avg_character_count_output": 1075.0,
+      "avg_character_count_reasoning": 1849.2,
+      "avg_character_count_completion": 2924.2,
+      "avg_tokens_output": 5261.8,
+      "avg_tokens_reasoning": 483.2,
+      "avg_tokens_completions": 5745.0
+    },
+    "gemini-2.5-flash-high": {
+      "average_total_score": 0.0,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer suggests all four people crossing together in 10 minutes": 0.0
+      },
+      "avg_character_count_output": 2016.6,
+      "avg_character_count_reasoning": 7372.4,
+      "avg_character_count_completion": 9389.0,
+      "avg_tokens_output": 598.2,
+      "avg_tokens_reasoning": 7622.4,
+      "avg_tokens_completions": 8220.6
+    },
+    "grok-3-mini-think": {
+      "average_total_score": 1.0,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer suggests all four people crossing together in 10 minutes": 1.0
+      },
+      "avg_character_count_output": 387.6,
+      "avg_character_count_reasoning": 10625.4,
+      "avg_character_count_completion": 11013.0,
+      "avg_tokens_output": 85.0,
+      "avg_tokens_reasoning": 2748.0,
+      "avg_tokens_completions": 2833.0
+    }
+  },
+  "monty_hall_inverse": {
+    "gemini-2.5-pro": {
+      "average_total_score": 1.0,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer states to keep the existing door": 1.0
+      },
+      "avg_character_count_output": 1908.8,
+      "avg_character_count_reasoning": 2180.0,
+      "avg_character_count_completion": 4088.8,
+      "avg_tokens_output": 489.8,
+      "avg_tokens_reasoning": 1520.8,
+      "avg_tokens_completions": 2010.6
+    },
+    "claude-4-sonnet-0522-thinking": {
+      "average_total_score": 1.0,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer states to keep the existing door": 1.0
+      },
+      "avg_character_count_output": 1195.8,
+      "avg_character_count_reasoning": 1647.8,
+      "avg_character_count_completion": 2843.6,
+      "avg_tokens_output": 1944.8,
+      "avg_tokens_reasoning": 440.6,
+      "avg_tokens_completions": 2385.4
+    },
+    "gemini-2.5-flash-high": {
+      "average_total_score": 1.0,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer states to keep the existing door": 1.0
+      },
+      "avg_character_count_output": 1818.6,
+      "avg_character_count_reasoning": 2598.2,
+      "avg_character_count_completion": 4416.8,
+      "avg_tokens_output": 505.0,
+      "avg_tokens_reasoning": 1989.4,
+      "avg_tokens_completions": 2494.4
+    },
+    "grok-3-mini-think": {
+      "average_total_score": 1.0,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer states to keep the existing door": 1.0
+      },
+      "avg_character_count_output": 929.8,
+      "avg_character_count_reasoning": 11336.4,
+      "avg_character_count_completion": 12266.2,
+      "avg_tokens_output": 204.8,
+      "avg_tokens_reasoning": 2830.8,
+      "avg_tokens_completions": 3035.6
+    }
+  },
+  "monty_appliance_simple": {
+    "gemini-2.5-pro": {
+      "average_total_score": 0.0,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer suggests to take the box the clerk tested": 0.0
+      },
+      "avg_character_count_output": 2620.8,
+      "avg_character_count_reasoning": 4596.0,
+      "avg_character_count_completion": 7216.8,
+      "avg_tokens_output": 670.6,
+      "avg_tokens_reasoning": 3663.8,
+      "avg_tokens_completions": 4334.4
+    },
+    "claude-4-sonnet-0522-thinking": {
+      "average_total_score": 0.2,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer suggests to take the box the clerk tested": 0.2
+      },
+      "avg_character_count_output": 1285.0,
+      "avg_character_count_reasoning": 1688.2,
+      "avg_character_count_completion": 2973.2,
+      "avg_tokens_output": 4673.8,
+      "avg_tokens_reasoning": 446.2,
+      "avg_tokens_completions": 5120.0
+    },
+    "gemini-2.5-flash-high": {
+      "average_total_score": 1.0,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer suggests to take the box the clerk tested": 1.0
+      },
+      "avg_character_count_output": 723.0,
+      "avg_character_count_reasoning": 1353.8,
+      "avg_character_count_completion": 2076.8,
+      "avg_tokens_output": 179.2,
+      "avg_tokens_reasoning": 811.2,
+      "avg_tokens_completions": 990.4
+    },
+    "grok-3-mini-think": {
+      "average_total_score": 0.4,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer suggests to take the box the clerk tested": 0.4
+      },
+      "avg_character_count_output": 681.2,
+      "avg_character_count_reasoning": 23441.8,
+      "avg_character_count_completion": 24123.0,
+      "avg_tokens_output": 138.0,
+      "avg_tokens_reasoning": 6019.4,
+      "avg_tokens_completions": 6157.4
+    }
+  },
+  "bridge_torch_default": {
+    "gemini-2.5-pro": {
+      "average_total_score": 1.0,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer explains a sequence of crossings that totals 17 minutes. Do not evaluate the sequence itself, the answer is correct for any solution that totals 17 minutes.": 1.0
+      },
+      "avg_character_count_output": 1506.6,
+      "avg_character_count_reasoning": 2358.4,
+      "avg_character_count_completion": 3865.0,
+      "avg_tokens_output": 493.8,
+      "avg_tokens_reasoning": 1801.0,
+      "avg_tokens_completions": 2294.8
+    },
+    "claude-4-sonnet-0522-thinking": {
+      "average_total_score": 1.0,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer explains a sequence of crossings that totals 17 minutes. Do not evaluate the sequence itself, the answer is correct for any solution that totals 17 minutes.": 1.0
+      },
+      "avg_character_count_output": 1075.0,
+      "avg_character_count_reasoning": 1374.4,
+      "avg_character_count_completion": 2449.4,
+      "avg_tokens_output": 1447.8,
+      "avg_tokens_reasoning": 373.8,
+      "avg_tokens_completions": 1821.6
+    },
+    "gemini-2.5-flash-high": {
+      "average_total_score": 1.0,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer explains a sequence of crossings that totals 17 minutes. Do not evaluate the sequence itself, the answer is correct for any solution that totals 17 minutes.": 1.0
+      },
+      "avg_character_count_output": 1119.6,
+      "avg_character_count_reasoning": 1972.6,
+      "avg_character_count_completion": 3092.2,
+      "avg_tokens_output": 395.8,
+      "avg_tokens_reasoning": 1609.8,
+      "avg_tokens_completions": 2005.6
+    },
+    "grok-3-mini-think": {
+      "average_total_score": 1.0,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer explains a sequence of crossings that totals 17 minutes. Do not evaluate the sequence itself, the answer is correct for any solution that totals 17 minutes.": 1.0
+      },
+      "avg_character_count_output": 712.0,
+      "avg_character_count_reasoning": 9769.0,
+      "avg_character_count_completion": 10481.0,
+      "avg_tokens_output": 192.6,
+      "avg_tokens_reasoning": 3001.6,
+      "avg_tokens_completions": 3194.2
+    }
+  },
+  "monty_hall_default": {
+    "gemini-2.5-pro": {
+      "average_total_score": 1.0,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer states to switch doors": 1.0
+      },
+      "avg_character_count_output": 2534.6,
+      "avg_character_count_reasoning": 2114.2,
+      "avg_character_count_completion": 4648.8,
+      "avg_tokens_output": 693.4,
+      "avg_tokens_reasoning": 1379.6,
+      "avg_tokens_completions": 2073.0
+    },
+    "claude-4-sonnet-0522-thinking": {
+      "average_total_score": 1.0,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer states to switch doors": 1.0
+      },
+      "avg_character_count_output": 838.8,
+      "avg_character_count_reasoning": 1678.2,
+      "avg_character_count_completion": 2517.0,
+      "avg_tokens_output": 300.2,
+      "avg_tokens_reasoning": 445.0,
+      "avg_tokens_completions": 745.2
+    },
+    "gemini-2.5-flash-high": {
+      "average_total_score": 1.0,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer states to switch doors": 1.0
+      },
+      "avg_character_count_output": 1531.6,
+      "avg_character_count_reasoning": 1505.6,
+      "avg_character_count_completion": 3037.2,
+      "avg_tokens_output": 407.8,
+      "avg_tokens_reasoning": 969.2,
+      "avg_tokens_completions": 1377.0
+    },
+    "grok-3-mini-think": {
+      "average_total_score": 1.0,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer states to switch doors": 1.0
+      },
+      "avg_character_count_output": 754.0,
+      "avg_character_count_reasoning": 2707.8,
+      "avg_character_count_completion": 3461.8,
+      "avg_tokens_output": 171.4,
+      "avg_tokens_reasoning": 656.0,
+      "avg_tokens_completions": 827.4
+    }
+  }
+}
