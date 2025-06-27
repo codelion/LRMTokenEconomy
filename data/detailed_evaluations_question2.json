@@ -1,0 +1,1228 @@
+{
+  "AIME2025I_Problem_2": {
+    "o4-mini-high-long": [
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is 49",
+            "met": true
+          }
+        ],
+        "feedback": "The output correctly identifies the sum as 49.",
+        "total_score": 1.0,
+        "original_question": "Find the sum of all positive integers $n$ such that $n+2$ divides the product $3(n+3)(n^2+9).$",
+        "original_response": "We set d = n+2.  Then n = d\u22122 and\n\n\u20033(n+3)(n\u00b2+9)\n= 3(d+1)( (d\u22122)\u00b2+9 )\n\u2261 3\u00b71\u00b713 \u2261 39 (mod d).\n\nHence d\u222339, so d\u2208{1,3,13,39}.  Since n>0 we take d=3,13,39, giving n=d\u22122=1,11,37.  Their sum is\n\n1+11+37=49.",
+        "statistics": {
+          "character_count_output": 202,
+          "character_count_reasoning": 1448,
+          "character_count_completion": 1650,
+          "tokens_output": 132,
+          "tokens_reasoning": 1536,
+          "tokens_completions": 1668
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is 49",
+            "met": true
+          }
+        ],
+        "feedback": "The output correctly identifies the sum as 49.",
+        "total_score": 1.0,
+        "original_question": "Find the sum of all positive integers $n$ such that $n+2$ divides the product $3(n+3)(n^2+9).$",
+        "original_response": "Set d=n+2.  Then\n\n\u20023(n+3)(n\u00b2+9)=3(d+1)((d\u22122)\u00b2+9)=3(d+1)(d\u00b2\u22124d+13)\u22613\u00b71\u00b713=39\u2002(mod d),\n\nso d|39.  The positive divisors d\u22653 of 39 are 3,13,39, giving n=d\u22122=1,11,37.  Their sum is  \n1+11+37=49.  \n\nAnswer: 49.",
+        "statistics": {
+          "character_count_output": 205,
+          "character_count_reasoning": 1326,
+          "character_count_completion": 1531,
+          "tokens_output": 121,
+          "tokens_reasoning": 1472,
+          "tokens_completions": 1593
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is 49",
+            "met": true
+          }
+        ],
+        "feedback": "The output correctly identifies the sum as 49.",
+        "total_score": 1.0,
+        "original_question": "Find the sum of all positive integers $n$ such that $n+2$ divides the product $3(n+3)(n^2+9).$",
+        "original_response": "We set k=n+2, so n=k\u22122 and the divisibility becomes\n  k\u2006|\u20063(k+1)( (k\u22122)\u00b2+9 )=3(k+1)(k\u00b2\u22124k+13).\n  Modulo k this is \u22613\u00b71\u00b713=39, hence k|39.  Since n>0\u21d2k\u22653, the only possibilities are\n  k=3,13,39 \u21d2 n=1,11,37.\nThus the sum is 1+11+37=49.",
+        "statistics": {
+          "character_count_output": 233,
+          "character_count_reasoning": 1358,
+          "character_count_completion": 1591,
+          "tokens_output": 126,
+          "tokens_reasoning": 1088,
+          "tokens_completions": 1214
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is 49",
+            "met": true
+          }
+        ],
+        "feedback": "The model correctly identified the sum as 49.",
+        "total_score": 1.0,
+        "original_question": "Find the sum of all positive integers $n$ such that $n+2$ divides the product $3(n+3)(n^2+9).$",
+        "original_response": "To have \\(n+2\\mid 3(n+3)(n^2+9)\\), set \\(d=n+2\\).  Then modulo \\(d\\), \\(n\\equiv-2\\) so\n\\[\n3(n+3)(n^2+9)\\equiv3\\cdot1\\cdot13=39\\pmod d.\n\\]\nHence \\(d\\mid39\\), and since \\(n>0\\), \\(d=n+2\\in\\{3,13,39\\}\\), giving \\(n\\in\\{1,11,37\\}\\).  Their sum is\n\\[\n1+11+37=49.\n\\]",
+        "statistics": {
+          "character_count_output": 260,
+          "character_count_reasoning": 1303,
+          "character_count_completion": 1563,
+          "tokens_output": 151,
+          "tokens_reasoning": 1472,
+          "tokens_completions": 1623
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is 49",
+            "met": true
+          }
+        ],
+        "feedback": "The output correctly identifies the sum as 49.",
+        "total_score": 1.0,
+        "original_question": "Find the sum of all positive integers $n$ such that $n+2$ divides the product $3(n+3)(n^2+9).$",
+        "original_response": "To have   \n(n+2) | 3(n+3)(n^2+9)   \nset d=n+2 \u21d2 n=d\u22122.  Then n+3=d+1, n^2+9=(d\u22122)^2+9=d^2\u22124d+13, so   \n3(n+3)(n^2+9)=3(d+1)(d^2\u22124d+13)\u22613\u00b71\u00b713=39 (mod\u2009d).   \nHence d|39, d>2 \u21d2 d\u2208{3,13,39} \u21d2 n\u2208{1,11,37}, sum = 1+11+37 = 49.",
+        "statistics": {
+          "character_count_output": 221,
+          "character_count_reasoning": 1269,
+          "character_count_completion": 1490,
+          "tokens_output": 153,
+          "tokens_reasoning": 1280,
+          "tokens_completions": 1433
+        }
+      }
+    ],
+    "gemini-2.5-pro": [
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is 49",
+            "met": true
+          }
+        ],
+        "feedback": "The model correctly identified the sum of all positive integers n as 49.",
+        "total_score": 1.0,
+        "original_question": "Find the sum of all positive integers $n$ such that $n+2$ divides the product $3(n+3)(n^2+9).$",
+        "original_response": "Let the given condition be\n$$n+2 \\mid 3(n+3)(n^2+9)$$\nWe are looking for the sum of all positive integers $n$ that satisfy this condition.\n\nWe can use the property of divisibility that if $a \\mid b$, then for any integer $k$, $a \\mid (b - k \\cdot a)$. This is the basis of the polynomial remainder theorem.\nLet $P(n) = 3(n+3)(n^2+9)$. The condition is $n+2 \\mid P(n)$.\n\nWe can analyze the expression modulo $n+2$.\nWorking modulo $n+2$, we have $n \\equiv -2 \\pmod{n+2}$.\nWe can substitute $n=-2$ into the expression $3(n+3)(n^2+9)$ to find the remainder when it is divided by $n+2$.\n$$3(n+3)(n^2+9) \\equiv 3((-2)+3)((-2)^2+9) \\pmod{n+2}$$\n$$ \\equiv 3(1)(4+9) \\pmod{n+2}$$\n$$ \\equiv 3(13) \\pmod{n+2}$$\n$$ \\equiv 39 \\pmod{n+2}$$\nThe statement $n+2 \\mid 3(n+3)(n^2+9)$ means that the remainder is 0. So, we must have\n$$n+2 \\mid 39$$\nThis means that $n+2$ must be a divisor of 39.\n\nThe divisors of 39 are $1, 3, 13, 39$.\nSince $n$ is a positive integer, $n \\ge 1$.\nTherefore, $n+2 \\ge 1+2 = 3$.\nSo, $n+2$ must be a divisor of 39 that is greater than or equal to 3.\n\nThe possible values for $n+2$ are $3, 13, 39$.\nWe can now find the corresponding values of $n$:\n1. If $n+2 = 3$, then $n = 3-2 = 1$.\n2. If $n+2 = 13$, then $n = 13-2 = 11$.\n3. If $n+2 = 39$, then $n = 39-2 = 37$.\n\nThese are all the positive integers $n$ that satisfy the condition. The problem asks for the sum of all such positive integers $n$.\nSum = $1 + 11 + 37 = 49$.\n\n",
+        "statistics": {
+          "character_count_output": 1434,
+          "character_count_reasoning": 1869,
+          "character_count_completion": 3303,
+          "tokens_output": 598,
+          "tokens_reasoning": 1862,
+          "tokens_completions": 2460
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is 49",
+            "met": true
+          }
+        ],
+        "feedback": "The model correctly identified the sum of all positive integers n as 49.",
+        "total_score": 1.0,
+        "original_question": "Find the sum of all positive integers $n$ such that $n+2$ divides the product $3(n+3)(n^2+9).$",
+        "original_response": "Let the given condition be $n+2 \\mid 3(n+3)(n^2+9)$.\nWe are looking for the sum of all positive integers $n$ that satisfy this condition.\n\nLet the expression be $P(n) = 3(n+3)(n^2+9)$.\nWe can use modular arithmetic to analyze the divisibility condition.\nThe condition $n+2 \\mid P(n)$ can be written as $P(n) \\equiv 0 \\pmod{n+2}$.\n\nWe can evaluate the components of the expression modulo $n+2$.\nFirst, note that $n \\equiv -2 \\pmod{n+2}$.\nNow we can substitute this into the expression for $P(n)$:\n1. For the term $(n+3)$:\n$n+3 \\equiv (-2)+3 \\equiv 1 \\pmod{n+2}$.\n\n2. For the term $(n^2+9)$:\n$n^2+9 \\equiv (-2)^2+9 \\pmod{n+2}$.\n$n^2+9 \\equiv 4+9 \\pmod{n+2}$.\n$n^2+9 \\equiv 13 \\pmod{n+2}$.\n\nNow, we substitute these results back into the expression for $P(n)$:\n$P(n) = 3(n+3)(n^2+9) \\equiv 3(1)(13) \\pmod{n+2}$.\n$P(n) \\equiv 39 \\pmod{n+2}$.\n\nFor the condition $n+2 \\mid P(n)$ to hold, the remainder of the division of $P(n)$ by $n+2$ must be 0.\nSo, we must have $P(n) \\equiv 0 \\pmod{n+2}$.\nThis implies that $39 \\equiv 0 \\pmod{n+2}$.\nIn other words, $n+2$ must be a divisor of 39.\n\nThe divisors of 39 are 1, 3, 13, and 39. Since the problem specifies that $n$ is a positive integer, $n \\ge 1$.\nThis implies that $n+2 \\ge 1+2=3$.\nSo, we must consider the divisors of 39 that are greater than or equal to 3.\nThe possible values for $n+2$ are 3, 13, and 39.\n\nLet's find the corresponding value of $n$ for each case:\n1. If $n+2 = 3$, then $n = 3-2 = 1$. This is a positive integer.\n2. If $n+2 = 13$, then $n = 13-2 = 11$. This is a positive integer.\n3. If $n+2 = 39$, then $n = 39-2 = 37$. This is a positive integer.\n\nSo, the positive integers $n$ that satisfy the condition are 1, 11, and 37.\n\nThe question asks for the sum of all such positive integers $n$.\nSum = $1 + 11 + 37$.\nSum = $12 + 37$.\nSum = 49.\n\nTo verify, we can check one of the values, for instance $n=37$:\n$n+2 = 39$.\nThe product is $3(37+3)(37^2+9) = 3(40)(1369+9) = 3(40)(1378)$.\nWe need to check if 39 divides this product.\n$39 = 3 \\times 13$.\nThe product $3(40)(1378)$ is clearly divisible by 3.\nTo check for divisibility by 13, we can check the factors:\n$40 = 3 \\times 13 + 1$.\n$1378 = 1300 + 78 = 13 \\times 100 + 13 \\times 6 = 13 \\times 106$.\nSince $1378$ is a multiple of 13, the entire product is divisible by $3 \\times 13 = 39$. So $n=37$ is a valid solution. The other values can be checked similarly.\n\nThe set of all positive integers $n$ satisfying the condition is $\\{1, 11, 37\\}$.\nThe sum of these integers is $1+11+37 = 49$.\n\n",
+        "statistics": {
+          "character_count_output": 2502,
+          "character_count_reasoning": 3376,
+          "character_count_completion": 5878,
+          "tokens_output": 1042,
+          "tokens_reasoning": 5088,
+          "tokens_completions": 6130
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is 49",
+            "met": true
+          }
+        ],
+        "feedback": "The model correctly identified the sum of all positive integers n as 49.",
+        "total_score": 1.0,
+        "original_question": "Find the sum of all positive integers $n$ such that $n+2$ divides the product $3(n+3)(n^2+9).$",
+        "original_response": "Let the given condition be that $n+2$ divides the product $3(n+3)(n^2+9)$. We are looking for the sum of all positive integers $n$ that satisfy this condition.\n\nThe condition can be written as:\n$$n+2 \\mid 3(n+3)(n^2+9)$$\n\nWe can use the property of divisibility that if $a \\mid b$, then $b \\equiv 0 \\pmod{a}$.\nIn our case, this means $3(n+3)(n^2+9) \\equiv 0 \\pmod{n+2}$.\n\nWe can evaluate the expression $3(n+3)(n^2+9)$ modulo $n+2$.\nWe know that $n \\equiv -2 \\pmod{n+2}$.\nWe can substitute $n=-2$ into the expression to find the remainder when $3(n+3)(n^2+9)$ is divided by $n+2$.\n\nLet $P(n) = 3(n+3)(n^2+9)$.\nThe remainder of $P(n)$ when divided by $n+2$ is $P(-2)$.\n$P(-2) = 3((-2)+3)((-2)^2+9)$\n$P(-2) = 3(1)(4+9)$\n$P(-2) = 3(13)$\n$P(-2) = 39$.\n\nSo, we have $3(n+3)(n^2+9) \\equiv 39 \\pmod{n+2}$.\nFor $n+2$ to divide $3(n+3)(n^2+9)$, the remainder must be 0.\nTherefore, we must have $39 \\equiv 0 \\pmod{n+2}$.\nThis means that $n+2$ must be a divisor of 39.\n\nThe divisors of 39 are $\\pm 1, \\pm 3, \\pm 13, \\pm 39$.\nThe problem states that $n$ is a positive integer, which means $n \\ge 1$.\nThis implies that $n+2$ must be an integer greater than or equal to $1+2=3$.\n\nSo we are looking for the divisors of 39 that are greater than or equal to 3.\nThe positive divisors of 39 are $1, 3, 13, 39$.\nThe divisors that satisfy the condition $n+2 \\ge 3$ are $3, 13, 39$.\n\nWe set $n+2$ equal to each of these values to find the possible values of $n$:\n1. If $n+2 = 3$, then $n = 3 - 2 = 1$. This is a positive integer.\n2. If $n+2 = 13$, then $n = 13 - 2 = 11$. This is a positive integer.\n3. If $n+2 = 39$, then $n = 39 - 2 = 37$. This is a positive integer.\n\nThe set of all positive integers $n$ that satisfy the condition is $\\{1, 11, 37\\}$.\nThe question asks for the sum of all such positive integers $n$.\nSum = $1 + 11 + 37 = 49$.\n\n",
+        "statistics": {
+          "character_count_output": 1825,
+          "character_count_reasoning": 3222,
+          "character_count_completion": 5047,
+          "tokens_output": 753,
+          "tokens_reasoning": 4107,
+          "tokens_completions": 4860
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is 49",
+            "met": true
+          }
+        ],
+        "feedback": "The model correctly identified the sum of all positive integers n as 49.",
+        "total_score": 1.0,
+        "original_question": "Find the sum of all positive integers $n$ such that $n+2$ divides the product $3(n+3)(n^2+9).$",
+        "original_response": "Let the given condition be $n+2$ divides $3(n+3)(n^2+9)$.\nWe are looking for the sum of all positive integers $n$ that satisfy this condition.\n\nLet $P(n) = 3(n+3)(n^2+9)$. The condition is $n+2 | P(n)$.\n\nWe can use the Polynomial Remainder Theorem. For a polynomial $P(x)$, the remainder upon division by $x-a$ is $P(a)$.\nIn our case, the polynomial is $P(n) = 3(n+3)(n^2+9)$ in the variable $n$, and the divisor is $n+2$, which can be written as $n-(-2)$. So, $a=-2$.\n\nThe remainder when $P(n)$ is divided by $n+2$ is $P(-2)$.\nLet's calculate this remainder:\n$P(-2) = 3((-2)+3)((-2)^2+9)$\n$P(-2) = 3(1)(4+9)$\n$P(-2) = 3(13)$\n$P(-2) = 39$.\n\nSo, we can write $P(n)$ in the form $P(n) = Q(n)(n+2) + 39$, where $Q(n)$ is the quotient polynomial.\nFor $n+2$ to divide $P(n)$, it must be that $n+2$ divides $Q(n)(n+2) + 39$.\nSince $n+2$ clearly divides $Q(n)(n+2)$, the condition simplifies to $n+2$ must divide the remainder, 39.\nSo, $n+2$ must be a divisor of 39.\n\nThe divisors of 39 are $1, 3, 13, 39$.\nThe problem states that $n$ must be a positive integer, which means $n \\ge 1$.\nThis imposes a condition on $n+2$:\n$n \\ge 1 \\implies n+2 \\ge 1+2 \\implies n+2 \\ge 3$.\n\nSo, $n+2$ must be a divisor of 39 that is greater than or equal to 3.\nThe possible values for $n+2$ are therefore $3, 13, 39$.\n\nWe can find the corresponding values of $n$ for each of these cases:\n1. If $n+2 = 3$, then $n = 3-2 = 1$.\n2. If $n+2 = 13$, then $n = 13-2 = 11$.\n3. If $n+2 = 39$, then $n = 39-2 = 37$.\n\nThese are all positive integers, so they are the solutions to the problem. The set of all positive integers $n$ satisfying the condition is $\\{1, 11, 37\\}$.\n\nThe question asks for the sum of all such positive integers $n$.\nSum = $1 + 11 + 37$.\nSum = $12 + 37$.\nSum = $49$.\n\nTo verify, let's check one of the values, for instance $n=37$:\n$n+2 = 39$.\nThe product is $3(37+3)(37^2+9) = 3(40)(1369+9) = 3(40)(1378)$.\nWe need to check if 39 divides this product.\n$3(40)(1378) = 3 \\times (40) \\times (13 \\times 106) = (3 \\times 13) \\times 40 \\times 106 = 39 \\times (40 \\times 106)$.\nThis is clearly divisible by 39. The other values of $n$ can be checked similarly.\n\n",
+        "statistics": {
+          "character_count_output": 2142,
+          "character_count_reasoning": 2916,
+          "character_count_completion": 5058,
+          "tokens_output": 892,
+          "tokens_reasoning": 4753,
+          "tokens_completions": 5645
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is 49",
+            "met": true
+          }
+        ],
+        "feedback": "The model correctly identified the sum of all positive integers n as 49.",
+        "total_score": 1.0,
+        "original_question": "Find the sum of all positive integers $n$ such that $n+2$ divides the product $3(n+3)(n^2+9).$",
+        "original_response": "Let the given condition be $n+2 \\mid 3(n+3)(n^2+9)$.\nWe are looking for the sum of all positive integers $n$ that satisfy this condition.\n\nLet $P(n) = 3(n+3)(n^2+9)$. The condition is that $n+2$ divides $P(n)$.\nWe can use modular arithmetic to simplify this condition. The statement $a \\mid b$ is equivalent to $b \\equiv 0 \\pmod a$.\nSo, we have $3(n+3)(n^2+9) \\equiv 0 \\pmod{n+2}$.\n\nTo evaluate the expression on the left modulo $n+2$, we can use the property that for any integer $n$, $n \\equiv -2 \\pmod{n+2}$.\nWe can substitute $n=-2$ into the expression:\n$3(n+3)(n^2+9) \\equiv 3((-2)+3)((-2)^2+9) \\pmod{n+2}$.\n$3(1)(4+9) \\pmod{n+2}$.\n$3(13) \\pmod{n+2}$.\n$39 \\pmod{n+2}$.\n\nSo, the original condition $3(n+3)(n^2+9) \\equiv 0 \\pmod{n+2}$ is equivalent to the much simpler condition $39 \\equiv 0 \\pmod{n+2}$.\nThis means that $n+2$ must be a divisor of 39.\n\nLet's list the divisors of 39. The prime factorization of 39 is $3 \\times 13$. The positive divisors of 39 are 1, 3, 13, and 39. Since divisors can be negative, the full list of divisors of 39 is $\\{-39, -13, -3, -1, 1, 3, 13, 39\\}$.\n\nThe problem asks for positive integers $n$. This means $n$ must be in the set $\\{1, 2, 3, \\ldots\\}$.\nIf $n \\ge 1$, then $n+2 \\ge 1+2 = 3$.\nSo, $n+2$ must be a divisor of 39 that is greater than or equal to 3.\nFrom the list of positive divisors $\\{1, 3, 13, 39\\}$, the values that satisfy this condition are $\\{3, 13, 39\\}$.\n\nWe can now find the possible values of $n$ corresponding to each of these cases:\n1. If $n+2 = 3$, then $n = 3 - 2 = 1$. Since $n=1$ is a positive integer, this is a valid solution.\n2. If $n+2 = 13$, then $n = 13 - 2 = 11$. Since $n=11$ is a positive integer, this is a valid solution.\n3. If $n+2 = 39$, then $n = 39 - 2 = 37$. Since $n=37$ is a positive integer, this is a valid solution.\n\nThe set of all positive integers $n$ that satisfy the condition is $\\{1, 11, 37\\}$.\nThe question asks for the sum of all such positive integers $n$.\nSum = $1 + 11 + 37$.\nSum = $12 + 37$.\nSum = $49$.\n\nTo be fully rigorous, we can show the equivalence without modular arithmetic.\nLet $P(n) = 3(n+3)(n^2+9)$. We can perform a polynomial division of $P(x)$ by $x+2$.\n$P(x) = Q(x)(x+2) + R$, where $R$ is the remainder. By the Remainder Theorem, $R=P(-2)=39$.\nSo, $3(n+3)(n^2+9) = Q(n)(n+2) + 39$ for some integer $Q(n)$ when $n$ is an integer.\nFor $n+2$ to divide $3(n+3)(n^2+9)$, it must divide $Q(n)(n+2) + 39$.\nSince $n+2$ always divides $Q(n)(n+2)$, the condition simplifies to $n+2$ must divide the remainder, which is 39. This confirms the previous reasoning.\n\nThe possible values for $n$ are $1, 11, 37$.\nThe sum of these values is $1+11+37=49$.\n\n",
+        "statistics": {
+          "character_count_output": 2656,
+          "character_count_reasoning": 4351,
+          "character_count_completion": 7007,
+          "tokens_output": 1057,
+          "tokens_reasoning": 7135,
+          "tokens_completions": 8192
+        }
+      }
+    ],
+    "claude-4-sonnet-0522-thinking": [
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is 49",
+            "met": true
+          }
+        ],
+        "feedback": "The model correctly identified the sum of all positive integers n as 49.",
+        "total_score": 1.0,
+        "original_question": "Find the sum of all positive integers $n$ such that $n+2$ divides the product $3(n+3)(n^2+9).$",
+        "original_response": "Looking at this problem, I need to find all positive integers $n$ such that $(n+2) \\mid 3(n+3)(n^2+9)$.\n\nFirst, I'll simplify the divisibility condition. Since $\\gcd(n+2, n+3) = \\gcd(n+2, 1) = 1$, the condition $(n+2) \\mid 3(n+3)(n^2+9)$ is equivalent to $(n+2) \\mid 3(n^2+9)$.\n\nNext, I'll find $n^2+9 \\pmod{n+2}$. Since $n \\equiv -2 \\pmod{n+2}$, we have:\n$$n^2 \\equiv (-2)^2 = 4 \\pmod{n+2}$$\n\nTherefore:\n$$n^2 + 9 \\equiv 4 + 9 = 13 \\pmod{n+2}$$\n\nSo the condition becomes $(n+2) \\mid 3 \\cdot 13 = 39$.\n\nThis means $(n+2)$ must be a divisor of 39. The positive divisors of 39 are: 1, 3, 13, 39.\n\nSince $n$ is a positive integer, we need $n+2 \\geq 3$, so the possible values are $n+2 \\in \\{3, 13, 39\\}$.\n\nThis gives us $n \\in \\{1, 11, 37\\}$.\n\nLet me verify each case:\n\n**For $n = 1$:** $n+2 = 3$, and $3(n+3)(n^2+9) = 3 \\cdot 4 \\cdot 10 = 120$\nSince $120 = 3 \\cdot 40$, we have $3 \\mid 120$ \u2713\n\n**For $n = 11$:** $n+2 = 13$, and $3(n+3)(n^2+9) = 3 \\cdot 14 \\cdot 130 = 5460$\nSince $5460 = 13 \\cdot 420$, we have $13 \\mid 5460$ \u2713\n\n**For $n = 37$:** $n+2 = 39$, and $3(n+3)(n^2+9) = 3 \\cdot 40 \\cdot 1378 = 165360$\nSince $165360 = 39 \\cdot 4240$, we have $39 \\mid 165360$ \u2713\n\nTherefore, the sum of all positive integers $n$ is $1 + 11 + 37 = 49$.",
+        "statistics": {
+          "character_count_output": 1240,
+          "character_count_reasoning": 755,
+          "character_count_completion": 1995,
+          "tokens_output": 3426,
+          "tokens_reasoning": 206,
+          "tokens_completions": 3632
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is 49",
+            "met": true
+          }
+        ],
+        "feedback": "The model correctly identified the sum of all positive integers n as 49.",
+        "total_score": 1.0,
+        "original_question": "Find the sum of all positive integers $n$ such that $n+2$ divides the product $3(n+3)(n^2+9).$",
+        "original_response": "Looking at this problem, I need to find all positive integers $n$ such that $(n+2)$ divides $3(n+3)(n^2+9)$.\n\nI'll use modular arithmetic. Since $(n+2)$ divides the expression, we have:\n$$3(n+3)(n^2+9) \\equiv 0 \\pmod{n+2}$$\n\nSince $n \\equiv -2 \\pmod{n+2}$, I can substitute:\n- $n+3 \\equiv -2+3 = 1 \\pmod{n+2}$\n- $n^2 \\equiv (-2)^2 = 4 \\pmod{n+2}$\n- $n^2 + 9 \\equiv 4 + 9 = 13 \\pmod{n+2}$\n\nTherefore:\n$$3(n+3)(n^2+9) \\equiv 3 \\cdot 1 \\cdot 13 = 39 \\pmod{n+2}$$\n\nFor the divisibility condition to hold, I need:\n$$39 \\equiv 0 \\pmod{n+2}$$\n\nThis means $(n+2)$ must divide 39.\n\nFinding the divisors of 39:\n$$39 = 3 \\times 13$$\n\nThe positive divisors are: 1, 3, 13, 39.\n\nThis gives us:\n- $n+2 = 1 \\Rightarrow n = -1$ (not positive)\n- $n+2 = 3 \\Rightarrow n = 1$ \n- $n+2 = 13 \\Rightarrow n = 11$\n- $n+2 = 39 \\Rightarrow n = 37$\n\nLet me verify these solutions:\n\nFor $n = 1$: $(n+2) = 3$ and $3(n+3)(n^2+9) = 3 \\cdot 4 \\cdot 10 = 120 = 3 \\times 40$ \u2713\n\nFor $n = 11$: $(n+2) = 13$ and $3(n+3)(n^2+9) = 3 \\cdot 14 \\cdot 130 = 5460 = 13 \\times 420$ \u2713\n\nFor $n = 37$: $(n+2) = 39$ and $3(n+3)(n^2+9) = 3 \\cdot 40 \\cdot 1378 = 165360 = 39 \\times 4240$ \u2713\n\nTherefore, the positive integer solutions are $n \\in \\{1, 11, 37\\}$.\n\nThe sum is $1 + 11 + 37 = 49$.",
+        "statistics": {
+          "character_count_output": 1239,
+          "character_count_reasoning": 826,
+          "character_count_completion": 2065,
+          "tokens_output": 2196,
+          "tokens_reasoning": 226,
+          "tokens_completions": 2422
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is 49",
+            "met": true
+          }
+        ],
+        "feedback": "The model correctly identified the sum of all positive integers n as 49.",
+        "total_score": 1.0,
+        "original_question": "Find the sum of all positive integers $n$ such that $n+2$ divides the product $3(n+3)(n^2+9).$",
+        "original_response": "Looking at this problem, I need to find all positive integers $n$ such that $(n+2)$ divides $3(n+3)(n^2+9)$.\n\nFirst, let me examine the relationship between $n+2$ and the other factors.\n\nI'll find $\\gcd(n+2, n+3)$:\n$\\gcd(n+2, n+3) = \\gcd(n+2, (n+3)-(n+2)) = \\gcd(n+2, 1) = 1$\n\nSo $n+2$ and $n+3$ are coprime.\n\nNext, let me find $\\gcd(n+2, n^2+9)$:\nSince $n^2 = (n+2-2)^2 = (n+2)^2 - 4(n+2) + 4$, we have:\n$n^2 + 9 = (n+2)^2 - 4(n+2) + 4 + 9 = (n+2)^2 - 4(n+2) + 13$\n\nTherefore:\n$\\gcd(n+2, n^2+9) = \\gcd(n+2, (n+2)^2 - 4(n+2) + 13) = \\gcd(n+2, 13)$\n\nThis means $\\gcd(n+2, n^2+9)$ is either 1 or 13, depending on whether $13$ divides $n+2$.\n\nSince $\\gcd(n+2, n+3) = 1$, the condition $(n+2) \\mid 3(n+3)(n^2+9)$ is equivalent to $(n+2) \\mid 3(n^2+9)$.\n\nLet $d = \\gcd(n+2, n^2+9)$. Then for the divisibility to hold, I need:\n$$\\frac{n+2}{d} \\mid \\frac{3(n^2+9)}{d}$$\n\nSince $\\gcd\\left(\\frac{n+2}{d}, \\frac{n^2+9}{d}\\right) = 1$, this means:\n$$\\frac{n+2}{d} \\mid 3$$\n\n**Case 1:** $d = 1$ (when $13 \\nmid (n+2)$)\nThen $n+2 \\mid 3$, so $n+2 \\in \\{1, 3\\}$.\nThis gives $n \\in \\{-1, 1\\}$.\nSince I need positive integers, $n = 1$.\n\nLet me verify: For $n = 1$, we have $n+2 = 3$, and we need to check if $3 \\mid 3 \\cdot 4 \\cdot 10 = 120$. Indeed, $120 = 3 \\cdot 40$. \u2713\n\n**Case 2:** $d = 13$ (when $13 \\mid (n+2)$)\nThen $\\frac{n+2}{13} \\mid 3$, so $\\frac{n+2}{13} \\in \\{1, 3\\}$.\nThis gives $n+2 \\in \\{13, 39\\}$, so $n \\in \\{11, 37\\}$.\n\nLet me verify these satisfy $13 \\mid (n+2)$:\n- For $n = 11$: $n+2 = 13$ \u2713\n- For $n = 37$: $n+2 = 39 = 3 \\cdot 13$ \u2713\n\nLet me verify the original condition:\n- For $n = 11$: We need $13 \\mid 3 \\cdot 14 \\cdot 130 = 5460$. Since $5460 = 13 \\cdot 420$, this works. \u2713\n- For $n = 37$: We need $39 \\mid 3 \\cdot 40 \\cdot 1378$. Since $39 = 3 \\cdot 13$ and $1378 = 13 \\cdot 106$, we have $3 \\cdot 40 \\cdot 1378 = 39 \\cdot 40 \\cdot 106$, so this works. \u2713\n\nTherefore, the solutions are $n \\in \\{1, 11, 37\\}$.\n\nThe sum is $1 + 11 + 37 = 49$.",
+        "statistics": {
+          "character_count_output": 1950,
+          "character_count_reasoning": 711,
+          "character_count_completion": 2661,
+          "tokens_output": 10138,
+          "tokens_reasoning": 194,
+          "tokens_completions": 10332
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is 49",
+            "met": true
+          }
+        ],
+        "feedback": "The model correctly identified the sum of all positive integers n as 49.",
+        "total_score": 1.0,
+        "original_question": "Find the sum of all positive integers $n$ such that $n+2$ divides the product $3(n+3)(n^2+9).$",
+        "original_response": "Looking at this problem, I need to find all positive integers $n$ such that $(n+2)$ divides $3(n+3)(n^2+9)$.\n\nLet me use polynomial division to find when this divisibility condition holds.\n\nFirst, I'll expand $3(n+3)(n^2+9)$:\n$$3(n+3)(n^2+9) = 3(n^3 + 9n + 3n^2 + 27) = 3n^3 + 9n^2 + 27n + 81$$\n\nNow I need to find the remainder when $3n^3 + 9n^2 + 27n + 81$ is divided by $(n+2)$.\n\nUsing polynomial long division:\n\n$$\\begin{array}{c|cc cc}\n& 3n^2 & +3n & +21 \\\\\n\\hline\nn+2 & 3n^3 & +9n^2 & +27n & +81 \\\\\n& 3n^3 & +6n^2 & & \\\\\n\\hline\n& & 3n^2 & +27n & \\\\\n& & 3n^2 & +6n & \\\\\n\\hline\n& & & 21n & +81 \\\\\n& & & 21n & +42 \\\\\n\\hline\n& & & & 39\n\\end{array}$$\n\nTherefore:\n$$3n^3 + 9n^2 + 27n + 81 = (n+2)(3n^2 + 3n + 21) + 39$$\n\nFor $(n+2)$ to divide $3n^3 + 9n^2 + 27n + 81$, the remainder must be zero, which means $(n+2)$ must divide $39$.\n\nThe positive divisors of $39 = 3 \\times 13$ are: $1, 3, 13, 39$.\n\nSince $n$ is a positive integer, we have $n \\geq 1$, so $n+2 \\geq 3$.\n\nTherefore, the possible values are:\n- $n+2 = 3 \\Rightarrow n = 1$\n- $n+2 = 13 \\Rightarrow n = 11$  \n- $n+2 = 39 \\Rightarrow n = 37$\n\nLet me verify these solutions:\n\nFor $n = 1$: $3(1+3)(1^2+9) = 3 \\cdot 4 \\cdot 10 = 120 = 3 \\cdot 40$ \u2713\n\nFor $n = 11$: $3(11+3)(11^2+9) = 3 \\cdot 14 \\cdot 130 = 5460 = 13 \\cdot 420$ \u2713\n\nFor $n = 37$: $3(37+3)(37^2+9) = 3 \\cdot 40 \\cdot 1378 = 165360 = 39 \\cdot 4240$ \u2713\n\nTherefore, the sum of all positive integers $n$ is:\n$$1 + 11 + 37 = 49$$",
+        "statistics": {
+          "character_count_output": 1446,
+          "character_count_reasoning": 765,
+          "character_count_completion": 2211,
+          "tokens_output": 6850,
+          "tokens_reasoning": 210,
+          "tokens_completions": 7060
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is 49",
+            "met": true
+          }
+        ],
+        "feedback": "The model correctly identified the sum of all positive integers n as 49.",
+        "total_score": 1.0,
+        "original_question": "Find the sum of all positive integers $n$ such that $n+2$ divides the product $3(n+3)(n^2+9).$",
+        "original_response": "Looking at this problem, I need to find all positive integers $n$ such that $(n+2)$ divides $3(n+3)(n^2+9)$.\n\nLet me work with modular arithmetic. I'll express each factor in terms of $(n+2)$.\n\nFor the factor $(n+3)$:\n$$n+3 = (n+2) + 1 \\equiv 1 \\pmod{n+2}$$\n\nFor the factor $(n^2+9)$:\nSince $n \\equiv -2 \\pmod{n+2}$, we have:\n$$n^2 \\equiv (-2)^2 = 4 \\pmod{n+2}$$\nTherefore:\n$$n^2 + 9 \\equiv 4 + 9 = 13 \\pmod{n+2}$$\n\nNow I can combine these results:\n$$3(n+3)(n^2+9) \\equiv 3 \\cdot 1 \\cdot 13 = 39 \\pmod{n+2}$$\n\nFor $(n+2)$ to divide $3(n+3)(n^2+9)$, I need:\n$$(n+2) \\mid 39$$\n\nFinding the divisors of $39 = 3 \\times 13$:\nThe divisors are: $1, 3, 13, 39$\n\nSince $n$ is a positive integer, we have $n \\geq 1$, so $n+2 \\geq 3$.\n\nTherefore, the possible values of $n+2$ are: $3, 13, 39$\n\nThis gives us: $n = 1, 11, 37$\n\nLet me verify each solution:\n\n**For $n = 1$:**\n- $n+2 = 3$\n- $3(n+3)(n^2+9) = 3 \\cdot 4 \\cdot 10 = 120$\n- $120 \u00f7 3 = 40$ \u2713\n\n**For $n = 11$:**\n- $n+2 = 13$ \n- $3(n+3)(n^2+9) = 3 \\cdot 14 \\cdot 130 = 5460$\n- $5460 \u00f7 13 = 420$ \u2713\n\n**For $n = 37$:**\n- $n+2 = 39$\n- $3(n+3)(n^2+9) = 3 \\cdot 40 \\cdot 1378 = 165360$\n- $165360 \u00f7 39 = 4240$ \u2713\n\nTherefore, the sum of all positive integers $n$ is:\n$$1 + 11 + 37 = 49$$",
+        "statistics": {
+          "character_count_output": 1222,
+          "character_count_reasoning": 792,
+          "character_count_completion": 2014,
+          "tokens_output": 1929,
+          "tokens_reasoning": 216,
+          "tokens_completions": 2145
+        }
+      }
+    ],
+    "gemini-2.5-flash-high": [
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is 49",
+            "met": true
+          }
+        ],
+        "feedback": "The model correctly identified the sum of all positive integers n as 49.",
+        "total_score": 1.0,
+        "original_question": "Find the sum of all positive integers $n$ such that $n+2$ divides the product $3(n+3)(n^2+9).$",
+        "original_response": "Let the given condition be that $n+2$ divides $3(n+3)(n^2+9)$.\nLet $k = n+2$. Since $n$ is a positive integer, $n \\ge 1$, which implies $k = n+2 \\ge 1+2=3$.\nWe can express $n$ in terms of $k$ as $n = k-2$.\nSubstitute $n=k-2$ into the expression $3(n+3)(n^2+9)$:\n$3((k-2)+3)(((k-2)^2+9)$\n$= 3(k+1)(k^2-4k+4+9)$\n$= 3(k+1)(k^2-4k+13)$.\n\nThe condition now becomes that $k$ divides $3(k+1)(k^2-4k+13)$.\nWe can use properties of divisibility to simplify this expression.\nSince $k$ divides $k$, it must be that $k$ divides $3(k+1)(k^2-4k+13) - 3(k+1)k(k-4)$.\nThis is equivalent to $k$ dividing $3(k+1)(k^2-4k+13) - 3(k+1)(k^2-4k)$.\nSo, $k$ must divide $3(k+1)( (k^2-4k+13) - (k^2-4k) )$.\n$k$ divides $3(k+1)(13)$.\n$k$ divides $39(k+1)$.\n\nSince $k$ divides $39(k+1)$, and $k$ divides $39k$, it must be that $k$ divides $39(k+1) - 39k$.\n$k$ divides $39k + 39 - 39k$.\n$k$ divides $39$.\n\nNow we need to find the divisors of 39. The positive divisors of 39 are $1, 3, 13, 39$.\nAs established earlier, $k = n+2$ and $n$ is a positive integer, so $n \\ge 1$. This means $k \\ge 1+2=3$.\nTherefore, we must select the divisors of 39 that are greater than or equal to 3.\nThe possible values for $k$ are $3, 13, 39$.\n\nFor each possible value of $k$, we find the corresponding value of $n$:\n1. If $k=3$:\n   $n+2 = 3 \\implies n=1$.\n   Let's check this solution: $n+2=3$ divides $3(1+3)(1^2+9) = 3(4)(10) = 120$. Since $120/3=40$, $n=1$ is a valid solution.\n\n2. If $k=13$:\n   $n+2 = 13 \\implies n=11$.\n   Let's check this solution: $n+2=13$ divides $3(11+3)(11^2+9) = 3(14)(121+9) = 3(14)(130)$. Since $130 = 13 \\times 10$, $13$ divides $3(14)(13 \\times 10)$. This is clearly true, so $n=11$ is a valid solution.\n\n3. If $k=39$:\n   $n+2 = 39 \\implies n=37$.\n   Let's check this solution: $n+2=39$ divides $3(37+3)(37^2+9) = 3(40)(1369+9) = 3(40)(1378)$. We need to check if $39$ divides $3(40)(1378)$. Since $39 = 3 \\times 13$, this is equivalent to checking if $13$ divides $40 \\times 1378$.\n   $1378 \\div 13 = 106$ (since $13 \\times 100 = 1300$ and $13 \\times 6 = 78$, so $1300+78=1378$).\n   Since $1378$ is divisible by $13$, $3(40)(1378)$ is divisible by $3 \\times 13 = 39$. So $n=37$ is a valid solution.\n\nThe positive integers $n$ that satisfy the condition are $1, 11, 37$.\nThe sum of all such positive integers $n$ is $1+11+37 = 49$.\n\nThe final answer is $\\boxed{49}$.",
+        "statistics": {
+          "character_count_output": 2352,
+          "character_count_reasoning": 1562,
+          "character_count_completion": 3914,
+          "tokens_output": 1120,
+          "tokens_reasoning": 1859,
+          "tokens_completions": 2979
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is 49",
+            "met": true
+          }
+        ],
+        "feedback": "The model correctly identified the sum of all positive integers n as 49.",
+        "total_score": 1.0,
+        "original_question": "Find the sum of all positive integers $n$ such that $n+2$ divides the product $3(n+3)(n^2+9).$",
+        "original_response": "Let the given condition be $n+2$ divides $3(n+3)(n^2+9)$.\nWe can express this condition using modular arithmetic.\nWe want $3(n+3)(n^2+9) \\equiv 0 \\pmod{n+2}$.\n\nLet $n+2 = k$. Then $n = k-2$.\nSubstitute $n=k-2$ into the expression:\n$3((k-2)+3)(((k-2)^2+9) \\equiv 0 \\pmod k$.\n$3(k+1)(k^2-4k+4+9) \\equiv 0 \\pmod k$.\n$3(k+1)(k^2-4k+13) \\equiv 0 \\pmod k$.\n\nSince $k \\equiv 0 \\pmod k$, we can simplify the expression:\n$k+1 \\equiv 1 \\pmod k$.\n$k^2-4k+13 \\equiv 13 \\pmod k$.\n\nSo, the expression becomes:\n$3(1)(13) \\equiv 0 \\pmod k$.\n$39 \\equiv 0 \\pmod k$.\n\nThis means that $k$ must be a divisor of 39.\nThe positive divisors of 39 are $1, 3, 13, 39$.\n\nSince $k = n+2$ and $n$ is a positive integer, $n \\ge 1$.\nTherefore, $k = n+2 \\ge 1+2 = 3$.\nThis eliminates $k=1$ as a possible value for $n+2$.\n\nSo, the possible values for $k$ are $3, 13, 39$.\nLet's find the corresponding values of $n$:\n1. If $k=3$: $n+2=3 \\implies n=1$.\n2. If $k=13$: $n+2=13 \\implies n=11$.\n3. If $k=39$: $n+2=39 \\implies n=37$.\n\nAll these values of $n$ are positive integers.\nLet's verify each solution:\n1. For $n=1$: $n+2=3$. We check if $3$ divides $3(1+3)(1^2+9)$.\n   $3(4)(10) = 120$. $3$ divides $120$. So $n=1$ is a solution.\n2. For $n=11$: $n+2=13$. We check if $13$ divides $3(11+3)(11^2+9)$.\n   $3(14)(121+9) = 3(14)(130)$. Since $130 = 13 \\times 10$, $13$ clearly divides $3(14)(130)$. So $n=11$ is a solution.\n3. For $n=37$: $n+2=39$. We check if $39$ divides $3(37+3)(37^2+9)$.\n   $3(40)(1369+9) = 3(40)(1378)$.\n   Since $39 = 3 \\times 13$, for $39$ to divide the expression, $13$ must divide $40 \\times 1378$.\n   $1378 \\div 13$: $1378 = 1300 + 78 = 13 \\times 100 + 13 \\times 6 = 13 \\times 106$.\n   So $1378$ is divisible by $13$. Thus $3(40)(1378)$ is divisible by $3 \\times 13 = 39$. So $n=37$ is a solution.\n\nThe positive integers $n$ that satisfy the condition are $1, 11, 37$.\nThe sum of all such positive integers $n$ is $1+11+37 = 49$.\n\nThe final answer is $\\boxed{49}$.",
+        "statistics": {
+          "character_count_output": 1954,
+          "character_count_reasoning": 1635,
+          "character_count_completion": 3589,
+          "tokens_output": 949,
+          "tokens_reasoning": 1949,
+          "tokens_completions": 2898
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is 49",
+            "met": true
+          }
+        ],
+        "feedback": "The model correctly identified the sum of all positive integers n as 49.",
+        "total_score": 1.0,
+        "original_question": "Find the sum of all positive integers $n$ such that $n+2$ divides the product $3(n+3)(n^2+9).$",
+        "original_response": "Let the given condition be $n+2$ divides $3(n+3)(n^2+9)$.\nWe can express this condition using modular arithmetic:\n$3(n+3)(n^2+9) \\equiv 0 \\pmod{n+2}$.\n\nLet $k = n+2$. Then $n = k-2$.\nSubstitute $n=k-2$ into the expression:\n$3((k-2)+3)((k-2)^2+9) \\equiv 0 \\pmod k$.\nSimplify the terms inside the parentheses:\n$k-2+3 = k+1$.\n$(k-2)^2+9 = k^2 - 4k + 4 + 9 = k^2 - 4k + 13$.\n\nSo the condition becomes:\n$3(k+1)(k^2-4k+13) \\equiv 0 \\pmod k$.\n\nNow we can use the property that $X \\equiv X \\pmod k$.\n$k+1 \\equiv 1 \\pmod k$.\n$k^2-4k+13 \\equiv 13 \\pmod k$.\n\nSubstitute these congruences back into the expression:\n$3(1)(13) \\equiv 0 \\pmod k$.\n$39 \\equiv 0 \\pmod k$.\n\nThis means that $k$ must be a divisor of 39.\nThe positive divisors of 39 are $1, 3, 13, 39$.\n\nSince $k=n+2$ and $n$ is a positive integer, $n \\ge 1$.\nTherefore, $k = n+2 \\ge 1+2 = 3$.\nThis eliminates $k=1$ as a possible value for $n+2$.\n\nSo, the possible values for $n+2$ are $3, 13, 39$.\n1. If $n+2 = 3$:\n   $n = 3-2 = 1$.\n   Let's check if $n=1$ is a solution: $n+2=3$ divides $3(1+3)(1^2+9) = 3(4)(10) = 120$. Since $120$ is divisible by $3$, $n=1$ is a solution.\n\n2. If $n+2 = 13$:\n   $n = 13-2 = 11$.\n   Let's check if $n=11$ is a solution: $n+2=13$ divides $3(11+3)(11^2+9) = 3(14)(121+9) = 3(14)(130)$. Since $130 = 13 \\times 10$, $3(14)(130)$ is clearly divisible by $13$. So $n=11$ is a solution.\n\n3. If $n+2 = 39$:\n   $n = 39-2 = 37$.\n   Let's check if $n=37$ is a solution: $n+2=39$ divides $3(37+3)(37^2+9) = 3(40)(37^2+9)$.\n   Since $39 = 3 \\times 13$, we need to check if $3(40)(37^2+9)$ is divisible by $3$ and $13$.\n   It's clearly divisible by $3$.\n   For divisibility by $13$: $37 \\equiv -2 \\pmod{13}$.\n   So $37^2+9 \\equiv (-2)^2+9 \\pmod{13}$.\n   $37^2+9 \\equiv 4+9 \\pmod{13}$.\n   $37^2+9 \\equiv 13 \\pmod{13}$.\n   $37^2+9 \\equiv 0 \\pmod{13}$.\n   Since $37^2+9$ is divisible by $13$, $3(40)(37^2+9)$ is divisible by $13$.\n   Therefore, $3(40)(37^2+9)$ is divisible by $39$. So $n=37$ is a solution.\n\nThe positive integers $n$ that satisfy the condition are $1, 11, 37$.\nThe sum of all such positive integers $n$ is $1 + 11 + 37 = 49$.\n\nThe final answer is $\\boxed{49}$.",
+        "statistics": {
+          "character_count_output": 2143,
+          "character_count_reasoning": 1752,
+          "character_count_completion": 3895,
+          "tokens_output": 1044,
+          "tokens_reasoning": 2112,
+          "tokens_completions": 3156
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is 49",
+            "met": true
+          }
+        ],
+        "feedback": "The model correctly identified the sum of all positive integers n as 49.",
+        "total_score": 1.0,
+        "original_question": "Find the sum of all positive integers $n$ such that $n+2$ divides the product $3(n+3)(n^2+9).$",
+        "original_response": "Let $n$ be a positive integer such that $n+2$ divides the product $3(n+3)(n^2+9)$.\nLet $k = n+2$. Since $n$ is a positive integer, $n \\ge 1$, which implies $k = n+2 \\ge 1+2 = 3$.\nWe can express $n$ in terms of $k$ as $n = k-2$.\n\nNow, substitute $n=k-2$ into the expression $3(n+3)(n^2+9)$:\n1. $n+3 = (k-2)+3 = k+1$.\n2. $n^2+9 = (k-2)^2+9 = (k^2-4k+4)+9 = k^2-4k+13$.\n\nSo the condition that $n+2$ divides $3(n+3)(n^2+9)$ becomes $k$ divides $3(k+1)(k^2-4k+13)$.\n\nWe know that $k$ and $k+1$ are consecutive integers, so their greatest common divisor is 1, i.e., $\\gcd(k, k+1) = 1$.\nSince $k$ divides $3(k+1)(k^2-4k+13)$ and $\\gcd(k, k+1)=1$, it must be that $k$ divides $3(k^2-4k+13)$.\n\nLet's expand $3(k^2-4k+13)$:\n$3(k^2-4k+13) = 3k^2 - 12k + 39$.\nFor $k$ to divide $3k^2 - 12k + 39$, since $k$ divides $3k^2$ and $k$ divides $-12k$, it must be that $k$ divides the constant term, $39$.\n\nSo, $k$ must be a divisor of $39$.\nThe positive divisors of $39$ are $1, 3, 13, 39$.\nAs established earlier, $k \\ge 3$. Therefore, the possible values for $k$ are $3, 13, 39$.\n\nNow we find the corresponding values of $n$ for each possible $k$ and verify the condition:\n\n1.  **Case $k=3$**:\n    $n = k-2 = 3-2 = 1$.\n    Check if $n=1$ is a solution:\n    $n+2 = 1+2 = 3$.\n    $3(n+3)(n^2+9) = 3(1+3)(1^2+9) = 3(4)(10) = 120$.\n    Since $3$ divides $120$ ($120/3 = 40$), $n=1$ is a solution.\n\n2.  **Case $k=13$**:\n    $n = k-2 = 13-2 = 11$.\n    Check if $n=11$ is a solution:\n    $n+2 = 11+2 = 13$.\n    $3(n+3)(n^2+9) = 3(11+3)(11^2+9) = 3(14)(121+9) = 3(14)(130)$.\n    Since $130 = 13 \\times 10$, $13$ divides $3(14)(130)$. Thus, $n=11$ is a solution.\n\n3.  **Case $k=39$**:\n    $n = k-2 = 39-2 = 37$.\n    Check if $n=37$ is a solution:\n    $n+2 = 37+2 = 39$.\n    $3(n+3)(n^2+9) = 3(37+3)(37^2+9) = 3(40)(37^2+9)$.\n    We need to check if $39$ divides $3(40)(37^2+9)$.\n    Since $39 = 3 \\times 13$, this is equivalent to checking if $13$ divides $40(37^2+9)$.\n    Let's evaluate $40(37^2+9) \\pmod{13}$:\n    $40 \\equiv 1 \\pmod{13}$.\n    $37 \\equiv -2 \\pmod{13}$.\n    So, $40(37^2+9) \\equiv 1 \\cdot ((-2)^2+9) \\pmod{13}$\n    $\\equiv (4+9) \\pmod{13}$\n    $\\equiv 13 \\pmod{13}$\n    $\\equiv 0 \\pmod{13}$.\n    Since $13$ divides $40(37^2+9)$, $39$ divides $3(40)(37^2+9)$. Thus, $n=37$ is a solution.\n\nThe positive integers $n$ that satisfy the given condition are $1, 11, 37$.\nThe sum of all such positive integers $n$ is $1+11+37 = 49$.\n\nThe final answer is $\\boxed{49}$.",
+        "statistics": {
+          "character_count_output": 2452,
+          "character_count_reasoning": 2030,
+          "character_count_completion": 4482,
+          "tokens_output": 1240,
+          "tokens_reasoning": 3487,
+          "tokens_completions": 4727
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is 49",
+            "met": true
+          }
+        ],
+        "feedback": "The model correctly identified the sum of all positive integers n as 49.",
+        "total_score": 1.0,
+        "original_question": "Find the sum of all positive integers $n$ such that $n+2$ divides the product $3(n+3)(n^2+9).$",
+        "original_response": "Let the given condition be that $n+2$ divides $3(n+3)(n^2+9)$.\nLet $k = n+2$. Since $n$ is a positive integer, $n \\ge 1$, which implies $k = n+2 \\ge 3$.\nWe can express $n$ in terms of $k$ as $n=k-2$.\nSubstitute $n=k-2$ into the given expression:\n$n+3 = (k-2)+3 = k+1$.\n$n^2+9 = (k-2)^2+9 = (k^2-4k+4)+9 = k^2-4k+13$.\n\nSo the condition becomes $k$ divides $3(k+1)(k^2-4k+13)$.\nLet's expand the product $3(k+1)(k^2-4k+13)$:\n$3(k+1)(k^2-4k+13) = 3(k(k^2-4k+13) + 1(k^2-4k+13))$\n$= 3(k^3-4k^2+13k + k^2-4k+13)$\n$= 3(k^3-3k^2+9k+13)$\n$= 3k^3-9k^2+27k+39$.\n\nThe condition is that $k$ divides $3k^3-9k^2+27k+39$.\nSince $k$ clearly divides $3k^3$, $-9k^2$, and $27k$, for $k$ to divide the entire expression, it must divide the constant term, $39$.\nSo, $k$ must be a positive divisor of $39$.\nThe positive divisors of $39$ are $1, 3, 13, 39$.\n\nWe established earlier that $k \\ge 3$. Therefore, the possible values for $k$ are $3, 13, 39$.\nWe now find the corresponding values of $n$ for each possible $k$:\n1. If $k=3$:\n   $n+2=3 \\implies n=1$.\n   Let's check if $n=1$ is a solution.\n   $n+2 = 3$. The expression is $3(1+3)(1^2+9) = 3(4)(10) = 120$.\n   Since $3$ divides $120$ ($120/3=40$), $n=1$ is a solution.\n\n2. If $k=13$:\n   $n+2=13 \\implies n=11$.\n   Let's check if $n=11$ is a solution.\n   $n+2 = 13$. The expression is $3(11+3)(11^2+9) = 3(14)(121+9) = 3(14)(130)$.\n   Since $130 = 13 \\times 10$, the expression $3(14)(130)$ is clearly divisible by $13$.\n   So $n=11$ is a solution.\n\n3. If $k=39$:\n   $n+2=39 \\implies n=37$.\n   Let's check if $n=37$ is a solution.\n   $n+2 = 39$. The expression is $3(37+3)(37^2+9) = 3(40)(1369+9) = 3(40)(1378)$.\n   We need to check if $39$ divides $3(40)(1378)$.\n   Since $39 = 3 \\times 13$, and $3(40)(1378)$ is already divisible by $3$, we only need to check if $13$ divides $40(1378)$.\n   Since $13$ does not divide $40$, we must check if $13$ divides $1378$.\n   $1378 = 1300 + 78 = 13 \\times 100 + 13 \\times 6 = 13 \\times (100+6) = 13 \\times 106$.\n   Since $1378$ is divisible by $13$, the expression $3(40)(1378)$ is divisible by $39$.\n   So $n=37$ is a solution.\n\nThe positive integers $n$ that satisfy the given condition are $1, 11, 37$.\nThe sum of all such positive integers $n$ is $1+11+37 = 49$.\n\nThe final answer is $\\boxed{49}$.",
+        "statistics": {
+          "character_count_output": 2275,
+          "character_count_reasoning": 1928,
+          "character_count_completion": 4203,
+          "tokens_output": 1113,
+          "tokens_reasoning": 2882,
+          "tokens_completions": 3995
+        }
+      }
+    ],
+    "grok-3-mini-think": [
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is 49",
+            "met": true
+          }
+        ],
+        "feedback": "The output correctly identifies the sum of the values of n as 49.",
+        "total_score": 1.0,
+        "original_question": "Find the sum of all positive integers $n$ such that $n+2$ divides the product $3(n+3)(n^2+9).$",
+        "original_response": "The condition is that \\(n+2\\) divides \\(3(n+3)(n^2+9)\\).\n\nThis is equivalent to \\(n+2\\) dividing 39, as shown by substituting \\(n \\equiv -2 \\pmod{n+2}\\) into the product, yielding \\(3(-2+3)((-2)^2 + 9) = 39\\).\n\nThe positive divisors of 39 are 1, 3, 13, and 39. Since \\(n\\) is a positive integer, \\(n+2 \\geq 3\\), so the possible values of \\(n+2\\) are 3, 13, and 39.\n\nThus, the corresponding values of \\(n\\) are:\n- \\(n+2 = 3\\) gives \\(n = 1\\)\n- \\(n+2 = 13\\) gives \\(n = 11\\)\n- \\(n+2 = 39\\) gives \\(n = 37\\)\n\nThese values satisfy the condition:\n- For \\(n = 1\\), \\(n+2 = 3\\) and \\(3(4)(10) = 120\\), which is divisible by 3.\n- For \\(n = 11\\), \\(n+2 = 13\\) and \\(3(14)(130) = 5460\\), which is divisible by 13.\n- For \\(n = 37\\), \\(n+2 = 39\\) and \\(3(40)(1378) = 165360\\), which is divisible by 39.\n\nThe sum of these \\(n\\) values is \\(1 + 11 + 37 = 49\\).\n\n\\boxed{49}",
+        "statistics": {
+          "character_count_output": 858,
+          "character_count_reasoning": 7197,
+          "character_count_completion": 8055,
+          "tokens_output": 340,
+          "tokens_reasoning": 2675,
+          "tokens_completions": 3015
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is 49",
+            "met": true
+          }
+        ],
+        "feedback": "The model correctly identified the sum of all positive integers n as 49.",
+        "total_score": 1.0,
+        "original_question": "Find the sum of all positive integers $n$ such that $n+2$ divides the product $3(n+3)(n^2+9).$",
+        "original_response": "The condition is that \\(n+2\\) divides \\(3(n+3)(n^2+9)\\), where \\(n\\) is a positive integer.\n\nSet \\(d = n+2\\), so \\(n = d - 2\\). Substituting gives the product \\(3((d-2)+3)((d-2)^2 + 9) = 3(d+1)(d^2 - 4d + 13)\\). For \\(d\\) to divide this product, \\(3(d+1)(d^2 - 4d + 13) \\equiv 0 \\pmod{d}\\).\n\nModulo \\(d\\), the expression simplifies to \\(3 \\cdot 1 \\cdot 13 = 39 \\equiv 0 \\pmod{d}\\), so \\(d\\) divides 39.\n\nSince \\(n\\) is a positive integer, \\(n \\geq 1\\) and \\(d = n+2 \\geq 3\\). The positive divisors of 39 are 1, 3, 13, and 39, but \\(d \\geq 3\\), so the possible values of \\(d\\) are 3, 13, and 39.\n\nCorresponding \\(n\\) values are:\n- \\(d = 3\\) gives \\(n = 1\\)\n- \\(d = 13\\) gives \\(n = 11\\)\n- \\(d = 39\\) gives \\(n = 37\\)\n\nVerifying each:\n- For \\(n = 1\\), the product is \\(3 \\cdot 4 \\cdot 10 = 120\\), and \\(120 / 3 = 40\\), an integer.\n- For \\(n = 11\\), the product is \\(3 \\cdot 14 \\cdot 130 = 5460\\), and \\(5460 / 13 = 420\\), an integer.\n- For \\(n = 37\\), the product is \\(3 \\cdot 40 \\cdot 1378 = 165360\\), and \\(165360 / 39 = 4240\\), an integer.\n\nAll satisfy the condition. The sum is \\(1 + 11 + 37 = 49\\).\n\nNo other positive integers \\(n\\) satisfy the condition, as \\(d\\) must divide 39 and \\(d \\geq 3\\).\n\n\\boxed{49}",
+        "statistics": {
+          "character_count_output": 1212,
+          "character_count_reasoning": 9056,
+          "character_count_completion": 10268,
+          "tokens_output": 470,
+          "tokens_reasoning": 3503,
+          "tokens_completions": 3973
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is 49",
+            "met": true
+          }
+        ],
+        "feedback": "The model correctly identified the sum of all positive integers n as 49.",
+        "total_score": 1.0,
+        "original_question": "Find the sum of all positive integers $n$ such that $n+2$ divides the product $3(n+3)(n^2+9).$",
+        "original_response": "The condition that \\(n+2\\) divides \\(3(n+3)(n^2+9)\\) is equivalent to \\(n+2\\) dividing 39, as derived from the polynomial congruence \\(P(n) \\equiv P(-2) \\mod (n+2)\\) where \\(P(n) = 3(n+3)(n^2+9)\\) and \\(P(-2) = 39\\).\n\nSince \\(n\\) is a positive integer, \\(n+2 \\geq 3\\). The positive divisors of 39 are 1, 3, 13, and 39. Excluding 1 because \\(n+2 \\geq 3\\), the possible values of \\(n+2\\) are 3, 13, and 39.\n\n- If \\(n+2 = 3\\), then \\(n = 1\\).\n- If \\(n+2 = 13\\), then \\(n = 11\\).\n- If \\(n+2 = 39\\), then \\(n = 37\\).\n\nThese values satisfy the original condition:\n- For \\(n = 1\\), \\(P(1) = 120\\) and \\(120 / 3 = 40\\), an integer.\n- For \\(n = 11\\), \\(P(11) = 5460\\) and \\(5460 / 13 = 420\\), an integer.\n- For \\(n = 37\\), \\(P(37) = 165840\\) and \\(165840 / 39 = 4252\\), an integer.\n\nNo other positive integers \\(n\\) satisfy the condition, as confirmed by the necessary and sufficient condition that \\(n+2\\) divides 39.\n\nThe sum of the values is \\(1 + 11 + 37 = 49\\).\n\n\\boxed{49}",
+        "statistics": {
+          "character_count_output": 969,
+          "character_count_reasoning": 9597,
+          "character_count_completion": 10566,
+          "tokens_output": 366,
+          "tokens_reasoning": 3541,
+          "tokens_completions": 3907
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is 49",
+            "met": true
+          }
+        ],
+        "feedback": "The output correctly identifies the sum of the integers as 49.",
+        "total_score": 1.0,
+        "original_question": "Find the sum of all positive integers $n$ such that $n+2$ divides the product $3(n+3)(n^2+9).$",
+        "original_response": "The condition is that \\(n+2\\) divides \\(3(n+3)(n^2+9)\\).\n\nFrom polynomial division, \\(3(n+3)(n^2+9) = (n+2)(3n^2 + 3n + 21) + 39\\). For the quotient to be an integer, \\(39 / (n+2)\\) must be an integer, so \\(n+2\\) must divide 39.\n\nThe positive divisors of 39 are 1, 3, 13, and 39. Since \\(n\\) is a positive integer, \\(n \\geq 1\\), so \\(n+2 \\geq 3\\). Thus, \\(n+2 = 1\\) is excluded.\n\nThe possible values of \\(n+2\\) are 3, 13, and 39, giving \\(n = 1\\), \\(n = 11\\), and \\(n = 37\\).\n\nEach value satisfies the condition:\n- For \\(n = 1\\), \\(n+2 = 3\\), and \\(3(4)(10) / 3 = 40\\), an integer.\n- For \\(n = 11\\), \\(n+2 = 13\\), and \\(3(14)(130) / 13 = 420\\), an integer.\n- For \\(n = 37\\), \\(n+2 = 39\\), and \\(3(40)(1378) / 39 = 4240\\), an integer.\n\nThe sum of these \\(n\\) values is \\(1 + 11 + 37 = 49\\).\n\n\\boxed{49}",
+        "statistics": {
+          "character_count_output": 801,
+          "character_count_reasoning": 10060,
+          "character_count_completion": 10861,
+          "tokens_output": 330,
+          "tokens_reasoning": 3982,
+          "tokens_completions": 4312
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is 49",
+            "met": true
+          }
+        ],
+        "feedback": "The output correctly identifies the sum as 49.",
+        "total_score": 1.0,
+        "original_question": "Find the sum of all positive integers $n$ such that $n+2$ divides the product $3(n+3)(n^2+9).$",
+        "original_response": "The condition is that \\(n+2\\) divides \\(3(n+3)(n^2+9)\\) for positive integers \\(n\\).\n\nThrough polynomial division and analysis, it is found that \\(n+2\\) must divide 39 for the condition to hold, and since \\(n \\geq 1\\), \\(n+2 \\geq 3\\). The positive divisors of 39 are 1, 3, 13, and 39, but only those greater than or equal to 3 are considered: 3, 13, and 39.\n\nSolving for \\(n\\):\n- If \\(n+2 = 3\\), then \\(n = 1\\).\n- If \\(n+2 = 13\\), then \\(n = 11\\).\n- If \\(n+2 = 39\\), then \\(n = 37\\).\n\nVerification confirms that for \\(n = 1, 11, 37\\), \\(n+2\\) divides the product \\(3(n+3)(n^2+9)\\). No other positive integers \\(n\\) satisfy the condition.\n\nThe sum of these \\(n\\) values is \\(1 + 11 + 37 = 49\\).\n\n\\boxed{49}",
+        "statistics": {
+          "character_count_output": 705,
+          "character_count_reasoning": 8373,
+          "character_count_completion": 9078,
+          "tokens_output": 250,
+          "tokens_reasoning": 3381,
+          "tokens_completions": 3631
+        }
+      }
+    ],
+    "magistral-medium-2506-thinking": [
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is 49",
+            "met": true
+          }
+        ],
+        "feedback": "The model correctly identified the sum as 49.",
+        "total_score": 1.0,
+        "original_question": "Find the sum of all positive integers $n$ such that $n+2$ divides the product $3(n+3)(n^2+9).$",
+        "original_response": "### Summary\nWe need to find all positive integers \\( n \\) such that \\( n+2 \\) divides \\( 3(n+3)(n^2+9) \\).\n\nBy setting \\( d = n + 2 \\), we rewrite the condition in terms of \\( d \\) and find that \\( d \\) must divide 39. The positive divisors of 39 that yield positive \\( n \\) are 3, 13, and 39, leading to \\( n = 1, 11, 37 \\). The sum of these values is 49.\n\nThus, the final answer is:\n\n\\[\n\\boxed{49}\n\\]\n\nHowever, upon re-reading the problem, I realize that I might have missed some cases. What if \\( n+2 \\) is a divisor of 39 but negative?\n\nFor example, \\( d = -3 \\) \u2192 \\( n = -5 \\) \u2192 invalid since \\( n \\) must be positive.\n\nThus, only positive divisors of 39 that give positive \\( n \\) are considered.\n\nBut, is there any other \\( n \\) where \\( n+2 \\) divides \\( P(n) \\) but \\( n+2 \\) does not divide 39?\n\nLet me think about \\( n = 7 \\), \\( d = 9 \\).\n\nCompute \\( P(7) = 3(10)(49 +9) = 3 \u00d7 10 \u00d7 58 = 3 \u00d7 10 \u00d7 58 = 3 \u00d7 580 = 1740.\n\nDoes 9 divide 1740? 1740 \u00f7 9 \u2248 193.333 \u2192 No.\n\nAnother case, \\( n = 17 \\), \\( d = 19 \\).\n\nCompute \\( P(17) = 3(20)(289 +9) = 3 \u00d7 20 \u00d7 298.\n\nDoes 19 divide 3 \u00d7 20 \u00d7 298?\n\nFirst, check if 19 divides 298.\n\n298 \u00f7 19 \u2248 15.684 \u2192 19 \u00d7 15 = 285; remainder 13 \u2192 No.\n\nThus, only the cases where \\( d \\) divides 39 seem to work.\n\nBut, is there any other \\( d \\) not dividing 39 that works? It seems unlikely based on our analysis.\n\nTherefore, the sum is indeed 49.\n\nBut, just to be sure, let's check \\( n = 10 \\), \\( d = 12 \\).\n\nCompute \\( P(10) = 3(13)(100 +9) = 3 \u00d7 13 \u00d7 109 = 3 \u00d7 13 \u00d7 109.\n\nDoes 12 divide this?\n\nWe need the product to be divisible by 12 = 3 \u00d7 4.\n\nWe have one factor of 3. We need another factor of 3 or 4 to make it divisible by 12.\n\nBut 13 \u00d7 109 = 1417, and 1417 \u00f7 4 = 354.25 \u2192 Not divisible by 4.\n\nThus, it doesn't work.\n\n### Final Verification\nIt seems that only the cases where \\( d \\) divides 39 satisfy the condition.\n\nBut, to ensure completeness, perhaps we should consider that \\( d \\) must divide 39, and we've already considered all positive divisors of 39 that give positive \\( n \\).\n\nThus, the sum is:\n\n\\[\n1 + 11 + 37 = 49\n\\]\n\nTherefore, the final answer is:\n\n\\[\n\\boxed{49}\n\\]",
+        "statistics": {
+          "character_count_output": 2127,
+          "character_count_reasoning": 31207,
+          "character_count_completion": 33334,
+          "tokens_output": 4699,
+          "tokens_reasoning": 8581,
+          "tokens_completions": 13280
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is 49",
+            "met": true
+          }
+        ],
+        "feedback": "The output correctly states that the sum is 49.",
+        "total_score": 1.0,
+        "original_question": "Find the sum of all positive integers $n$ such that $n+2$ divides the product $3(n+3)(n^2+9).$",
+        "original_response": "**Summary:**\nWe transformed the problem by setting \\( k = n + 2 \\) and showed that \\( k \\) must be a divisor of 39. The positive divisors of 39 that lead to positive \\( n \\) are 3, 13, and 39, corresponding to \\( n = 1, 11, 37 \\). Their sum is 49.\n\n**Final Answer:**\nThe sum of all positive integers \\( n \\) such that \\( n+2 \\) divides \\( 3(n+3)(n^2 + 9) \\) is \\(\\boxed{49}\\).",
+        "statistics": {
+          "character_count_output": 376,
+          "character_count_reasoning": 31568,
+          "character_count_completion": 31944,
+          "tokens_output": 4657,
+          "tokens_reasoning": 8425,
+          "tokens_completions": 13082
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is 49",
+            "met": true
+          }
+        ],
+        "feedback": "The output correctly states that the sum is 49.",
+        "total_score": 1.0,
+        "original_question": "Find the sum of all positive integers $n$ such that $n+2$ divides the product $3(n+3)(n^2+9).$",
+        "original_response": "### Summary\nWe analyzed the problem by setting \\( k = n + 2 \\) and rewriting the divisibility condition in terms of \\( k \\). Through polynomial expansion and simplification, we deduced that \\( k \\) must be a divisor of 39. Considering only positive divisors of 39 that yield positive \\( n \\) values, we found \\( n = 1, 11, 37 \\). Verifying these values confirmed they satisfy the original condition. The sum of these values is 49.\n\nThus, the final answer is:\n\\[ \\boxed{49} \\]",
+        "statistics": {
+          "character_count_output": 475,
+          "character_count_reasoning": 31646,
+          "character_count_completion": 32121,
+          "tokens_output": 3749,
+          "tokens_reasoning": 8519,
+          "tokens_completions": 12268
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is 49",
+            "met": true
+          }
+        ],
+        "feedback": "The output correctly states that the answer is 49.",
+        "total_score": 1.0,
+        "original_question": "Find the sum of all positive integers $n$ such that $n+2$ divides the product $3(n+3)(n^2+9).$",
+        "original_response": "**Summary:**\nWe are to find the sum of all positive integers \\( n \\) such that \\( n+2 \\) divides \\( 3(n+3)(n^2+9) \\). By setting \\( k = n + 2 \\), we transformed the condition into \\( k \\) dividing 39. The positive divisors of 39 that lead to positive \\( n \\) are 3, 13, and 39, corresponding to \\( n = 1, 11, \\) and \\( 37 \\). The sum of these values is \\( 1 + 11 + 37 = 49 \\).\n\nThus, the final answer is:\n\n\\[ \\boxed{49} \\]",
+        "statistics": {
+          "character_count_output": 422,
+          "character_count_reasoning": 35402,
+          "character_count_completion": 35824,
+          "tokens_output": 4805,
+          "tokens_reasoning": 9497,
+          "tokens_completions": 14302
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is 49",
+            "met": true
+          }
+        ],
+        "feedback": "The output correctly identifies the sum of the positive integers as 49.",
+        "total_score": 1.0,
+        "original_question": "Find the sum of all positive integers $n$ such that $n+2$ divides the product $3(n+3)(n^2+9).$",
+        "original_response": "### Summary\nWe are tasked with finding all positive integers \\( n \\) such that \\( n + 2 \\) divides \\( 3(n + 3)(n^2 + 9) \\). By setting \\( k = n + 2 \\), we transformed the problem into finding \\( k \\) such that \\( k \\) divides the expanded polynomial expression. Through analysis, we found that \\( k \\) must be a divisor of 39. Considering only positive \\( n \\) values, the valid \\( k \\) values are 3, 13, and 39, leading to \\( n = 1, 11, 37 \\). The sum of these \\( n \\) values is 49.\n\n\\[\n\\boxed{49}\n\\]\n\n\\boxed{49}",
+        "statistics": {
+          "character_count_output": 513,
+          "character_count_reasoning": 27296,
+          "character_count_completion": 27809,
+          "tokens_output": 3212,
+          "tokens_reasoning": 7311,
+          "tokens_completions": 10523
+        }
+      }
+    ],
+    "qwen3-235b-a22b-think": [
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is 49",
+            "met": true
+          }
+        ],
+        "feedback": "The model correctly identified the sum of all positive integers n as 49.",
+        "total_score": 1.0,
+        "original_question": "Find the sum of all positive integers $n$ such that $n+2$ divides the product $3(n+3)(n^2+9).$",
+        "original_response": "To solve the problem, we are asked to find the **sum of all positive integers $ n $** such that:\n\n$$\nn + 2 \\mid 3(n + 3)(n^2 + 9)\n$$\n\n---\n\n### Step 1: Understanding the Divisibility Condition\n\nWe are given that $ n + 2 $ divides the expression $ 3(n + 3)(n^2 + 9) $. This means that:\n\n$$\n\\frac{3(n + 3)(n^2 + 9)}{n + 2} \\in \\mathbb{Z}\n$$\n\nThis is equivalent to saying that the remainder when $ 3(n + 3)(n^2 + 9) $ is divided by $ n + 2 $ is zero.\n\n---\n\n### Step 2: Use the Remainder Theorem\n\nLet\u2019s define the polynomial:\n\n$$\nP(n) = 3(n + 3)(n^2 + 9)\n$$\n\nWe want to find all positive integers $ n $ such that $ n + 2 \\mid P(n) $. By the **Remainder Theorem**, the remainder when $ P(n) $ is divided by $ n + 2 $ is:\n\n$$\nP(-2) = 3(-2 + 3)((-2)^2 + 9) = 3(1)(4 + 9) = 3 \\cdot 1 \\cdot 13 = 39\n$$\n\nSo, the remainder is 39. Therefore, for $ n + 2 $ to divide $ P(n) $, it must divide the remainder, i.e.,\n\n$$\nn + 2 \\mid 39\n$$\n\n---\n\n### Step 3: Find All Positive Divisors of 39\n\nThe positive divisors of 39 are:\n\n$$\n1, 3, 13, 39\n$$\n\nSince $ n + 2 \\geq 3 $ (because $ n \\geq 1 $), we discard 1. The valid values of $ n + 2 $ are:\n\n$$\n3, 13, 39\n$$\n\nThus, the corresponding values of $ n $ are:\n\n$$\nn = 1, 11, 37\n$$\n\n---\n\n### Step 4: Verify the Values\n\nLet\u2019s verify that each of these values satisfies the original condition:\n\n- **For $ n = 1 $:**\n  $$\n  n + 2 = 3, \\quad 3(n + 3)(n^2 + 9) = 3(4)(10) = 120, \\quad 120 \\div 3 = 40 \\in \\mathbb{Z}\n  $$\n\n- **For $ n = 11 $:**\n  $$\n  n + 2 = 13, \\quad 3(14)(130) = 5460, \\quad 5460 \\div 13 = 420 \\in \\mathbb{Z}\n  $$\n\n- **For $ n = 37 $:**\n  $$\n  n + 2 = 39, \\quad 3(40)(1378) = 165360, \\quad 165360 \\div 39 = 4240 \\in \\mathbb{Z}\n  $$\n\nAll three values satisfy the condition.\n\n---\n\n### Step 5: Compute the Final Answer\n\nNow, sum the valid values of $ n $:\n\n$$\n1 + 11 + 37 = \\boxed{49}\n$$\n\n---\n\n### Final Answer\n\n$$\n\\boxed{49}\n$$",
+        "statistics": {
+          "character_count_output": 1863,
+          "character_count_reasoning": 20293,
+          "character_count_completion": 22156,
+          "tokens_output": 4837,
+          "tokens_reasoning": 5355,
+          "tokens_completions": 10192
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is 49",
+            "met": true
+          }
+        ],
+        "feedback": "The model correctly identified the sum of all positive integers n as 49.",
+        "total_score": 1.0,
+        "original_question": "Find the sum of all positive integers $n$ such that $n+2$ divides the product $3(n+3)(n^2+9).$",
+        "original_response": "To solve the problem, we are asked to find the **sum of all positive integers $ n $** such that:\n\n$$\nn + 2 \\mid 3(n + 3)(n^2 + 9)\n$$\n\n---\n\n### Step 1: Understanding the Divisibility Condition\n\nWe are given that $ n + 2 $ divides the expression $ 3(n + 3)(n^2 + 9) $. This means:\n\n$$\n3(n + 3)(n^2 + 9) \\equiv 0 \\pmod{n + 2}\n$$\n\nWe can use the **Remainder Theorem** to simplify this. Let:\n\n$$\nP(n) = 3(n + 3)(n^2 + 9)\n$$\n\nThen, the remainder when $ P(n) $ is divided by $ n + 2 $ is $ P(-2) $, because $ n \\equiv -2 \\pmod{n + 2} $. So:\n\n$$\nP(-2) = 3(-2 + 3)((-2)^2 + 9) = 3(1)(4 + 9) = 3 \\cdot 1 \\cdot 13 = 39\n$$\n\nThus, the condition becomes:\n\n$$\nn + 2 \\mid 39\n$$\n\n---\n\n### Step 2: Finding All Positive Integers $ n $\n\nWe now find all **positive integers $ n $** such that $ n + 2 $ divides 39.\n\nThe **positive divisors of 39** are:\n\n$$\n1, 3, 13, 39\n$$\n\nSince $ n + 2 \\geq 3 $ (because $ n \\geq 1 $), we exclude 1. So the valid values of $ n + 2 $ are:\n\n$$\n3, 13, 39\n$$\n\nThis gives the corresponding values of $ n $:\n\n- $ n + 2 = 3 \\Rightarrow n = 1 $\n- $ n + 2 = 13 \\Rightarrow n = 11 $\n- $ n + 2 = 39 \\Rightarrow n = 37 $\n\n---\n\n### Step 3: Verifying the Values\n\nLet\u2019s verify that each of these values satisfies the original condition:\n\n- **For $ n = 1 $:**\n  $$\n  n + 2 = 3, \\quad 3(n + 3)(n^2 + 9) = 3(4)(10) = 120, \\quad 120 \\div 3 = 40 \\Rightarrow \\text{divisible}\n  $$\n\n- **For $ n = 11 $:**\n  $$\n  n + 2 = 13, \\quad 3(14)(130) = 5460, \\quad 5460 \\div 13 = 420 \\Rightarrow \\text{divisible}\n  $$\n\n- **For $ n = 37 $:**\n  $$\n  n + 2 = 39, \\quad 3(40)(1378) = 165360, \\quad 165360 \\div 39 = 4240 \\Rightarrow \\text{divisible}\n  $$\n\nAll three values satisfy the condition.\n\n---\n\n### Step 4: Summing the Valid Values\n\nNow, we sum the valid values of $ n $:\n\n$$\n1 + 11 + 37 = 49\n$$\n\n---\n\n### Final Answer\n\n$$\n\\boxed{49}\n$$",
+        "statistics": {
+          "character_count_output": 1819,
+          "character_count_reasoning": 21474,
+          "character_count_completion": 23293,
+          "tokens_output": 4056,
+          "tokens_reasoning": 5690,
+          "tokens_completions": 9746
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is 49",
+            "met": true
+          }
+        ],
+        "feedback": "The model correctly identified the sum of all positive integers n as 49.",
+        "total_score": 1.0,
+        "original_question": "Find the sum of all positive integers $n$ such that $n+2$ divides the product $3(n+3)(n^2+9).$",
+        "original_response": "To solve the problem, we are asked to find the **sum of all positive integers $ n $** such that:\n\n$$\nn + 2 \\mid 3(n + 3)(n^2 + 9)\n$$\n\n---\n\n### Step 1: Understand the Divisibility Condition\n\nWe are given that $ n + 2 $ divides the expression $ 3(n + 3)(n^2 + 9) $. That is:\n\n$$\nn + 2 \\mid 3(n + 3)(n^2 + 9)\n$$\n\nThis is equivalent to saying that:\n\n$$\n\\frac{3(n + 3)(n^2 + 9)}{n + 2} \\in \\mathbb{Z}\n$$\n\nWe can use **modular arithmetic** to simplify this. Since $ n + 2 \\mid 3(n + 3)(n^2 + 9) $, we can write:\n\n$$\n3(n + 3)(n^2 + 9) \\equiv 0 \\pmod{n + 2}\n$$\n\nLet\u2019s consider this modulo $ n + 2 $. Since $ n \\equiv -2 \\mod (n + 2) $, we can substitute $ n = -2 $ into the expression to evaluate it modulo $ n + 2 $:\n\n$$\n3(n + 3)(n^2 + 9) \\equiv 3((-2) + 3)((-2)^2 + 9) = 3(1)(4 + 9) = 3 \\cdot 13 = 39 \\pmod{n + 2}\n$$\n\nSo, we have:\n\n$$\n39 \\equiv 0 \\pmod{n + 2} \\Rightarrow n + 2 \\mid 39\n$$\n\n---\n\n### Step 2: Find All Positive Integers $ n $\n\nWe now need to find all **positive integers $ n $** such that $ n + 2 \\mid 39 $. The positive divisors of 39 are:\n\n$$\n\\{1, 3, 13, 39\\}\n$$\n\nSince $ n $ is positive, $ n + 2 \\geq 3 $, so we exclude $ 1 $. The valid values for $ n + 2 $ are:\n\n$$\nn + 2 \\in \\{3, 13, 39\\} \\Rightarrow n \\in \\{1, 11, 37\\}\n$$\n\n---\n\n### Step 3: Verify the Values\n\nLet\u2019s verify that each of these values of $ n $ satisfies the original condition:\n\n- **$ n = 1 $**:\n  $$\n  n + 2 = 3, \\quad 3(1 + 3)(1^2 + 9) = 3 \\cdot 4 \\cdot 10 = 120, \\quad 120 \\div 3 = 40 \\in \\mathbb{Z}\n  $$\n- **$ n = 11 $**:\n  $$\n  n + 2 = 13, \\quad 3(11 + 3)(11^2 + 9) = 3 \\cdot 14 \\cdot 130 = 5460, \\quad 5460 \\div 13 = 420 \\in \\mathbb{Z}\n  $$\n- **$ n = 37 $**:\n  $$\n  n + 2 = 39, \\quad 3(37 + 3)(37^2 + 9) = 3 \\cdot 40 \\cdot 1378 = 165360, \\quad 165360 \\div 39 = 4240 \\in \\mathbb{Z}\n  $$\n\nAll three values satisfy the condition.\n\n---\n\n### Step 4: Compute the Final Answer\n\nNow, sum the valid values of $ n $:\n\n$$\n1 + 11 + 37 = \\boxed{49}\n$$\n\n---\n\n### Final Answer\n\n$$\n\\boxed{49}\n$$",
+        "statistics": {
+          "character_count_output": 1963,
+          "character_count_reasoning": 13842,
+          "character_count_completion": 15805,
+          "tokens_output": 3388,
+          "tokens_reasoning": 3684,
+          "tokens_completions": 7072
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is 49",
+            "met": true
+          }
+        ],
+        "feedback": "The model correctly identified the sum of all positive integers n as 49.",
+        "total_score": 1.0,
+        "original_question": "Find the sum of all positive integers $n$ such that $n+2$ divides the product $3(n+3)(n^2+9).$",
+        "original_response": "To solve the problem, we are given that $ n $ is a positive integer such that $ n + 2 $ divides the expression $ 3(n + 3)(n^2 + 9) $, and we are to find the **sum of all such $ n $**.\n\n---\n\n### Step 1: Understanding the divisibility condition\n\nWe are told:\n$$\nn + 2 \\mid 3(n + 3)(n^2 + 9)\n$$\n\nLet us define $ d = n + 2 $, so that $ n = d - 2 $. Substituting into the expression, we get:\n$$\n3(n + 3)(n^2 + 9) = 3(d + 1)((d - 2)^2 + 9)\n$$\nSimplify the second factor:\n$$\n(d - 2)^2 + 9 = d^2 - 4d + 4 + 9 = d^2 - 4d + 13\n$$\nSo the full expression becomes:\n$$\n3(d + 1)(d^2 - 4d + 13)\n$$\n\nWe now want:\n$$\nd \\mid 3(d + 1)(d^2 - 4d + 13)\n$$\n\n---\n\n### Step 2: Use modular arithmetic and the Remainder Theorem\n\nWe can use the **Remainder Theorem** to simplify this. The remainder when $ f(n) = 3(n + 3)(n^2 + 9) $ is divided by $ n + 2 $ is:\n$$\nf(-2) = 3(-2 + 3)((-2)^2 + 9) = 3(1)(4 + 9) = 3 \\cdot 1 \\cdot 13 = 39\n$$\n\nSo, for $ n + 2 \\mid f(n) $, we must have:\n$$\nn + 2 \\mid f(-2) = 39\n$$\n\nThus, $ n + 2 $ must be a **positive divisor of 39**. The positive divisors of 39 are:\n$$\n\\{1, 3, 13, 39\\}\n$$\n\nSince $ n + 2 \\geq 3 $ (because $ n \\geq 1 $), we discard $ 1 $. So the possible values of $ n + 2 $ are:\n$$\n\\{3, 13, 39\\}\n$$\nThus, the corresponding values of $ n $ are:\n$$\nn = 1, 11, 37\n$$\n\n---\n\n### Step 3: Verify that each $ n $ satisfies the condition\n\nLet\u2019s verify each of the values:\n\n- **For $ n = 1 $:**\n  $$\n  n + 2 = 3, \\quad 3(1 + 3)(1^2 + 9) = 3 \\cdot 4 \\cdot 10 = 120 \\Rightarrow \\frac{120}{3} = 40 \\text{ (integer)}\n  $$\n  \u2705 Works.\n\n- **For $ n = 11 $:**\n  $$\n  n + 2 = 13, \\quad 3(11 + 3)(11^2 + 9) = 3 \\cdot 14 \\cdot 130 = 5460 \\Rightarrow \\frac{5460}{13} = 420 \\text{ (integer)}\n  $$\n  \u2705 Works.\n\n- **For $ n = 37 $:**\n  $$\n  n + 2 = 39, \\quad 3(37 + 3)(37^2 + 9) = 3 \\cdot 40 \\cdot 1378 = 165360 \\Rightarrow \\frac{165360}{39} = 4240 \\text{ (integer)}\n  $$\n  \u2705 Works.\n\nAll three values are valid.\n\n---\n\n### Step 4: Compute the sum of all valid $ n $\n\n$$\n1 + 11 + 37 = \\boxed{49}\n$$\n\n---\n\n### Final Answer\n\n$$\n\\boxed{49}\n$$",
+        "statistics": {
+          "character_count_output": 2030,
+          "character_count_reasoning": 29569,
+          "character_count_completion": 31599,
+          "tokens_output": 5489,
+          "tokens_reasoning": 7766,
+          "tokens_completions": 13255
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is 49",
+            "met": true
+          }
+        ],
+        "feedback": "The model correctly identified the sum of all positive integers n as 49.",
+        "total_score": 1.0,
+        "original_question": "Find the sum of all positive integers $n$ such that $n+2$ divides the product $3(n+3)(n^2+9).$",
+        "original_response": "To solve the problem, we are given that a positive integer $ n $ satisfies the condition:\n\n$$\nn + 2 \\mid 3(n + 3)(n^2 + 9)\n$$\n\nOur goal is to find **all such positive integers** $ n $ and compute their **sum**.\n\n---\n\n### Step 1: Understanding the Divisibility Condition\n\nWe are told that $ n + 2 $ divides the expression $ 3(n + 3)(n^2 + 9) $. This means:\n\n$$\n3(n + 3)(n^2 + 9) \\equiv 0 \\pmod{n + 2}\n$$\n\nWe can interpret this using the **Remainder Theorem**. If we consider the polynomial:\n\n$$\nf(n) = 3(n + 3)(n^2 + 9)\n$$\n\nThen the remainder when $ f(n) $ is divided by $ n + 2 $ is $ f(-2) $. Let's compute this:\n\n$$\nf(-2) = 3(-2 + 3)((-2)^2 + 9) = 3(1)(4 + 9) = 3 \\cdot 1 \\cdot 13 = 39\n$$\n\nSo, the **remainder** when $ f(n) $ is divided by $ n + 2 $ is 39. Therefore, for $ n + 2 $ to divide $ f(n) $, we must have:\n\n$$\n39 \\equiv 0 \\pmod{n + 2} \\quad \\Rightarrow \\quad n + 2 \\mid 39\n$$\n\n---\n\n### Step 2: Finding All Positive Integers $ n $\n\nWe now find all positive integers $ n $ such that $ n + 2 \\mid 39 $. The positive divisors of 39 are:\n\n$$\n1, 3, 13, 39\n$$\n\nSince $ n + 2 \\geq 3 $ (because $ n \\geq 1 $), we discard 1. So the valid divisors are:\n\n$$\nn + 2 = 3, 13, 39 \\quad \\Rightarrow \\quad n = 1, 11, 37\n$$\n\n---\n\n### Step 3: Verifying the Values\n\nLet\u2019s verify that each of these values of $ n $ satisfies the original divisibility condition.\n\n- **For $ n = 1 $:**\n  $$\n  n + 2 = 3, \\quad 3(n + 3)(n^2 + 9) = 3(4)(1 + 9) = 3 \\cdot 4 \\cdot 10 = 120\n  $$\n  $ 120 \\div 3 = 40 $, so it works.\n\n- **For $ n = 11 $:**\n  $$\n  n + 2 = 13, \\quad 3(14)(121 + 9) = 3 \\cdot 14 \\cdot 130 = 5460\n  $$\n  $ 5460 \\div 13 = 420 $, so it works.\n\n- **For $ n = 37 $:**\n  $$\n  n + 2 = 39, \\quad 3(40)(1369 + 9) = 3 \\cdot 40 \\cdot 1378 = 165360\n  $$\n  $ 165360 \\div 39 = 4240 $, so it works.\n\nAll three values are valid.\n\n---\n\n### Step 4: Computing the Sum\n\nNow, we sum the valid values of $ n $:\n\n$$\n1 + 11 + 37 = 49\n$$\n\n---\n\n### Final Answer\n\n$$\n\\boxed{49}\n$$",
+        "statistics": {
+          "character_count_output": 1948,
+          "character_count_reasoning": 15664,
+          "character_count_completion": 17612,
+          "tokens_output": 3272,
+          "tokens_reasoning": 4107,
+          "tokens_completions": 7379
+        }
+      }
+    ],
+    "qwen3-30b-a3b-think": [
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is 49",
+            "met": true
+          }
+        ],
+        "feedback": "The model correctly identified the sum of all positive integers n as 49.",
+        "total_score": 1.0,
+        "original_question": "Find the sum of all positive integers $n$ such that $n+2$ divides the product $3(n+3)(n^2+9).$",
+        "original_response": "To solve the problem, we are given the condition:\n\n> $ n + 2 $ divides $ 3(n + 3)(n^2 + 9) $\n\nWe are to find all **positive integers** $ n $ for which this is true, and then compute their **sum**.\n\n---\n\n### Step 1: Use the Remainder Theorem\n\nLet us define the function:\n\n$$\nf(n) = 3(n + 3)(n^2 + 9)\n$$\n\nWe are told that $ n + 2 \\mid f(n) $. This means that $ f(n) \\mod (n + 2) = 0 $.\n\nAccording to the **Remainder Theorem**, the remainder when $ f(n) $ is divided by $ n + 2 $ is $ f(-2) $.\n\nSo compute:\n\n$$\nf(-2) = 3(-2 + 3)((-2)^2 + 9) = 3(1)(4 + 9) = 3 \\cdot 1 \\cdot 13 = 39\n$$\n\nTherefore, the remainder is 39. For $ n + 2 $ to divide $ f(n) $, it must divide 39:\n\n$$\nn + 2 \\mid 39\n$$\n\n---\n\n### Step 2: Find All Positive Integer Values of $ n $\n\nWe now find all positive integers $ n $ such that $ n + 2 $ is a **positive divisor** of 39.\n\nThe positive divisors of 39 are:\n\n$$\n1, 3, 13, 39\n$$\n\nSince $ n $ is a **positive integer**, $ n + 2 \\geq 3 $. So we discard 1.\n\nThus, the valid values of $ n + 2 $ are:\n\n$$\n3, 13, 39 \\Rightarrow n = 1, 11, 37\n$$\n\n---\n\n### Step 3: Verify the Values\n\nWe can double-check that each of these values satisfies the original condition.\n\n- $ n = 1 $: $ n + 2 = 3 $, and the product is $ 3(1 + 3)(1^2 + 9) = 3 \\cdot 4 \\cdot 10 = 120 $, which is divisible by 3.\n- $ n = 11 $: $ n + 2 = 13 $, and the product is $ 3(14)(130) = 5460 $, divisible by 13.\n- $ n = 37 $: $ n + 2 = 39 $, and the product is $ 3(40)(1378) = 165360 $, divisible by 39.\n\nAll values are valid.\n\n---\n\n### Step 4: Compute the Sum\n\n$$\n1 + 11 + 37 = 49\n$$\n\n---\n\n### Final Answer\n\n$$\n\\boxed{49}\n$$",
+        "statistics": {
+          "character_count_output": 1598,
+          "character_count_reasoning": 18144,
+          "character_count_completion": 19742,
+          "tokens_output": 3350,
+          "tokens_reasoning": 4745,
+          "tokens_completions": 8095
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is 49",
+            "met": true
+          }
+        ],
+        "feedback": "The model correctly identified the sum of all positive integers n as 49.",
+        "total_score": 1.0,
+        "original_question": "Find the sum of all positive integers $n$ such that $n+2$ divides the product $3(n+3)(n^2+9).$",
+        "original_response": "To solve the problem, we are given that a positive integer $ n $ satisfies the condition:\n\n$$\nn + 2 \\mid 3(n + 3)(n^2 + 9)\n$$\n\nOur goal is to **find all such positive integers $ n $** and then **compute their sum**.\n\n---\n\n### Step 1: Use the Remainder Theorem\n\nLet us define the expression:\n\n$$\nf(n) = 3(n + 3)(n^2 + 9)\n$$\n\nWe are told that $ n + 2 \\mid f(n) $, which means that the remainder when $ f(n) $ is divided by $ n + 2 $ is zero. By the **Remainder Theorem**, the remainder of the division of $ f(n) $ by $ n + 2 $ is:\n\n$$\nf(-2) = 3(-2 + 3)((-2)^2 + 9) = 3(1)(4 + 9) = 39\n$$\n\nSo, for $ n + 2 $ to divide $ f(n) $, it must divide the remainder, which is 39.\n\n---\n\n### Step 2: Find All Positive Integers $ n $ Such That $ n + 2 \\mid 39 $\n\nWe now find all **positive integers** $ n $ such that $ n + 2 $ is a **positive divisor of 39**.\n\nThe positive divisors of 39 are:\n\n$$\n1, 3, 13, 39\n$$\n\nSince $ n + 2 \\geq 3 $ (as $ n $ is a positive integer), the valid values of $ n + 2 $ are:\n\n$$\n3, 13, 39\n$$\n\nSo the corresponding values of $ n $ are:\n\n$$\nn = 1, 11, 37\n$$\n\n---\n\n### Step 3: Verify Each Value\n\nLet\u2019s confirm that each of these values satisfies the original condition.\n\n- **For $ n = 1 $:**  \n  $ n + 2 = 3 $, and  \n  $$\n  3(n + 3)(n^2 + 9) = 3(4)(10) = 120 \\quad \\text{and} \\quad 120 \\div 3 = 40 \\quad \\text{(integer)}\n  $$\n\n- **For $ n = 11 $:**  \n  $ n + 2 = 13 $, and  \n  $$\n  3(14)(130) = 5460 \\quad \\text{and} \\quad 5460 \\div 13 = 420 \\quad \\text{(integer)}\n  $$\n\n- **For $ n = 37 $:**  \n  $ n + 2 = 39 $, and  \n  $$\n  3(40)(1378) = 120 \\cdot 1378 = 165360 \\quad \\text{and} \\quad 165360 \\div 39 = 4240 \\quad \\text{(integer)}\n  $$\n\nAll three values satisfy the condition.\n\n---\n\n### Step 4: Compute the Sum\n\nNow, sum the valid values of $ n $:\n\n$$\n1 + 11 + 37 = \\boxed{49}\n$$\n\n---\n\n### Final Answer\n\n$$\n\\boxed{49}\n$$",
+        "statistics": {
+          "character_count_output": 1834,
+          "character_count_reasoning": 11786,
+          "character_count_completion": 13620,
+          "tokens_output": 2956,
+          "tokens_reasoning": 3114,
+          "tokens_completions": 6070
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is 49",
+            "met": true
+          }
+        ],
+        "feedback": "The model correctly identified the sum of all positive integers n as 49.",
+        "total_score": 1.0,
+        "original_question": "Find the sum of all positive integers $n$ such that $n+2$ divides the product $3(n+3)(n^2+9).$",
+        "original_response": "To solve the problem, we are asked to find all **positive integers** $ n $ such that:\n\n$$\nn + 2 \\mid 3(n + 3)(n^2 + 9)\n$$\n\nThis means that the expression $ 3(n + 3)(n^2 + 9) $ must be divisible by $ n + 2 $. Our goal is to find all such $ n $ and then compute the **sum** of these values.\n\n---\n\n### Step 1: Substitution\n\nLet us make the substitution $ k = n + 2 $. Then $ n = k - 2 $, and we can rewrite the expression:\n\n$$\n3(n + 3)(n^2 + 9) = 3((k - 2) + 3)((k - 2)^2 + 9)\n$$\n\nSimplify:\n\n$$\n= 3(k + 1)(k^2 - 4k + 13)\n$$\n\nSo we now want $ k \\mid 3(k + 1)(k^2 - 4k + 13) $\n\n---\n\n### Step 2: Modular Arithmetic Approach\n\nWe analyze the expression modulo $ k $. Since $ k \\mid 3(k + 1)(k^2 - 4k + 13) $, then:\n\n$$\n3(k + 1)(k^2 - 4k + 13) \\equiv 0 \\mod k\n$$\n\nNow, compute each factor modulo $ k $:\n\n- $ k + 1 \\equiv 1 \\mod k $\n- $ k^2 - 4k + 13 \\equiv 0 - 0 + 13 = 13 \\mod k $\n\nSo the expression becomes:\n\n$$\n3 \\cdot 1 \\cdot 13 = 39 \\mod k\n$$\n\nTherefore:\n\n$$\n39 \\equiv 0 \\mod k \\Rightarrow k \\mid 39\n$$\n\n---\n\n### Step 3: Find Valid $ k $ Values\n\nThe positive divisors of 39 are:\n\n$$\n\\{1, 3, 13, 39\\}\n$$\n\nBut since $ n $ is a **positive integer**, $ n + 2 = k \\geq 3 $, so we only consider:\n\n$$\nk \\in \\{3, 13, 39\\}\n$$\n\nThen the corresponding values of $ n $ are:\n\n- $ k = 3 \\Rightarrow n = 1 $\n- $ k = 13 \\Rightarrow n = 11 $\n- $ k = 39 \\Rightarrow n = 37 $\n\n---\n\n### Step 4: Verify the Values\n\nLet\u2019s verify that each of these $ n $ satisfies the original condition:\n\n- **For $ n = 1 $:**\n  $$\n  n + 2 = 3,\\quad 3(n + 3)(n^2 + 9) = 3(4)(10) = 120,\\quad 120 \\div 3 = 40 \\in \\mathbb{Z}\n  $$\n\n- **For $ n = 11 $:**\n  $$\n  n + 2 = 13,\\quad 3(14)(130) = 5460,\\quad 5460 \\div 13 = 420 \\in \\mathbb{Z}\n  $$\n\n- **For $ n = 37 $:**\n  $$\n  n + 2 = 39,\\quad 3(40)(1378) = 165360,\\quad 165360 \\div 39 = 4240 \\in \\mathbb{Z}\n  $$\n\nAll values are valid.\n\n---\n\n### Step 5: Final Calculation\n\nNow, sum the valid values of $ n $:\n\n$$\n1 + 11 + 37 = \\boxed{49}\n$$\n\n---\n\n### Final Answer\n\n$$\n\\boxed{49}\n$$",
+        "statistics": {
+          "character_count_output": 1978,
+          "character_count_reasoning": 11315,
+          "character_count_completion": 13293,
+          "tokens_output": 2249,
+          "tokens_reasoning": 3026,
+          "tokens_completions": 5275
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is 49",
+            "met": true
+          }
+        ],
+        "feedback": "The model correctly identified the sum of all positive integers n as 49.",
+        "total_score": 1.0,
+        "original_question": "Find the sum of all positive integers $n$ such that $n+2$ divides the product $3(n+3)(n^2+9).$",
+        "original_response": "To solve the problem, we are given the condition:\n\n> $ n + 2 $ divides $ 3(n + 3)(n^2 + 9) $\n\nWe are to find all **positive integers** $ n $ satisfying this condition and then compute the **sum** of all such $ n $.\n\n---\n\n### Step 1: Use the Remainder Theorem\n\nWe interpret the condition as:\n\n$$\nn + 2 \\mid 3(n + 3)(n^2 + 9)\n$$\n\nThis is equivalent to saying that the remainder when $ 3(n + 3)(n^2 + 9) $ is divided by $ n + 2 $ is zero.\n\nBy the **Remainder Theorem**, the remainder of a polynomial $ f(n) $ divided by $ n + 2 $ is $ f(-2) $. So, we compute:\n\n$$\nf(n) = 3(n + 3)(n^2 + 9)\n$$\n$$\nf(-2) = 3(-2 + 3)((-2)^2 + 9) = 3(1)(4 + 9) = 3 \\cdot 13 = 39\n$$\n\nSo, the remainder is 39, and for $ n + 2 $ to divide $ f(n) $, it must divide 39.\n\n---\n\n### Step 2: Determine Possible Values of $ n + 2 $\n\nWe now look for all **positive integers** $ n $ such that $ n + 2 \\mid 39 $. That is, $ n + 2 $ is a **positive divisor** of 39.\n\nThe positive divisors of 39 are:\n\n$$\n1, 3, 13, 39\n$$\n\nBut since $ n + 2 \\geq 3 $ (as $ n \\geq 1 $), we exclude 1. The possible values of $ n + 2 $ are:\n\n$$\n3, 13, 39\n$$\n\nSo the corresponding values of $ n $ are:\n\n- $ n = 3 - 2 = 1 $\n- $ n = 13 - 2 = 11 $\n- $ n = 39 - 2 = 37 $\n\n---\n\n### Step 3: Verify the Values\n\nLet\u2019s confirm each value satisfies the original condition.\n\n- **For $ n = 1 $:**\n\n  $$\n  n + 2 = 3, \\quad 3(n + 3)(n^2 + 9) = 3(4)(10) = 120\n  $$\n  $$\n  120 \\div 3 = 40 \\quad \\text{(integer)}\n  $$\n\n- **For $ n = 11 $:**\n\n  $$\n  n + 2 = 13, \\quad 3(14)(130) = 3 \\cdot 14 \\cdot 130 = 5460\n  $$\n  $$\n  5460 \\div 13 = 420 \\quad \\text{(integer)}\n  $$\n\n- **For $ n = 37 $:**\n\n  $$\n  n + 2 = 39, \\quad 3(40)(1378) = 3 \\cdot 40 \\cdot 1378 = 165360\n  $$\n  $$\n  165360 \\div 39 = 4240 \\quad \\text{(integer)}\n  $$\n\nAll values satisfy the condition.\n\n---\n\n### Step 4: Compute the Final Answer\n\nThe valid values of $ n $ are: $ 1, 11, 37 $\n\nTheir sum is:\n\n$$\n1 + 11 + 37 = 49\n$$\n\n---\n\n### \u2705 Final Answer\n\n$$\n\\boxed{49}\n$$",
+        "statistics": {
+          "character_count_output": 1949,
+          "character_count_reasoning": 15175,
+          "character_count_completion": 17124,
+          "tokens_output": 3015,
+          "tokens_reasoning": 4061,
+          "tokens_completions": 7076
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is 49",
+            "met": true
+          }
+        ],
+        "feedback": "The model correctly identified the sum of all positive integers n as 49.",
+        "total_score": 1.0,
+        "original_question": "Find the sum of all positive integers $n$ such that $n+2$ divides the product $3(n+3)(n^2+9).$",
+        "original_response": "To solve the problem, we are given that for a positive integer $ n $, the expression $ n + 2 $ divides the product:\n\n$$\n3(n + 3)(n^2 + 9)\n$$\n\nWe are to find all such positive integers $ n $, and then sum them up.\n\n---\n\n### Step 1: Use the Remainder Theorem\n\nWe interpret the condition as:\n\n$$\nn + 2 \\mid 3(n + 3)(n^2 + 9)\n$$\n\nThis means that when we divide the expression $ 3(n + 3)(n^2 + 9) $ by $ n + 2 $, the remainder is zero. Using the **Remainder Theorem**, we evaluate the expression at $ n = -2 $, since that is the root of the divisor $ n + 2 $.\n\nLet:\n\n$$\nf(n) = 3(n + 3)(n^2 + 9)\n$$\n\nThen:\n\n$$\nf(-2) = 3(-2 + 3)((-2)^2 + 9) = 3(1)(4 + 9) = 3 \\cdot 1 \\cdot 13 = 39\n$$\n\nSo the remainder when dividing $ f(n) $ by $ n + 2 $ is 39. Therefore, for $ n + 2 $ to divide $ f(n) $, it must divide 39.\n\n---\n\n### Step 2: Find Positive Divisors of 39\n\nThe positive divisors of 39 are:\n\n$$\n1, 3, 13, 39\n$$\n\nSince $ n + 2 \\geq 3 $ (because $ n $ is a positive integer), the valid values of $ n + 2 $ are:\n\n$$\n3, 13, 39\n$$\n\nSo the corresponding values of $ n $ are:\n\n$$\nn = 1, 11, 37\n$$\n\n---\n\n### Step 3: Verify the Values\n\nWe check that each of these values satisfies the original condition:\n\n- **For $ n = 1 $:**\n\n$$\nn + 2 = 3,\\quad 3(n + 3)(n^2 + 9) = 3(4)(10) = 120,\\quad 120 \\div 3 = 40 \\quad \\text{(integer)}\n$$\n\n- **For $ n = 11 $:**\n\n$$\nn + 2 = 13,\\quad 3(14)(130) = 5460,\\quad 5460 \\div 13 = 420 \\quad \\text{(integer)}\n$$\n\n- **For $ n = 37 $:**\n\n$$\nn + 2 = 39,\\quad 3(40)(1378) = 165360,\\quad 165360 \\div 39 = 4240 \\quad \\text{(integer)}\n$$\n\nAll values are valid.\n\n---\n\n### Step 4: Compute the Final Answer\n\nNow, sum the values of $ n $:\n\n$$\n1 + 11 + 37 = 49\n$$\n\n---\n\n### Final Answer\n\n$$\n\\boxed{49}\n$$",
+        "statistics": {
+          "character_count_output": 1706,
+          "character_count_reasoning": 13962,
+          "character_count_completion": 15668,
+          "tokens_output": 3219,
+          "tokens_reasoning": 3724,
+          "tokens_completions": 6943
+        }
+      }
+    ],
+    "glm-z1-32b": [
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is 49",
+            "met": true
+          }
+        ],
+        "feedback": "The model correctly identified the sum as 49.",
+        "total_score": 1.0,
+        "original_question": "Find the sum of all positive integers $n$ such that $n+2$ divides the product $3(n+3)(n^2+9).$",
+        "original_response": "To solve the problem of finding the sum of all positive integers \\( n \\) such that \\( n + 2 \\) divides \\( 3(n + 3)(n^2 + 9) \\), we start by noting that \\( n + 2 \\) must be a divisor of the product. \n\nWe use modular arithmetic to simplify the expression modulo \\( n + 2 \\). Substituting \\( n \\equiv -2 \\mod (n + 2) \\) into the product, we get:\n\\[\n3(n + 3)(n^2 + 9) \\equiv 3(1)(13) = 39 \\mod (n + 2)\n\\]\nThis implies \\( n + 2 \\) must be a divisor of 39. The positive divisors of 39 are 1, 3, 13, and 39. Since \\( n \\) is a positive integer, \\( n + 2 \\) must be at least 3, so the relevant divisors are 3, 13, and 39. \n\nSolving for \\( n \\):\n- If \\( n + 2 = 3 \\), then \\( n = 1 \\)\n- If \\( n + 2 = 13 \\), then \\( n = 11 \\)\n- If \\( n + 2 = 39 \\), then \\( n = 37 \\)\n\nWe verify each solution by checking that \\( 3(n + 3)(n^2 + 9) \\) is indeed divisible by \\( n + 2 \\). All values \\( n = 1 \\), \\( n = 11 \\), and \\( n = 37 \\) satisfy the condition. \n\nSumming these values, we get:\n\\[\n1 + 11 + 37 = 49\n\\]\n\nThus, the sum of all positive integers \\( n \\) is \\(\\boxed{49}\\).",
+        "statistics": {
+          "character_count_output": 1059,
+          "character_count_reasoning": 5457,
+          "character_count_completion": 6516,
+          "tokens_output": 885,
+          "tokens_reasoning": 1450,
+          "tokens_completions": 2335
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is 49",
+            "met": true
+          }
+        ],
+        "feedback": "The model correctly identified the sum of all positive integers n as 49.",
+        "total_score": 1.0,
+        "original_question": "Find the sum of all positive integers $n$ such that $n+2$ divides the product $3(n+3)(n^2+9).$",
+        "original_response": "To find the sum of all positive integers \\( n \\) such that \\( n + 2 \\) divides the product \\( 3(n + 3)(n^2 + 9) \\), we start by noting that if \\( n + 2 \\) divides \\( 3(n + 3)(n^2 + 9) \\), then the remainder when \\( 3(n + 3)(n^2 + 9) \\) is divided by \\( n + 2 \\) must be zero. Using the Remainder Theorem, we substitute \\( n = -2 \\) into the polynomial \\( 3(n + 3)(n^2 + 9) \\):\n\n\\[\n3(-2 + 3)((-2)^2 + 9) = 3(1)(4 + 9) = 3 \\cdot 1 \\cdot 13 = 39\n\\]\n\nThis tells us that the remainder is 39, so \\( n + 2 \\) must be a divisor of 39. The positive divisors of 39 are 1, 3, 13, and 39. Since \\( n \\) is a positive integer, \\( n + 2 \\) must be at least 3. Therefore, the possible values for \\( n + 2 \\) are 3, 13, and 39, leading to \\( n = 1 \\), \\( n = 11 \\), and \\( n = 37 \\).\n\nWe verify each value:\n- For \\( n = 1 \\), \\( 1 + 2 = 3 \\) divides \\( 3(1 + 3)(1^2 + 9) = 120 \\).\n- For \\( n = 11 \\), \\( 11 + 2 = 13 \\) divides \\( 3(11 + 3)(11^2 + 9) = 5460 \\).\n- For \\( n = 37 \\), \\( 37 + 2 = 39 \\) divides \\( 3(37 + 3)(37^2 + 9) = 165360 \\).\n\nAll these values satisfy the condition. Summing them, we get \\( 1 + 11 + 37 = 49 \\).\n\nThus, the sum of all positive integers \\( n \\) is \\(\\boxed{49}\\).",
+        "statistics": {
+          "character_count_output": 1179,
+          "character_count_reasoning": 6551,
+          "character_count_completion": 7730,
+          "tokens_output": 1227,
+          "tokens_reasoning": 1765,
+          "tokens_completions": 2992
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is 49",
+            "met": true
+          }
+        ],
+        "feedback": "The model correctly identified the sum as 49.",
+        "total_score": 1.0,
+        "original_question": "Find the sum of all positive integers $n$ such that $n+2$ divides the product $3(n+3)(n^2+9).$",
+        "original_response": "To find the sum of all positive integers \\( n \\) such that \\( n + 2 \\) divides \\( 3(n + 3)(n^2 + 9) \\), we start by noting that \\( n + 2 \\) must divide the product. Using the Remainder Theorem, we evaluate the polynomial \\( P(n) = 3(n + 3)(n^2 + 9) \\) at \\( n = -2 \\):\n\n\\[\nP(-2) = 3(-2 + 3)((-2)^2 + 9) = 3(1)(4 + 9) = 3 \\cdot 1 \\cdot 13 = 39\n\\]\n\nThis tells us that \\( n + 2 \\) must be a divisor of 39. The positive divisors of 39 are 1, 3, 13, and 39. Since \\( n \\) is a positive integer, \\( n + 2 \\) must be at least 3, so the valid divisors are 3, 13, and 39. This gives the corresponding values of \\( n \\):\n\n- \\( n + 2 = 3 \\) implies \\( n = 1 \\)\n- \\( n + 2 = 13 \\) implies \\( n = 11 \\)\n- \\( n + 2 = 39 \\) implies \\( n = 37 \\)\n\nWe verify each value of \\( n \\) to ensure it satisfies the original condition. All values \\( n = 1 \\), \\( n = 11 \\), and \\( n = 37 \\) work. Summing these values:\n\n\\[\n1 + 11 + 37 = 49\n\\]\n\nThus, the sum of all positive integers \\( n \\) is \\(\\boxed{49}\\).",
+        "statistics": {
+          "character_count_output": 983,
+          "character_count_reasoning": 5507,
+          "character_count_completion": 6490,
+          "tokens_output": 1096,
+          "tokens_reasoning": 1437,
+          "tokens_completions": 2533
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is 49",
+            "met": true
+          }
+        ],
+        "feedback": "The model correctly identified the sum of all positive integers n as 49.",
+        "total_score": 1.0,
+        "original_question": "Find the sum of all positive integers $n$ such that $n+2$ divides the product $3(n+3)(n^2+9).$",
+        "original_response": "To solve the problem, we need to find all positive integers \\( n \\) such that \\( n + 2 \\) divides \\( 3(n + 3)(n^2 + 9) \\). \n\n1. **Substitution**: Let \\( k = n + 2 \\). Then \\( n = k - 2 \\). Substituting into the product:\n   \\[\n   3(n + 3)(n^2 + 9) = 3(k + 1)(k^2 - 4k + 13)\n   \\]\n   The condition becomes \\( k \\) divides \\( 3(k + 1)(k^2 - 4k + 13) \\).\n\n2. **Modular Arithmetic**: Simplify the expression modulo \\( k \\):\n   \\[\n   3(k + 1)(k^2 - 4k + 13) \\equiv 3 \\cdot 1 \\cdot 13 \\equiv 39 \\pmod{k}\n   \\]\n   Thus, \\( k \\) must divide 39.\n\n3. **Divisors of 39**: The positive divisors of 39 are 1, 3, 13, and 39. Since \\( k = n + 2 \\geq 3 \\), the valid divisors are 3, 13, and 39. This gives \\( n = k - 2 \\):\n   - \\( k = 3 \\Rightarrow n = 1 \\)\n   - \\( k = 13 \\Rightarrow n = 11 \\)\n   - \\( k = 39 \\Rightarrow n = 37 \\)\n\n4. **Verification**: Check each \\( n \\):\n   - \\( n = 1 \\): \\( 3(4)(10) = 120 \\), divisible by 3.\n   - \\( n = 11 \\): \\( 3(14)(130) = 5460 \\), divisible by 13.\n   - \\( n = 37 \\): \\( 3(40)(1378) = 165360 \\), divisible by 39.\n\nSumming these values: \\( 1 + 11 + 37 = 49 \\).\n\n**Answer:** \\boxed{49}",
+        "statistics": {
+          "character_count_output": 1108,
+          "character_count_reasoning": 6249,
+          "character_count_completion": 7357,
+          "tokens_output": 992,
+          "tokens_reasoning": 1681,
+          "tokens_completions": 2673
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is 49",
+            "met": true
+          }
+        ],
+        "feedback": "The model correctly identified the sum of all positive integers n as 49.",
+        "total_score": 1.0,
+        "original_question": "Find the sum of all positive integers $n$ such that $n+2$ divides the product $3(n+3)(n^2+9).$",
+        "original_response": "The problem requires finding all positive integers \\( n \\) such that \\( n + 2 \\) divides \\( 3(n + 3)(n^2 + 9) \\). \n\nUsing the Remainder Theorem, substituting \\( n = -2 \\) into the polynomial \\( 3(n + 3)(n^2 + 9) \\) gives the remainder when divided by \\( n + 2 \\). Calculating this remainder:\n\n\\[\n3(-2 + 3)((-2)^2 + 9) = 3(1)(13) = 39\n\\]\n\nThus, \\( n + 2 \\) must be a positive divisor of 39. The divisors of 39 are 1, 3, 13, and 39. Since \\( n \\) is positive, \\( n + 2 \\) must be at least 3, leading to \\( n + 2 \\in \\{3, 13, 39\\} \\). Therefore, the corresponding values of \\( n \\) are:\n\n\\[\nn = 3 - 2 = 1, \\quad n = 13 - 2 = 11, \\quad n = 39 - 2 = 37\n\\]\n\nVerifying each \\( n \\):\n\n- For \\( n = 1 \\), \\( 3(1 + 3)(1^2 + 9) = 120 \\), which is divisible by \\( 3 \\).\n- For \\( n = 11 \\), \\( 3(11 + 3)(11^2 + 9) = 5460 \\), which is divisible by \\( 13 \\).\n- For \\( n = 37 \\), \\( 3(37 + 3)(37^2 + 9) = 165360 \\), which is divisible by \\( 39 \\).\n\nSumming these values:\n\n\\[\n1 + 11 + 37 = 49\n\\]\n\nThus, the sum of all positive integers \\( n \\) is \\(\\boxed{49}\\).",
+        "statistics": {
+          "character_count_output": 1045,
+          "character_count_reasoning": 5552,
+          "character_count_completion": 6597,
+          "tokens_output": 1016,
+          "tokens_reasoning": 1514,
+          "tokens_completions": 2530
+        }
+      }
+    ],
+    "deepseek-r1-0528": [
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is 49",
+            "met": true
+          }
+        ],
+        "feedback": "The model correctly identified the sum of all positive integers n as 49.",
+        "total_score": 1.0,
+        "original_question": "Find the sum of all positive integers $n$ such that $n+2$ divides the product $3(n+3)(n^2+9).$",
+        "original_response": "The condition that \\(n + 2\\) divides \\(3(n+3)(n^2 + 9)\\) requires that \\(n + 2 \\mid 39\\). This is determined by setting \\(d = n + 2\\), so \\(n = d - 2\\). Substituting gives the expression:\n\\[\n3(d + 1)((d - 2)^2 + 9) = 3(d + 1)(d^2 - 4d + 13).\n\\]\nModulo \\(d\\), this reduces to \\(39\\), so \\(d \\mid 39\\). Since \\(n\\) is a positive integer, \\(d = n + 2 \\geq 3\\).\n\nThe positive divisors of 39 are 1, 3, 13, and 39. Excluding divisors less than 3 (i.e., 1), the valid values for \\(d\\) are 3, 13, and 39. Thus:\n- If \\(d = 3\\), then \\(n = 1\\).\n- If \\(d = 13\\), then \\(n = 11\\).\n- If \\(d = 39\\), then \\(n = 37\\).\n\nThe positive integer solutions for \\(n\\) are 1, 11, and 37. Their sum is:\n\\[\n1 + 11 + 37 = 49.\n\\]\n\nVerification:\n- For \\(n = 1\\), \\(n + 2 = 3\\) and \\(3(1+3)(1^2+9) = 3 \\cdot 4 \\cdot 10 = 120\\), and \\(120 / 3 = 40\\), so divisible.\n- For \\(n = 11\\), \\(n + 2 = 13\\) and \\(3(11+3)(11^2+9) = 3 \\cdot 14 \\cdot 130 = 5460\\), and \\(5460 / 13 = 420\\), so divisible.\n- For \\(n = 37\\), \\(n + 2 = 39\\) and \\(3(37+3)(37^2+9) = 3 \\cdot 40 \\cdot 1378 = 165360\\), and \\(165360 / 39 = 4240\\), so divisible.\n\nNo other positive integers \\(n\\) satisfy the condition.\n\n\\boxed{49}",
+        "statistics": {
+          "character_count_output": 1162,
+          "character_count_reasoning": 18533,
+          "character_count_completion": 19695,
+          "tokens_output": 2082,
+          "tokens_reasoning": 5096,
+          "tokens_completions": 7178
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is 49",
+            "met": true
+          }
+        ],
+        "feedback": "The model correctly identified the sum of all positive integers n as 49.",
+        "total_score": 1.0,
+        "original_question": "Find the sum of all positive integers $n$ such that $n+2$ divides the product $3(n+3)(n^2+9).$",
+        "original_response": "The condition requires that \\(n + 2\\) divides the expression \\(3(n + 3)(n^2 + 9)\\), where \\(n\\) is a positive integer.\n\nTo satisfy this condition, substitute \\(d = n + 2\\), so \\(n = d - 2\\). This gives:\n- \\(n + 3 = (d - 2) + 3 = d + 1\\)\n- \\(n^2 + 9 = (d - 2)^2 + 9 = d^2 - 4d + 13\\)\n\nThe expression becomes:\n\\[\n3(d + 1)(d^2 - 4d + 13)\n\\]\nExpanding the product:\n\\[\n(d + 1)(d^2 - 4d + 13) = d \\cdot d^2 + d \\cdot (-4d) + d \\cdot 13 + 1 \\cdot d^2 + 1 \\cdot (-4d) + 1 \\cdot 13 = d^3 - 4d^2 + 13d + d^2 - 4d + 13 = d^3 - 3d^2 + 9d + 13\n\\]\nThen:\n\\[\n3(d^3 - 3d^2 + 9d + 13) = 3d^3 - 9d^2 + 27d + 39\n\\]\n\nThe requirement is that \\(d\\) divides \\(3d^3 - 9d^2 + 27d + 39\\). Since \\(d\\) divides \\(3d^3\\), \\(-9d^2\\), and \\(27d\\), the expression modulo \\(d\\) reduces to the constant term:\n\\[\n3d^3 - 9d^2 + 27d + 39 \\equiv 39 \\pmod{d}\n\\]\nFor divisibility:\n\\[\n39 \\equiv 0 \\pmod{d} \\implies d \\mid 39\n\\]\n\nThe positive divisors of 39 are 1, 3, 13, and 39. Since \\(n\\) is a positive integer, \\(d = n + 2 \\geq 3\\). Thus, \\(d = 1\\) is excluded, leaving \\(d = 3\\), \\(d = 13\\), and \\(d = 39\\).\n\nSolving for \\(n\\):\n- If \\(d = 3\\), then \\(n + 2 = 3\\) so \\(n = 1\\).\n- If \\(d = 13\\), then \\(n + 2 = 13\\) so \\(n = 11\\).\n- If \\(d = 39\\), then \\(n + 2 = 39\\) so \\(n = 37\\).\n\nVerifying each:\n- For \\(n = 1\\): Expression is \\(3(1 + 3)(1^2 + 9) = 3 \\cdot 4 \\cdot 10 = 120\\). Divided by \\(n + 2 = 3\\), \\(120 / 3 = 40\\), an integer.\n- For \\(n = 11\\): Expression is \\(3(11 + 3)(11^2 + 9) = 3 \\cdot 14 \\cdot 130 = 5460\\). Divided by \\(n + 2 = 13\\), \\(5460 / 13 = 420\\), an integer.\n- For \\(n = 37\\): Expression is \\(3(37 + 3)(37^2 + 9) = 3 \\cdot 40 \\cdot 1378 = 165360\\). Divided by \\(n + 2 = 39\\), \\(165360 / 39 = 4240\\), an integer.\n\nAll satisfy the condition. The sum of the solutions is:\n\\[\n1 + 11 + 37 = 49\n\\]\n\n\\boxed{49}",
+        "statistics": {
+          "character_count_output": 1788,
+          "character_count_reasoning": 18098,
+          "character_count_completion": 19886,
+          "tokens_output": 2563,
+          "tokens_reasoning": 4989,
+          "tokens_completions": 7552
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is 49",
+            "met": true
+          }
+        ],
+        "feedback": "The model correctly identified the sum of all positive integers n as 49.",
+        "total_score": 1.0,
+        "original_question": "Find the sum of all positive integers $n$ such that $n+2$ divides the product $3(n+3)(n^2+9).$",
+        "original_response": "To solve the problem, we need to find all positive integers \\(n\\) such that \\(n + 2\\) divides the expression \\(3(n+3)(n^2 + 9)\\), and then find their sum.\n\nConsider the expression \\(h(n) = 3(n+3)(n^2 + 9)\\). Performing polynomial division of \\(h(n)\\) by \\(n + 2\\) (which corresponds to the root \\(-2\\)) gives:\n\n- \\(h(n) = 3n^3 + 9n^2 + 27n + 81\\) after expanding.\n- Using synthetic division with root \\(-2\\):\n  - Coefficients: 3, 9, 27, 81.\n  - Bring down 3.\n  - Multiply by \\(-2\\): \\(3 \\times -2 = -6\\), add to 9: \\(9 + (-6) = 3\\).\n  - Multiply by \\(-2\\): \\(3 \\times -2 = -6\\), add to 27: \\(27 + (-6) = 21\\).\n  - Multiply by \\(-2\\): \\(21 \\times -2 = -42\\), add to 81: \\(81 + (-42) = 39\\).\n- Thus, \\(h(n) = (n + 2)(3n^2 + 3n + 21) + 39\\).\n\nFor \\(n + 2\\) to divide \\(h(n)\\), the remainder must be zero when \\(n\\) is an integer. This requires that \\(n + 2\\) divides the remainder 39:\n\\[\nn + 2 \\mid 39.\n\\]\nSince \\(n\\) is a positive integer, \\(n \\geq 1\\), so \\(n + 2 \\geq 3\\). The positive divisors of 39 are 1, 3, 13, and 39. Excluding divisors less than 3 (since \\(n + 2 \\geq 3\\)), the possible values of \\(n + 2\\) are 3, 13, and 39.\n\nSolving for \\(n\\):\n- If \\(n + 2 = 3\\), then \\(n = 1\\).\n- If \\(n + 2 = 13\\), then \\(n = 11\\).\n- If \\(n + 2 = 39\\), then \\(n = 37\\).\n\nThus, the positive integer solutions are \\(n = 1\\), \\(n = 11\\), and \\(n = 37\\).\n\nNow, verify that each \\(n\\) satisfies the condition:\n- For \\(n = 1\\): \\(h(1) = 3(1+3)(1^2 + 9) = 3 \\times 4 \\times 10 = 120\\), and \\(120 / (1 + 2) = 120 / 3 = 40\\), an integer.\n- For \\(n = 11\\): \\(h(11) = 3(11+3)(11^2 + 9) = 3 \\times 14 \\times 130 = 5460\\), and \\(5460 / (11 + 2) = 5460 / 13 = 420\\), an integer.\n- For \\(n = 37\\): \\(h(37) = 3(37+3)(37^2 + 9) = 3 \\times 40 \\times 1378 = 54600\\)? Wait, earlier calculation:  \n  \\(37^2 = 1369\\), so \\(n^2 + 9 = 1378\\), then \\(3 \\times 40 \\times 1378 = 120 \\times 1378 = 165360\\).  \n  Better: \\(120 \\times 1378\\).  \n  However, dividing by \\(n + 2 = 39\\): \\(39 = 3 \\times 13\\), \\(120 / 3 = 40\\), and \\(1378 / 13 = 106\\) (since \\(13 \\times 106 = 1378\\)), so \\(40 \\times 106 = 4240\\), an integer.\n\nThe sum of the solutions is:\n\\[\n1 + 11 + 37 = 49.\n\\]\n\nNo other positive integers \\(n\\) satisfy the condition, as the divisor condition \\(n + 2 \\mid 39\\) with \\(n + 2 \\geq 3\\) yields only these three values.\n\n\\boxed{49}",
+        "statistics": {
+          "character_count_output": 2306,
+          "character_count_reasoning": 17482,
+          "character_count_completion": 19788,
+          "tokens_output": 2719,
+          "tokens_reasoning": 4752,
+          "tokens_completions": 7471
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is 49",
+            "met": true
+          }
+        ],
+        "feedback": "The model correctly identified the sum of all positive integers n as 49.",
+        "total_score": 1.0,
+        "original_question": "Find the sum of all positive integers $n$ such that $n+2$ divides the product $3(n+3)(n^2+9).$",
+        "original_response": "The condition is that \\(n+2\\) divides \\(3(n+3)(n^2+9)\\). Define \\(f(n) = 3(n+3)(n^2+9)\\). Using polynomial division, divide \\(f(n)\\) by \\(n+2\\):\n\n- Dividing \\(3n^3 + 9n^2 + 27n + 81\\) (which is the expansion of \\(f(n)\\)) by \\(n+2\\) gives a quotient of \\(3n^2 + 3n + 21\\) and a remainder of \\(39\\). Thus,\n\\[\nf(n) = (n+2)(3n^2 + 3n + 21) + 39.\n\\]\nFor \\(n+2\\) to divide \\(f(n)\\), \\(n+2\\) must divide the remainder \\(39\\), so\n\\[\nn+2 \\mid 39.\n\\]\nSince \\(n\\) is a positive integer, \\(n \\geq 1\\), so \\(n+2 \\geq 3\\). The positive divisors of \\(39\\) are \\(1, 3, 13, 39\\). Excluding \\(1\\) as it is less than \\(3\\), the possible values for \\(n+2\\) are \\(3, 13, 39\\).\n\nSolving for \\(n\\):\n- If \\(n+2 = 3\\), then \\(n = 1\\).\n- If \\(n+2 = 13\\), then \\(n = 11\\).\n- If \\(n+2 = 39\\), then \\(n = 37\\).\n\nThese values satisfy the condition:\n- For \\(n=1\\), \\(f(1) = 3(1+3)(1^2+9) = 3 \\cdot 4 \\cdot 10 = 120\\), and \\(120 / (1+2) = 120 / 3 = 40\\), an integer.\n- For \\(n=11\\), \\(f(11) = 3(11+3)(11^2+9) = 3 \\cdot 14 \\cdot 130 = 5460\\), and \\(5460 / (11+2) = 5460 / 13 = 420\\), an integer.\n- For \\(n=37\\), \\(f(37) = 3(37+3)(37^2+9) = 3 \\cdot 40 \\cdot 1378 = 165360\\), and \\(165360 / (37+2) = 165360 / 39 = 4240\\), an integer.\n\nThe sum of the solutions is \\(1 + 11 + 37 = 49\\).\n\nNo other positive integers \\(n\\) satisfy the condition, as \\(n+2\\) must be a divisor of \\(39\\) and at least \\(3\\), and all such divisors have been considered.\n\n\\boxed{49}",
+        "statistics": {
+          "character_count_output": 1421,
+          "character_count_reasoning": 18877,
+          "character_count_completion": 20298,
+          "tokens_output": 2500,
+          "tokens_reasoning": 5134,
+          "tokens_completions": 7634
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is 49",
+            "met": true
+          }
+        ],
+        "feedback": "The model correctly identified the sum of all positive integers n as 49.",
+        "total_score": 1.0,
+        "original_question": "Find the sum of all positive integers $n$ such that $n+2$ divides the product $3(n+3)(n^2+9).$",
+        "original_response": "To determine the positive integers \\(n\\) such that \\(n+2\\) divides \\(3(n+3)(n^2+9)\\), express the condition in terms of \\(d = n + 2\\). Substituting \\(n = d - 2\\) gives:\n\\[\n3(n+3)(n^2+9) = 3(d-2+3)((d-2)^2+9) = 3(d+1)(d^2-4d+13).\n\\]\nThe requirement that \\(d\\) divides this expression means:\n\\[\n3(d+1)(d^2-4d+13) \\equiv 0 \\pmod{d}.\n\\]\nSince \\(d \\equiv 0 \\pmod{d}\\), this simplifies to:\n\\[\n3(0+1)(0-0+13) = 3 \\cdot 1 \\cdot 13 = 39 \\equiv 0 \\pmod{d}.\n\\]\nThus, \\(d\\) must divide 39, so \\(d \\mid 39\\).\n\nThe positive divisors of 39 are 1, 3, 13, and 39. Since \\(n\\) is a positive integer, \\(d = n + 2 \\geq 3\\). Therefore, the possible values are \\(d = 3\\), \\(d = 13\\), and \\(d = 39\\).\n\n- If \\(d = 3\\), then \\(n = 3 - 2 = 1\\).\n- If \\(d = 13\\), then \\(n = 13 - 2 = 11\\).\n- If \\(d = 39\\), then \\(n = 39 - 2 = 37\\).\n\nVerify these values:\n- For \\(n = 1\\), \\(n + 2 = 3\\), and \\(3(1+3)(1^2+9) = 3 \\cdot 4 \\cdot 10 = 120\\), which is divisible by 3 since \\(120 / 3 = 40\\).\n- For \\(n = 11\\), \\(n + 2 = 13\\), and \\(3(11+3)(11^2+9) = 3 \\cdot 14 \\cdot 130 = 5460\\), which is divisible by 13 since \\(5460 / 13 = 420\\).\n- For \\(n = 37\\), \\(n + 2 = 39\\), and \\(3(37+3)(37^2+9) = 3 \\cdot 40 \\cdot 1378 = 165360\\), which is divisible by 39 since \\(165360 / 39 = 4240\\).\n\nThe positive integer solutions are \\(n = 1\\), \\(n = 11\\), and \\(n = 37\\). The sum is:\n\\[\n1 + 11 + 37 = 49.\n\\]\n\nNo other positive integers \\(n\\) satisfy the condition, as \\(d = n + 2\\) must divide 39 and be at least 3, and all such divisors have been considered.\n\n\\boxed{49}",
+        "statistics": {
+          "character_count_output": 1519,
+          "character_count_reasoning": 21274,
+          "character_count_completion": 22793,
+          "tokens_output": 2711,
+          "tokens_reasoning": 5821,
+          "tokens_completions": 8532
+        }
+      }
+    ],
+    "deepseek-r1": [
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is 49",
+            "met": true
+          }
+        ],
+        "feedback": "The model correctly identified the sum as 49.",
+        "total_score": 1.0,
+        "original_question": "Find the sum of all positive integers $n$ such that $n+2$ divides the product $3(n+3)(n^2+9).$",
+        "original_response": "To solve the problem of finding the sum of all positive integers \\( n \\) such that \\( n + 2 \\) divides the product \\( 3(n+3)(n^2 + 9) \\), we start by recognizing that \\( n + 2 \\) must be a divisor of the given product. \n\nWe substitute \\( n = -2 \\) into the product \\( 3(n+3)(n^2 + 9) \\), which simplifies to 39. This implies that \\( n + 2 \\) must be a divisor of 39. \n\nThe positive divisors of 39 are 1, 3, 13, and 39. Since \\( n \\) is a positive integer, \\( n + 2 \\) must be at least 3. Therefore, the possible values for \\( n + 2 \\) are 3, 13, and 39. Converting these back to \\( n \\), we get \\( n = 1 \\), \\( n = 11 \\), and \\( n = 37 \\).\n\nChecking each value confirms that they indeed satisfy the divisibility condition. Summing these values, we get:\n\\[\n1 + 11 + 37 = 49\n\\]\n\nThus, the sum of all positive integers \\( n \\) is \\(\\boxed{49}\\).",
+        "statistics": {
+          "character_count_output": 842,
+          "character_count_reasoning": 7247,
+          "character_count_completion": 8089,
+          "tokens_output": 992,
+          "tokens_reasoning": 1890,
+          "tokens_completions": 2882
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is 49",
+            "met": true
+          }
+        ],
+        "feedback": "The model correctly identified the sum of all positive integers n as 49.",
+        "total_score": 1.0,
+        "original_question": "Find the sum of all positive integers $n$ such that $n+2$ divides the product $3(n+3)(n^2+9).$",
+        "original_response": "To find the sum of all positive integers \\( n \\) such that \\( n + 2 \\) divides the product \\( 3(n + 3)(n^2 + 9) \\), we start by noting that \\( n + 2 \\) must divide the remainder when the polynomial \\( 3(n + 3)(n^2 + 9) \\) is divided by \\( n + 2 \\).\n\nUsing polynomial remainder theorem, substitute \\( n = -2 \\) into the polynomial to find the remainder:\n\\[\n3(-2 + 3)((-2)^2 + 9) = 3(1)(4 + 9) = 3 \\cdot 1 \\cdot 13 = 39.\n\\]\nThus, \\( n + 2 \\) must be a divisor of 39. The positive divisors of 39 are 1, 3, 13, and 39. Since \\( n \\) is a positive integer, \\( n + 2 \\) must be at least 3. Therefore, the valid divisors are 3, 13, and 39.\n\nSolving for \\( n \\):\n- If \\( n + 2 = 3 \\), then \\( n = 1 \\).\n- If \\( n + 2 = 13 \\), then \\( n = 11 \\).\n- If \\( n + 2 = 39 \\), then \\( n = 37 \\).\n\nWe verify each solution:\n- For \\( n = 1 \\), \\( 3(1 + 3)(1^2 + 9) = 120 \\), and \\( 120 \\) is divisible by 3.\n- For \\( n = 11 \\), \\( 3(14)(130) = 5460 \\), and \\( 5460 \\) is divisible by 13.\n- For \\( n = 37 \\), \\( 3(40)(1378) = 165360 \\), and \\( 165360 \\) is divisible by 39.\n\nSumming these values, we get \\( 1 + 11 + 37 = 49 \\).\n\nThus, the sum of all positive integers \\( n \\) is \\(\\boxed{49}\\).",
+        "statistics": {
+          "character_count_output": 1173,
+          "character_count_reasoning": 5435,
+          "character_count_completion": 6608,
+          "tokens_output": 927,
+          "tokens_reasoning": 1489,
+          "tokens_completions": 2416
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is 49",
+            "met": true
+          }
+        ],
+        "feedback": "The model correctly identified the sum of all positive integers n as 49.",
+        "total_score": 1.0,
+        "original_question": "Find the sum of all positive integers $n$ such that $n+2$ divides the product $3(n+3)(n^2+9).$",
+        "original_response": "To solve the problem, we need to find all positive integers \\( n \\) such that \\( n + 2 \\) divides \\( 3(n + 3)(n^2 + 9) \\). \n\nFirst, we use the Remainder Theorem to determine the remainder when \\( 3(n + 3)(n^2 + 9) \\) is divided by \\( n + 2 \\). Substituting \\( n = -2 \\) into the polynomial gives:\n\n\\[\n3(-2 + 3)((-2)^2 + 9) = 3(1)(4 + 9) = 3 \\times 1 \\times 13 = 39\n\\]\n\nThis tells us that the remainder when \\( 3(n + 3)(n^2 + 9) \\) is divided by \\( n + 2 \\) is 39. For \\( n + 2 \\) to divide the product \\( 3(n + 3)(n^2 + 9) \\), \\( n + 2 \\) must be a divisor of 39. \n\nThe positive divisors of 39 are 1, 3, 13, and 39. Since \\( n \\) is a positive integer, \\( n + 2 \\) must be at least 3. Therefore, the valid divisors are 3, 13, and 39, corresponding to \\( n = 1 \\), \\( n = 11 \\), and \\( n = 37 \\).\n\nSummarizing the valid values of \\( n \\):\n- \\( n + 2 = 3 \\) gives \\( n = 1 \\)\n- \\( n + 2 = 13 \\) gives \\( n = 11 \\)\n- \\( n + 2 = 39 \\) gives \\( n = 37 \\)\n\nAdding these values, we get:\n\\[\n1 + 11 + 37 = 49\n\\]\n\nThus, the sum of all positive integers \\( n \\) that satisfy the condition is \\(\\boxed{49}\\).",
+        "statistics": {
+          "character_count_output": 1096,
+          "character_count_reasoning": 8590,
+          "character_count_completion": 9686,
+          "tokens_output": 967,
+          "tokens_reasoning": 2244,
+          "tokens_completions": 3211
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is 49",
+            "met": true
+          }
+        ],
+        "feedback": "The model correctly identified the sum of all positive integers n as 49.",
+        "total_score": 1.0,
+        "original_question": "Find the sum of all positive integers $n$ such that $n+2$ divides the product $3(n+3)(n^2+9).$",
+        "original_response": "To solve the problem of finding the sum of all positive integers \\( n \\) such that \\( n + 2 \\) divides \\( 3(n + 3)(n^2 + 9) \\), we start by noting that if \\( n + 2 \\) divides the given product, then the product modulo \\( n + 2 \\) must be zero. \n\nUsing modular arithmetic, we substitute \\( n \\equiv -2 \\) (mod \\( n + 2 \\)) into the expression \\( 3(n + 3)(n^2 + 9) \\):\n\n- \\( n + 3 \\equiv -2 + 3 = 1 \\) (mod \\( n + 2 \\))\n- \\( n^2 + 9 \\equiv (-2)^2 + 9 = 4 + 9 = 13 \\) (mod \\( n + 2 \\))\n\nThus, the product becomes \\( 3 \\cdot 1 \\cdot 13 = 39 \\) modulo \\( n + 2 \\). Therefore, \\( n + 2 \\) must be a divisor of 39. The positive divisors of 39 are 1, 3, 13, and 39. Excluding the divisor 1 (since it would make \\( n \\) negative), we find the valid positive integers \\( n \\):\n\n- \\( n + 2 = 3 \\) gives \\( n = 1 \\)\n- \\( n + 2 = 13 \\) gives \\( n = 11 \\)\n- \\( n + 2 = 39 \\) gives \\( n = 37 \\)\n\nSumming these values, we get \\( 1 + 11 + 37 = 49 \\).\n\nThus, the sum of all positive integers \\( n \\) is \\(\\boxed{49}\\).",
+        "statistics": {
+          "character_count_output": 1000,
+          "character_count_reasoning": 4419,
+          "character_count_completion": 5419,
+          "tokens_output": 692,
+          "tokens_reasoning": 1155,
+          "tokens_completions": 1847
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is 49",
+            "met": true
+          }
+        ],
+        "feedback": "The model correctly identified the sum of all positive integers n as 49.",
+        "total_score": 1.0,
+        "original_question": "Find the sum of all positive integers $n$ such that $n+2$ divides the product $3(n+3)(n^2+9).$",
+        "original_response": "To solve the problem of finding the sum of all positive integers \\( n \\) such that \\( n + 2 \\) divides the product \\( 3(n + 3)(n^2 + 9) \\), we start by noting that if \\( n + 2 \\) divides \\( 3(n + 3)(n^2 + 9) \\), then \\( 3(n + 3)(n^2 + 9) \\equiv 0 \\pmod{n + 2} \\).\n\nWe substitute \\( k = n + 2 \\), which implies \\( n = k - 2 \\). Substituting \\( n = k - 2 \\) into the expression, we get:\n- \\( n + 3 = (k - 2) + 3 = k + 1 \\)\n- \\( n^2 + 9 = (k - 2)^2 + 9 = k^2 - 4k + 13 \\)\n\nThus, the product becomes \\( 3(k + 1)(k^2 - 4k + 13) \\). We need \\( k \\) to divide this product. Simplifying modulo \\( k \\), we find:\n- \\( k + 1 \\equiv 1 \\pmod{k} \\)\n- \\( k^2 - 4k + 13 \\equiv 13 \\pmod{k} \\)\n\nTherefore, \\( 3(k + 1)(k^2 - 4k + 13) \\equiv 3 \\cdot 1 \\cdot 13 = 39 \\pmod{k} \\). This implies \\( k \\) must be a divisor of 39. The positive divisors of 39 are 1, 3, 13, and 39. Since \\( n \\) is a positive integer, \\( k = n + 2 \\) must be at least 3. The valid values for \\( k \\) are 3, 13, and 39, corresponding to \\( n = 1 \\), \\( n = 11 \\), and \\( n = 37 \\).\n\nSumming these values of \\( n \\):\n\\[\n1 + 11 + 37 = 49\n\\]\n\nThus, the sum of all positive integers \\( n \\) is \\(\\boxed{49}\\).",
+        "statistics": {
+          "character_count_output": 1162,
+          "character_count_reasoning": 7498,
+          "character_count_completion": 8660,
+          "tokens_output": 1000,
+          "tokens_reasoning": 2014,
+          "tokens_completions": 3014
+        }
+      }
+    ],
+    "DeepHermes-3-Mistral-24B-Pre": [
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is 49",
+            "met": true
+          }
+        ],
+        "feedback": "The model correctly identified the sum of all positive integers n as 49.",
+        "total_score": 1.0,
+        "original_question": "Find the sum of all positive integers $n$ such that $n+2$ divides the product $3(n+3)(n^2+9).$",
+        "original_response": "Given the problem of finding the sum of all positive integers \\( n \\) such that \\( n + 2 \\) divides the product \\( 3(n + 3)(n^2 + 9) \\), we start by substituting \\( k = n + 2 \\). This transforms the problem into finding all positive integers \\( k \\geq 3 \\) such that \\( k \\) divides \\( 3(k + 1)(k^2 - 4k + 13) \\).\n\nSince \\( k \\) and \\( k + 1 \\) are coprime, \\( k \\) must divide \\( 39 \\) (the product of the prime factors 3 and 13). The divisors of 39 that are greater than or equal to 3 are 3, 13, and 39. Converting these back to \\( n \\) by subtracting 2, we get \\( n = 1 \\), \\( n = 11 \\), and \\( n = 37 \\).\n\nTo verify each solution:\n- For \\( n = 1 \\), \\( n + 2 = 3 \\) and the product \\( 3(1 + 3)(1^2 + 9) = 120 \\), which is divisible by 3.\n- For \\( n = 11 \\), \\( n + 2 = 13 \\) and the product \\( 3(11 + 3)(11^2 + 9) = 5460 \\), which is divisible by 13.\n- For \\( n = 37 \\), \\( n + 2 = 39 \\) and the product \\( 3(37 + 3)(37^2 + 9) = 165360 \\), which is divisible by 39.\n\nSumming these solutions, we get \\( 1 + 11 + 37 = 49 \\).\n\nThus, the sum of all positive integers \\( n \\) is \\(\\boxed{49}\\).",
+        "statistics": {
+          "character_count_output": 1093,
+          "character_count_reasoning": 16865,
+          "character_count_completion": 17958,
+          "tokens_output": null,
+          "tokens_reasoning": null,
+          "tokens_completions": 7666
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is 49",
+            "met": true
+          }
+        ],
+        "feedback": "The output correctly identifies the sum as 49.",
+        "total_score": 1.0,
+        "original_question": "Find the sum of all positive integers $n$ such that $n+2$ divides the product $3(n+3)(n^2+9).$",
+        "original_response": "To solve the problem, we need to find all positive integers \\( n \\) such that \\( n + 2 \\) divides the product \\( 3(n + 3)(n^2 + 9) \\). \n\nFirst, we substitute \\( n = -2 \\) into the expression \\( 3(n + 3)(n^2 + 9) \\). This gives:\n\\[\n3(-2 + 3)( (-2)^2 + 9) = 3(1)(4 + 9) = 3 \\cdot 13 = 39\n\\]\nThus, \\( n + 2 \\) must be a divisor of 39. The divisors of 39 are 1, 3, 13, and 39. Since \\( n \\) is a positive integer, \\( n + 2 \\) must be greater than 2, so the possible values for \\( n + 2 \\) are 3, 13, and 39. This gives the corresponding values for \\( n \\) as 1, 11, and 37.\n\nWe verify each solution:\n1. For \\( n = 1 \\):\n   \\[\n   3(1 + 3)(1^2 + 9) = 3 \\cdot 4 \\cdot 10 = 120\n   \\]\n   \\( 120 \\) divided by 3 (which is \\( 1 + 2 \\)) is 40, an integer.\n\n2. For \\( n = 11 \\):\n   \\[\n   3(11 + 3)(11^2 + 9) = 3 \\cdot 14 \\cdot 130 = 5460\n   \\]\n   \\( 5460 \\) divided by 13 (which is \\( 11 + 2 \\)) is 420, an integer.\n\n3. For \\( n = 37 \\):\n   \\[\n   3(37 + 3)(37^2 + 9) = 3 \\cdot 40 \\cdot 1378 = 165360\n   \\]\n   \\( 165360 \\) divided by 39 (which is \\( 37 + 2 \\)) is 4240, an integer.\n\nAll three values \\( n = 1, 11, 37 \\) satisfy the condition. Summing these values gives:\n\\[\n1 + 11 + 37 = 49\n\\]\n\nThus, the sum of all positive integers \\( n \\) is \\(\\boxed{49}\\).",
+        "statistics": {
+          "character_count_output": 1246,
+          "character_count_reasoning": 24536,
+          "character_count_completion": 25782,
+          "tokens_output": null,
+          "tokens_reasoning": null,
+          "tokens_completions": 11368
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is 49",
+            "met": true
+          }
+        ],
+        "feedback": "The model correctly identified the sum of all positive integers n as 49.",
+        "total_score": 1.0,
+        "original_question": "Find the sum of all positive integers $n$ such that $n+2$ divides the product $3(n+3)(n^2+9).$",
+        "original_response": "To find all positive integers \\( n \\) such that \\( n + 2 \\) divides the product \\( 3(n + 3)(n^2 + 9) \\), we start by setting \\( k = n + 2 \\). This transforms the problem into finding \\( k \\) such that \\( k \\) divides \\( 3(k + 1)(k^2 - 4k + 13) \\).\n\nWe need \\( 3(k + 1)(k^2 - 4k + 13) \\equiv 0 \\pmod{k} \\). Simplifying modulo \\( k \\), we substitute \\( k \\equiv 0 \\mod k \\), leading to:\n\\[\n3 \\cdot 1 \\cdot 13 \\equiv 0 \\pmod{k}\n\\]\nThus, \\( k \\) must divide 39. The positive divisors of 39 are 1, 3, 13, and 39. Since \\( k = n + 2 \\geq 3 \\), the valid values of \\( k \\) are 3, 13, and 39. Converting back to \\( n \\), we get:\n- \\( k = 3 \\) corresponds to \\( n = 1 \\)\n- \\( k = 13 \\) corresponds to \\( n = 11 \\)\n- \\( k = 39 \\) corresponds to \\( n = 37 \\)\n\nVerifying each \\( n \\):\n- For \\( n = 1 \\): \\( 3(1 + 3)(1^2 + 9) = 120 \\), and \\( 120 / 3 = 40 \\), which is an integer.\n- For \\( n = 11 \\): \\( 3(11 + 3)(11^2 + 9) = 5460 \\), and \\( 5460 / 13 = 420 \\), which is an integer.\n- For \\( n = 37 \\): \\( 3(37 + 3)(37^2 + 9) = 165360 \\), and \\( 165360 / 39 = 4240 \\), which is an integer.\n\nSumming these values: \\( 1 + 11 + 37 = 49 \\).\n\nThus, the sum of all positive integers \\( n \\) is \\(\\boxed{49}\\).",
+        "statistics": {
+          "character_count_output": 1190,
+          "character_count_reasoning": 11862,
+          "character_count_completion": 13052,
+          "tokens_output": null,
+          "tokens_reasoning": null,
+          "tokens_completions": 5424
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is 49",
+            "met": true
+          }
+        ],
+        "feedback": "The model correctly identified the sum of all positive integers n as 49.",
+        "total_score": 1.0,
+        "original_question": "Find the sum of all positive integers $n$ such that $n+2$ divides the product $3(n+3)(n^2+9).$",
+        "original_response": "To solve the problem, we need to find all positive integers \\( n \\) such that \\( n + 2 \\) divides the product \\( 3(n + 3)(n^2 + 9) \\). \n\nFirst, we substitute \\( n \\) with \\( k - 2 \\) (where \\( k = n + 2 \\)) to simplify the equation. This transforms the problem into finding \\( k \\) such that \\( k \\) divides \\( 3(k + 1)(k^2 - 4k + 13) \\).\n\nWe then analyze the divisors of 39 (since \\( 39 \\equiv 0 \\mod k \\)), which gives the possible values of \\( k \\) as 3, 13, and 39. Converting these back to \\( n \\), we get:\n\n- \\( k = 3 \\) gives \\( n = 3 - 2 = 1 \\)\n- \\( k = 13 \\) gives \\( n = 13 - 2 = 11 \\)\n- \\( k = 39 \\) gives \\( n = 39 - 2 = 37 \\)\n\nWe verify each solution:\n- For \\( n = 1 \\): \\( n + 2 = 3 \\) divides \\( 3(4)(10) = 120 \\)\n- For \\( n = 11 \\): \\( n + 2 = 13 \\) divides \\( 3(14)(130) = 5460 \\)\n- For \\( n = 37 \\): \\( n + 2 = 39 \\) divides \\( 3(40)(1378) = 165360 \\)\n\nAll solutions are valid. Summing these values, we get \\( 1 + 11 + 37 = 49 \\).\n\nThus, the sum of all positive integers \\( n \\) is \\(\\boxed{49}\\).",
+        "statistics": {
+          "character_count_output": 1015,
+          "character_count_reasoning": 24451,
+          "character_count_completion": 25466,
+          "tokens_output": null,
+          "tokens_reasoning": null,
+          "tokens_completions": 10603
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is 49",
+            "met": true
+          }
+        ],
+        "feedback": "The model correctly identified the sum of all positive integers n as 49.",
+        "total_score": 1.0,
+        "original_question": "Find the sum of all positive integers $n$ such that $n+2$ divides the product $3(n+3)(n^2+9).$",
+        "original_response": "To find all positive integers \\( n \\) such that \\( n + 2 \\) divides the product \\( 3(n + 3)(n^2 + 9) \\), we start by substituting \\( x = n + 2 \\). This gives \\( n = x - 2 \\). Substituting \\( n \\) into the product, we get:\n\n\\[\n3((x - 2) + 3)((x - 2)^2 + 9) = 3(x + 1)(x^2 - 4x + 13)\n\\]\n\nWe need \\( x \\) to divide this product modulo \\( x \\). Simplifying modulo \\( x \\), we get:\n\n\\[\n3(x + 1)(x^2 - 4x + 13) \\equiv 3(1)(x^2 - 4x + 13) \\equiv 3x^2 - 12x + 39 \\pmod{x}\n\\]\n\nSince \\( x \\) must divide \\( 3x^2 - 12x + 39 \\), we have:\n\n\\[\n3x^2 - 12x + 39 \\equiv 0 \\pmod{x}\n\\]\n\nThis simplifies to \\( 39 \\equiv 0 \\pmod{x} \\), meaning \\( x \\) must be a divisor of 39. The positive divisors of 39 are 1, 3, 13, and 39. Since \\( x = n + 2 \\) must be at least 3 (as \\( n \\) is a positive integer), the valid values for \\( x \\) are 3, 13, and 39. Converting these back to \\( n \\):\n\n\\[\nn + 2 = 3 \\implies n = 1\n\\]\n\\[\nn + 2 = 13 \\implies n = 11\n\\]\n\\[\nn + 2 = 39 \\implies n = 37\n\\]\n\nThe sum of these values of \\( n \\) is \\( 1 + 11 + 37 = 49 \\).\n\nThus, the answer is \\(\\boxed{49}\\).",
+        "statistics": {
+          "character_count_output": 1062,
+          "character_count_reasoning": 9394,
+          "character_count_completion": 10456,
+          "tokens_output": null,
+          "tokens_reasoning": null,
+          "tokens_completions": 4771
+        }
+      }
+    ]
+  }
+}

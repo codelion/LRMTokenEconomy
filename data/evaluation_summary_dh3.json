@@ -1,0 +1,197 @@
+{
+  "capital_of_australia": {
+    "DeepHermes-3-Mistral-24B-Pre": {
+      "average_total_score": 1.0,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer is Canberra": 1.0
+      },
+      "avg_character_count_output": 291.8,
+      "avg_character_count_reasoning": 1273.6,
+      "avg_character_count_completion": 1565.4,
+      "avg_tokens_completions": 337.2
+    }
+  },
+  "train_distance": {
+    "DeepHermes-3-Mistral-24B-Pre": {
+      "average_total_score": 1.0,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer is 150 kilometers": 1.0
+      },
+      "avg_character_count_output": 356.8,
+      "avg_character_count_reasoning": 1769.6,
+      "avg_character_count_completion": 2126.4,
+      "avg_tokens_completions": 548.4
+    }
+  },
+  "brazil_continent": {
+    "DeepHermes-3-Mistral-24B-Pre": {
+      "average_total_score": 1.0,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer is South America": 1.0
+      },
+      "avg_character_count_output": 56.0,
+      "avg_character_count_reasoning": 776.2,
+      "avg_character_count_completion": 832.2,
+      "avg_tokens_completions": 182.2
+    }
+  },
+  "leap_year_february_days": {
+    "DeepHermes-3-Mistral-24B-Pre": {
+      "average_total_score": 1.0,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer is 29": 1.0
+      },
+      "avg_character_count_output": 338.6,
+      "avg_character_count_reasoning": 1545.0,
+      "avg_character_count_completion": 1883.6,
+      "avg_tokens_completions": 501.4
+    }
+  },
+  "roses_logic": {
+    "DeepHermes-3-Mistral-24B-Pre": {
+      "average_total_score": 1.0,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "No, we cannot conclude that some roses are red.": 1.0
+      },
+      "avg_character_count_output": 1029.4,
+      "avg_character_count_reasoning": 3652.6,
+      "avg_character_count_completion": 4682.0,
+      "avg_tokens_completions": 1066.6
+    }
+  },
+  "Ice cream parlor": {
+    "DeepHermes-3-Mistral-24B-Pre": {
+      "average_total_score": 0.8,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer is 16": 0.8
+      },
+      "avg_character_count_output": 1341.0,
+      "avg_character_count_reasoning": 8955.6,
+      "avg_character_count_completion": 10296.6,
+      "avg_tokens_completions": 4094.6
+    }
+  },
+  "Integer pairs": {
+    "DeepHermes-3-Mistral-24B-Pre": {
+      "average_total_score": 0.6,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer is 117": 0.6
+      },
+      "avg_character_count_output": 1567.6,
+      "avg_character_count_reasoning": 22383.6,
+      "avg_character_count_completion": 23951.2,
+      "avg_tokens_completions": 8754.8
+    }
+  },
+  "Probability of G": {
+    "DeepHermes-3-Mistral-24B-Pre": {
+      "average_total_score": 0.0,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer is 821": 0.0
+      },
+      "avg_character_count_output": 8205.0,
+      "avg_character_count_reasoning": 42005.6,
+      "avg_character_count_completion": 50210.6,
+      "avg_tokens_completions": 13943.6
+    }
+  },
+  "bridge_torch_impossible": {
+    "DeepHermes-3-Mistral-24B-Pre": {
+      "average_total_score": 0.2,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer concludes that it is impossible to solve within 17 minutes": 0.2
+      },
+      "avg_character_count_output": 1123.0,
+      "avg_character_count_reasoning": 35654.2,
+      "avg_character_count_completion": 36777.2,
+      "avg_tokens_completions": 11863.2
+    }
+  },
+  "bridge_torch_easy": {
+    "DeepHermes-3-Mistral-24B-Pre": {
+      "average_total_score": 0.2,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer suggests all four people crossing together in 10 minutes": 0.2
+      },
+      "avg_character_count_output": 17527.6,
+      "avg_character_count_reasoning": 25778.8,
+      "avg_character_count_completion": 43306.4,
+      "avg_tokens_completions": 13207.6
+    }
+  },
+  "bridge_torch_default": {
+    "DeepHermes-3-Mistral-24B-Pre": {
+      "average_total_score": 1.0,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer explains a sequence of crossings that totals 17 minutes. Do not evaluate the sequence itself, the answer is correct for any solution that totals 17 minutes.": 1.0
+      },
+      "avg_character_count_output": 1088.0,
+      "avg_character_count_reasoning": 8002.2,
+      "avg_character_count_completion": 9090.2,
+      "avg_tokens_completions": 2025.8
+    }
+  },
+  "monty_hall_inverse": {
+    "DeepHermes-3-Mistral-24B-Pre": {
+      "average_total_score": 0.4,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer states to keep the existing door": 0.4
+      },
+      "avg_character_count_output": 1025.2,
+      "avg_character_count_reasoning": 11515.2,
+      "avg_character_count_completion": 12540.4,
+      "avg_tokens_completions": 3225.2
+    }
+  },
+  "monty_hall_default": {
+    "DeepHermes-3-Mistral-24B-Pre": {
+      "average_total_score": 1.0,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer states to switch doors": 1.0
+      },
+      "avg_character_count_output": 917.0,
+      "avg_character_count_reasoning": 3525.2,
+      "avg_character_count_completion": 4442.2,
+      "avg_tokens_completions": 1124.2
+    }
+  },
+  "monty_appliance_simple": {
+    "DeepHermes-3-Mistral-24B-Pre": {
+      "average_total_score": 0.8,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer suggests to take the box the clerk tested": 0.8
+      },
+      "avg_character_count_output": 612.2,
+      "avg_character_count_reasoning": 27582.8,
+      "avg_character_count_completion": 28195.0,
+      "avg_tokens_completions": 6444.2
+    }
+  },
+  "Sawtooth and parabola": {
+    "DeepHermes-3-Mistral-24B-Pre": {
+      "average_total_score": 0.0,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer is 259": 0.0
+      },
+      "avg_character_count_output": 45885.2,
+      "avg_character_count_reasoning": 20848.0,
+      "avg_character_count_completion": 66733.2,
+      "avg_tokens_completions": 26037.0
+    }
+  }
+}
