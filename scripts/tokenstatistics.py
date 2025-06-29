@@ -38,6 +38,7 @@ def parse_args():
     parser.add_argument("config_file", type=str, help="Path to a configurations file in json.")
     parser.add_argument("-o", "--output", type=str, default="statistics.json", help="Path for the output JSON statistics file.")
     parser.add_argument("--all", action="store_true", help="Process all LLMs, ignoring the config file.")
+    parser.add_argument("--prompt-dataset", type=str, help="Path to a JSON file with prompt metadata.")
     return parser.parse_args()
 
 def load_config(config_file):
@@ -51,6 +52,59 @@ def load_config(config_file):
         return None
     except json.JSONDecodeError:
         print(f"Error: Could not decode JSON from {config_file}")
+        return None
+
+def load_llm_metadata(config_file):
+    """Loads LLM metadata from a JSON file."""
+    try:
+        with open(config_file, 'r', encoding='utf-8') as f:
+            config = json.load(f)
+        llms = config.get('llms', [])
+        if not llms:
+            print(f"Warning: No LLMs found in {config_file}")
+            return None
+        
+        # Extract name and open_weights, default open_weights to False if missing
+        llm_data = [{'llm': llm.get('name'), 'open_weights': llm.get('open_weights', False)} for llm in llms]
+        
+        df = pd.DataFrame(llm_data)
+        if 'llm' not in df.columns:
+            print(f"Warning: 'name' not found for LLMs in {config_file}")
+            return None
+        
+        print(f"Loaded metadata for {len(df)} LLMs from {config_file}")
+        return df
+    except FileNotFoundError:
+        print(f"Error: Configuration file not found at {config_file}")
+        return None
+    except json.JSONDecodeError:
+        print(f"Error: Could not decode JSON from {config_file}")
+        return None
+
+def load_prompt_dataset(prompt_dataset_file):
+    """Loads prompt metadata from a JSON file."""
+    if not prompt_dataset_file:
+        return None
+    try:
+        with open(prompt_dataset_file, 'r', encoding='utf-8') as f:
+            data = json.load(f)
+        prompts = data.get('prompts', [])
+        if not prompts:
+            print(f"Warning: No prompts found in {prompt_dataset_file}")
+            return None
+        
+        df = pd.DataFrame(prompts)
+        if 'prompt_id' not in df.columns:
+            print(f"Warning: 'prompt_id' not found in prompts data from {prompt_dataset_file}")
+            return None
+        
+        print(f"Loaded metadata for {len(df)} prompts from {prompt_dataset_file}")
+        return df[['prompt_id', 'category', 'type']]
+    except FileNotFoundError:
+        print(f"Error: Prompt dataset file not found at {prompt_dataset_file}")
+        return None
+    except json.JSONDecodeError:
+        print(f"Error: Could not decode JSON from {prompt_dataset_file}")
         return None
 
 def load_and_process_data(dataset_folder, configured_llms, process_all):
@@ -183,13 +237,47 @@ def save_statistics(stats, output_file):
     stats.to_json(output_file, orient='records', indent=4)
     print(f"Statistics saved to {output_file}")
 
-def generate_heatmaps(stats, figure_dir):
+def generate_heatmaps(stats, figure_dir, prompt_metadata=None):
     """Generates and saves heatmap plots."""
     print("\nGenerating heatmaps...")
+
+    # Calculate normalized token count
+    if 'tokens_completion_mean' in stats.columns:
+        # Calculate the mean token count for each prompt across all LLMs
+        prompt_avg_tokens = stats.groupby('prompt_id')['tokens_completion_mean'].transform('mean')
+        # Avoid division by zero
+        prompt_avg_tokens[prompt_avg_tokens == 0] = np.nan
+        stats['normalized_tokens_mean'] = stats['tokens_completion_mean'] / prompt_avg_tokens
+
+        # Calculate normalization to prompt median
+        prompt_median_tokens = stats.groupby('prompt_id')['tokens_completion_mean'].transform('median')
+        prompt_median_tokens[prompt_median_tokens == 0] = np.nan
+        stats['normalized_tokens_median'] = stats['tokens_completion_mean'] / prompt_median_tokens
+
+    # Calculate normalization against a reference LLM
+    reference_llm = "claude-4-sonnet-0522-thinking"
+    if 'tokens_completion_mean' in stats.columns and reference_llm in stats['llm'].unique():
+        ref_tokens = stats[stats['llm'] == reference_llm].set_index('prompt_id')['tokens_completion_mean']
+        stats['ref_tokens'] = stats['prompt_id'].map(ref_tokens)
+        stats['ref_tokens'].replace(0, np.nan, inplace=True)
+        stats['normalized_by_ref_mean'] = stats['tokens_completion_mean'] / stats['ref_tokens']
+        stats.drop(columns=['ref_tokens'], inplace=True)
+
+    if prompt_metadata is not None:
+        stats = pd.merge(stats, prompt_metadata, on='prompt_id', how='left')
+        stats['type'].fillna('uncategorized', inplace=True)
+        stats.sort_values(['type', 'prompt_id'], inplace=True)
+        index_cols = ['type', 'prompt_id']
+    else:
+        index_cols = 'prompt_id'
+
     metrics_to_plot = {
         'output_length_mean': 'Mean Output Length',
         'thinking_length_mean': 'Mean Thinking Length',
         'tokens_completion_mean': 'Mean Output Tokens',
+        'normalized_tokens_mean': 'Normalized Mean Output Tokens',
+        'normalized_tokens_median': 'Tokens Normalized to Prompt Median',
+        'normalized_by_ref_mean': f'Tokens Normalized to {reference_llm}',
         'num_samples': 'Number of Samples'
     }
 
@@ -197,7 +285,7 @@ def generate_heatmaps(stats, figure_dir):
         if metric not in stats.columns:
             continue
         try:
-            pivot_df = stats.pivot(index='prompt_id', columns='llm', values=metric)
+            pivot_df = stats.pivot_table(index=index_cols, columns='llm', values=metric)
             
             height = max(6, len(pivot_df.index) * 0.6)
             width = max(10, len(pivot_df.columns) * 1.0)
@@ -207,8 +295,17 @@ def generate_heatmaps(stats, figure_dir):
             pivot_for_plot = pivot_df.replace(0, np.nan)
             
             plot_fmt = "d" if metric == 'num_samples' else ".1f"
+            use_log_norm = True
 
-            sns.heatmap(pivot_for_plot, annot=pivot_df, fmt=plot_fmt, cmap="viridis", linewidths=.5, norm=LogNorm())
+            if metric in ['normalized_tokens_mean', 'normalized_by_ref_mean', 'normalized_tokens_median']:
+                plot_fmt = ".2f"
+                use_log_norm = False
+
+            if use_log_norm:
+                sns.heatmap(pivot_for_plot, annot=pivot_df, fmt=plot_fmt, cmap="viridis", linewidths=.5, norm=LogNorm())
+            else:
+                sns.heatmap(pivot_df, annot=True, fmt=plot_fmt, cmap="coolwarm", center=1.0, linewidths=.5)
+
             plt.title(title, fontsize=16)
             plt.xlabel("LLM", fontsize=12)
             plt.ylabel("Prompt ID", fontsize=12)
@@ -557,6 +654,141 @@ def generate_token_length_scatter_plot(df, figure_dir):
             plt.close()
     print(f"Individual LLM scatter plots saved to {pdf_filename}")
 
+def generate_normalized_token_chart(df, figure_dir):
+    """Generates a bar chart of normalized tokens, grouped by open_weights and colored by prompt type."""
+    print("\nGenerating normalized token bar chart by open_weights...")
+
+    if 'open_weights' not in df.columns or 'type' not in df.columns:
+        print("Skipping normalized token chart: 'open_weights' or 'type' metadata is missing. Use --prompt-dataset and ensure config has 'open_weights'.")
+        return
+    
+    plot_df = df.dropna(subset=['tokens_completion', 'open_weights', 'type']).copy()
+    if plot_df.empty:
+        print("Skipping normalized token chart: no data with required information.")
+        return
+
+    # Calculate mean tokens for open_weights models per prompt type
+    ow_models_df = plot_df[plot_df['open_weights'] == True]
+    if ow_models_df.empty:
+        print("Skipping normalized token chart: no open_weights models found for normalization.")
+        return
+        
+    type_ow_mean_tokens = ow_models_df.groupby('type')['tokens_completion'].mean()
+    
+    # Map the mean back to the main dataframe based on prompt type
+    plot_df['ow_ref_tokens'] = plot_df['type'].map(type_ow_mean_tokens)
+    
+    # Avoid division by zero or by NaN
+    plot_df.dropna(subset=['ow_ref_tokens'], inplace=True)
+    plot_df = plot_df[plot_df['ow_ref_tokens'] > 0]
+
+    if plot_df.empty:
+        print("Skipping normalized token chart: could not compute reference tokens for any prompt type.")
+        return
+
+    plot_df['normalized_tokens'] = plot_df['tokens_completion'] / plot_df['ow_ref_tokens']
+
+    # Aggregate for plotting
+    agg_data = plot_df.groupby(['llm', 'open_weights', 'type'])['normalized_tokens'].mean().reset_index()
+
+    # Sort LLMs by open_weights status, then by name
+    llm_order = agg_data.sort_values(['open_weights', 'llm'], ascending=[False, True])['llm'].unique()
+
+    plt.figure(figsize=(16, 8))
+    ax = sns.barplot(data=agg_data, x='llm', y='normalized_tokens', hue='type', order=llm_order, palette='tab20')
+
+    # Add a line to separate open vs. closed models
+    num_open = agg_data[agg_data['open_weights'] == True]['llm'].nunique()
+    if num_open > 0 and num_open < len(llm_order):
+        ax.axvline(x=num_open - 0.5, color='black', linestyle='--', linewidth=2)
+        # Add text labels for groups
+        y_max = ax.get_ylim()[1]
+        ax.text((num_open - 0.5) / 2, y_max, 'Open Weights', ha='center', va='bottom', fontsize=12, weight='bold')
+        ax.text(num_open - 0.5 + (len(llm_order) - num_open) / 2, y_max, 'Closed Weights', ha='center', va='bottom', fontsize=12, weight='bold')
+
+    plt.xticks(rotation=45, ha='right')
+    plt.title('Normalized Token Usage by LLM (vs. Open-Weights Mean per Prompt Type)', fontsize=16)
+    plt.xlabel('LLM', fontsize=12)
+    plt.ylabel('Normalized Token Count (vs. OW Mean per Type)', fontsize=12)
+    plt.legend(title='Prompt Type')
+    plt.grid(True, axis='y', linestyle='--', alpha=0.6)
+    plt.tight_layout()
+
+    filename_base = 'normalized_tokens_by_ow_status'
+    plt.savefig(os.path.join(figure_dir, f"{filename_base}.png"), dpi=300)
+    plt.savefig(os.path.join(figure_dir, f"{filename_base}.pdf"))
+    plt.close()
+
+def generate_normalized_token_chart_by_ref_llm(df, figure_dir):
+    """Generates a bar chart of normalized tokens against a reference LLM, grouped by open_weights and colored by prompt type."""
+    reference_llm = "claude-4-sonnet-0522-thinking"
+    print(f"\nGenerating normalized token bar chart by reference LLM ({reference_llm})...")
+
+    if 'open_weights' not in df.columns or 'type' not in df.columns:
+        print("Skipping reference LLM normalized token chart: 'open_weights' or 'type' metadata is missing.")
+        return
+    
+    if reference_llm not in df['llm'].unique():
+        print(f"Skipping reference LLM normalized token chart: Reference LLM '{reference_llm}' not found in data.")
+        return
+
+    plot_df = df.dropna(subset=['tokens_completion', 'open_weights', 'type']).copy()
+    if plot_df.empty:
+        print("Skipping reference LLM normalized token chart: no data with required information.")
+        return
+
+    # Calculate mean tokens for the reference LLM per prompt type
+    ref_llm_df = plot_df[plot_df['llm'] == reference_llm]
+    if ref_llm_df.empty:
+        print(f"Skipping reference LLM normalized token chart: no data found for reference LLM '{reference_llm}'.")
+        return
+        
+    type_ref_mean_tokens = ref_llm_df.groupby('type')['tokens_completion'].mean()
+    
+    # Map the mean back to the main dataframe based on prompt type
+    plot_df['ref_tokens'] = plot_df['type'].map(type_ref_mean_tokens)
+    
+    # Avoid division by zero or by NaN
+    plot_df.dropna(subset=['ref_tokens'], inplace=True)
+    plot_df = plot_df[plot_df['ref_tokens'] > 0]
+
+    if plot_df.empty:
+        print("Skipping reference LLM normalized token chart: could not compute reference tokens for any prompt type.")
+        return
+
+    plot_df['normalized_tokens'] = plot_df['tokens_completion'] / plot_df['ref_tokens']
+
+    # Aggregate for plotting
+    agg_data = plot_df.groupby(['llm', 'open_weights', 'type'])['normalized_tokens'].mean().reset_index()
+
+    # Sort LLMs by open_weights status, then by name
+    llm_order = agg_data.sort_values(['open_weights', 'llm'], ascending=[False, True])['llm'].unique()
+
+    plt.figure(figsize=(16, 8))
+    ax = sns.barplot(data=agg_data, x='llm', y='normalized_tokens', hue='type', order=llm_order, palette='tab20')
+
+    # Add a line to separate open vs. closed models
+    num_open = agg_data[agg_data['open_weights'] == True]['llm'].nunique()
+    if num_open > 0 and num_open < len(llm_order):
+        ax.axvline(x=num_open - 0.5, color='black', linestyle='--', linewidth=2)
+        # Add text labels for groups
+        y_max = ax.get_ylim()[1]
+        ax.text((num_open - 0.5) / 2, y_max, 'Open Weights', ha='center', va='bottom', fontsize=12, weight='bold')
+        ax.text(num_open - 0.5 + (len(llm_order) - num_open) / 2, y_max, 'Closed Weights', ha='center', va='bottom', fontsize=12, weight='bold')
+
+    plt.xticks(rotation=45, ha='right')
+    plt.title(f'Normalized Token Usage by LLM (vs. {reference_llm} per Prompt Type)', fontsize=16)
+    plt.xlabel('LLM', fontsize=12)
+    plt.ylabel(f'Normalized Token Count (vs. {reference_llm} per Type)', fontsize=12)
+    plt.legend(title='Prompt Type')
+    plt.grid(True, axis='y', linestyle='--', alpha=0.6)
+    plt.tight_layout()
+
+    filename_base = 'normalized_tokens_by_ref_llm'
+    plt.savefig(os.path.join(figure_dir, f"{filename_base}.png"), dpi=300)
+    plt.savefig(os.path.join(figure_dir, f"{filename_base}.pdf"))
+    plt.close()
+
 def main():
     """Main function to run the analysis."""
     args = parse_args()
@@ -564,6 +796,9 @@ def main():
     configured_llms = load_config(args.config_file)
     if configured_llms is None:
         return
+
+    llm_metadata = load_llm_metadata(args.config_file)
+    prompt_metadata = load_prompt_dataset(args.prompt_dataset)
 
     df, found_llms, processed_count, total_count = load_and_process_data(
         args.dataset_folder, configured_llms, args.all
@@ -575,6 +810,11 @@ def main():
         print("No samples found to process.")
         return
 
+    if llm_metadata is not None:
+        df = pd.merge(df, llm_metadata, on='llm', how='left')
+    if prompt_metadata is not None:
+        df = pd.merge(df, prompt_metadata, on='prompt_id', how='left')
+
     stats = calculate_statistics(df)
     
     save_statistics(stats, args.output)
@@ -582,11 +822,13 @@ def main():
     figure_dir = 'figure'
     os.makedirs(figure_dir, exist_ok=True)
 
-    generate_heatmaps(stats, figure_dir)
+    generate_heatmaps(stats, figure_dir, prompt_metadata)
     generate_bar_charts(df, figure_dir)
     generate_token_count_bar_charts(df, figure_dir)
     generate_correctness_plots(df, figure_dir)
     generate_token_length_scatter_plot(df, figure_dir)
+    generate_normalized_token_chart(df, figure_dir)
+    generate_normalized_token_chart_by_ref_llm(df, figure_dir)
 
     print(f"\nPlots saved to '{figure_dir}' directory.")
 
