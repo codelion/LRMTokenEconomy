@@ -120,7 +120,7 @@ async def query_llm_async(session, prompt, llm_config, temperature_override, cot
                 'content': response_text,
                 'thinking': thinking_content,
                 'finish_reason': finish_reason,
-                'native_finish_reason': None,
+                # 'native_finish_reason': None,
                 'provider': 'google',
                 'id': None,
                 'tokens_completion': tokens_completion,
@@ -322,8 +322,8 @@ async def process_prompt_sample(session, semaphore, prompt, llm, sample_idx, arg
                     print(f"  Provider: {response.get('provider')}")
                 if response.get('finish_reason'):
                     print(f"  Finish Reason: {response.get('finish_reason')}")
-                if response.get('native_finish_reason'):
-                    print(f"  Native Finish Reason: {response.get('native_finish_reason')}")
+                # if response.get('native_finish_reason'):
+                #     print(f"  Native Finish Reason: {response.get('native_finish_reason')}")
 
 
             return (response.get('content'), response.get('thinking'), response.get('tokens_completion'), response.get('completion_tokens_details'),
@@ -368,8 +368,8 @@ async def process_prompt_llm_combination(session, semaphore, prompt, llm, args, 
             result["provider"] = []
         if "finish_reason" not in result:
             result["finish_reason"] = []
-        if "native_finish_reason" not in result:
-            result["native_finish_reason"] = []
+        # if "native_finish_reason" not in result:
+        #     result["native_finish_reason"] = []
         
         # Pad arrays to existing_samples length if needed (in case of inconsistent data)
         while len(result["output"]) < existing_samples:
@@ -386,8 +386,8 @@ async def process_prompt_llm_combination(session, semaphore, prompt, llm, args, 
             result["provider"].append(None)
         while len(result["finish_reason"]) < existing_samples:
             result["finish_reason"].append(None)
-        while len(result["native_finish_reason"]) < existing_samples:
-            result["native_finish_reason"].append(None)
+        # while len(result["native_finish_reason"]) < existing_samples:
+        #     result["native_finish_reason"].append(None)
         
         start_sample_idx = existing_samples
     else:
@@ -406,8 +406,8 @@ async def process_prompt_llm_combination(session, semaphore, prompt, llm, args, 
             "completion_tokens_details": [],
             "id": [],
             "provider": [],
-            "finish_reason": [],
-            "native_finish_reason": []
+            "finish_reason": []
+            # "native_finish_reason": []
         }
 
     # Get CoT entries for this prompt if available
@@ -434,7 +434,7 @@ async def process_prompt_llm_combination(session, semaphore, prompt, llm, args, 
                 result["id"].append(None)
                 result["provider"].append(None)
                 result["finish_reason"].append(None)
-                result["native_finish_reason"].append(None)
+                # result["native_finish_reason"].append(None)
             else:
                 (output, thinking, tokens, completion_tokens_details, 
                  req_id, provider, finish_reason, native_finish_reason) = sample_result
@@ -445,7 +445,7 @@ async def process_prompt_llm_combination(session, semaphore, prompt, llm, args, 
                 result["id"].append(req_id)
                 result["provider"].append(provider)
                 result["finish_reason"].append(finish_reason)
-                result["native_finish_reason"].append(native_finish_reason)
+                # result["native_finish_reason"].append(native_finish_reason)
     
     return result
 
