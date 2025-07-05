@@ -1,0 +1,172 @@
+{
+  "one_plus_one": {
+    "o4-mini-high-long": {
+      "average_total_score": 1.0,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer is 2": 1.0
+      },
+      "avg_character_count_output": 1.0,
+      "avg_character_count_reasoning": 291.4,
+      "avg_character_count_completion": 292.4,
+      "avg_tokens_output": 7.0,
+      "avg_tokens_reasoning": 64.0,
+      "avg_tokens_completions": 71.0
+    },
+    "gemini-2.5-pro": {
+      "average_total_score": 1.0,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer is 2": 1.0
+      },
+      "avg_character_count_output": 9.0,
+      "avg_character_count_reasoning": 668.8,
+      "avg_character_count_completion": 677.8,
+      "avg_tokens_output": 7.0,
+      "avg_tokens_reasoning": 304.4,
+      "avg_tokens_completions": 311.4
+    },
+    "claude-4-sonnet-0522-thinking": {
+      "average_total_score": 1.0,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer is 2": 1.0
+      },
+      "avg_character_count_output": 9.0,
+      "avg_character_count_reasoning": 80.6,
+      "avg_character_count_completion": 89.6,
+      "avg_tokens_output": 24.6,
+      "avg_tokens_reasoning": 20.8,
+      "avg_tokens_completions": 45.4
+    },
+    "gemini-2.5-flash-high": {
+      "average_total_score": 1.0,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer is 2": 1.0
+      },
+      "avg_character_count_output": 1.0,
+      "avg_character_count_reasoning": 298.8,
+      "avg_character_count_completion": 299.8,
+      "avg_tokens_output": 1.0,
+      "avg_tokens_reasoning": 45.6,
+      "avg_tokens_completions": 46.6
+    },
+    "grok-3-mini-think": {
+      "average_total_score": 1.0,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer is 2": 0.8,
+        "Answer \u00c3\u00acs 2": 0.2
+      },
+      "avg_character_count_output": 26.8,
+      "avg_character_count_reasoning": 1146.6,
+      "avg_character_count_completion": 1173.4,
+      "avg_tokens_output": 11.2,
+      "avg_tokens_reasoning": 268.6,
+      "avg_tokens_completions": 279.8
+    },
+    "magistral-medium-2506-thinking": {
+      "average_total_score": 1.0,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer is 2": 1.0
+      },
+      "avg_character_count_output": 553.4,
+      "avg_character_count_reasoning": 3932.6,
+      "avg_character_count_completion": 4486.0,
+      "avg_tokens_output": 144.6,
+      "avg_tokens_reasoning": 1025.2,
+      "avg_tokens_completions": 1169.8
+    },
+    "qwen3-235b-a22b-think": {
+      "average_total_score": 1.0,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer is 2": 1.0
+      },
+      "avg_character_count_output": 26.2,
+      "avg_character_count_reasoning": 1471.4,
+      "avg_character_count_completion": 1497.6,
+      "avg_tokens_output": -23.8,
+      "avg_tokens_reasoning": 375.8,
+      "avg_tokens_completions": 352.0
+    },
+    "qwen3-30b-a3b-think": {
+      "average_total_score": 1.0,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer is 2": 1.0
+      },
+      "avg_character_count_output": 19.4,
+      "avg_character_count_reasoning": 1125.4,
+      "avg_character_count_completion": 1144.8,
+      "avg_tokens_output": -0.8,
+      "avg_tokens_reasoning": 287.6,
+      "avg_tokens_completions": 286.8
+    },
+    "glm-z1-32b": {
+      "average_total_score": 1.0,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer is 2": 1.0
+      },
+      "avg_character_count_output": 44.6,
+      "avg_character_count_reasoning": 1068.2,
+      "avg_character_count_completion": 1112.8,
+      "avg_tokens_output": 4.2,
+      "avg_tokens_reasoning": 272.0,
+      "avg_tokens_completions": 276.2
+    },
+    "deepseek-r1-0528": {
+      "average_total_score": 1.0,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer is 2": 1.0
+      },
+      "avg_character_count_output": 96.6,
+      "avg_character_count_reasoning": 1225.6,
+      "avg_character_count_completion": 1322.2,
+      "avg_tokens_output": 1.0,
+      "avg_tokens_reasoning": 322.6,
+      "avg_tokens_completions": 323.6
+    },
+    "deepseek-r1": {
+      "average_total_score": 1.0,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer is 2": 1.0
+      },
+      "avg_character_count_output": 153.0,
+      "avg_character_count_reasoning": 909.0,
+      "avg_character_count_completion": 1062.0,
+      "avg_tokens_output": 33.0,
+      "avg_tokens_reasoning": 230.0,
+      "avg_tokens_completions": 263.0
+    },
+    "DeepHermes-3-Mistral-24B-Pre": {
+      "average_total_score": 1.0,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer is 2": 1.0
+      },
+      "avg_character_count_output": 232.4,
+      "avg_character_count_reasoning": 1774.0,
+      "avg_character_count_completion": 2006.4,
+      "avg_tokens_completions": 497.8
+    },
+    "magistral-small-2506": {
+      "average_total_score": 1.0,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer is 2": 1.0
+      },
+      "avg_character_count_output": 100.2,
+      "avg_character_count_reasoning": 1555.6,
+      "avg_character_count_completion": 1655.8,
+      "avg_tokens_output": 12.8,
+      "avg_tokens_reasoning": 404.0,
+      "avg_tokens_completions": 416.8
+    }
+  }
+}

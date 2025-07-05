@@ -1,0 +1,171 @@
+{
+  "bridge_torch_easy_10m": {
+    "o4-mini-high-long": {
+      "average_total_score": 1.0,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer suggests all four people crossing together in 10 minutes": 1.0
+      },
+      "avg_character_count_output": 191.4,
+      "avg_character_count_reasoning": 1433.6,
+      "avg_character_count_completion": 1625.0,
+      "avg_tokens_output": 53.8,
+      "avg_tokens_reasoning": 1523.2,
+      "avg_tokens_completions": 1577.0
+    },
+    "gemini-2.5-pro": {
+      "average_total_score": 1.0,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer suggests all four people crossing together in 10 minutes": 1.0
+      },
+      "avg_character_count_output": 761.6,
+      "avg_character_count_reasoning": 3326.0,
+      "avg_character_count_completion": 4087.6,
+      "avg_tokens_output": 186.4,
+      "avg_tokens_reasoning": 2534.2,
+      "avg_tokens_completions": 2720.6
+    },
+    "claude-4-sonnet-0522-thinking": {
+      "average_total_score": 1.0,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer suggests all four people crossing together in 10 minutes": 1.0
+      },
+      "avg_character_count_output": 1066.0,
+      "avg_character_count_reasoning": 1891.8,
+      "avg_character_count_completion": 2957.8,
+      "avg_tokens_output": 3952.6,
+      "avg_tokens_reasoning": 493.6,
+      "avg_tokens_completions": 4446.2
+    },
+    "gemini-2.5-flash-high": {
+      "average_total_score": 0.8,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer suggests all four people crossing together in 10 minutes": 0.8
+      },
+      "avg_character_count_output": 1219.0,
+      "avg_character_count_reasoning": 5807.8,
+      "avg_character_count_completion": 7026.8,
+      "avg_tokens_output": 322.0,
+      "avg_tokens_reasoning": 5092.0,
+      "avg_tokens_completions": 5414.0
+    },
+    "grok-3-mini-think": {
+      "average_total_score": 1.0,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer suggests all four people crossing together in 10 minutes": 1.0
+      },
+      "avg_character_count_output": 471.6,
+      "avg_character_count_reasoning": 4783.6,
+      "avg_character_count_completion": 5255.2,
+      "avg_tokens_output": 104.2,
+      "avg_tokens_reasoning": 1081.0,
+      "avg_tokens_completions": 1185.2
+    },
+    "magistral-medium-2506-thinking": {
+      "average_total_score": 1.0,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer suggests all four people crossing together in 10 minutes": 1.0
+      },
+      "avg_character_count_output": 6888.0,
+      "avg_character_count_reasoning": 41960.8,
+      "avg_character_count_completion": 48848.8,
+      "avg_tokens_output": 2237.8,
+      "avg_tokens_reasoning": 11078.8,
+      "avg_tokens_completions": 13316.6
+    },
+    "qwen3-235b-a22b-think": {
+      "average_total_score": 1.0,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer suggests all four people crossing together in 10 minutes": 1.0
+      },
+      "avg_character_count_output": 2046.8,
+      "avg_character_count_reasoning": 17615.8,
+      "avg_character_count_completion": 19662.6,
+      "avg_tokens_output": 205.0,
+      "avg_tokens_reasoning": 4537.6,
+      "avg_tokens_completions": 4742.6
+    },
+    "qwen3-30b-a3b-think": {
+      "average_total_score": 1.0,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer suggests all four people crossing together in 10 minutes": 1.0
+      },
+      "avg_character_count_output": 1593.6,
+      "avg_character_count_reasoning": 16424.6,
+      "avg_character_count_completion": 18018.2,
+      "avg_tokens_output": 393.6,
+      "avg_tokens_reasoning": 4202.8,
+      "avg_tokens_completions": 4596.4
+    },
+    "glm-z1-32b": {
+      "average_total_score": 1.0,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer suggests all four people crossing together in 10 minutes": 1.0
+      },
+      "avg_character_count_output": 617.2,
+      "avg_character_count_reasoning": 8775.4,
+      "avg_character_count_completion": 9392.6,
+      "avg_tokens_output": 74.0,
+      "avg_tokens_reasoning": 2260.2,
+      "avg_tokens_completions": 2334.2
+    },
+    "deepseek-r1-0528": {
+      "average_total_score": 1.0,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer suggests all four people crossing together in 10 minutes": 1.0
+      },
+      "avg_character_count_output": 1232.2,
+      "avg_character_count_reasoning": 18319.4,
+      "avg_character_count_completion": 19551.6,
+      "avg_tokens_output": 546.0,
+      "avg_tokens_reasoning": 4905.0,
+      "avg_tokens_completions": 5451.0
+    },
+    "deepseek-r1": {
+      "average_total_score": 1.0,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer suggests all four people crossing together in 10 minutes": 1.0
+      },
+      "avg_character_count_output": 667.4,
+      "avg_character_count_reasoning": 10701.0,
+      "avg_character_count_completion": 11368.4,
+      "avg_tokens_output": 75.6,
+      "avg_tokens_reasoning": 2747.2,
+      "avg_tokens_completions": 2822.8
+    },
+    "DeepHermes-3-Mistral-24B-Pre": {
+      "average_total_score": 0.8,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer suggests all four people crossing together in 10 minutes": 0.8
+      },
+      "avg_character_count_output": 846.8,
+      "avg_character_count_reasoning": 23584.2,
+      "avg_character_count_completion": 24431.0,
+      "avg_tokens_completions": 6842.6
+    },
+    "magistral-small-2506": {
+      "average_total_score": 0.8,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer suggests all four people crossing together in 10 minutes": 0.8
+      },
+      "avg_character_count_output": 16901.2,
+      "avg_character_count_reasoning": 50740.0,
+      "avg_character_count_completion": 67641.2,
+      "avg_tokens_output": 4471.8,
+      "avg_tokens_reasoning": 13434.4,
+      "avg_tokens_completions": 17906.2
+    }
+  }
+}
