@@ -266,6 +266,7 @@ async def query_llm_async(session, prompt, llm_config, temperature_override, cot
                             api_response_data['tokens_completion'] = usage_data.get('completion_tokens')
                             api_response_data['completion_tokens_details'] = usage_data.get('completion_tokens_details')
                         else:
+                            assert 'usage' in source_for_metadata, "Usage data not found in response, token count incorrect"
                             api_response_data['tokens_completion'] = source_for_metadata.get('tokens_completion')
                             api_response_data['completion_tokens_details'] = source_for_metadata.get('completion_tokens_details')
                     
