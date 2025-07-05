@@ -1,19 +1,16 @@
 {
   "llms": [
           
-      {
-      "name": "claude-3-7-sonnet-20250219",
-      "model": "anthropic/claude-3-7-sonnet-20250219:thinking",
-      "open_weights": false,
-      "full_cot": false,
-      "max_tokens": 30000,
-      "temperature": 0.9,
-      "top_p": 0.9,
-      "repetition_penalty": 1,
-      "reasoning": {
-        "effort": "high",
-        "exclude": false
-      }
+         {
+      "name": "deepseek-r1-distill-qwen-7b",
+      "model": "deepseek/deepseek-r1-distill-qwen-7b",
+      "open_weights": true,
+      "full_cot": true,
+      "max_tokens": 60000,
+      "temperature": 1.0,
+      "provider": [ "gmicloud/bf16"],
+      "top_p": 1.0,
+      "repetition_penalty": 1
     }
 
   ]

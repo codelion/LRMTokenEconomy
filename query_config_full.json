@@ -179,6 +179,17 @@
         "effort": "high",
         "exclude": false
       }
+    },
+             {
+      "name": "deepseek-r1-distill-qwen-7b",
+      "model": "deepseek/deepseek-r1-distill-qwen-7b",
+      "open_weights": true,
+      "full_cot": true,
+      "max_tokens": 60000,
+      "temperature": 1.0,
+      "provider": [ "gmicloud/bf16"],
+      "top_p": 1.0,
+      "repetition_penalty": 1
     }
   ] 
 }
