@@ -1,0 +1,65 @@
+{
+  "llms": [
+          
+  {
+      "name": "ds-r1-0528-t1.4",
+      "model": "deepseek/deepseek-r1-0528",
+      "open_weights": true,
+      "full_cot": true,
+      "max_tokens": 60000,
+      "temperature": 1.2,
+      "provider": [ "novita/fp8"],
+      "top_p": 1.0,
+      "repetition_penalty": 1
+    },
+  {
+      "name": "ds-r1-0528-t1.0",
+      "model": "deepseek/deepseek-r1-0528",
+      "open_weights": true,
+      "full_cot": true,
+      "max_tokens": 60000,
+      "temperature": 1.0,
+      "provider": [ "novita/fp8"],
+      "top_p": 1.0,
+      "repetition_penalty": 1
+    },
+  {
+      "name": "ds-r1-0528-t0.6",
+      "model": "deepseek/deepseek-r1-0528",
+      "open_weights": true,
+      "full_cot": true,
+      "max_tokens": 60000,
+      "temperature": 0.6,
+      "provider": [ "novita/fp8"],
+      "top_p": 1.0,
+      "repetition_penalty": 1
+    },
+  {
+      "name": "ds-r1-0528-t0.3",
+      "model": "deepseek/deepseek-r1-0528",
+      "open_weights": true,
+      "full_cot": true,
+      "max_tokens": 60000,
+      "temperature": 0.3,
+      "provider": [ "novita/fp8"],
+      "top_p": 1.0,
+      "repetition_penalty": 1
+    },
+  {
+      "name": "ds-r1-0528-t0.0",
+      "model": "deepseek/deepseek-r1-0528",
+      "open_weights": true,
+      "full_cot": true,
+      "max_tokens": 60000,
+      "temperature": 0.0,
+      "provider": [ "novita/fp8"],
+      "top_p": 1.0,
+      "repetition_penalty": 1
+    }
+
+  ]
+}
+
+
+
+

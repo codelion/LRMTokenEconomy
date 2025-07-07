@@ -1,0 +1,337 @@
+{
+  "one_plus_one": {
+    "ds-r1-0528-t1.4": {
+      "average_total_score": 1.0,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer is 2": 1.0
+      },
+      "avg_character_count_output": 163.4,
+      "avg_character_count_reasoning": 390.6,
+      "avg_character_count_completion": 554.0,
+      "avg_tokens_output": 39.4,
+      "avg_tokens_reasoning": 105.2,
+      "avg_tokens_completions": 144.6
+    },
+    "ds-r1-0528-t1.0": {
+      "average_total_score": 1.0,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer is 2": 1.0
+      },
+      "avg_character_count_output": 33.4,
+      "avg_character_count_reasoning": 1011.0,
+      "avg_character_count_completion": 1044.4,
+      "avg_tokens_output": -3.0,
+      "avg_tokens_reasoning": 269.2,
+      "avg_tokens_completions": 266.2
+    },
+    "ds-r1-0528-t0.6": {
+      "average_total_score": 1.0,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer is 2": 1.0
+      },
+      "avg_character_count_output": 77.2,
+      "avg_character_count_reasoning": 1109.8,
+      "avg_character_count_completion": 1187.0,
+      "avg_tokens_output": 7.2,
+      "avg_tokens_reasoning": 293.0,
+      "avg_tokens_completions": 300.2
+    },
+    "ds-r1-0528-t0.3": {
+      "average_total_score": 1.0,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer is 2": 1.0
+      },
+      "avg_character_count_output": 93.4,
+      "avg_character_count_reasoning": 1366.0,
+      "avg_character_count_completion": 1459.4,
+      "avg_tokens_output": 4.6,
+      "avg_tokens_reasoning": 360.2,
+      "avg_tokens_completions": 364.8
+    },
+    "ds-r1-0528-t0.0": {
+      "average_total_score": 1.0,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer is 2": 1.0
+      },
+      "avg_character_count_output": 134.0,
+      "avg_character_count_reasoning": 1587.2,
+      "avg_character_count_completion": 1721.2,
+      "avg_tokens_output": 15.2,
+      "avg_tokens_reasoning": 421.4,
+      "avg_tokens_completions": 436.6
+    }
+  },
+  "bridge_torch_easy_10m": {
+    "ds-r1-0528-t1.4": {
+      "average_total_score": 1.0,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer suggests all four people crossing together in 10 minutes": 1.0
+      },
+      "avg_character_count_output": 963.0,
+      "avg_character_count_reasoning": 23676.8,
+      "avg_character_count_completion": 24639.8,
+      "avg_tokens_output": 746.2,
+      "avg_tokens_reasoning": 6343.2,
+      "avg_tokens_completions": 7089.4
+    },
+    "ds-r1-0528-t1.0": {
+      "average_total_score": 1.0,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer suggests all four people crossing together in 10 minutes": 1.0
+      },
+      "avg_character_count_output": 1023.8,
+      "avg_character_count_reasoning": 21989.0,
+      "avg_character_count_completion": 23012.8,
+      "avg_tokens_output": 650.8,
+      "avg_tokens_reasoning": 5919.2,
+      "avg_tokens_completions": 6570.0
+    },
+    "ds-r1-0528-t0.6": {
+      "average_total_score": 1.0,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer suggests all four people crossing together in 10 minutes": 1.0
+      },
+      "avg_character_count_output": 1167.2,
+      "avg_character_count_reasoning": 21868.6,
+      "avg_character_count_completion": 23035.8,
+      "avg_tokens_output": 773.6,
+      "avg_tokens_reasoning": 5884.8,
+      "avg_tokens_completions": 6658.4
+    },
+    "ds-r1-0528-t0.3": {
+      "average_total_score": 1.0,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer suggests all four people crossing together in 10 minutes": 1.0
+      },
+      "avg_character_count_output": 1082.0,
+      "avg_character_count_reasoning": 26148.6,
+      "avg_character_count_completion": 27230.6,
+      "avg_tokens_output": 905.4,
+      "avg_tokens_reasoning": 7055.0,
+      "avg_tokens_completions": 7960.4
+    },
+    "ds-r1-0528-t0.0": {
+      "average_total_score": 1.0,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer suggests all four people crossing together in 10 minutes": 1.0
+      },
+      "avg_character_count_output": 1011.4,
+      "avg_character_count_reasoning": 22918.2,
+      "avg_character_count_completion": 23929.6,
+      "avg_tokens_output": 702.6,
+      "avg_tokens_reasoning": 6184.6,
+      "avg_tokens_completions": 6887.2
+    }
+  },
+  "AIME2023II_P1": {
+    "ds-r1-0528-t1.4": {
+      "average_total_score": 1.0,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer is 220": 1.0
+      },
+      "avg_character_count_output": 1469.6,
+      "avg_character_count_reasoning": 6751.4,
+      "avg_character_count_completion": 8221.0,
+      "avg_tokens_output": 869.2,
+      "avg_tokens_reasoning": 1834.4,
+      "avg_tokens_completions": 2703.6
+    },
+    "ds-r1-0528-t1.0": {
+      "average_total_score": 1.0,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer is 220": 1.0
+      },
+      "avg_character_count_output": 1547.4,
+      "avg_character_count_reasoning": 5555.8,
+      "avg_character_count_completion": 7103.2,
+      "avg_tokens_output": 834.2,
+      "avg_tokens_reasoning": 1517.2,
+      "avg_tokens_completions": 2351.4
+    },
+    "ds-r1-0528-t0.6": {
+      "average_total_score": 1.0,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer is 220": 1.0
+      },
+      "avg_character_count_output": 1314.6,
+      "avg_character_count_reasoning": 8740.0,
+      "avg_character_count_completion": 10054.6,
+      "avg_tokens_output": 797.6,
+      "avg_tokens_reasoning": 2380.2,
+      "avg_tokens_completions": 3177.8
+    },
+    "ds-r1-0528-t0.3": {
+      "average_total_score": 1.0,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer is 220": 1.0
+      },
+      "avg_character_count_output": 1455.2,
+      "avg_character_count_reasoning": 7343.4,
+      "avg_character_count_completion": 8798.6,
+      "avg_tokens_output": 889.2,
+      "avg_tokens_reasoning": 2003.2,
+      "avg_tokens_completions": 2892.4
+    },
+    "ds-r1-0528-t0.0": {
+      "average_total_score": 1.0,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer is 220": 1.0
+      },
+      "avg_character_count_output": 1454.2,
+      "avg_character_count_reasoning": 8727.2,
+      "avg_character_count_completion": 10181.4,
+      "avg_tokens_output": 908.2,
+      "avg_tokens_reasoning": 2371.0,
+      "avg_tokens_completions": 3279.2
+    }
+  },
+  "AIME2023II_P1_mod": {
+    "ds-r1-0528-t1.4": {
+      "average_total_score": 1.0,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer is 660": 1.0
+      },
+      "avg_character_count_output": 1433.6,
+      "avg_character_count_reasoning": 9851.2,
+      "avg_character_count_completion": 11284.8,
+      "avg_tokens_output": 1015.8,
+      "avg_tokens_reasoning": 2695.6,
+      "avg_tokens_completions": 3711.4
+    },
+    "ds-r1-0528-t1.0": {
+      "average_total_score": 1.0,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer is 660": 1.0
+      },
+      "avg_character_count_output": 1266.6,
+      "avg_character_count_reasoning": 8509.4,
+      "avg_character_count_completion": 9776.0,
+      "avg_tokens_output": 931.4,
+      "avg_tokens_reasoning": 2317.8,
+      "avg_tokens_completions": 3249.2
+    },
+    "ds-r1-0528-t0.6": {
+      "average_total_score": 1.0,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer is 660": 1.0
+      },
+      "avg_character_count_output": 1467.8,
+      "avg_character_count_reasoning": 9539.4,
+      "avg_character_count_completion": 11007.2,
+      "avg_tokens_output": 1093.4,
+      "avg_tokens_reasoning": 2583.8,
+      "avg_tokens_completions": 3677.2
+    },
+    "ds-r1-0528-t0.3": {
+      "average_total_score": 1.0,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer is 660": 1.0
+      },
+      "avg_character_count_output": 1878.0,
+      "avg_character_count_reasoning": 5880.8,
+      "avg_character_count_completion": 7758.8,
+      "avg_tokens_output": 1051.6,
+      "avg_tokens_reasoning": 1612.4,
+      "avg_tokens_completions": 2664.0
+    },
+    "ds-r1-0528-t0.0": {
+      "average_total_score": 1.0,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer is 660": 1.0
+      },
+      "avg_character_count_output": 1323.8,
+      "avg_character_count_reasoning": 7814.6,
+      "avg_character_count_completion": 9138.4,
+      "avg_tokens_output": 852.0,
+      "avg_tokens_reasoning": 2108.4,
+      "avg_tokens_completions": 2960.4
+    }
+  },
+  "AIME2025I_P2_modified": {
+    "ds-r1-0528-t1.4": {
+      "average_total_score": 1.0,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer is 41": 1.0
+      },
+      "avg_character_count_output": 1653.0,
+      "avg_character_count_reasoning": 16577.6,
+      "avg_character_count_completion": 18230.6,
+      "avg_tokens_output": 2249.8,
+      "avg_tokens_reasoning": 4565.2,
+      "avg_tokens_completions": 6815.0
+    },
+    "ds-r1-0528-t1.0": {
+      "average_total_score": 1.0,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer is 41": 1.0
+      },
+      "avg_character_count_output": 1676.6,
+      "avg_character_count_reasoning": 16413.2,
+      "avg_character_count_completion": 18089.8,
+      "avg_tokens_output": 2440.6,
+      "avg_tokens_reasoning": 4527.2,
+      "avg_tokens_completions": 6967.8
+    },
+    "ds-r1-0528-t0.6": {
+      "average_total_score": 1.0,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer is 41": 1.0
+      },
+      "avg_character_count_output": 1515.8,
+      "avg_character_count_reasoning": 16960.8,
+      "avg_character_count_completion": 18476.6,
+      "avg_tokens_output": 2420.0,
+      "avg_tokens_reasoning": 4631.0,
+      "avg_tokens_completions": 7051.0
+    },
+    "ds-r1-0528-t0.3": {
+      "average_total_score": 1.0,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer is 41": 1.0
+      },
+      "avg_character_count_output": 1663.0,
+      "avg_character_count_reasoning": 15206.0,
+      "avg_character_count_completion": 16869.0,
+      "avg_tokens_output": 2181.8,
+      "avg_tokens_reasoning": 4156.6,
+      "avg_tokens_completions": 6338.4
+    },
+    "ds-r1-0528-t0.0": {
+      "average_total_score": 1.0,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer is 41": 1.0
+      },
+      "avg_character_count_output": 1453.8,
+      "avg_character_count_reasoning": 16337.2,
+      "avg_character_count_completion": 17791.0,
+      "avg_tokens_output": 2353.0,
+      "avg_tokens_reasoning": 4488.0,
+      "avg_tokens_completions": 6841.0
+    }
+  }
+}
