@@ -191,21 +191,7 @@
       "top_p": 1.0,
       "repetition_penalty": 1
     },
-        {
-      "name": "grok-3-mini-beta",
-      "model": "x-ai/grok-3-mini-beta",
-      "open_weights": false,
-      "full_cot": true,
-      "max_tokens": 30000,
-      "temperature": 0.7,
-      "top_p": 0.95,
-      "repetition_penalty": 1,
-      "reasoning": {
-        "effort": "high",
-        "exclude": false
-      } 
-    },
-             {
+    {
       "name": "minimax-m1",
       "model": "minimax/minimax-m1",
       "open_weights": true,
