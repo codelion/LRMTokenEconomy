@@ -1,6 +1,6 @@
 # Do Open Weight Reasoning Models Think Less Efficiently?
 
-There has been remarkable advancement in Large Reasoning Models (LRMs) recently, resulting in both open weight and closed weight models. These models employ a novel paradigm known as test-time scaling, leveraging reinforcement learning to generate extended chains of thought (CoT) during reasoning tasks. This enhances their problem-solving capabilities beyond what their base models could achieve independently.
+Large Reasoning Models (LRMs) employ a novel paradigm known as test-time scaling, leveraging reinforcement learning to teach the models to generate extended chains of thought (CoT) during reasoning tasks. This enhances their problem-solving capabilities beyond what their base models could achieve independently.
 
 While cost and efficiency trade off curves  ("the pareto frontier") typically focus on model intelligence versus cost per million completion tokens, token efficiency — the number of tokens used for reasoning relative to the solution — is a critical factor that is recently receiving more attention. 
 
@@ -18,10 +18,9 @@ Our investigation addresses three key questions:
 2. What are the cost implications when token efficiency is factored into total inference expenses?
 3. Are there specific task categories where this efficiency gap is more pronounced?
 
-
 ## How can we measure token efficiency? 
 
-Measuring the length of the thinking process, the Chain-of-Though presents some issues, because most recent closed source models will not share their raw reasoning traces. Instead, they use smaller language models to transcribe the chain of thought into summaries or compressed representations. This means the original reasoning process remains hidden, with only the final answer and a transcribed version of the CoT available for analysis.
+Measuring the length of the thinking process, the Chain-of-Though presents some issues, because most recent closed source models will not share their raw reasoning traces. The rationale behind this is prevent competitors from finetuning on their reasoning traces. Instead, they use smaller language models to transcribe the chain of thought into summaries or compressed representations. This means the original reasoning process remains hidden, with only the final answer and a transcribed version of the CoT available for analysis.
 
 However, since models are usually billed by the number of output tokens for the full prompt completion (thinking and final answer output), we can use the number of completion tokens as a proxy for the total effort required to generate an answer.
 
@@ -50,25 +49,24 @@ Based on these findings, we use completion tokens to assess overall effort, supp
 
 ## Dataset
 
-  - To investigate token efficiency, a dataset was carefully curated with prompts the represent different workloads:
+To systematically evaluate token efficiency across different reasoning domains, we curated a dataset consisting of three categories:
+
     - *Knowledge questions*: These can be answered in one sentence from the models pre-training corpus and usually no reasoning is required. 
-    - *Math problems*: Most reasoning models are especially trained for math benchmarks, so they usually perform well on math problems. A subset of AIME problems was used.
-    - *Logic puzzles*: These are problems that require logical understanding and reasoning.
-  - All prompts were selected to complete below 30000 tokens to avoid truncated responses.
+    - *Math problems*: Most reasoning models are especially trained for math benchmarks, so they usually perform well on math problems. 
+    - *Logic puzzles*: logic puzzles requires both semantic understanding and logical reasoning.
 
-## Model selection
+The questions were chosen to be solvable within the 30000 token limit to avoid truncated responses.
 
-## Results 
+## Findings
 
 ### Knowledge questions
 
-This part of the evaluation consists of 5 trivial knowledge questions that can be answered in one word and that do not require reasoning at all. 
+This part of the evaluation consists of 5 trivial knowledge questions that can be answered in one word and that do not require reasoning at all. E.g.
 
-> What is the capital of Australia?
+1) What is the capital of Australia?
+2) How many days are there in February during a leap year?
 
-> How many days are there in February during a leap year?
-
-All models were able to responds to these prompts correctly. The purpose of these questions is to probe for superfluous reasoning. Efficient models should be able to determine that no reasoning is required.
+All models were able to respond to these prompts correctly. The purpose of these questions is to probe for superfluous reasoning. Efficient models should be able to determine that no reasoning is required.
 
 <div align="center" id="fig3">
 <img src="./images/knowledge/token_composition_by_prompt_chart.png" alt="Figure 3: Average token composition by knowledge question prompt across all models" style="width: 70%;">
@@ -99,34 +97,40 @@ How does this affect inference costs? [Figure 6](#fig6) shows the mean cost per 
  
 ### Math problems
 
-Math problems are a core benchmark for reasoning capabilities. The prompts used in this study are from recent AIME competitions, selected to be solvable by current frontier models.
+Most reasoning models are specifically trained to solve mathematical problems.
+One reason for this is that math problems are usually easily verifiable, which is a key advantage for reinforcement learning training. Furthermore, math problems are also an easy benchmark target for reasoning models.
 
-*AIME2025I Problem 2*
+For this study, we selected a set of six problems to test token efficiency in the math domain. Three problems were sourced from [AIME](https://artofproblemsolving.com/wiki/index.php/American_Invitational_Mathematics_Examination) 2025, and one problem was taken from AIME 2023. Easier problems were chosen to prevent models from exceeding the 30000 token limit. To further investigate the role of memorization in problem-solving, we created two modified problems by changing the variables in one AIME 2025 problem and the AIME 2023 problem. The rationale behind this approach is that unknown problems may require a longer chain of thought, as the model cannot rely on memorized solutions. The AIME 2025 problems are too new to be in the pretraining data of any model, while some may have seen the AIME 2023 problems during pretraining.
+
+Example:
+
+*AIME2025I Problem 2* (Original)
 
 > Find the sum of all positive integers $n$ such that $n+2$ divides the product $3(n+3)(n^2+9).$
 
 *AIME2025I P2 Modified*
 
 > Find the sum of all positive integers $n$ such that $n+2$ divides the product $3(n+3)(n^2+7).$
-> 
+ 
+<div align="center" id="fig7">
+<br>
+<img src="./images/math/success_rate_heatmap.png" alt="Success rate All Math Prompts" style="width: 70%;">
+</div>
 
-<div align="center">
+With a few exception, all models were able to solve the math problems correctly [Figure 7](#fig7).
+
+<div align="center" id="fig8">
 <img src="./images/math/token_composition_by_prompt_chart.png" alt="Token Composition by Math Prompt" style="width: 70%;">
 </div>
 
-The figure above shows the average token composition across all models for various math prompts. As expected, these problems require a substantial number of reasoning tokens, often in the thousands, which is significantly more than for knowledge questions.
+When we look at the relative completion tokens, a familiar pattern emerges. Open-weight models are generally less token-efficient. For instance, `magistral-small` and `magistral-medium` use over three times as many tokens as the most efficient models. In contrast, some open-weight models like `o4-mini-high-lo` and `deepseek-r1` demonstrate high token efficiency, comparable to closed-weight models.
 
-<div align="center">
-<img src="./images/math/success_rate_heatmap.png" alt="Success Rates by Math Prompt and LLM" style="width: 70%;">
-</div>
-
-Success rates are high across the board for most models, especially for the closed-weight frontier models which solve all problems perfectly. Some open-weight models struggle with specific problems like "Integer pairs", indicating variability in their mathematical reasoning skills.
-
-<div align="center">
+ 
+<div align="center" id="fig7">
+<br>
 <img src="./images/math/average_relative_completion_tokens_chart.png" alt="Average Relative Completion Tokens Across All Math Prompts" style="width: 70%;">
 </div>
 
-When we look at the relative completion tokens, a familiar pattern emerges. Open-weight models are generally less token-efficient. For instance, `magistral-small` and `magistral-medium` use over three times as many tokens as the most efficient models. In contrast, some open-weight models like `o4-mini-high-lo` and `deepseek-r1` demonstrate high token efficiency, comparable to closed-weight models.
 
 <div align="center">
 <img src="./images/math/mean_cost_math.png" alt="Min/Max Completion Cost - Math Prompts" style="width: 70%;">
@@ -156,7 +160,7 @@ The completion cost analysis for math prompts highlights the trade-offs between 
 
 ## Acquiring response and thinking token data
 
- - For many models, the number of reasoning tokens is also directly provided by the API. However we found this number to be unreliable in some cases. For example, Anthropic models would only return the length of the transcribed CoT, not the actual CoT lengths. Other models would occasionally return CoT lengths that were longer than the total completion length. The evaluation scripts perform consistency checks to assess the validity of returned CoT lengths and fell back to estimated the CoT  length with one of the following formula: 
+ - For many models, the number of reasoning tokens is also directly provided by the API. However we found this number to be unreliable in many cases. For example, Anthropic models would only return the length of the transcribed CoT, not the actual CoT lengths. Other models would occasionally return CoT lengths that were longer than the total completion length. The evaluation scripts perform consistency checks to assess the validity of returned CoT lengths and fell back to estimated the CoT  length with one of the following formula: 
    - When CoT is not available: CoT tokens = Completion tokens - Answer length in characters / 3.1 
    - When CoT is available: CoT tokens = Completion tokens * Cot length in characters / completion length in characters
 
