@@ -4,7 +4,9 @@ Large Reasoning Models (LRMs) employ a novel paradigm known as test-time scaling
 
 While cost and efficiency trade off curves  ("the pareto frontier") typically focus on model intelligence versus cost per million completion tokens, token efficiency — the number of tokens used for reasoning relative to the solution — is a critical factor that is recently receiving more attention. 
 
-Anecdotal evidence suggests open weight models produce significantly more tokens for similar tasks than closed weight models. This report systematically investigates these observations.
+Anecdotal evidence suggests open weight models produce significantly more tokens for similar tasks than closed weight models. 
+
+This report systematically investigates these observations. We confirm this trend to be generally true, but observe significant differences depending on problem domain.
 
 ## Why is it of interest to measure token efficiency?
 
@@ -97,10 +99,9 @@ How does this affect inference costs? [Figure 6](#fig6) shows the mean cost per 
  
 ### Math problems
 
-Most reasoning models are specifically trained to solve mathematical problems.
-One reason for this is that math problems are usually easily verifiable, which is a key advantage for reinforcement learning training. Furthermore, math problems are also an easy benchmark target for reasoning models.
+Most reasoning models are specifically trained to solve mathematical problems. One reason for this is that math problems are usually easily verifiable, which is a key advantage for reinforcement learning training. Furthermore, math problems are also an easy benchmark target for reasoning models.
 
-For this study, we selected a set of six problems to test token efficiency in the math domain. Three problems were sourced from [AIME](https://artofproblemsolving.com/wiki/index.php/American_Invitational_Mathematics_Examination) 2025, and one problem was taken from AIME 2023. Easier problems were chosen to prevent models from exceeding the 30000 token limit. To further investigate the role of memorization in problem-solving, we created two modified problems by changing the variables in one AIME 2025 problem and the AIME 2023 problem. The rationale behind this approach is that unknown problems may require a longer chain of thought, as the model cannot rely on memorized solutions. The AIME 2025 problems are too new to be in the pretraining data of any model, while some may have seen the AIME 2023 problems during pretraining.
+For this study, we selected a set of six problems to test token efficiency in the math domain. Three problems were sourced from [AIME](https://artofproblemsolving.com/wiki/index.php/American_Invitational_Mathematics_Examination) 2025, and one problem was taken from AIME 2023. Easier problems were chosen to prevent models from exceeding the 30000 token limit. To further investigate the role of memorization in problem-solving, we created two modified problems by changing the variables in one AIME 2025 problem and the AIME 2023 problem. The rationale behind this approach is that unknown problems may require a longer chain of thought, as the model cannot rely on memorized solutions. The AIME 2025 problems are too new to be in the pretraining data of any model, while some may have seen the AIME 2023 problems during pretraining. 
 
 Example:
 
@@ -117,79 +118,110 @@ Example:
 <img src="./images/math/success_rate_heatmap.png" alt="Success rate All Math Prompts" style="width: 70%;">
 </div>
 
-With a few exception, all models were able to solve the math problems correctly [Figure 7](#fig7).
+With a few exceptions, all models were able to solve the math problems correctly [Figure 7](#fig7).
+
+We can see that, on average, less than 10000 tokens are required to solve the selected problems ([Figure 8](#fig8)). The more complex problems from the AIME2025 set will easily required more than 30000 tokens in some models and were therefore not used for this evaluation to avoid skewing the distribution.
 
 <div align="center" id="fig8">
 <img src="./images/math/token_composition_by_prompt_chart.png" alt="Token Composition by Math Prompt" style="width: 70%;">
 </div>
 
-When we look at the relative completion tokens, a familiar pattern emerges. Open-weight models are generally less token-efficient. For instance, `magistral-small` and `magistral-medium` use over three times as many tokens as the most efficient models. In contrast, some open-weight models like `o4-mini-high-lo` and `deepseek-r1` demonstrate high token efficiency, comparable to closed-weight models.
-
+Remarkably, the number of tokens required to solve the pairs of original and modified problems is almost identical. This could suggest two trends across all llms:
+- These math problems are not solved based on memorization, but algorithmically.
+- The number of tokens is identical for similar problems.
  
-<div align="center" id="fig7">
+<div align="center" id="fig9">
 <br>
 <img src="./images/math/average_relative_completion_tokens_chart.png" alt="Average Relative Completion Tokens Across All Math Prompts" style="width: 70%;">
 </div>
 
+[Figure 9](#fig9) shows the relative excess token ratio compared to the reference. In contrast to the trends observed for knowledge questions, the relative ratio between models is much lower. `o4-mini-high` is a notable outlier with a surprisingly low token count—3x fewer tokens than the next most efficient model. This suggests that o4-mini has been specifically optimized for token efficiency in mathematical problems. `magistral-small` and `magistral-medium` remain the highest token count models, but show only 3x the ratio of the reference models. Another notable change is the significant increase from `deepseek-r1` to the latest checkpoint `deepseek-r1-0528`. This suggests the model was trained to reason for longer periods to improve performance on math benchmarks. The opposite trend can be observed between `sonnet-3.7` and `sonnet-4.0`, which significantly improved in token efficiency.
 
 <div align="center">
 <img src="./images/math/mean_cost_math.png" alt="Min/Max Completion Cost - Math Prompts" style="width: 70%;">
 </div>
 
-The completion cost analysis for math prompts highlights the trade-offs between per-token price and token efficiency. While some open-weight models have low per-token costs, their higher token usage on these complex reasoning tasks can lead to overall costs that are competitive with, or even exceed, those of more token-efficient closed-weight models. For example, the cost for `claude-3-7-sonnet-20250219` is the highest, despite other Claude and Gemini models being more cost-effective.
+Examining completion costs reveals that since token consumption is relatively similar across most models, those with higher per-token pricing naturally incur the highest completion costs. However, the exceptional token efficiency of `o4-mini-high` enables it to outperform many open-source models in total completion cost despite potentially higher per-token rates.
 
 ### Logic puzzles
 
- A special challenge with logic puzzles is that they are often represented in pretraining data and hence the model may be able to answer them without reasoning. To avoid this, modified problems from the [misguided attention](https://github.com/cpldcpu/MisguidedAttention) dataset were used.
+[This section is a slop placeholder, need to add more details]
 
+A special challenge with logic puzzles is that they are often represented in pretraining data and hence the model may be able to answer them without reasoning. To avoid this, modified problems from the [misguided attention](https://github.com/cpldcpu/MisguidedAttention) dataset were used.
 
- # 
+Our logic puzzle evaluation included eight different problems designed to test reasoning capabilities while avoiding memorization:
 
+- **Bridge and torch problems** with varying constraints (impossible, easy, and standard versions)
+- **Monty Hall variations** including both the classic problem and an inverse version
+- **Logical deduction puzzles** such as the roses and flowers problem
+- **Strategic reasoning problems** like the defective appliance scenario
 
+These problems were specifically chosen to require genuine logical reasoning rather than pattern matching from training data.
 
+<div align="center" id="fig10">
+<img src="./images/logic_puzzles/success_rate_heatmap.png" alt="Figure 10: Success rate for logic puzzle prompts by model" style="width: 70%;">
+</div>
 
+[Figure 10](#fig10) shows the success rates across different logic puzzle problems. Unlike the math problems, success rates vary significantly across both models and problem types. Some models struggle with certain logical reasoning tasks, particularly the more complex bridge and torch problems and Monty Hall variations.
+
+<div align="center" id="fig11">
+<img src="./images/logic_puzzles/token_composition_by_prompt_chart.png" alt="Figure 11: Token composition by logic puzzle prompt" style="width: 70%;">
+</div>
+
+[Figure 11](#fig11) reveals that logic puzzles generally require fewer tokens than math problems but more than knowledge questions. The token requirements vary significantly depending on the specific puzzle type, with bridge and torch problems typically requiring the most reasoning tokens.
+
+<div align="center" id="fig12">
+<img src="./images/logic_puzzles/token_composition_stacked_chart.png" alt="Figure 12: Token composition breakdown by model for logic puzzles" style="width: 70%;">
+</div>
+
+Similar to the patterns observed in other categories, [Figure 12](#fig12) shows that open-weight models consistently use more tokens than closed-weight models for logic puzzles. However, the gap is less pronounced than in knowledge questions, suggesting that the reasoning complexity of logic puzzles may naturally require more tokens even from efficient models.
+
+<div align="center" id="fig13">
+<img src="./images/logic_puzzles/average_relative_completion_tokens_chart.png" alt="Figure 13: Average relative completion tokens for logic puzzles by model" style="width: 70%;">
+</div>
+
+[Figure 13](#fig13) shows the relative token efficiency for logic puzzles. The pattern is consistent with our other findings: open-weight models like `magistral-small` and `magistral-medium` show the highest token usage, while models like `o4-mini-high` and `claude-4-sonnet` demonstrate superior token efficiency. Notably, the efficiency gap between open and closed-weight models is smaller for logic puzzles than for knowledge questions, suggesting that the inherent reasoning complexity may level the playing field somewhat.
+
+<div align="center">
+<img src="./images/logic_puzzles/mean_cost_logic_puzzle.png" alt="Figure 14: Mean inference cost for logic puzzles by model" style="width: 70%;">
+</div>
+
+The cost analysis for logic puzzles reveals interesting trade-offs. While some open-weight models have lower per-token costs, their higher token consumption means the total inference cost can be competitive with or exceed that of more token-efficient closed-weight models. The exceptional token efficiency of `o4-mini-high` again translates to very competitive costs despite potentially higher per-token rates.
+
+## Summary
+
+We find that open-weight models use consistently more tokens than closed-weight models for equivalent tasks. However, the efficiency gap depends on the work load and is most pronounced for simple knowledge questions where no reasoning is required where on average 3x more tokens are required for prompts. The gap reduces to less than 2x for math problems and logic puzzles. 
+
+Despite higher per-token costs, closed-weight models often achieve competitive or lower total inference costs due to their superior token efficiency. This finding challenges the assumption that open-weight models are inherently more cost-effective, as their higher token consumption can easily offset the benefits of lower hosting costs or per-token rates.
+
+Current open-weight reasoning models may focus less on domain specific optimization that closed-weight models use to minimize unnecessary token generation during inference. To address these efficiency gaps, open-weight model developers could focus on improving token efficiency for simple knowledge tasks, and implement mechanisms similar to closed-weight models that can steer the length of the chain of thought based on problem complexity. These optimizations could significantly improve the cost-effectiveness of open-weight reasoning models while maintaining their problem-solving capabilities.
 
 
 # Methods
 
 ## General
 
-   - General: Models were accessed with Openrouter, except Deephermes via the Nous API and DeepSeek R1-524 via the Deepseek API.
-   - Generations were limited to 30000 tokens and reasoning effort was set to "high" in the OR api. Some issues were encountered where models would time out before 30000 tokens were generated. In these cases, the query was restarted and the provider was adjusted, if needed.
-   - Statistics is N=5 for each prompt/llm combination
+All models were accessed through OpenRouter, with the exception of Deephermes, which was accessed via the Nous API, and DeepSeek R1-524, which was accessed through the DeepSeek API. Generation limits were set to 30,000 tokens with reasoning effort configured to "high" in the OpenRouter API. In cases where models timed out before generating the full 30,000 tokens, queries were restarted and the provider was adjusted as needed to ensure completion in instances when the query to not complete. Typical reasons for failure to complete were timouts.
+
+Statistical analysis was conducted with N=5 samples for each prompt and language model combination.
 
 ## Acquiring response and thinking token data
 
- - For many models, the number of reasoning tokens is also directly provided by the API. However we found this number to be unreliable in many cases. For example, Anthropic models would only return the length of the transcribed CoT, not the actual CoT lengths. Other models would occasionally return CoT lengths that were longer than the total completion length. The evaluation scripts perform consistency checks to assess the validity of returned CoT lengths and fell back to estimated the CoT  length with one of the following formula: 
-   - When CoT is not available: CoT tokens = Completion tokens - Answer length in characters / 3.1 
-   - When CoT is available: CoT tokens = Completion tokens * Cot length in characters / completion length in characters
+While many models directly provide reasoning token counts through their API responses, we found these numbers to be unreliable in numerous cases. For instance, Anthropic models would only return the length of the transcribed Chain of Thought rather than the actual CoT lengths, while other models would occasionally report CoT lengths that exceeded the total completion length—a logical impossibility.
 
+To address these inconsistencies, our evaluation scripts implemented consistency checks to assess the validity of returned CoT lengths. When the provided reasoning token counts failed validation, we employed fallback estimation methods using the following formulas:
+
+- When CoT text is not available: CoT tokens = Completion tokens - (Answer length in characters / 3.1)
+- When CoT text is available: CoT tokens = Completion tokens × (CoT length in characters / completion length in characters)
 
 ## Model pricing
 
- - The cost per in $/1M completion tokens was automatically extracted from the OpenRouter API for each model in July 2025, except for Deephermes3. A summary is shown in Fig A, which lists highest and lowest pricing per model. <div align="center">
-<img src="./images/model_pricing_comparison.png" alt="FigA" style="width: 70%;">
+Pricing data for completion tokens (measured in $/1M tokens) was automatically extracted from the OpenRouter API for each model in July 2025, with the exception of Deephermes3. The pricing information captures both minimum and maximum rates available through different providers, as illustrated in Figure A below.
+
+<div align="center">
+<img src="./images/model_pricing_comparison.png" alt="Figure A: Model pricing comparison showing min/max costs per million tokens" style="width: 70%;">
 </div>
 
+## Data processing and figure generation
 
-
-
-Research plan
-
-Objectives:
-- Understand the token efficiency of large reasoning models (LRMs), specifically whether there is a different in state of the art between open weight and closed weight models.
-- Discuss implications on cost of ownership.
-- Discuss some of the mechanisms, if possible.
-- Discuss why potential differences exist.
-- Derive recommendations for optimization for open weight LRMs.
-
-Approach:
-- Set up test environment to measure token efficiency based on select prompts and tokens reported for completion.
-- Choose a limited set of suitable prompts:
-  a) Representative of common use cases. (knowledge question) - 4
-  b) Clean reasoning prompts (e.g. math problems) - AIMES 2025
-  c) Misguiding prompts without solution (impossibe, model has to figure out when to stop) - 
-  d) Misguiding prompts with a solution (Model has to sample distribution despite bias, but problem is solvable)
-
-For evaluation, use the normalized ratio!
-- Some prompts may generally elicit shorter answers. Using the ratio of median/mean may skew results!
+All datasets and code can be found in this repository: [xxx]. The python scripts for data evaluation were largely writting with code agent support.
