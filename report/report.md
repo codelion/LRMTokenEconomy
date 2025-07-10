@@ -190,11 +190,9 @@ The cost analysis for logic puzzles reveals interesting trade-offs. While some o
 
 ## Summary
 
-We find that open-weight models use consistently more tokens than closed-weight models for equivalent tasks. However, the efficiency gap depends on the work load and is most pronounced for simple knowledge questions where no reasoning is required where on average 3x more tokens are required for prompts. The gap reduces to less than 2x for math problems and logic puzzles. 
+We find that open-weight models use consistently more tokens than closed-weight models for equivalent tasks. However, the efficiency gap depends on the work load and is most pronounced for simple knowledge questions where no reasoning is required. On average 3x more tokens are required for knowlege prompts. The gap reduces to less than 2x for math problems and logic puzzles. 
 
-Despite higher per-token costs, closed-weight models often achieve competitive or lower total inference costs due to their superior token efficiency. This finding challenges the assumption that open-weight models are inherently more cost-effective, as their higher token consumption can easily offset the benefits of lower hosting costs or per-token rates.
-
-Current open-weight reasoning models may focus less on domain specific optimization that closed-weight models use to minimize unnecessary token generation during inference. To address these efficiency gaps, open-weight model developers could focus on improving token efficiency for simple knowledge tasks, and implement mechanisms similar to closed-weight models that can steer the length of the chain of thought based on problem complexity. These optimizations could significantly improve the cost-effectiveness of open-weight reasoning models while maintaining their problem-solving capabilities.
+Current open-weight reasoning models appear to focus less on domain specific optimization than closed-weight models to minimize unnecessary token generation during inference. To address these efficiency gaps, improving token efficiency for simple knowledge tasks outside of typical benchmarking domains is necessary. In addition, many closed-weight models implement mechanisms to steer the length of the CoT, which is still largely absent in open-weight models. These optimizations could significantly improve the cost-effectiveness of open-weight reasoning models.
 
 
 # Methods
