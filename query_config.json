@@ -1,18 +1,20 @@
 {
   "llms": [
           
-         {
-      "name": "deepseek-r1-distill-qwen-7b",
-      "model": "deepseek/deepseek-r1-distill-qwen-7b",
-      "open_weights": true,
+       {
+      "name": "claude-opus-4",
+      "model": "anthropic/claude-opus-4",
+      "open_weights": false,
       "full_cot": true,
-      "max_tokens": 60000,
-      "temperature": 1.0,
-      "provider": [ "gmicloud/bf16"],
-      "top_p": 1.0,
-      "repetition_penalty": 1
+      "max_tokens": 30000,
+      "temperature": 0.9,
+      "top_p": 0.9,
+      "repetition_penalty": 1,
+      "reasoning": {
+        "effort": "high",
+        "exclude": false
+      }
     }
-
   ]
 }
 
