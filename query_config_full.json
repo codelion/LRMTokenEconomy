@@ -266,6 +266,15 @@
         "effort": "high",
         "exclude": false
       }
-    }
+    },
+       {
+        "name": "llama-3.3-nemotron-super-49b-v1",
+        "model": "nvidia/llama-3.3-nemotron-super-49b-v1",
+        "max_tokens": 30000,
+        "temperature": 0.6,
+        "top_p": 0.95,
+        "repetition_penalty": 1,
+        "system_prompt": "detailed thinking on"
+      }
   ] 
 }

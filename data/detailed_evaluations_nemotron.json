@@ -1,0 +1,1978 @@
+{
+  "one_plus_one": {
+    "llama-3.3-nemotron-super-49b-v1": [
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is 2",
+            "met": true
+          }
+        ],
+        "feedback": "The output correctly states that the answer is 2, which matches the specified criterion.",
+        "total_score": 1.0,
+        "original_question": "How much is 1+1?",
+        "original_response": "Answer: 2",
+        "statistics": {
+          "character_count_output": 9,
+          "character_count_reasoning": 521,
+          "character_count_completion": 530,
+          "tokens_output": 146,
+          "tokens_reasoning": 0,
+          "tokens_completions": 146
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is 2",
+            "met": true
+          }
+        ],
+        "feedback": "The output correctly states that the answer is 2, which matches the specified criterion.",
+        "total_score": 1.0,
+        "original_question": "How much is 1+1?",
+        "original_response": "Answer: 2",
+        "statistics": {
+          "character_count_output": 9,
+          "character_count_reasoning": 1288,
+          "character_count_completion": 1297,
+          "tokens_output": 323,
+          "tokens_reasoning": 0,
+          "tokens_completions": 323
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is 2",
+            "met": true
+          }
+        ],
+        "feedback": "The output correctly states that the answer is 2, which matches the specified criterion.",
+        "total_score": 1.0,
+        "original_question": "How much is 1+1?",
+        "original_response": "Answer: 2",
+        "statistics": {
+          "character_count_output": 9,
+          "character_count_reasoning": 593,
+          "character_count_completion": 602,
+          "tokens_output": 152,
+          "tokens_reasoning": 0,
+          "tokens_completions": 152
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is 2",
+            "met": true
+          }
+        ],
+        "feedback": "The output correctly states that the answer is 2, which matches the specified criterion.",
+        "total_score": 1.0,
+        "original_question": "How much is 1+1?",
+        "original_response": "Answer: 2",
+        "statistics": {
+          "character_count_output": 9,
+          "character_count_reasoning": 1830,
+          "character_count_completion": 1839,
+          "tokens_output": 455,
+          "tokens_reasoning": 0,
+          "tokens_completions": 455
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is 2",
+            "met": true
+          }
+        ],
+        "feedback": "The output correctly states that the answer is 2, which matches the specified criterion.",
+        "total_score": 1.0,
+        "original_question": "How much is 1+1?",
+        "original_response": "Answer: 2",
+        "statistics": {
+          "character_count_output": 9,
+          "character_count_reasoning": 1008,
+          "character_count_completion": 1017,
+          "tokens_output": 246,
+          "tokens_reasoning": 0,
+          "tokens_completions": 246
+        }
+      }
+    ]
+  },
+  "bridge_torch_easy_10m": {
+    "llama-3.3-nemotron-super-49b-v1": [
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer suggests all four people crossing together in 10 minutes",
+            "met": true
+          }
+        ],
+        "feedback": "The output clearly states that all four people cross together in 10 minutes, which directly matches the criterion.",
+        "total_score": 1.0,
+        "original_question": "Four people come to a rickety bridge at night. The bridge can support four people at a time, and they share a single torch. A takes 1 minute, B takes 3, C takes 5, D takes 10. The challenge is to get all four over in no more than 10 minutes. How do they do it?",
+        "original_response": "The challenge can be solved by having all four cross the bridge together in one trip. Since the bridge can support four people at once and the torch is carried by one of them, the crossing time is determined by the slowest person, D, who takes 10 minutes. \n\n**Solution:**  \n1. **A, B, C, D all cross together:** This takes 10 minutes (D\u2019s time).  \n2. **Everyone is now on the other side** with the total time exactly 10 minutes.  \n\n**Answer:**  \nAll four cross together in one trip, taking 10 minutes.  \n**Steps:**  \n1. A, B, C, D cross \u2192 10 minutes.  \n**Total Time:** 10 minutes.  \n\n$\\boxed{10}$ minutes.",
+        "statistics": {
+          "character_count_output": 605,
+          "character_count_reasoning": 13394,
+          "character_count_completion": 13999,
+          "tokens_output": 3532,
+          "tokens_reasoning": 0,
+          "tokens_completions": 3532
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer suggests all four people crossing together in 10 minutes",
+            "met": true
+          }
+        ],
+        "feedback": "The model correctly identifies that all four people can cross together in 10 minutes, which is the most straightforward solution given the stated bridge capacity.",
+        "total_score": 1.0,
+        "original_question": "Four people come to a rickety bridge at night. The bridge can support four people at a time, and they share a single torch. A takes 1 minute, B takes 3, C takes 5, D takes 10. The challenge is to get all four over in no more than 10 minutes. How do they do it?",
+        "original_response": "<think>\nOkay, let's see. So there's this problem where four people need to cross a bridge at night. The bridge can hold up to four people at once, but they only have one torch. Each person takes a different amount of time to cross: A takes 1 minute, B takes 3, C takes 5, and D takes 10 minutes. The goal is to get everyone across in 10 minutes or less. Hmm, how do they do that?\n\nFirst, I remember that in these types of problems, the key is to minimize the total time by optimizing who carries the torch back. Because if the two fastest people are always the ones going back with the torch, you can save a lot of time. Let me think through the steps.\n\nInitially, all four are on the starting side. The bridge can take four, but since they need the torch to cross, they can't all go at once without someone bringing the torch back. Wait, but the problem says the bridge can support four people at a time. Wait, does that mean that up to four can cross together, but they still need the torch? Or does the torch's presence allow them to cross? The problem states they \"share a single torch,\" so I think the torch is necessary for crossing, regardless of the number of people. So even if four people cross, someone has to bring the torch back. Wait, but if four cross together, then all four would have the torch? No, probably the torch can only be carried by one person at a time. So even if multiple people cross, only one can carry the torch, and when they get to the other side, someone has to bring it back.\n\nWait, maybe the bridge can hold four people, but the torch is needed for crossing. So, for example, if two people cross with the torch, then one of them has to bring it back. But if four people cross, they all need the torch, but since there's only one, only one person can carry it. Wait, this is confusing. Let me re-read the problem.\n\n\"Four people come to a rickety bridge at night. The bridge can support four people at a time, and they share a single torch. A takes 1 minute, B takes 3, C takes 5, D takes 10. The challenge is to get all four over in no more than 10 minutes. How do they do it?\"\n\nAh, okay. So the bridge can hold four people at the same time, but they need the torch to cross. So, when people cross, they must have the torch with them. So, the torch can only be on one side at a time. So, if two people cross from the start to the end, the torch goes with them. Then, one of them has to bring the torch back. So the strategy involves minimizing the time spent on return trips.\n\nThe classic version of this problem usually has a bridge that can only hold two people at a time, and the solution involves the fastest people doing the returns. But here, the bridge can hold four, which might change things. Wait, but if the bridge can hold four, maybe more people can cross at once, reducing the number of trips needed.\n\nWait, let's think. If all four cross together with the torch, that would take 10 minutes (since D is the slowest), but then the torch is on the other side, and no one is left on the original side to bring it back. So that's not possible. So they can't all cross at once because then there's no one to bring the torch back for any remaining people. But in this case, all four need to cross, so maybe the approach is different.\n\nWait, maybe the optimal way is to have the two fastest people make the return trips. Let's outline possible steps.\n\nFirst, send the two fastest (A and B) across. That takes 3 minutes (since B is slower). Then, A returns with the torch, taking 1 minute. Total so far: 4 minutes.\n\nThen, send the two slowest (C and D) across. That takes 10 minutes. Total: 14 minutes. Then, B returns with the torch, taking 3 minutes. Total: 17. Then A and B cross again, taking 3 minutes. Total 20. That's way over 10.\n\nWait, that's the classic approach for a two-person bridge, but here the bridge can take four. Maybe we can do better by having more people cross at once.\n\nAlternative approach: First, send all four across. But the time would be 10 minutes (D's time), but then there's no one to bring the torch back. So that's not possible.\n\nWait, perhaps the first step is to send two people across, then have one return, then send two more, etc. But since the bridge can hold four, maybe we can send three across and have one return? Not sure.\n\nWait, let's think again. The bridge can support four people at a time, but the torch is needed for crossing. So, when a group crosses, they must have the torch. So, the torch's location determines who can cross.\n\nLet me try to model this step by step.\n\nStart: All on start side (A, B, C, D), torch on start side.\n\nStep 1: Send A and B across. Time taken: 3 minutes (since B is slower). Now, on the other side: A, B. Torch is there. Start side: C, D.\n\nStep 2: A returns with the torch. Time taken: 1 minute. Total: 4 minutes. Now, start side: A, C, D. Other side: B.\n\nStep 3: Send C and D across. Time taken: 10 minutes. Total: 14. Now, other side: B, C, D. Torch is there. Start side: A.\n\nStep 4: B returns with the torch. Time: 3 minutes. Total: 17. Start side: A, B. Other side: C, D.\n\nStep 5: A and B cross again. Time: 3 minutes. Total: 20. That's too long.\n\nHmm, same as before. Not good.\n\nAlternative approach: Maybe send the two fastest first, but then have one of them return, then send the slowest pair, then have the fastest return, and then the two fastest again.\n\nWait, but even that gives 3 + 1 + 10 + 1 + 3 = 18 minutes.\n\nWait, maybe there's a better way. Let's think differently.\n\nSince the bridge can hold four, maybe we can have more people cross together. For example:\n\nStep 1: A and D cross. Time: 10 minutes. Torch on other side. Start side: B, C.\n\nStep 2: A returns. Time: 1. Total: 11.\n\nStep 3: B and C cross. Time: 5 minutes (C is slower). Total: 16.\n\nStep 4: B returns. Time: 3. Total: 19.\n\nStep 5: A and B cross. Time: 3. Total: 22. Still too long.\n\nNope, worse.\n\nAnother idea: Maybe send three people across first, then have one return.\n\nStep 1: A, B, C cross. Time: 5 minutes (C is slowest). Torch on other side. Start side: D.\n\nStep 2: A returns. Time: 1. Total: 6.\n\nStep 3: A and D cross. Time: 10. Total: 16.\n\nBut then, on the other side: A, B, C, D. Total time 16. Wait, that's under 10? No, 16 is over 10. Wait, the challenge is to do it in 10 minutes. So that's not enough.\n\nWait, maybe another strategy. Let's see.\n\nWhat if we do:\n\nStep 1: A and B cross. 3 minutes. Torch on other side.\n\nStep 2: A returns. 1 minute. Total 4.\n\nStep 3: C and D cross. 10 minutes. Total 14.\n\nStep 4: B returns. 3 minutes. Total 17.\n\nStep 5: A and B cross. 3 minutes. Total 20. Same as before.\n\nStill too long.\n\nWait, but the bridge can hold four. So maybe in some steps, we can have four cross at once. But since the torch is needed, only one person can carry it. Wait, no. If four people cross, they all need the torch. But there's only one torch. So only one person can carry it, so effectively, when four cross, it's like one person carrying the torch and three others following? But that doesn't make sense because the torch is necessary for crossing. So perhaps all four can cross together if one of them has the torch. So the time would be the time of the slowest person in the group.\n\nWait, that's an important point. If multiple people cross together, the time taken is the maximum time of those crossing. So, for example, if A, B, C, D all cross together with the torch (carried by one of them), the time would be 10 minutes (D's time). But then the torch is on the other side, and no one is left on the start side to bring it back. So that's not helpful because then you can't get the torch back to pick up anyone else. But in this problem, all four need to cross, so maybe that's the way? But then you can't because after everyone crosses, the torch is on the other side, but there's no one left to bring it back. Wait, but if all four cross together, then everyone is on the other side, and the torch is there. So that would take 10 minutes. But the problem says the bridge can support four people at a time. So why not just have all four cross together? That would take 10 minutes, right?\n\nWait, that seems too easy. Let me check the problem statement again.\n\n\"Four people come to a rickety bridge at night. The bridge can support four people at a time, and they share a single torch. A takes 1 minute, B takes 3, C takes 5, D takes 10. The challenge is to get all four over in no more than 10 minutes. How do they do it?\"\n\nIf the bridge can support four people, and they have one torch, then theoretically, all four could cross at the same time, with one of them carrying the torch. The time taken would be the time of the slowest person, which is D at 10 minutes. Then everyone is across in 10 minutes. But that seems to solve the problem trivially. So why is this a challenge?\n\nWait, maybe there's a misunderstanding here. Maybe the bridge can only hold up to four people at any given time, but the torch is required for anyone to cross, so even if four people are on the bridge, they all need the torch. But since there's only one torch, only one person can carry it, so effectively, only one person can cross at a time unless accompanied by the torch holder. Wait, that doesn't make sense. Maybe the torch is needed for visibility, so multiple people can cross together as long as the torch is with them. So if two people cross, one carries the torch, and the time is the slower of the two. If four cross, one carries the torch, and the time is the slowest of the four.\n\nIn that case, sending all four across together would take 10 minutes, achieving the goal. But that seems too straightforward, so perhaps there's a rule I'm missing. Maybe the problem is a variation where the bridge can hold up to four, but the torch must be accompanied by at least one person when moving. So, for example, you can't have the torch left on one side without someone being there with it. Wait, but if all four cross together, the torch is with them, so it's on the other side. Then everyone is across in 10 minutes. So why isn't that the solution?\n\nBut maybe the original problem intends that the bridge can only hold two people at a time, and the user modified it to four, but the solution still requires the same strategy. Or perhaps there's a mistake in interpreting the bridge's capacity.\n\nAlternatively, perhaps the problem is that even though the bridge can hold four, the torch can only be carried by one person, so when crossing, only one person can carry the torch, and others must follow without it, which isn't allowed. So maybe the rule is that any group crossing must have the torch with them, but only one person can carry it. Therefore, when multiple people cross, the torch bearer's time determines the crossing time, but others can't cross without the torch. Wait, that doesn't make sense. If the torch is necessary for crossing, then anyone crossing must have the torch. So if two people cross, one carries the torch, and the other follows. But the time is determined by the slower person. For example, if A and D cross, A carries the torch, but since D is slower, it takes 10 minutes. But that's worse.\n\nWait, no. If two people cross together, the time taken is the maximum of their individual times. So if A (1 min) and D (10 min) cross together, it takes 10 minutes because D is slower. But if A carries the torch and D follows, does that matter? Probably not; the time is still determined by the slower person.\n\nSo, going back, if all four cross together, with one of them (say A) carrying the torch, the time would be 10 minutes (D's time). Then everyone is across in 10 minutes. That seems to solve the problem. But why is this a challenge then? Maybe the actual problem has a different constraint, like the bridge can only hold two people at a time, but the user changed it to four. Let me check the original problem statement again.\n\nThe user wrote: \"The bridge can support four people at a time, and they share a single torch.\" So according to that, the bridge capacity is four, torch is single. So the solution should be possible in 10 minutes by just sending all four across together. But that seems too easy, so perhaps there's a misunderstanding.\n\nWait, maybe the problem is that when people cross, they must go in groups, and the torch must be accompanied. So if you send four across, the torch is with them, but then to get the torch back, someone has to return. But if all four are across, there's no one left to bring the torch back. Wait, but if all four cross together, then the torch is on the other side, and everyone is there. So there's no need to bring the torch back because everyone is already across. So total time is 10 minutes. That would work.\n\nBut then why is this considered a challenge? Maybe the original problem had a bridge that could only hold two, and the user modified it to four but forgot to adjust the challenge time. Alternatively, perhaps there's a rule that the torch must be on the same side as at least one person at all times, but that doesn't make sense.\n\nAlternatively, maybe the problem is that even though the bridge can hold four, the torch can only be carried by one person, so when four cross, only one can carry the torch, and the others can't cross without it. But that would mean that only one person can cross at a time unless accompanied by the torch bearer. Which would make the bridge capacity irrelevant. So in that case, the problem reduces to the standard two-person bridge problem, where the optimal strategy is needed.\n\nBut the user specifically says the bridge can support four. So perhaps the intended solution is indeed to send all four across at once, taking 10 minutes. But that seems too straightforward. Maybe the user made a mistake in the problem statement, or perhaps I'm missing something.\n\nWait, let's check the classic problem. The classic bridge problem has four people with times 1, 2, 5, 10, and a bridge that holds two. The solution involves sending the two fastest to go over and back, resulting in a total time of 17 minutes. But here, the times are 1, 3, 5, 10, and the bridge holds four. If we can send all four over at once, that's 10 minutes. So maybe that's the answer.\n\nBut maybe the problem expects the same strategy as the classic one, not realizing that with a four-person bridge, you can just send everyone at once. Let me verify.\n\nIf the bridge can hold four, and the torch is required for crossing, then yes, all four can cross together, taking the time of the slowest, which is 10 minutes. Therefore, the answer is simply to have all four cross together, taking 10 minutes.\n\nBut perhaps the problem intends that the torch must be moved by someone, so even if four cross, someone has to bring the torch back. But if all four cross, there's no one left to bring it back, but since everyone is already across, there's no need. So that's valid.\n\nTherefore, the solution is:\n\nA, B, C, D all cross together. Time taken: 10 minutes.\n\nBut that seems too easy. Maybe the problem was misstated, and the bridge can only hold two. Let me check the original question again.\n\nThe user wrote: \"The bridge can support four people at a time, and they share a single torch.\" So no, the bridge capacity is four. Therefore, the answer should be that all four cross together in 10 minutes.\n\nBut maybe there's a rule that the torch cannot be left unattended on either side. For example, if all four cross, the torch is on the other side, but there must always be at least one person with the torch on each side. But that's not a standard rule in these problems.\n\nAlternatively, perhaps the problem is that when crossing, the torch must be accompanied by at least one person, but multiple people can cross with the torch as long as someone is carrying it. So, for example, four people can cross if one of them carries the torch, and the time is the maximum of their times.\n\nIn that case, sending all four across with D carrying the torch would take 10 minutes. Then everyone is across. So total time 10 minutes.\n\nTherefore, the answer is that they all cross together, taking 10 minutes.\n\nBut why would this be a challenge then? It seems straightforward. Maybe the user intended the bridge to hold only two, but wrote four by mistake. Alternatively, perhaps the torch can only be carried by one person at a time, and others can't cross without it, making the bridge capacity irrelevant.\n\nAlternatively, maybe the problem is in the style of the classic one but with a higher bridge capacity, and the solution still requires optimization because sending all four at once isn't allowed for some reason.\n\nWait, let's think again. Suppose the bridge can hold four, but the torch must be physically carried by someone when crossing. So, if four people cross, one of them carries the torch, and the crossing time is the maximum of their individual times. So, if A, B, C, D cross with the torch carried by A, the time is 10 minutes (D's time). Then everyone is across. So that's the solution.\n\nBut perhaps the problem expects that after some cross, the torch must be",
+        "statistics": {
+          "character_count_output": 17080,
+          "character_count_reasoning": 0,
+          "character_count_completion": 17080,
+          "tokens_output": 4096,
+          "tokens_reasoning": 0,
+          "tokens_completions": 4096
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer suggests all four people crossing together in 10 minutes",
+            "met": true
+          }
+        ],
+        "feedback": "The output correctly states that all four people cross together in 10 minutes, which aligns with the given criterion.",
+        "total_score": 1.0,
+        "original_question": "Four people come to a rickety bridge at night. The bridge can support four people at a time, and they share a single torch. A takes 1 minute, B takes 3, C takes 5, D takes 10. The challenge is to get all four over in no more than 10 minutes. How do they do it?",
+        "original_response": "The bridge can hold all four people simultaneously, and since the torch must accompany them, the slowest person (D, taking 10 minutes) dictates the crossing time. By having all four cross together:\n\n1. **A, B, C, D cross together** \u2192 Takes 10 minutes (D\u2019s time).  \n   **Total time: 10 minutes**  \n\nThis meets the 10-minute limit.  \n\n**Answer:** All four cross together, taking 10 minutes.  \n\\boxed{10}",
+        "statistics": {
+          "character_count_output": 401,
+          "character_count_reasoning": 6424,
+          "character_count_completion": 6825,
+          "tokens_output": 1593,
+          "tokens_reasoning": 0,
+          "tokens_completions": 1593
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer suggests all four people crossing together in 10 minutes",
+            "met": true
+          }
+        ],
+        "feedback": "The output clearly states that all four people cross together and that this takes 10 minutes, which directly matches the criterion.",
+        "total_score": 1.0,
+        "original_question": "Four people come to a rickety bridge at night. The bridge can support four people at a time, and they share a single torch. A takes 1 minute, B takes 3, C takes 5, D takes 10. The challenge is to get all four over in no more than 10 minutes. How do they do it?",
+        "original_response": "To solve the problem, we can leverage the fact that the bridge can support all four people simultaneously. Since the torch is only needed once for the entire group to cross, the slowest person (D, taking 10 minutes) dictates the total crossing time. Here\u2019s the solution:\n\n1. **All four cross together**: A, B, C, and D cross the bridge simultaneously with the torch. This takes **10 minutes** (D\u2019s time).\n2. **No return trips are needed**: Since everyone is already on the far side after the single crossing, there\u2019s no requirement to shuttle the torch back.\n\n**Total time**: 10 minutes.\n\n**Answer**: All four cross the bridge together, taking 10 minutes.  \n**Step-by-Step Explanation**:  \n1. A, B, C, and D cross together (10 minutes).  \n2. Everyone is now on the far side.  \n\nThis strategy works because the bridge\u2019s capacity allows all to cross at once, eliminating the need for return trips. The total time is exactly 10 minutes, meeting the challenge. \n\n$\\boxed{10}$ minutes.",
+        "statistics": {
+          "character_count_output": 980,
+          "character_count_reasoning": 12664,
+          "character_count_completion": 13644,
+          "tokens_output": 3773,
+          "tokens_reasoning": 0,
+          "tokens_completions": 3773
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer suggests all four people crossing together in 10 minutes",
+            "met": true
+          }
+        ],
+        "feedback": "The output correctly states that all four people cross together in 10 minutes, which matches the criterion.",
+        "total_score": 1.0,
+        "original_question": "Four people come to a rickety bridge at night. The bridge can support four people at a time, and they share a single torch. A takes 1 minute, B takes 3, C takes 5, D takes 10. The challenge is to get all four over in no more than 10 minutes. How do they do it?",
+        "original_response": "The challenge can be solved by having all four people cross the bridge together. Since the bridge can support four people at once and the torch is present with them, the crossing time is determined by the slowest person, D, who takes 10 minutes. By crossing collectively, everyone reaches the other side in exactly **10 minutes**.\n\n**Answer:** All four cross together, taking 10 minutes.  \n**Steps:**  \n1. A, B, C, D cross together \u2192 10 minutes.  \n**Total Time:** 10 minutes.",
+        "statistics": {
+          "character_count_output": 475,
+          "character_count_reasoning": 9943,
+          "character_count_completion": 10418,
+          "tokens_output": 2586,
+          "tokens_reasoning": 0,
+          "tokens_completions": 2586
+        }
+      }
+    ]
+  },
+  "AIME2023II_P1": {
+    "llama-3.3-nemotron-super-49b-v1": [
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is 220",
+            "met": true
+          }
+        ],
+        "feedback": "The output correctly identifies the greatest number of apples as 220, which matches the expected answer.",
+        "total_score": 1.0,
+        "original_question": "The numbers of apples growing on each of six apple trees form an arithmetic sequence where the greatest number of apples growing on any of the six trees is double the least number of apples growing on any of the six trees. The total number of apples growing on all six trees is $990.$ Find the greatest number of apples growing on any of the six trees.$",
+        "original_response": "Given that the numbers of apples growing on each of six apple trees form an arithmetic sequence, where the greatest number of apples is double the least number, and the total number of apples is 990, we need to find the greatest number of apples.\n\n1. Let the least number of apples be \\( a \\) and the common difference be \\( d \\). The terms of the arithmetic sequence are \\( a, a + d, a + 2d, a + 3d, a + 4d, a + 5d \\).\n2. The greatest number of apples (the sixth term) is \\( a + 5d \\), which is given to be double the least number:\n   \\[\n   a + 5d = 2a \\implies 5d = a \\implies a = 5d\n   \\]\n3. The total number of apples is the sum of the six terms. Using the sum formula for an arithmetic sequence:\n   \\[\n   S = \\frac{n}{2} \\times (\\text{first term} + \\text{last term})\n   \\]\n   Substituting \\( n = 6 \\), first term \\( a \\), and last term \\( a + 5d \\):\n   \\[\n   990 = \\frac{6}{2} \\times (a + (a + 5d)) \\implies 990 = 3 \\times (2a + 5d)\n   \\]\n4. Substituting \\( a = 5d \\) into the sum equation:\n   \\[\n   990 = 3 \\times (2 \\times 5d + 5d) \\implies 990 = 3 \\times (10d + 5d) \\implies 990 = 3 \\times 15d \\implies 990 = 45d\n   \\]\n5. Solving for \\( d \\):\n   \\[\n   d = \\frac{990}{45} = 22\n   \\]\n6. Substituting \\( d = 22 \\) back to find \\( a \\):\n   \\[\n   a = 5d = 5 \\times 22 = 110\n   \\]\n7. The greatest number of apples is \\( a + 5d = 2a \\):\n   \\[\n   2a = 2 \\times 110 = 220\n   \\]\n\nThe greatest number of apples growing on any of the six trees is \\(\\boxed{220}\\).",
+        "statistics": {
+          "character_count_output": 1459,
+          "character_count_reasoning": 2080,
+          "character_count_completion": 3539,
+          "tokens_output": 1222,
+          "tokens_reasoning": 0,
+          "tokens_completions": 1222
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is 220",
+            "met": true
+          }
+        ],
+        "feedback": "The model correctly identified the greatest number of apples as 220.",
+        "total_score": 1.0,
+        "original_question": "The numbers of apples growing on each of six apple trees form an arithmetic sequence where the greatest number of apples growing on any of the six trees is double the least number of apples growing on any of the six trees. The total number of apples growing on all six trees is $990.$ Find the greatest number of apples growing on any of the six trees.$",
+        "original_response": "Given six apple trees with the number of apples forming an arithmetic sequence, where the greatest number of apples is double the least number, and the total number of apples is 990, we need to find the greatest number of apples.\n\n1. Let the first term be \\( a \\) and the common difference be \\( d \\). The sixth term (greatest number) is \\( a + 5d \\).\n2. The greatest number is double the least number:\n   \\[\n   a + 5d = 2a \\implies 5d = a \\implies a = 5d\n   \\]\n3. The total number of apples is the sum of the arithmetic sequence:\n   \\[\n   \\text{Sum} = \\frac{6}{2} \\times (a + (a + 5d)) = 3 \\times (2a + 5d) = 6a + 15d\n   \\]\n4. Substituting \\( a = 5d \\) into the sum equation:\n   \\[\n   6(5d) + 15d = 990 \\implies 30d + 15d = 990 \\implies 45d = 990 \\implies d = 22\n   \\]\n5. Calculating \\( a \\):\n   \\[\n   a = 5d = 5 \\times 22 = 110\n   \\]\n6. The greatest number of apples (sixth term) is:\n   \\[\n   a + 5d = 110 + 5 \\times 22 = 110 + 110 = 220\n   \\]\n\nVerification:\n- The sequence is 110, 132, 154, 176, 198, 220.\n- Sum: \\( 110 + 132 + 154 + 176 + 198 + 220 = 990 \\).\n- The greatest number (220) is double the least number (110).\n\nThe greatest number of apples growing on any of the six trees is \\(\\boxed{220}\\).",
+        "statistics": {
+          "character_count_output": 1207,
+          "character_count_reasoning": 2688,
+          "character_count_completion": 3895,
+          "tokens_output": 1302,
+          "tokens_reasoning": 0,
+          "tokens_completions": 1302
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is 220",
+            "met": true
+          }
+        ],
+        "feedback": "The model correctly identified the greatest number of apples as 220.",
+        "total_score": 1.0,
+        "original_question": "The numbers of apples growing on each of six apple trees form an arithmetic sequence where the greatest number of apples growing on any of the six trees is double the least number of apples growing on any of the six trees. The total number of apples growing on all six trees is $990.$ Find the greatest number of apples growing on any of the six trees.$",
+        "original_response": "Given six apple trees where the number of apples forms an arithmetic sequence, the greatest number of apples is double the least number, and the total number of apples is 990. We need to find the greatest number of apples.\n\n1. Let the first term (least number of apples) be \\( a \\) and the common difference be \\( d \\). The terms of the sequence are \\( a, a+d, a+2d, a+3d, a+4d, a+5d \\).\n2. The greatest number of apples (sixth term) is \\( a + 5d \\), which is double the least number \\( a \\). Therefore, \\( a + 5d = 2a \\), leading to \\( a = 5d \\).\n3. The total number of apples is the sum of the arithmetic sequence:\n   \\[\n   S = \\frac{6}{2} \\times (a + (a + 5d)) = 3 \\times (2a + 5d)\n   \\]\n4. Substituting \\( a = 5d \\) into the sum formula:\n   \\[\n   990 = 3 \\times (2 \\times 5d + 5d) = 3 \\times (10d + 5d) = 3 \\times 15d = 45d\n   \\]\n5. Solving for \\( d \\):\n   \\[\n   d = \\frac{990}{45} = 22\n   \\]\n6. Substituting \\( d = 22 \\) back to find \\( a \\):\n   \\[\n   a = 5d = 5 \\times 22 = 110\n   \\]\n7. The greatest number of apples (sixth term) is:\n   \\[\n   a + 5d = 110 + 5 \\times 22 = 110 + 110 = 220\n   \\]\n\nThe greatest number of apples growing on any of the six trees is \\(\\boxed{220}\\).",
+        "statistics": {
+          "character_count_output": 1182,
+          "character_count_reasoning": 3043,
+          "character_count_completion": 4225,
+          "tokens_output": 1395,
+          "tokens_reasoning": 0,
+          "tokens_completions": 1395
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is 220",
+            "met": true
+          }
+        ],
+        "feedback": "The model correctly identified the greatest number of apples as 220.",
+        "total_score": 1.0,
+        "original_question": "The numbers of apples growing on each of six apple trees form an arithmetic sequence where the greatest number of apples growing on any of the six trees is double the least number of apples growing on any of the six trees. The total number of apples growing on all six trees is $990.$ Find the greatest number of apples growing on any of the six trees.$",
+        "original_response": "Given six apple trees with the number of apples forming an arithmetic sequence, where the greatest number of apples is double the least, and the total number of apples is 990, we need to find the greatest number of apples.\n\n1. Let the first term of the arithmetic sequence be \\( a \\) and the common difference be \\( d \\).\n2. The sixth term (greatest number) is \\( a + 5d \\), which is given to be double the first term:\n   \\[\n   a + 5d = 2a \\implies 5d = a \\implies d = \\frac{a}{5}\n   \\]\n3. The sum of the six terms of the arithmetic sequence is given by:\n   \\[\n   \\text{Sum} = \\frac{6}{2} \\times (a + 2a) = 3 \\times 3a = 9a\n   \\]\n4. Given the total number of apples is 990:\n   \\[\n   9a = 990 \\implies a = \\frac{990}{9} = 110\n   \\]\n5. The greatest number of apples (sixth term) is:\n   \\[\n   2a = 2 \\times 110 = 220\n   \\]\n\nVerification of the sequence:\n- First term: 110\n- Common difference: \\( \\frac{110}{5} = 22 \\)\n- Sequence: 110, 132, 154, 176, 198, 220\n- Sum: \\( 110 + 132 + 154 + 176 + 198 + 220 = 990 \\)\n\nThus, the greatest number of apples growing on any of the six trees is \\(\\boxed{220}\\).",
+        "statistics": {
+          "character_count_output": 1097,
+          "character_count_reasoning": 4157,
+          "character_count_completion": 5254,
+          "tokens_output": 1504,
+          "tokens_reasoning": 0,
+          "tokens_completions": 1504
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is 220",
+            "met": true
+          }
+        ],
+        "feedback": "The model correctly identified the greatest number of apples as 220.",
+        "total_score": 1.0,
+        "original_question": "The numbers of apples growing on each of six apple trees form an arithmetic sequence where the greatest number of apples growing on any of the six trees is double the least number of apples growing on any of the six trees. The total number of apples growing on all six trees is $990.$ Find the greatest number of apples growing on any of the six trees.$",
+        "original_response": "Given that the numbers of apples growing on each of six apple trees form an arithmetic sequence, where the greatest number of apples is double the least number, and the total number of apples is 990, we need to find the greatest number of apples.\n\n1. Let the first term be \\( a \\) and the common difference be \\( d \\). The terms of the sequence are \\( a, a+d, a+2d, a+3d, a+4d, a+5d \\).\n2. The greatest number of apples (sixth term) is double the least number (first term):\n   \\[\n   a + 5d = 2a \\implies 5d = a \\implies a = 5d\n   \\]\n3. The sum of the arithmetic sequence is given by:\n   \\[\n   S = \\frac{n}{2} \\times (\\text{first term} + \\text{last term})\n   \\]\n   Substituting \\( n = 6 \\), \\( a = 5d \\), and the last term \\( a + 5d = 10d \\):\n   \\[\n   990 = \\frac{6}{2} \\times (5d + 10d) = 3 \\times 15d = 45d\n   \\]\n4. Solving for \\( d \\):\n   \\[\n   45d = 990 \\implies d = \\frac{990}{45} = 22\n   \\]\n5. Substituting \\( d = 22 \\) back to find \\( a \\):\n   \\[\n   a = 5d = 5 \\times 22 = 110\n   \\]\n6. The greatest number of apples (sixth term) is:\n   \\[\n   a + 5d = 110 + 5 \\times 22 = 110 + 110 = 220\n   \\]\n\nThus, the greatest number of apples growing on any of the six trees is \\(\\boxed{220}\\).",
+        "statistics": {
+          "character_count_output": 1187,
+          "character_count_reasoning": 2596,
+          "character_count_completion": 3783,
+          "tokens_output": 1337,
+          "tokens_reasoning": 0,
+          "tokens_completions": 1337
+        }
+      }
+    ]
+  },
+  "AIME2023II_P1_mod": {
+    "llama-3.3-nemotron-super-49b-v1": [
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is 660",
+            "met": true
+          }
+        ],
+        "feedback": "The output correctly identifies the greatest number of apples as 660.",
+        "total_score": 1.0,
+        "original_question": "The numbers of apples growing on each of six apple trees form an arithmetic sequence where the greatest number of apples growing on any of the six trees is double the least number of apples growing on any of the six trees. The total number of apples growing on all six trees is $2970.$ Find the greatest number of apples growing on any of the six trees.$",
+        "original_response": "Given six apple trees where the number of apples forms an arithmetic sequence, the greatest number of apples is double the least number, and the total number of apples is 2970. We need to find the greatest number of apples.\n\n1. Represent the arithmetic sequence with the first term \\(a\\) and common difference \\(d\\):\n   \\[\n   a, a + d, a + 2d, a + 3d, a + 4d, a + 5d\n   \\]\n\n2. The greatest number of apples (sixth term) is double the least number (first term):\n   \\[\n   a + 5d = 2a \\implies 5d = a \\implies a = 5d\n   \\]\n\n3. Calculate the total number of apples using the sum formula for an arithmetic sequence:\n   \\[\n   \\text{Sum} = \\frac{n}{2} \\times (\\text{first term} + \\text{last term}) = \\frac{6}{2} \\times (a + (a + 5d)) = 3 \\times (2a + 5d)\n   \\]\n\n4. Substitute \\(a = 5d\\) into the sum formula:\n   \\[\n   2970 = 3 \\times (2 \\times 5d + 5d) = 3 \\times (10d + 5d) = 3 \\times 15d = 45d\n   \\]\n\n5. Solve for \\(d\\):\n   \\[\n   45d = 2970 \\implies d = \\frac{2970}{45} = 66\n   \\]\n\n6. Find \\(a\\) using \\(a = 5d\\):\n   \\[\n   a = 5 \\times 66 = 330\n   \\]\n\n7. The greatest number of apples is the sixth term:\n   \\[\n   a + 5d = 2a = 2 \\times 330 = 660\n   \\]\n\nVerification:\n- The sequence is \\(330, 396, 462, 528, 594, 660\\).\n- Sum: \\(330 + 396 + 462 + 528 + 594 + 660 = 2970\\).\n- The greatest number (660) is double the least (330).\n\nThus, the greatest number of apples growing on any of the six trees is \\(\\boxed{660}\\).",
+        "statistics": {
+          "character_count_output": 1410,
+          "character_count_reasoning": 2873,
+          "character_count_completion": 4283,
+          "tokens_output": 1452,
+          "tokens_reasoning": 0,
+          "tokens_completions": 1452
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is 660",
+            "met": true
+          }
+        ],
+        "feedback": "The model correctly identified the greatest number of apples as 660.",
+        "total_score": 1.0,
+        "original_question": "The numbers of apples growing on each of six apple trees form an arithmetic sequence where the greatest number of apples growing on any of the six trees is double the least number of apples growing on any of the six trees. The total number of apples growing on all six trees is $2970.$ Find the greatest number of apples growing on any of the six trees.$",
+        "original_response": "Given six apple trees where the number of apples on each forms an arithmetic sequence, the greatest number of apples is double the least number, and the total number of apples is 2970. We need to find the greatest number of apples.\n\n1. Let the terms of the arithmetic sequence be \\(a\\), \\(a + d\\), \\(a + 2d\\), \\(a + 3d\\), \\(a + 4d\\), \\(a + 5d\\), where \\(a\\) is the first term (smallest number of apples) and \\(d\\) is the common difference.\n2. The greatest number of apples is \\(a + 5d\\), which is double the least number \\(a\\). Therefore, \\(a + 5d = 2a\\), leading to \\(5d = a\\) or \\(d = \\frac{a}{5}\\).\n3. The total number of apples is given by the sum of the arithmetic sequence:\n   \\[\n   \\text{Sum} = \\frac{6}{2} \\times [2a + 5d] = 3 \\times [2a + 5d]\n   \\]\n4. Substituting \\(d = \\frac{a}{5}\\) into the sum formula:\n   \\[\n   3 \\times [2a + 5 \\left(\\frac{a}{5}\\right)] = 3 \\times [2a + a] = 3 \\times 3a = 9a\n   \\]\n5. Given the total number of apples is 2970:\n   \\[\n   9a = 2970 \\implies a = \\frac{2970}{9} = 330\n   \\]\n6. The greatest number of apples is \\(2a = 2 \\times 330 = 660\\).\n\nVerification:\n- The sequence is 330, 396, 462, 528, 594, 660.\n- Sum: \\(330 + 396 + 462 + 528 + 594 + 660 = 2970\\).\n\nThus, the greatest number of apples growing on any of the six trees is \\(\\boxed{660}\\).",
+        "statistics": {
+          "character_count_output": 1286,
+          "character_count_reasoning": 3427,
+          "character_count_completion": 4713,
+          "tokens_output": 1547,
+          "tokens_reasoning": 0,
+          "tokens_completions": 1547
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is 660",
+            "met": true
+          }
+        ],
+        "feedback": "The model correctly identified the greatest number of apples as 660.",
+        "total_score": 1.0,
+        "original_question": "The numbers of apples growing on each of six apple trees form an arithmetic sequence where the greatest number of apples growing on any of the six trees is double the least number of apples growing on any of the six trees. The total number of apples growing on all six trees is $2970.$ Find the greatest number of apples growing on any of the six trees.$",
+        "original_response": "Given that the numbers of apples on six apple trees form an arithmetic sequence, where the greatest number is double the least, and the total number of apples is 2970, we need to find the greatest number of apples.\n\n1. Let the first term be \\( a \\) and the common difference be \\( d \\). The six terms of the arithmetic sequence are:\n   \\[\n   a, a + d, a + 2d, a + 3d, a + 4d, a + 5d\n   \\]\n\n2. The greatest number of apples (sixth term) is double the least number (first term):\n   \\[\n   a + 5d = 2a \\implies 5d = a \\implies a = 5d\n   \\]\n\n3. The total number of apples is the sum of the sequence:\n   \\[\n   \\text{Sum} = \\frac{6}{2} \\times (a + (a + 5d)) = 3 \\times (2a + 5d)\n   \\]\n\n4. Substituting \\( a = 5d \\) into the sum formula:\n   \\[\n   \\text{Sum} = 3 \\times (2 \\times 5d + 5d) = 3 \\times (10d + 5d) = 3 \\times 15d = 45d\n   \\]\n\n5. Given the total sum is 2970:\n   \\[\n   45d = 2970 \\implies d = \\frac{2970}{45} = 66\n   \\]\n\n6. Calculate \\( a \\):\n   \\[\n   a = 5d = 5 \\times 66 = 330\n   \\]\n\n7. The greatest number of apples (sixth term) is:\n   \\[\n   a + 5d = 330 + 5 \\times 66 = 330 + 330 = 660\n   \\]\n\nThus, the greatest number of apples growing on any of the six trees is \\(\\boxed{660}\\).",
+        "statistics": {
+          "character_count_output": 1186,
+          "character_count_reasoning": 2282,
+          "character_count_completion": 3468,
+          "tokens_output": 1217,
+          "tokens_reasoning": 0,
+          "tokens_completions": 1217
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is 660",
+            "met": true
+          }
+        ],
+        "feedback": "The output correctly identifies the greatest number of apples as 660.",
+        "total_score": 1.0,
+        "original_question": "The numbers of apples growing on each of six apple trees form an arithmetic sequence where the greatest number of apples growing on any of the six trees is double the least number of apples growing on any of the six trees. The total number of apples growing on all six trees is $2970.$ Find the greatest number of apples growing on any of the six trees.$",
+        "original_response": "Given that the numbers of apples growing on each of six apple trees form an arithmetic sequence, where the greatest number of apples is double the least number, and the total number of apples is 2970, we need to find the greatest number of apples.\n\n1. Let the first term of the arithmetic sequence be \\( a \\) and the common difference be \\( d \\). The six terms are:\n   \\[\n   a, a + d, a + 2d, a + 3d, a + 4d, a + 5d\n   \\]\n2. The greatest number of apples (the sixth term) is double the least number (the first term):\n   \\[\n   a + 5d = 2a \\implies 5d = a \\implies a = 5d\n   \\]\n3. The total number of apples is given by the sum of the arithmetic sequence:\n   \\[\n   S = \\frac{6}{2} \\times (a + (a + 5d)) = 3 \\times (2a + 5d)\n   \\]\n4. Substituting \\( a = 5d \\) into the sum formula:\n   \\[\n   2970 = 3 \\times (2 \\times 5d + 5d) = 3 \\times (10d + 5d) = 3 \\times 15d = 45d\n   \\]\n5. Solving for \\( d \\):\n   \\[\n   45d = 2970 \\implies d = \\frac{2970}{45} = 66\n   \\]\n6. Substituting \\( d = 66 \\) back to find \\( a \\):\n   \\[\n   a = 5d = 5 \\times 66 = 330\n   \\]\n7. The greatest number of apples (the sixth term) is:\n   \\[\n   a + 5d = 330 + 5 \\times 66 = 330 + 330 = 660\n   \\]\n\nThus, the greatest number of apples growing on any of the six trees is \\(\\boxed{660}\\).",
+        "statistics": {
+          "character_count_output": 1251,
+          "character_count_reasoning": 2541,
+          "character_count_completion": 3792,
+          "tokens_output": 1332,
+          "tokens_reasoning": 0,
+          "tokens_completions": 1332
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is 660",
+            "met": true
+          }
+        ],
+        "feedback": "The model correctly identified the greatest number of apples as 660.",
+        "total_score": 1.0,
+        "original_question": "The numbers of apples growing on each of six apple trees form an arithmetic sequence where the greatest number of apples growing on any of the six trees is double the least number of apples growing on any of the six trees. The total number of apples growing on all six trees is $2970.$ Find the greatest number of apples growing on any of the six trees.$",
+        "original_response": "Given six apple trees with the number of apples forming an arithmetic sequence, where the greatest number of apples is double the least, and the total number of apples is 2970, we need to find the greatest number of apples.\n\n1. Let the first term be \\( a \\) and the common difference be \\( d \\). The sixth term (greatest number) is \\( a + 5d \\).\n2. The greatest number is double the least, so:\n   \\[\n   a + 5d = 2a \\implies 5d = a \\implies a = 5d\n   \\]\n3. The total number of apples is the sum of the arithmetic sequence:\n   \\[\n   \\text{Sum} = \\frac{6}{2} \\times (a + (a + 5d)) = 3 \\times (2a + 5d)\n   \\]\n4. Given the total sum is 2970:\n   \\[\n   3 \\times (2a + 5d) = 2970 \\implies 2a + 5d = 990\n   \\]\n5. Substitute \\( a = 5d \\) into the equation:\n   \\[\n   2(5d) + 5d = 990 \\implies 10d + 5d = 990 \\implies 15d = 990 \\implies d = 66\n   \\]\n6. Calculate \\( a \\):\n   \\[\n   a = 5d = 5 \\times 66 = 330\n   \\]\n7. The greatest number of apples (sixth term) is:\n   \\[\n   a + 5d = 330 + 5 \\times 66 = 330 + 330 = 660\n   \\]\n\nVerification of the terms and their sum confirms the solution is correct.\n\nThe greatest number of apples growing on any of the six trees is \\(\\boxed{660}\\).",
+        "statistics": {
+          "character_count_output": 1169,
+          "character_count_reasoning": 2373,
+          "character_count_completion": 3542,
+          "tokens_output": 1194,
+          "tokens_reasoning": 0,
+          "tokens_completions": 1194
+        }
+      }
+    ]
+  },
+  "AIME2025I_P2_modified": {
+    "llama-3.3-nemotron-super-49b-v1": [
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is 41",
+            "met": true
+          }
+        ],
+        "feedback": "The output correctly identifies the sum of all positive integers n as 41.",
+        "total_score": 1.0,
+        "original_question": "Find the sum of all positive integers $n$ such that $n+2$ divides the product $3(n+3)(n^2+7).$",
+        "original_response": "To find the sum of all positive integers \\( n \\) such that \\( n + 2 \\) divides the product \\( 3(n + 3)(n^2 + 7) \\), we start by noting that \\( n + 2 \\) must divide \\( 3(n + 3)(n^2 + 7) \\). \n\nWe substitute \\( k = n + 2 \\), so \\( n = k - 2 \\). Substituting \\( n = k - 2 \\) into the product, we get:\n\\[\n3((k - 2) + 3)((k - 2)^2 + 7) = 3(k + 1)(k^2 - 4k + 11)\n\\]\nWe need \\( k \\) to divide \\( 3(k + 1)(k^2 - 4k + 11) \\). Considering this modulo \\( k \\), we find:\n\\[\n3(k + 1)(k^2 - 4k + 11) \\equiv 3 \\cdot 1 \\cdot 11 \\equiv 33 \\pmod{k}\n\\]\nThus, \\( k \\) must be a divisor of 33. The divisors of 33 are 1, 3, 11, and 33. Since \\( k = n + 2 \\geq 3 \\), the possible values of \\( k \\) are 3, 11, and 33. This gives \\( n = 1, 9, 31 \\).\n\nVerifying each value:\n- For \\( n = 1 \\), \\( n + 2 = 3 \\) divides \\( 3(4)(8) = 96 \\).\n- For \\( n = 9 \\), \\( n + 2 = 11 \\) divides \\( 3(12)(88) = 3168 \\).\n- For \\( n = 31 \\), \\( n + 2 = 33 \\) divides \\( 3(34)(968) = 98736 \\).\n\nAll values satisfy the condition. The sum of these values is \\( 1 + 9 + 31 = 41 \\).\n\nThus, the sum of all positive integers \\( n \\) is \\(\\boxed{41}\\).",
+        "statistics": {
+          "character_count_output": 1100,
+          "character_count_reasoning": 7210,
+          "character_count_completion": 8310,
+          "tokens_output": 3194,
+          "tokens_reasoning": 0,
+          "tokens_completions": 3194
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is 41",
+            "met": true
+          }
+        ],
+        "feedback": "The output correctly identifies the sum of all positive integers n as 41.",
+        "total_score": 1.0,
+        "original_question": "Find the sum of all positive integers $n$ such that $n+2$ divides the product $3(n+3)(n^2+7).$",
+        "original_response": "To find the sum of all positive integers \\( n \\) such that \\( n + 2 \\) divides the product \\( 3(n + 3)(n^2 + 7) \\), we start by setting \\( k = n + 2 \\). This transforms the problem into finding \\( k \\) such that \\( k \\) divides \\( 3(k + 1)(k^2 - 4k + 11) \\).\n\nSince \\( k \\) and \\( k + 1 \\) are coprime, \\( k \\) must divide \\( 3(k^2 - 4k + 11) \\). Simplifying modulo \\( k \\), we find that \\( 3(k^2 - 4k + 11) \\equiv 33 \\pmod{k} \\). Therefore, \\( k \\) must be a divisor of 33.\n\nThe positive divisors of 33 are 1, 3, 11, and 33. Since \\( n \\) is a positive integer, \\( k = n + 2 \\) must be at least 3. Thus, the valid values for \\( k \\) are 3, 11, and 33, corresponding to \\( n = 1 \\), \\( n = 9 \\), and \\( n = 31 \\).\n\nVerifying each \\( n \\):\n- For \\( n = 1 \\), \\( n + 2 = 3 \\) divides \\( 3 \\cdot 4 \\cdot 8 = 96 \\).\n- For \\( n = 9 \\), \\( n + 2 = 11 \\) divides \\( 3 \\cdot 12 \\cdot 88 = 3168 \\).\n- For \\( n = 31 \\), \\( n + 2 = 33 \\) divides \\( 3 \\cdot 34 \\cdot 968 \\).\n\nSumming these values, we get \\( 1 + 9 + 31 = 41 \\).\n\nThus, the final answer is \\(\\boxed{41}\\).",
+        "statistics": {
+          "character_count_output": 1058,
+          "character_count_reasoning": 6776,
+          "character_count_completion": 7834,
+          "tokens_output": 3124,
+          "tokens_reasoning": 0,
+          "tokens_completions": 3124
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is 41",
+            "met": true
+          }
+        ],
+        "feedback": "The model correctly identified the sum of all positive integers n as 41.",
+        "total_score": 1.0,
+        "original_question": "Find the sum of all positive integers $n$ such that $n+2$ divides the product $3(n+3)(n^2+7).$",
+        "original_response": "To find the sum of all positive integers \\( n \\) such that \\( n + 2 \\) divides the product \\( 3(n + 3)(n^2 + 7) \\), we start by noting that if \\( n + 2 \\) divides \\( 3(n + 3)(n^2 + 7) \\), then the remainder when \\( 3(n + 3)(n^2 + 7) \\) is divided by \\( n + 2 \\) must be zero. \n\nSubstituting \\( n = -2 \\) into the expression \\( 3(n + 3)(n^2 + 7) \\), we get:\n\\[\n3(-2 + 3)((-2)^2 + 7) = 3(1)(4 + 7) = 3 \\cdot 1 \\cdot 11 = 33\n\\]\nThus, \\( n + 2 \\) must divide 33. The positive divisors of 33 are 1, 3, 11, and 33. Since \\( n \\) is a positive integer, \\( n + 2 \\) must be at least 3, so the possible values for \\( n + 2 \\) are 3, 11, and 33. This gives us:\n\\[\nn + 2 = 3 \\implies n = 1\n\\]\n\\[\nn + 2 = 11 \\implies n = 9\n\\]\n\\[\nn + 2 = 33 \\implies n = 31\n\\]\n\nWe verify each \\( n \\):\n- For \\( n = 1 \\), \\( 3(1 + 3)(1^2 + 7) = 96 \\), which is divisible by 3.\n- For \\( n = 9 \\), \\( 3(9 + 3)(9^2 + 7) = 3168 \\), which is divisible by 11.\n- For \\( n = 31 \\), \\( 3(31 + 3)(31^2 + 7) = 98736 \\), which is divisible by 33.\n\nSumming these values, we get \\( 1 + 9 + 31 = 41 \\).\n\nThus, the sum of all positive integers \\( n \\) is \\(\\boxed{41}\\).",
+        "statistics": {
+          "character_count_output": 1123,
+          "character_count_reasoning": 6043,
+          "character_count_completion": 7166,
+          "tokens_output": 2946,
+          "tokens_reasoning": 0,
+          "tokens_completions": 2946
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is 41",
+            "met": true
+          }
+        ],
+        "feedback": "The model correctly identified the sum of all positive integers n as 41.",
+        "total_score": 1.0,
+        "original_question": "Find the sum of all positive integers $n$ such that $n+2$ divides the product $3(n+3)(n^2+7).$",
+        "original_response": "To find the sum of all positive integers \\( n \\) such that \\( n + 2 \\) divides the product \\( 3(n + 3)(n^2 + 7) \\), we start by noting that \\( n + 2 \\) must divide the remainder when the product is divided by \\( n + 2 \\).\n\nFirst, we perform polynomial long division of \\( 3(n + 3)(n^2 + 7) \\) by \\( n + 2 \\):\n\n1. Expand \\( 3(n + 3)(n^2 + 7) \\):\n   \\[\n   3(n + 3)(n^2 + 7) = 3(n^3 + 3n^2 + 7n + 21) = 3n^3 + 9n^2 + 21n + 63\n   \\]\n\n2. Divide \\( 3n^3 + 9n^2 + 21n + 63 \\) by \\( n + 2 \\):\n   - The quotient is \\( 3n^2 + 3n + 15 \\)\n   - The remainder is 33\n\nThus, we have:\n\\[\n3(n + 3)(n^2 + 7) = (n + 2)(3n^2 + 3n + 15) + 33\n\\]\n\nFor \\( n + 2 \\) to divide \\( 3(n + 3)(n^2 + 7) \\), the remainder 33 must be divisible by \\( n + 2 \\). Therefore, \\( n + 2 \\) must be a divisor of 33. The positive divisors of 33 are 1, 3, 11, and 33. Since \\( n \\) is a positive integer, \\( n + 2 \\geq 3 \\), so the possible values of \\( n + 2 \\) are 3, 11, and 33. This gives:\n\n- \\( n + 2 = 3 \\) implies \\( n = 1 \\)\n- \\( n + 2 = 11 \\) implies \\( n = 9 \\)\n- \\( n + 2 = 33 \\) implies \\( n = 31 \\)\n\nSumming these values, we get:\n\\[\n1 + 9 + 31 = 41\n\\]\n\nThus, the sum of all positive integers \\( n \\) is \\(\\boxed{41}\\).",
+        "statistics": {
+          "character_count_output": 1187,
+          "character_count_reasoning": 5844,
+          "character_count_completion": 7031,
+          "tokens_output": 2794,
+          "tokens_reasoning": 0,
+          "tokens_completions": 2794
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is 41",
+            "met": true
+          }
+        ],
+        "feedback": "The model correctly identified the sum of all positive integers n as 41.",
+        "total_score": 1.0,
+        "original_question": "Find the sum of all positive integers $n$ such that $n+2$ divides the product $3(n+3)(n^2+7).$",
+        "original_response": "To find the sum of all positive integers \\( n \\) such that \\( n + 2 \\) divides the product \\( 3(n + 3)(n^2 + 7) \\), we start by noting that if \\( n + 2 \\) divides \\( 3(n + 3)(n^2 + 7) \\), then the remainder when \\( 3(n + 3)(n^2 + 7) \\) is divided by \\( n + 2 \\) must be zero. Using the Remainder Theorem, we substitute \\( n = -2 \\) into the polynomial \\( 3(n + 3)(n^2 + 7) \\):\n\n\\[\n3(-2 + 3)((-2)^2 + 7) = 3(1)(4 + 7) = 3 \\cdot 1 \\cdot 11 = 33\n\\]\n\nThus, \\( n + 2 \\) must be a divisor of 33. The positive divisors of 33 are 1, 3, 11, and 33. Since \\( n \\) is a positive integer, \\( n + 2 \\) must be at least 3. Therefore, the possible values for \\( n + 2 \\) are 3, 11, and 33, leading to \\( n = 1 \\), \\( n = 9 \\), and \\( n = 31 \\).\n\nWe verify each value:\n- For \\( n = 1 \\), \\( 1 + 2 = 3 \\) divides \\( 3(1 + 3)(1^2 + 7) = 96 \\).\n- For \\( n = 9 \\), \\( 9 + 2 = 11 \\) divides \\( 3(9 + 3)(9^2 + 7) = 3168 \\).\n- For \\( n = 31 \\), \\( 31 + 2 = 33 \\) divides \\( 3(31 + 3)(31^2 + 7) = 98736 \\).\n\nAll values are valid. Summing these values, we get \\( 1 + 9 + 31 = 41 \\).\n\n\\[\n\\boxed{41}\n\\]",
+        "statistics": {
+          "character_count_output": 1075,
+          "character_count_reasoning": 5265,
+          "character_count_completion": 6340,
+          "tokens_output": 2409,
+          "tokens_reasoning": 0,
+          "tokens_completions": 2409
+        }
+      }
+    ]
+  },
+  "AIME2025I_Problem_2": {
+    "llama-3.3-nemotron-super-49b-v1": [
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is 49",
+            "met": true
+          }
+        ],
+        "feedback": "The model correctly identified the sum of all positive integers n as 49.",
+        "total_score": 1.0,
+        "original_question": "Find the sum of all positive integers $n$ such that $n+2$ divides the product $3(n+3)(n^2+9).$",
+        "original_response": "To find the sum of all positive integers \\( n \\) such that \\( n + 2 \\) divides the product \\( 3(n + 3)(n^2 + 9) \\), we start by noting that \\( n + 2 \\) must divide the remainder of the polynomial \\( 3(n + 3)(n^2 + 9) \\) when divided by \\( n + 2 \\). Using the Remainder Theorem, we substitute \\( n = -2 \\) into the polynomial:\n\n\\[\n3(-2 + 3)((-2)^2 + 9) = 3(1)(4 + 9) = 3 \\cdot 1 \\cdot 13 = 39\n\\]\n\nThus, \\( n + 2 \\) must be a divisor of 39. The positive divisors of 39 are 1, 3, 13, and 39. Since \\( n \\) is a positive integer, \\( n + 2 \\) must be at least 3, so the possible values for \\( n + 2 \\) are 3, 13, and 39. This gives the corresponding values of \\( n \\) as 1, 11, and 37.\n\nVerifying each value:\n- For \\( n = 1 \\): \\( 3(1 + 3)(1^2 + 9) = 120 \\), which is divisible by \\( 1 + 2 = 3 \\).\n- For \\( n = 11 \\): \\( 3(11 + 3)(11^2 + 9) = 5460 \\), which is divisible by \\( 11 + 2 = 13 \\).\n- For \\( n = 37 \\): \\( 3(37 + 3)(37^2 + 9) = 165360 \\), which is divisible by \\( 37 + 2 = 39 \\).\n\nSumming these values, we get \\( 1 + 11 + 37 = 49 \\).\n\nThus, the sum of all positive integers \\( n \\) is \\(\\boxed{49}\\).",
+        "statistics": {
+          "character_count_output": 1105,
+          "character_count_reasoning": 6728,
+          "character_count_completion": 7833,
+          "tokens_output": 2988,
+          "tokens_reasoning": 0,
+          "tokens_completions": 2988
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is 49",
+            "met": true
+          }
+        ],
+        "feedback": "The model correctly identified the sum of all positive integers n as 49.",
+        "total_score": 1.0,
+        "original_question": "Find the sum of all positive integers $n$ such that $n+2$ divides the product $3(n+3)(n^2+9).$",
+        "original_response": "To find the sum of all positive integers \\( n \\) such that \\( n + 2 \\) divides the product \\( 3(n + 3)(n^2 + 9) \\), we start by setting \\( k = n + 2 \\). This transforms the problem into finding \\( k \\) such that \\( k \\) divides \\( 3(k + 1)(k^2 - 4k + 13) \\).\n\nWe substitute \\( n = k - 2 \\) into the product:\n\\[\n3(n + 3)(n^2 + 9) = 3(k + 1)(k^2 - 4k + 13)\n\\]\n\nWe need \\( k \\) to divide this product. Considering the expression modulo \\( k \\):\n- \\( k + 1 \\equiv 1 \\pmod{k} \\)\n- \\( k^2 - 4k + 13 \\equiv 13 \\pmod{k} \\)\n\nThus, the product modulo \\( k \\) is:\n\\[\n3 \\cdot 1 \\cdot 13 \\equiv 39 \\pmod{k}\n\\]\n\nThis implies \\( k \\) must be a divisor of 39. The positive divisors of 39 are 1, 3, 13, and 39. Since \\( n \\) is a positive integer, \\( k = n + 2 \\) must be at least 3. Therefore, the valid values of \\( k \\) are 3, 13, and 39, leading to \\( n = 1 \\), \\( n = 11 \\), and \\( n = 37 \\).\n\nSumming these values:\n\\[\n1 + 11 + 37 = 49\n\\]\n\nThus, the sum of all positive integers \\( n \\) is \\(\\boxed{49}\\).",
+        "statistics": {
+          "character_count_output": 993,
+          "character_count_reasoning": 5812,
+          "character_count_completion": 6805,
+          "tokens_output": 2592,
+          "tokens_reasoning": 0,
+          "tokens_completions": 2592
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is 49",
+            "met": true
+          }
+        ],
+        "feedback": "The model correctly identified the sum of all positive integers n as 49.",
+        "total_score": 1.0,
+        "original_question": "Find the sum of all positive integers $n$ such that $n+2$ divides the product $3(n+3)(n^2+9).$",
+        "original_response": "To find the sum of all positive integers \\( n \\) such that \\( n + 2 \\) divides the product \\( 3(n + 3)(n^2 + 9) \\), we start by noting that if \\( n + 2 \\) divides the product, then the remainder when the product is divided by \\( n + 2 \\) must be zero. Using the Remainder Theorem, we substitute \\( n = -2 \\) into the product:\n\n\\[\n3(-2 + 3)((-2)^2 + 9) = 3 \\cdot 1 \\cdot (4 + 9) = 3 \\cdot 1 \\cdot 13 = 39\n\\]\n\nThus, \\( n + 2 \\) must be a divisor of 39. The positive divisors of 39 are 1, 3, 13, and 39. Since \\( n \\) is a positive integer, \\( n + 2 \\) must be at least 3. Therefore, the possible values of \\( n + 2 \\) are 3, 13, and 39, leading to \\( n = 1 \\), \\( n = 11 \\), and \\( n = 37 \\).\n\nWe verify each value:\n- For \\( n = 1 \\), \\( n + 2 = 3 \\) divides \\( 3 \\cdot 4 \\cdot 10 = 120 \\).\n- For \\( n = 11 \\), \\( n + 2 = 13 \\) divides \\( 3 \\cdot 14 \\cdot 130 = 5460 \\).\n- For \\( n = 37 \\), \\( n + 2 = 39 \\) divides \\( 3 \\cdot 40 \\cdot 1378 = 165360 \\).\n\nAll values satisfy the condition. Summing these values:\n\n\\[\n1 + 11 + 37 = 49\n\\]\n\nThus, the sum of all positive integers \\( n \\) is \\(\\boxed{49}\\).",
+        "statistics": {
+          "character_count_output": 1099,
+          "character_count_reasoning": 6934,
+          "character_count_completion": 8033,
+          "tokens_output": 3030,
+          "tokens_reasoning": 0,
+          "tokens_completions": 3030
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is 49",
+            "met": true
+          }
+        ],
+        "feedback": "The model correctly identified the sum as 49.",
+        "total_score": 1.0,
+        "original_question": "Find the sum of all positive integers $n$ such that $n+2$ divides the product $3(n+3)(n^2+9).$",
+        "original_response": "To find the sum of all positive integers \\( n \\) such that \\( n + 2 \\) divides the product \\( 3(n + 3)(n^2 + 9) \\), we start by noting that \\( n + 2 \\) must divide the remainder when \\( 3(n + 3)(n^2 + 9) \\) is divided by \\( n + 2 \\). Using the polynomial remainder theorem, we evaluate the expression at \\( n = -2 \\):\n\n\\[\n3(-2 + 3)((-2)^2 + 9) = 3(1)(13) = 39\n\\]\n\nThus, \\( n + 2 \\) must be a divisor of 39. The positive divisors of 39 are 1, 3, 13, and 39. Since \\( n \\) is a positive integer, \\( n + 2 \\) must be at least 3, so the possible values for \\( n + 2 \\) are 3, 13, and 39. This gives the corresponding values of \\( n \\):\n\n\\[\nn + 2 = 3 \\implies n = 1\n\\]\n\\[\nn + 2 = 13 \\implies n = 11\n\\]\n\\[\nn + 2 = 39 \\implies n = 37\n\\]\n\nSumming these values, we get:\n\n\\[\n1 + 11 + 37 = 49\n\\]\n\nThus, the sum of all positive integers \\( n \\) is \\(\\boxed{49}\\).",
+        "statistics": {
+          "character_count_output": 851,
+          "character_count_reasoning": 4026,
+          "character_count_completion": 4877,
+          "tokens_output": 1892,
+          "tokens_reasoning": 0,
+          "tokens_completions": 1892
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is 49",
+            "met": true
+          }
+        ],
+        "feedback": "The output correctly identifies the sum as 49.",
+        "total_score": 1.0,
+        "original_question": "Find the sum of all positive integers $n$ such that $n+2$ divides the product $3(n+3)(n^2+9).$",
+        "original_response": "To find the sum of all positive integers \\( n \\) such that \\( n + 2 \\) divides the product \\( 3(n + 3)(n^2 + 9) \\), we start by substituting \\( m = n + 2 \\). This transforms the condition into \\( m \\) dividing \\( 3(m + 1)(m^2 - 4m + 13) \\).\n\nSince \\( m \\) and \\( m + 1 \\) are coprime, \\( m \\) must divide \\( 3(m^2 - 4m + 13) \\). We then reduce this modulo \\( m \\):\n\n\\[\n3(m^2 - 4m + 13) \\equiv 3 \\cdot 13 \\equiv 39 \\pmod{m}\n\\]\n\nThus, \\( m \\) must be a divisor of 39. The positive divisors of 39 are 1, 3, 13, and 39. Since \\( n \\) is a positive integer, \\( m = n + 2 \\) must be at least 3, so the valid divisors are 3, 13, and 39. Converting back to \\( n \\):\n\n- If \\( m = 3 \\), then \\( n = 3 - 2 = 1 \\)\n- If \\( m = 13 \\), then \\( n = 13 - 2 = 11 \\)\n- If \\( m = 39 \\), then \\( n = 39 - 2 = 37 \\)\n\nSumming these values, we get \\( 1 + 11 + 37 = 49 \\).\n\nThus, the sum of all positive integers \\( n \\) is \\(\\boxed{49}\\).",
+        "statistics": {
+          "character_count_output": 914,
+          "character_count_reasoning": 5808,
+          "character_count_completion": 6722,
+          "tokens_output": 2629,
+          "tokens_reasoning": 0,
+          "tokens_completions": 2629
+        }
+      }
+    ]
+  },
+  "capital_of_australia": {
+    "llama-3.3-nemotron-super-49b-v1": [
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is Canberra",
+            "met": true
+          }
+        ],
+        "feedback": "The output correctly identifies Canberra as the capital of Australia.",
+        "total_score": 1.0,
+        "original_question": "What is the capital of Australia?",
+        "original_response": "The capital of Australia is **Canberra**. Located in the Australian Capital Territory (ACT), it was chosen as the capital in 1908 to resolve a dispute between Sydney and Melbourne, the country's two largest cities. Canberra is home to key national institutions, including the Parliament of Australia and the High Court of Australia. \n\n**Answer:** Canberra",
+        "statistics": {
+          "character_count_output": 355,
+          "character_count_reasoning": 1006,
+          "character_count_completion": 1361,
+          "tokens_output": 293,
+          "tokens_reasoning": 0,
+          "tokens_completions": 293
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is Canberra",
+            "met": true
+          }
+        ],
+        "feedback": "The output correctly identified Canberra as the capital of Australia.",
+        "total_score": 1.0,
+        "original_question": "What is the capital of Australia?",
+        "original_response": "The capital of Australia is **Canberra**. Chosen as a compromise between Sydney and Melbourne, it was purpose-built to serve as the nation's capital and officially became so in 1908. \n\n**Answer:** Canberra",
+        "statistics": {
+          "character_count_output": 205,
+          "character_count_reasoning": 730,
+          "character_count_completion": 935,
+          "tokens_output": 209,
+          "tokens_reasoning": 0,
+          "tokens_completions": 209
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is Canberra",
+            "met": true
+          }
+        ],
+        "feedback": "The output correctly identifies Canberra as the capital of Australia.",
+        "total_score": 1.0,
+        "original_question": "What is the capital of Australia?",
+        "original_response": "The capital of Australia is **Canberra**. Established as a compromise between Sydney and Melbourne, it is located in the Australian Capital Territory (ACT) and serves as the country's political and administrative center. \n\n**Answer:** Canberra",
+        "statistics": {
+          "character_count_output": 243,
+          "character_count_reasoning": 1044,
+          "character_count_completion": 1287,
+          "tokens_output": 271,
+          "tokens_reasoning": 0,
+          "tokens_completions": 271
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is Canberra",
+            "met": true
+          }
+        ],
+        "feedback": "The output correctly identified Canberra as the capital of Australia.",
+        "total_score": 1.0,
+        "original_question": "What is the capital of Australia?",
+        "original_response": "The capital of Australia is **Canberra**. Located in the Australian Capital Territory (ACT), it was purpose-built to serve as the nation's capital, resolving the rivalry between Sydney and Melbourne. \n\n**Answer:** Canberra",
+        "statistics": {
+          "character_count_output": 222,
+          "character_count_reasoning": 907,
+          "character_count_completion": 1129,
+          "tokens_output": 243,
+          "tokens_reasoning": 0,
+          "tokens_completions": 243
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is Canberra",
+            "met": true
+          }
+        ],
+        "feedback": "The output correctly identifies Canberra as the capital of Australia.",
+        "total_score": 1.0,
+        "original_question": "What is the capital of Australia?",
+        "original_response": "The capital of Australia is **Canberra**. Established in 1908 as a compromise between Sydney and Melbourne, it serves as the country's planned administrative and political center. \n\n**Answer:** Canberra",
+        "statistics": {
+          "character_count_output": 202,
+          "character_count_reasoning": 649,
+          "character_count_completion": 851,
+          "tokens_output": 181,
+          "tokens_reasoning": 0,
+          "tokens_completions": 181
+        }
+      }
+    ]
+  },
+  "train_distance": {
+    "llama-3.3-nemotron-super-49b-v1": [
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is 150 kilometers",
+            "met": true
+          }
+        ],
+        "feedback": "The output correctly states the answer as 150 kilometers.",
+        "total_score": 1.0,
+        "original_question": "If a train travels 60 kilometers per hour for 2.5 hours, how far does it go?",
+        "original_response": "The train travels a distance calculated by multiplying its speed by the time traveled:  \n\\( 60 \\, \\text{km/h} \\times 2.5 \\, \\text{h} = 150 \\, \\text{kilometers} \\).\n\n**Answer:** 150 kilometers",
+        "statistics": {
+          "character_count_output": 191,
+          "character_count_reasoning": 1268,
+          "character_count_completion": 1459,
+          "tokens_output": 417,
+          "tokens_reasoning": 0,
+          "tokens_completions": 417
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is 150 kilometers",
+            "met": true
+          }
+        ],
+        "feedback": "The output correctly states the answer as 150 kilometers.",
+        "total_score": 1.0,
+        "original_question": "If a train travels 60 kilometers per hour for 2.5 hours, how far does it go?",
+        "original_response": "The train travels at a speed of 60 km/h for 2.5 hours. To find the distance, multiply speed by time: \n\n\\[\n60 \\, \\text{km/h} \\times 2.5 \\, \\text{h} = 150 \\, \\text{km}\n\\]\n\n**Answer:** 150 kilometers",
+        "statistics": {
+          "character_count_output": 196,
+          "character_count_reasoning": 1039,
+          "character_count_completion": 1235,
+          "tokens_output": 364,
+          "tokens_reasoning": 0,
+          "tokens_completions": 364
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is 150 kilometers",
+            "met": true
+          }
+        ],
+        "feedback": "The output correctly states the answer as 150 kilometers.",
+        "total_score": 1.0,
+        "original_question": "If a train travels 60 kilometers per hour for 2.5 hours, how far does it go?",
+        "original_response": "The distance the train travels is calculated by multiplying its speed by the time traveled: \n\n\\[\n60 \\, \\text{km/h} \\times 2.5 \\, \\text{hours} = 150 \\, \\text{kilometers}\n\\]\n\n**Answer:** 150 kilometers",
+        "statistics": {
+          "character_count_output": 199,
+          "character_count_reasoning": 983,
+          "character_count_completion": 1182,
+          "tokens_output": 345,
+          "tokens_reasoning": 0,
+          "tokens_completions": 345
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is 150 kilometers",
+            "met": true
+          }
+        ],
+        "feedback": "The model correctly identified the distance as 150 kilometers.",
+        "total_score": 1.0,
+        "original_question": "If a train travels 60 kilometers per hour for 2.5 hours, how far does it go?",
+        "original_response": "The distance traveled by the train is calculated by multiplying its speed by the time it travels:  \n\n\\[\n60 \\, \\text{km/h} \\times 2.5 \\, \\text{hours} = 150 \\, \\text{kilometers}\n\\]\n\n**Answer:** 150 kilometers",
+        "statistics": {
+          "character_count_output": 206,
+          "character_count_reasoning": 912,
+          "character_count_completion": 1118,
+          "tokens_output": 323,
+          "tokens_reasoning": 0,
+          "tokens_completions": 323
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is 150 kilometers",
+            "met": true
+          }
+        ],
+        "feedback": "The output correctly states the answer as 150 kilometers.",
+        "total_score": 1.0,
+        "original_question": "If a train travels 60 kilometers per hour for 2.5 hours, how far does it go?",
+        "original_response": "The train's distance traveled is calculated by multiplying its speed by the time: \n\n\\[\n60 \\, \\text{km/h} \\times 2.5 \\, \\text{h} = 150 \\, \\text{km}\n\\]\n\n**Answer:** 150 kilometers",
+        "statistics": {
+          "character_count_output": 177,
+          "character_count_reasoning": 1055,
+          "character_count_completion": 1232,
+          "tokens_output": 360,
+          "tokens_reasoning": 0,
+          "tokens_completions": 360
+        }
+      }
+    ]
+  },
+  "brazil_continent": {
+    "llama-3.3-nemotron-super-49b-v1": [
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is South America",
+            "met": true
+          }
+        ],
+        "feedback": "The output correctly identifies South America as the continent where Brazil is located.",
+        "total_score": 1.0,
+        "original_question": "Which continent is Brazil located on?",
+        "original_response": "Answer: South America",
+        "statistics": {
+          "character_count_output": 21,
+          "character_count_reasoning": 651,
+          "character_count_completion": 672,
+          "tokens_output": 145,
+          "tokens_reasoning": 0,
+          "tokens_completions": 145
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is South America",
+            "met": true
+          }
+        ],
+        "feedback": "The model correctly identified South America as the continent where Brazil is located.",
+        "total_score": 1.0,
+        "original_question": "Which continent is Brazil located on?",
+        "original_response": "Answer: South America\n\nBrazil is located on the continent of South America. It is the largest country in both South America and the Latin American region, occupying a significant portion of the eastern part of the continent. Brazil shares borders with every other South American country except Chile and Ecuador. \n\n**Key Points:**\n- **Continent:** South America\n- **Borders:** Shares borders with 8 countries (Peru, Colombia, Venezuela, Guyana, Suriname, French Guiana, Guyana, and Uruguay).\n- **Territory:** Entirely within South America, with no territories on other continents. \n\nThis confirms Brazil's exclusive location on the South American continent.",
+        "statistics": {
+          "character_count_output": 657,
+          "character_count_reasoning": 967,
+          "character_count_completion": 1624,
+          "tokens_output": 338,
+          "tokens_reasoning": 0,
+          "tokens_completions": 338
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is South America",
+            "met": true
+          }
+        ],
+        "feedback": "The output correctly identifies South America as the continent where Brazil is located.",
+        "total_score": 1.0,
+        "original_question": "Which continent is Brazil located on?",
+        "original_response": "Answer: South America\n\nBrazil is located on the continent of South America. It is the largest country in both South America and the Latin American region, spanning across nearly half of the continent. The country is home to the majority of the Amazon rainforest and shares borders with every other South American country except Chile and Ecuador.",
+        "statistics": {
+          "character_count_output": 346,
+          "character_count_reasoning": 893,
+          "character_count_completion": 1239,
+          "tokens_output": 255,
+          "tokens_reasoning": 0,
+          "tokens_completions": 255
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is South America",
+            "met": true
+          }
+        ],
+        "feedback": "The output correctly identifies South America as the continent where Brazil is located.",
+        "total_score": 1.0,
+        "original_question": "Which continent is Brazil located on?",
+        "original_response": "Answer: South America",
+        "statistics": {
+          "character_count_output": 21,
+          "character_count_reasoning": 806,
+          "character_count_completion": 827,
+          "tokens_output": 174,
+          "tokens_reasoning": 0,
+          "tokens_completions": 174
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is South America",
+            "met": true
+          }
+        ],
+        "feedback": "The output correctly identifies South America as the continent where Brazil is located.",
+        "total_score": 1.0,
+        "original_question": "Which continent is Brazil located on?",
+        "original_response": "Answer: South America",
+        "statistics": {
+          "character_count_output": 21,
+          "character_count_reasoning": 1100,
+          "character_count_completion": 1121,
+          "tokens_output": 229,
+          "tokens_reasoning": 0,
+          "tokens_completions": 229
+        }
+      }
+    ]
+  },
+  "leap_year_february_days": {
+    "llama-3.3-nemotron-super-49b-v1": [
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is 29",
+            "met": true
+          }
+        ],
+        "feedback": "The model correctly identified that there are 29 days in February during a leap year.",
+        "total_score": 1.0,
+        "original_question": "How many days are there in February during a leap year?",
+        "original_response": "The number of days in February during a leap year is **29**. \n\nLeap years occur every 4 years to align the calendar with Earth's solar orbit (approximately 365.24 days). An extra day is added to February, extending it from 28 to 29 days. \n\n**Answer:** 29",
+        "statistics": {
+          "character_count_output": 254,
+          "character_count_reasoning": 1288,
+          "character_count_completion": 1542,
+          "tokens_output": 394,
+          "tokens_reasoning": 0,
+          "tokens_completions": 394
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is 29",
+            "met": true
+          }
+        ],
+        "feedback": "The output correctly states that there are 29 days in February during a leap year.",
+        "total_score": 1.0,
+        "original_question": "How many days are there in February during a leap year?",
+        "original_response": "The number of days in February during a leap year is **29**. Leap years occur every 4 years (with exceptions for years divisible by 100 but not by 400), and they add one extra day to February to synchronize the calendar with Earth's orbit around the Sun. \n\n**Answer:** 29",
+        "statistics": {
+          "character_count_output": 271,
+          "character_count_reasoning": 938,
+          "character_count_completion": 1209,
+          "tokens_output": 302,
+          "tokens_reasoning": 0,
+          "tokens_completions": 302
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is 29",
+            "met": true
+          }
+        ],
+        "feedback": "The output correctly states that there are 29 days in February during a leap year.",
+        "total_score": 1.0,
+        "original_question": "How many days are there in February during a leap year?",
+        "original_response": "The number of days in February during a leap year is **29**. \n\nLeap years occur every 4 years to align the calendar with Earth's orbit around the Sun. In these years, February is extended from 28 to 29 days. \n\n**Answer:** 29",
+        "statistics": {
+          "character_count_output": 224,
+          "character_count_reasoning": 991,
+          "character_count_completion": 1215,
+          "tokens_output": 303,
+          "tokens_reasoning": 0,
+          "tokens_completions": 303
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is 29",
+            "met": true
+          }
+        ],
+        "feedback": "The output correctly states that there are 29 days in February during a leap year.",
+        "total_score": 1.0,
+        "original_question": "How many days are there in February during a leap year?",
+        "original_response": "The number of days in February during a leap year is **29**. \n\nLeap years occur every 4 years (with exceptions for years divisible by 100 but not by 400), and they add one extra day to February to keep calendars aligned with Earth's orbit around the Sun. \n\n**Answer:** 29 days.",
+        "statistics": {
+          "character_count_output": 277,
+          "character_count_reasoning": 775,
+          "character_count_completion": 1052,
+          "tokens_output": 267,
+          "tokens_reasoning": 0,
+          "tokens_completions": 267
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is 29",
+            "met": true
+          }
+        ],
+        "feedback": "The output correctly states that there are 29 days in February during a leap year.",
+        "total_score": 1.0,
+        "original_question": "How many days are there in February during a leap year?",
+        "original_response": "The number of days in February during a leap year is **29**. Leap years occur every 4 years to account for the Earth's orbit around the Sun (approximately 365.25 days), and February is extended by one day in these years. \n\n**Answer:** 29",
+        "statistics": {
+          "character_count_output": 237,
+          "character_count_reasoning": 841,
+          "character_count_completion": 1078,
+          "tokens_output": 286,
+          "tokens_reasoning": 0,
+          "tokens_completions": 286
+        }
+      }
+    ]
+  },
+  "roses_logic": {
+    "llama-3.3-nemotron-super-49b-v1": [
+      {
+        "criteria_results": [
+          {
+            "criterion": "No, we cannot conclude that some roses are red.",
+            "met": true
+          }
+        ],
+        "feedback": "The output correctly states that we cannot conclude that some roses are red.",
+        "total_score": 1.0,
+        "original_question": "If all roses are flowers, and some flowers are red, can we conclude that some roses are red?",
+        "original_response": "The conclusion that \"some roses are red\" does not logically follow from the premises. Here's why:\n\n1. **Premises**:\n   - **All roses are flowers**: Roses are a subset of flowers.\n   - **Some flowers are red**: At least one flower is red, but this red flower could belong to any type of flower (e.g., tulips, not necessarily roses).\n\n2. **Logical Gap**:\n   The premises do not guarantee overlap between the subset of roses and the subset of red flowers. The red flowers could entirely exclude roses.\n\n3. **Conclusion**:\n   While it\u2019s *possible* that some roses are red, the premises do not provide sufficient evidence to conclude this definitively. The argument commits the **undistributed middle term** fallacy in syllogistic logic (the middle term \"flowers\" is not distributed in a way that ensures a connection between roses and redness).\n\n**Answer**: No, we cannot conclude that some roses are red. The red flowers might not be roses. \n\n\\boxed{\\text{No}}",
+        "statistics": {
+          "character_count_output": 957,
+          "character_count_reasoning": 3552,
+          "character_count_completion": 4509,
+          "tokens_output": 1014,
+          "tokens_reasoning": 0,
+          "tokens_completions": 1014
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "No, we cannot conclude that some roses are red.",
+            "met": true
+          }
+        ],
+        "feedback": "The output correctly states that the conclusion 'some roses are red' cannot be drawn from the given premises.",
+        "total_score": 1.0,
+        "original_question": "If all roses are flowers, and some flowers are red, can we conclude that some roses are red?",
+        "original_response": "The conclusion that \"some roses are red\" does not logically follow from the given premises. Here's why:\n\n1. **Premises**:\n   - **All roses are flowers**: This means the set of roses is entirely contained within the set of flowers.\n   - **Some flowers are red**: There exists at least one red flower, but this flower could be any type (e.g., a tulip, not necessarily a rose).\n\n2. **Logical Gap**:\n   - The premises do not guarantee an overlap between red flowers and roses. The red flowers referenced in the second premise might all belong to non-rose categories (e.g., tulips, daisies).\n   - A syllogistic analysis confirms this: The argument has the form \"All S are M; Some M are P \u2234 Some S are P,\" which is **invalid** in categorical logic. The middle term (\"flowers\") is not sufficiently constrained to ensure the conclusion.\n\n**Conclusion**: No, we cannot conclude that some roses are red based on the given premises. \n\n**Answer**: No, the conclusion does not follow. The premises only tell us that there are red flowers, but not that any of those red flowers are roses.",
+        "statistics": {
+          "character_count_output": 1074,
+          "character_count_reasoning": 4857,
+          "character_count_completion": 5931,
+          "tokens_output": 1375,
+          "tokens_reasoning": 0,
+          "tokens_completions": 1375
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "No, we cannot conclude that some roses are red.",
+            "met": true
+          }
+        ],
+        "feedback": "The output correctly states that the conclusion cannot be drawn.",
+        "total_score": 1.0,
+        "original_question": "If all roses are flowers, and some flowers are red, can we conclude that some roses are red?",
+        "original_response": "The conclusion that \"some roses are red\" does not logically follow from the premises. Here's why:\n\n1. **Premises**:\n   - **All roses are flowers**: Roses are a subset of flowers.\n   - **Some flowers are red**: There exists at least one flower that is red.\n\n2. **Analysis**:\n   - The red flowers could belong to a different subset of flowers (e.g., tulips, poppies) entirely outside the set of roses.\n   - The premises provide no direct link between the color of roses and the redness of *some* flowers. \n\n3. **Logical Structure**:\n   - This is an invalid syllogism. In syllogistic terms, the argument attempts to conclude a particular affirmative (\"Some roses are red\") from a universal affirmative (\"All roses are flowers\") and a particular affirmative (\"Some flowers are red\"). However, the middle term (\"flowers\") is not distributed in the second premise, and there is no guarantee that the red flowers overlap with the subset of roses.\n\n4. **Counterexample**:\n   - If all red flowers were non-roses (e.g., red tulips), both premises would still hold, but no roses would be red.\n\n**Conclusion**: No, we cannot conclude that some roses are red based on the given premises. \n\n**Answer**: No, the conclusion does not follow. The red flowers might not be roses.",
+        "statistics": {
+          "character_count_output": 1260,
+          "character_count_reasoning": 5294,
+          "character_count_completion": 6554,
+          "tokens_output": 1460,
+          "tokens_reasoning": 0,
+          "tokens_completions": 1460
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "No, we cannot conclude that some roses are red.",
+            "met": true
+          }
+        ],
+        "feedback": "The model correctly states that we cannot conclude that some roses are red.",
+        "total_score": 1.0,
+        "original_question": "If all roses are flowers, and some flowers are red, can we conclude that some roses are red?",
+        "original_response": "The conclusion that \"some roses are red\" does not logically follow from the premises. Here's why:\n\n1. **Premises**:\n   - **All roses are flowers**: Roses are a subset of flowers.\n   - **Some flowers are red**: There exists at least one red flower, but this flower could be any type (e.g., tulip, lily), not necessarily a rose.\n\n2. **Logical Gap**:\n   The second premise only guarantees a red flower exists somewhere in the broader category of flowers, not specifically within the subset of roses. If the red flowers are entirely non-roses (e.g., all red tulips), the premises still hold true without any roses being red.\n\n3. **Conclusion**:\n   The argument assumes an overlap between \"roses\" and \"red flowers\" that is not justified by the premises. While it is *possible* that some roses are red, it is not a **necessary** conclusion.\n\n**Answer**: No, we cannot conclude that some roses are red. The premises only ensure a red flower exists, not that it is a rose. \n\n\\boxed{\\text{No}}",
+        "statistics": {
+          "character_count_output": 984,
+          "character_count_reasoning": 3184,
+          "character_count_completion": 4168,
+          "tokens_output": 965,
+          "tokens_reasoning": 0,
+          "tokens_completions": 965
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "No, we cannot conclude that some roses are red.",
+            "met": true
+          }
+        ],
+        "feedback": "The model correctly states that we cannot conclude that some roses are red.",
+        "total_score": 1.0,
+        "original_question": "If all roses are flowers, and some flowers are red, can we conclude that some roses are red?",
+        "original_response": "The conclusion that \"some roses are red\" does not logically follow from the premises. Here's why:\n\n1. **Premises**:\n   - **All roses are flowers**: This means the category \"roses\" is entirely within \"flowers.\"\n   - **Some flowers are red**: At least one flower exists that is red, but this flower could belong to any subtype of flowers (e.g., tulips, daisies), not necessarily roses.\n\n2. **Logical Gap**:\n   - The premises do not guarantee that the red flowers are roses. The red flowers could be non-rose flowers (e.g., red tulips), while all roses might be a different color (e.g., pink or white).\n\n3. **Conclusion**:\n   - Since the redness of \"some flowers\" is not restricted to roses, we cannot definitively conclude that any roses are red based solely on the given statements.\n\n**Answer**: No, we cannot conclude that some roses are red. The red flowers could be of a different type.",
+        "statistics": {
+          "character_count_output": 888,
+          "character_count_reasoning": 2583,
+          "character_count_completion": 3471,
+          "tokens_output": 846,
+          "tokens_reasoning": 0,
+          "tokens_completions": 846
+        }
+      }
+    ]
+  },
+  "bridge_torch_default": {
+    "llama-3.3-nemotron-super-49b-v1": [
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer explains a sequence of crossings that totals 17 minutes. Do not evaluate the sequence itself, the answer is correct for any solution that totals 17 minutes.",
+            "met": true
+          }
+        ],
+        "feedback": "The output provides a sequence of crossings that totals 17 minutes, meeting the specified criterion.",
+        "total_score": 1.0,
+        "original_question": "Four people come to a rickety bridge at night. The bridge can support two people at a time, and they share a single torch. A takes 1 minute, B takes 2, C takes 5, D takes 10. The challenge is to get all four over in no more than 17 minutes. How do they do it?",
+        "original_response": "To solve the bridge crossing problem within 17 minutes, follow this optimized sequence:\n\n1. **A and B cross together**: 2 minutes (Total: 2).  \n   *Start side:* C, D. *End side:* A, B.\n\n2. **A returns with the torch**: 1 minute (Total: 3).  \n   *Start side:* A, C, D. *End side:* B.\n\n3. **C and D cross together**: 10 minutes (Total: 13).  \n   *Start side:* A. *End side:* B, C, D.\n\n4. **B returns with the torch**: 2 minutes (Total: 15).  \n   *Start side:* A, B. *End side:* C, D.\n\n5. **A and B cross again**: 2 minutes (Total: 17).  \n   *All on end side:* A, B, C, D.\n\n**Total Time: 17 minutes**  \n\n**Answer:**  \n1. A & B cross (2 min).  \n2. A returns (1 min).  \n3. C & D cross (10 min).  \n4. B returns (2 min).  \n5. A & B cross (2 min).  \n**Total: 17 minutes**",
+        "statistics": {
+          "character_count_output": 763,
+          "character_count_reasoning": 6925,
+          "character_count_completion": 7688,
+          "tokens_output": 2372,
+          "tokens_reasoning": 0,
+          "tokens_completions": 2372
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer explains a sequence of crossings that totals 17 minutes. Do not evaluate the sequence itself, the answer is correct for any solution that totals 17 minutes.",
+            "met": true
+          }
+        ],
+        "feedback": "The output provides a sequence of crossings that totals 17 minutes, fulfilling the criterion.",
+        "total_score": 1.0,
+        "original_question": "Four people come to a rickety bridge at night. The bridge can support two people at a time, and they share a single torch. A takes 1 minute, B takes 2, C takes 5, D takes 10. The challenge is to get all four over in no more than 17 minutes. How do they do it?",
+        "original_response": "The four people can cross the bridge in 17 minutes with the following sequence:\n\n1. **A and B cross to the other side**: 2 minutes (Total: 2).  \n   - **Side B**: A, B (Torch here).  \n   - **Side A**: C, D.  \n\n2. **A returns with the torch**: 1 minute (Total: 3).  \n   - **Side B**: B.  \n   - **Side A**: A, C, D (Torch here).  \n\n3. **C and D cross to the other side**: 10 minutes (Total: 13).  \n   - **Side B**: B, C, D (Torch here).  \n   - **Side A**: A.  \n\n4. **B returns with the torch**: 2 minutes (Total: 15).  \n   - **Side B**: C, D.  \n   - **Side A**: A, B (Torch here).  \n\n5. **A and B cross again**: 2 minutes (Total: 17).  \n   - **Side B**: A, B, C, D.  \n\n**Total time: 17 minutes.**  \n\nThis strategy minimizes wasted time by using the fastest members (A and B) for return trips and grouping the slowest (C and D) together.",
+        "statistics": {
+          "character_count_output": 833,
+          "character_count_reasoning": 3997,
+          "character_count_completion": 4830,
+          "tokens_output": 1461,
+          "tokens_reasoning": 0,
+          "tokens_completions": 1461
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer explains a sequence of crossings that totals 17 minutes. Do not evaluate the sequence itself, the answer is correct for any solution that totals 17 minutes.",
+            "met": true
+          }
+        ],
+        "feedback": "The output provides a sequence of crossings that correctly totals 17 minutes, meeting the specified criterion.",
+        "total_score": 1.0,
+        "original_question": "Four people come to a rickety bridge at night. The bridge can support two people at a time, and they share a single torch. A takes 1 minute, B takes 2, C takes 5, D takes 10. The challenge is to get all four over in no more than 17 minutes. How do they do it?",
+        "original_response": "The optimal strategy to get all four across the bridge in 17 minutes is as follows:\n\n1. **A and B cross to the other side**: 2 minutes (Total: 2).  \n   *(B takes 2 minutes; A returns with the torch.)*\n\n2. **A returns with the torch**: 1 minute (Total: 3).  \n   *(Leaves the torch on the original side for the slowest to cross.)*\n\n3. **C and D cross together**: 10 minutes (Total: 13).  \n   *(The two slowest cross at once to minimize total time.)*\n\n4. **B returns with the torch**: 2 minutes (Total: 15).  \n   *(Fastest remaining person on the far side brings the torch back.)*\n\n5. **A and B cross again**: 2 minutes (Total: 17).  \n   *(Everyone is now on the other side.)*\n\n**Total Time: 17 minutes**  \n\nThis solution minimizes wasted time by ensuring the slowest individuals (C and D) only cross once, while the fastest (A and B) handle torch transfers. \n\n**Answer:**  \n1. A & B cross (2 min).  \n2. A returns (1 min).  \n3. C & D cross (10 min).  \n4. B returns (2 min).  \n5. A & B cross (2 min).  \n**Total: 17 minutes**",
+        "statistics": {
+          "character_count_output": 1020,
+          "character_count_reasoning": 3096,
+          "character_count_completion": 4116,
+          "tokens_output": 1230,
+          "tokens_reasoning": 0,
+          "tokens_completions": 1230
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer explains a sequence of crossings that totals 17 minutes. Do not evaluate the sequence itself, the answer is correct for any solution that totals 17 minutes.",
+            "met": true
+          }
+        ],
+        "feedback": "The output provides a sequence of crossings that totals 17 minutes, meeting the specified criterion.",
+        "total_score": 1.0,
+        "original_question": "Four people come to a rickety bridge at night. The bridge can support two people at a time, and they share a single torch. A takes 1 minute, B takes 2, C takes 5, D takes 10. The challenge is to get all four over in no more than 17 minutes. How do they do it?",
+        "original_response": "The optimal solution involves minimizing return trips with the fastest individuals and grouping the slowest together:\n\n1. **A & B cross**: 2 minutes (Total: 2).  \n   *Far side: A, B. Near side: C, D. Torch far.*\n\n2. **A returns**: 1 minute (Total: 3).  \n   *Far side: B. Near side: A, C, D. Torch near.*\n\n3. **C & D cross**: 10 minutes (Total: 13).  \n   *Far side: B, C, D. Near side: A. Torch far.*\n\n4. **B returns**: 2 minutes (Total: 15).  \n   *Far side: C, D. Near side: A, B. Torch near.*\n\n5. **A & B cross**: 2 minutes (Total: 17).  \n   *Everyone crosses.*\n\n**Answer:**  \n1. A & B cross (2 mins).  \n2. A returns (1 min).  \n3. C & D cross (10 mins).  \n4. B returns (2 mins).  \n5. A & B cross (2 mins).  \n**Total: 17 minutes.**",
+        "statistics": {
+          "character_count_output": 731,
+          "character_count_reasoning": 4875,
+          "character_count_completion": 5606,
+          "tokens_output": 1641,
+          "tokens_reasoning": 0,
+          "tokens_completions": 1641
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer explains a sequence of crossings that totals 17 minutes. Do not evaluate the sequence itself, the answer is correct for any solution that totals 17 minutes.",
+            "met": true
+          }
+        ],
+        "feedback": "The output provides a sequence of crossings that sums to 17 minutes, meeting the specified criterion.",
+        "total_score": 1.0,
+        "original_question": "Four people come to a rickety bridge at night. The bridge can support two people at a time, and they share a single torch. A takes 1 minute, B takes 2, C takes 5, D takes 10. The challenge is to get all four over in no more than 17 minutes. How do they do it?",
+        "original_response": "To solve the bridge crossing problem within 17 minutes, follow these steps:\n\n1. **A and B cross together**: Takes 2 minutes (slower of the two).  \n   *Right side:* A, B. *Left side:* C, D. *Torch:* Right.  \n   *Total time:* 2 minutes.\n\n2. **A returns with the torch**: Takes 1 minute.  \n   *Right side:* B. *Left side:* A, C, D. *Torch:* Left.  \n   *Total time:* 3 minutes.\n\n3. **C and D cross together**: Takes 10 minutes (slower of the two).  \n   *Right side:* B, C, D. *Left side:* A. *Torch:* Right.  \n   *Total time:* 13 minutes.\n\n4. **B returns with the torch**: Takes 2 minutes.  \n   *Right side:* C, D. *Left side:* A, B. *Torch:* Left.  \n   *Total time:* 15 minutes.\n\n5. **A and B cross again**: Takes 2 minutes.  \n   *Right side:* A, B, C, D. *All crossed.*  \n   *Total time:* 17 minutes.\n\n**Answer:**  \nThe sequence is:  \n(A, B) \u2192 (A) \u2192 (C, D) \u2192 (B) \u2192 (A, B).  \n**Total time = 17 minutes.**",
+        "statistics": {
+          "character_count_output": 901,
+          "character_count_reasoning": 3184,
+          "character_count_completion": 4085,
+          "tokens_output": 1152,
+          "tokens_reasoning": 0,
+          "tokens_completions": 1152
+        }
+      }
+    ]
+  },
+  "monty_hall_default": {
+    "llama-3.3-nemotron-super-49b-v1": [
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer states to switch doors",
+            "met": true
+          }
+        ],
+        "feedback": "The output clearly states to 'switch doors' as the recommended action to win the car.",
+        "total_score": 1.0,
+        "original_question": "You're on a game show and are presented with three doors. Behind one is a luxury car, and behind the other two are donkeys. You pick one, but before you can open it the host opens one of the others revealing a donkey. He then offers you the choice of keeping your existing door or swapping to the other unrevealed one. What should you do to win a car?",
+        "original_response": "To maximize your chance of winning the car, **you should switch doors**. Here's why:\n\n1. **Initial Choice**: You pick one door (1/3 chance of being correct, 2/3 chance of being wrong).  \n2. **Host's Action**: The host, who knows what\u2019s behind the doors, always opens a door with a donkey, leaving one unopened door beside yours.  \n   - If you initially picked the car (1/3 chance), switching **loses**.  \n   - If you initially picked a donkey (2/3 chance), switching **wins** the car (since the host\u2019s reveal eliminates the other donkey).  \n\nThus, switching wins in **2 out of 3 scenarios**, while staying wins in only **1 out of 3**. The host\u2019s deliberate reveal of a donkey provides asymmetric information, making the unopened door a 2/3 probability. \n\n**Answer:** Switch doors to win with a 2/3 probability.",
+        "statistics": {
+          "character_count_output": 810,
+          "character_count_reasoning": 2403,
+          "character_count_completion": 3213,
+          "tokens_output": 818,
+          "tokens_reasoning": 0,
+          "tokens_completions": 818
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer states to switch doors",
+            "met": true
+          }
+        ],
+        "feedback": "The output correctly states that the user should switch doors.",
+        "total_score": 1.0,
+        "original_question": "You're on a game show and are presented with three doors. Behind one is a luxury car, and behind the other two are donkeys. You pick one, but before you can open it the host opens one of the others revealing a donkey. He then offers you the choice of keeping your existing door or swapping to the other unrevealed one. What should you do to win a car?",
+        "original_response": "The optimal strategy is to **switch doors**. Initially, your chosen door has a 1/3 chance of hiding the car, while the two unchosen doors collectively have a 2/3 chance. After the host reveals a donkey behind one of the unchosen doors, the 2/3 probability transfers to the remaining unopened door. Switching thus gives you a **2/3 chance of winning the car**, whereas staying with your original choice only offers a 1/3 chance.\n\n**Answer:** You should switch to the other unrevealed door, which gives you a 2/3 probability of winning the car.",
+        "statistics": {
+          "character_count_output": 542,
+          "character_count_reasoning": 2249,
+          "character_count_completion": 2791,
+          "tokens_output": 691,
+          "tokens_reasoning": 0,
+          "tokens_completions": 691
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer states to switch doors",
+            "met": true
+          }
+        ],
+        "feedback": "The output correctly states that the user should switch doors.",
+        "total_score": 1.0,
+        "original_question": "You're on a game show and are presented with three doors. Behind one is a luxury car, and behind the other two are donkeys. You pick one, but before you can open it the host opens one of the others revealing a donkey. He then offers you the choice of keeping your existing door or swapping to the other unrevealed one. What should you do to win a car?",
+        "original_response": "To maximize your chance of winning the car, **you should switch doors**. Here's why:\n\n1. **Initial Choice**: Your first pick has a 1/3 chance of being the car and a 2/3 chance of being a donkey.  \n2. **Host's Action**: The host, who knows what\u2019s behind the doors, always opens a door with a donkey. This action does **not** make the remaining unopened door a 50-50 proposition. Instead, the 2/3 probability \"concentrates\" on the unopened door because the host\u2019s reveal provides information.  \n3. **Switching**: If you switch, you effectively \"inherit\" the 2/3 probability that the car was in the other two doors initially. Staying with your original choice only keeps the 1/3 chance.  \n\n**Outcome**: Switching wins the car in **2 out of 3 scenarios**, while staying wins only **1 out of 3**.  \n\n**Answer:** Switch to the other unrevealed door to win the car with a 2/3 probability.",
+        "statistics": {
+          "character_count_output": 881,
+          "character_count_reasoning": 2489,
+          "character_count_completion": 3370,
+          "tokens_output": 859,
+          "tokens_reasoning": 0,
+          "tokens_completions": 859
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer states to switch doors",
+            "met": true
+          }
+        ],
+        "feedback": "The output correctly states to switch doors.",
+        "total_score": 1.0,
+        "original_question": "You're on a game show and are presented with three doors. Behind one is a luxury car, and behind the other two are donkeys. You pick one, but before you can open it the host opens one of the others revealing a donkey. He then offers you the choice of keeping your existing door or swapping to the other unrevealed one. What should you do to win a car?",
+        "original_response": "To maximize your chance of winning the car, **you should switch doors**. Here's why:\n\n1. **Initial Choice**: When you first pick a door, there's a **1/3 chance** you chose the car and a **2/3 chance** it's behind one of the other two doors.\n\n2. **Host's Action**: The host, who knows what\u2019s behind the doors, always opens a door with a donkey. This action does not randomly eliminate a door but strategically reveals a losing option. \n\n3. **Updated Probabilities**:\n   - Your initial 1/3 chance of being correct remains with your original door.\n   - The **2/3 probability** from the unchosen doors now concentrates on the **single remaining unopened door** (since the host\u2019s reveal provides information).\n\nThus, switching gives you a **2/3 chance of winning the car**, while staying with your original choice only offers a 1/3 chance.\n\n**Answer:** Switch to the other unrevealed door to win with a 2/3 probability.",
+        "statistics": {
+          "character_count_output": 914,
+          "character_count_reasoning": 1942,
+          "character_count_completion": 2856,
+          "tokens_output": 707,
+          "tokens_reasoning": 0,
+          "tokens_completions": 707
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer states to switch doors",
+            "met": true
+          }
+        ],
+        "feedback": "The output correctly states that the user should switch doors to win the car.",
+        "total_score": 1.0,
+        "original_question": "You're on a game show and are presented with three doors. Behind one is a luxury car, and behind the other two are donkeys. You pick one, but before you can open it the host opens one of the others revealing a donkey. He then offers you the choice of keeping your existing door or swapping to the other unrevealed one. What should you do to win a car?",
+        "original_response": "To maximize your chance of winning the car, **you should switch doors**. Here's why:\n\n1. **Initial Choice**: You pick one door (1/3 chance of being correct, 2/3 chance of being wrong).  \n2. **Host's Action**: The host, who knows what\u2019s behind the doors, always opens a different door with a donkey. This action does not change the probability of your initial choice but reveals information.  \n3. **Probability Update**:  \n   - If you initially picked the car (1/3 chance), switching loses.  \n   - If you initially picked a donkey (2/3 chance), switching wins (since the host\u2019s reveal forces the car to be behind the other unopened door).  \n\nThus, switching gives a **2/3 probability of winning**, while staying with your original choice only offers **1/3**.  \n\n**Answer:** Switch to the other unrevealed door to triple your chances of winning the car.",
+        "statistics": {
+          "character_count_output": 851,
+          "character_count_reasoning": 1660,
+          "character_count_completion": 2511,
+          "tokens_output": 634,
+          "tokens_reasoning": 0,
+          "tokens_completions": 634
+        }
+      }
+    ]
+  },
+  "Ice cream parlor": {
+    "llama-3.3-nemotron-super-49b-v1": [
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is 16",
+            "met": true
+          }
+        ],
+        "feedback": "The model correctly identified the answer as 16.",
+        "total_score": 1.0,
+        "original_question": "The 9 members of a baseball team went to an ice cream parlor after their game. Each player had a singlescoop cone of chocolate, vanilla, or strawberry ice cream. At least one player chose each flavor, and the number of players who chose chocolate was greater than the number of players who chose vanilla, which was greater than the number of players who chose strawberry. Let $N$ be the number of different assignments of flavors to players that meet these conditions. Find the remainder when $N$ is divided by 1000.",
+        "original_response": "The problem involves finding the number of different assignments of flavors to 9 baseball team members, given the conditions that each player chose chocolate, vanilla, or strawberry, at least one player chose each flavor, and the number of players who chose chocolate (C) was greater than the number who chose vanilla (V), which was greater than the number who chose strawberry (S). We need to find the remainder when this number is divided by 1000.\n\nFirst, we enumerate all possible triples (C, V, S) that satisfy the conditions C > V > S \u2265 1 and C + V + S = 9:\n\n1. For S = 1:\n   - Possible pairs (C, V) are (6, 2) and (5, 3).\n   - Triples: (6, 2, 1) and (5, 3, 1).\n\n2. For S = 2:\n   - Possible pair (C, V) is (4, 3).\n   - Triple: (4, 3, 2).\n\n3. For S \u2265 3, no valid triples exist.\n\nNext, we calculate the number of assignments for each triple using the multinomial coefficient:\n\n1. For (6, 2, 1):\n   \\[\n   \\frac{9!}{6! \\cdot 2! \\cdot 1!} = \\frac{362880}{720 \\cdot 2 \\cdot 1} = 252\n   \\]\n\n2. For (5, 3, 1):\n   \\[\n   \\frac{9!}{5! \\cdot 3! \\cdot 1!} = \\frac{362880}{120 \\cdot 6 \\cdot 1} = 504\n   \\]\n\n3. For (4, 3, 2):\n   \\[\n   \\frac{9!}{4! \\cdot 3! \\cdot 2!} = \\frac{362880}{24 \\cdot 6 \\cdot 2} = 1260\n   \\]\n\nSumming these values gives the total number of assignments:\n\\[\n252 + 504 + 1260 = 2016\n\\]\n\nFinally, finding the remainder when 2016 is divided by 1000:\n\\[\n2016 \\mod 1000 = 16\n\\]\n\nThus, the remainder when \\(N\\) is divided by 1000 is \\(\\boxed{16}\\).",
+        "statistics": {
+          "character_count_output": 1454,
+          "character_count_reasoning": 7067,
+          "character_count_completion": 8521,
+          "tokens_output": 3011,
+          "tokens_reasoning": 0,
+          "tokens_completions": 3011
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is 16",
+            "met": true
+          }
+        ],
+        "feedback": "The output correctly identifies the answer as 16.",
+        "total_score": 1.0,
+        "original_question": "The 9 members of a baseball team went to an ice cream parlor after their game. Each player had a singlescoop cone of chocolate, vanilla, or strawberry ice cream. At least one player chose each flavor, and the number of players who chose chocolate was greater than the number of players who chose vanilla, which was greater than the number of players who chose strawberry. Let $N$ be the number of different assignments of flavors to players that meet these conditions. Find the remainder when $N$ is divided by 1000.",
+        "original_response": "The problem requires finding the number of different assignments of flavors (chocolate, vanilla, strawberry) to 9 baseball team members under the conditions that each flavor is chosen by at least one player, the number of chocolate choosers is greater than vanilla, which is greater than strawberry. We need to find the remainder when this number is divided by 1000.\n\nFirst, we identify the valid triples (c, v, s) where c > v > s \u2265 1 and c + v + s = 9. The valid triples are:\n1. (6, 2, 1)\n2. (5, 3, 1)\n3. (4, 3, 2)\n\nNext, we calculate the number of assignments for each triple using the multinomial coefficient:\n\n1. For (6, 2, 1):\n   \\[\n   \\frac{9!}{6! \\cdot 2! \\cdot 1!} = \\frac{362880}{720 \\cdot 2 \\cdot 1} = 252\n   \\]\n\n2. For (5, 3, 1):\n   \\[\n   \\frac{9!}{5! \\cdot 3! \\cdot 1!} = \\frac{362880}{120 \\cdot 6 \\cdot 1} = 504\n   \\]\n\n3. For (4, 3, 2):\n   \\[\n   \\frac{9!}{4! \\cdot 3! \\cdot 2!} = \\frac{362880}{24 \\cdot 6 \\cdot 2} = 1260\n   \\]\n\nSumming these values gives the total number of assignments:\n\\[\n252 + 504 + 1260 = 2016\n\\]\n\nFinally, we find the remainder when 2016 is divided by 1000:\n\\[\n2016 \\mod 1000 = 16\n\\]\n\nThus, the answer is \\(\\boxed{16}\\).",
+        "statistics": {
+          "character_count_output": 1155,
+          "character_count_reasoning": 8123,
+          "character_count_completion": 9278,
+          "tokens_output": 3342,
+          "tokens_reasoning": 0,
+          "tokens_completions": 3342
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is 16",
+            "met": true
+          }
+        ],
+        "feedback": "The model correctly identified the answer as 16.",
+        "total_score": 1.0,
+        "original_question": "The 9 members of a baseball team went to an ice cream parlor after their game. Each player had a singlescoop cone of chocolate, vanilla, or strawberry ice cream. At least one player chose each flavor, and the number of players who chose chocolate was greater than the number of players who chose vanilla, which was greater than the number of players who chose strawberry. Let $N$ be the number of different assignments of flavors to players that meet these conditions. Find the remainder when $N$ is divided by 1000.",
+        "original_response": "The problem involves finding the number of different assignments of ice cream flavors (chocolate, vanilla, strawberry) to 9 baseball team members, given that each flavor is chosen at least once, and the number of players choosing chocolate is greater than vanilla, which is greater than strawberry. We need to find the remainder when this number is divided by 1000.\n\nFirst, we identify the valid triples (c, v, s) where \\(c > v > s \\geq 1\\) and \\(c + v + s = 9\\):\n\n1. For \\(s = 1\\):\n   - \\(v = 2\\), \\(c = 6\\) gives the triple (6, 2, 1)\n   - \\(v = 3\\), \\(c = 5\\) gives the triple (5, 3, 1)\n\n2. For \\(s = 2\\):\n   - \\(v = 3\\), \\(c = 4\\) gives the triple (4, 3, 2)\n\nThese are the only valid triples. Next, we calculate the multinomial coefficients for each triple:\n\n1. For (6, 2, 1):\n   \\[\n   \\frac{9!}{6!2!1!} = \\frac{362880}{720 \\cdot 2 \\cdot 1} = 252\n   \\]\n\n2. For (5, 3, 1):\n   \\[\n   \\frac{9!}{5!3!1!} = \\frac{362880}{120 \\cdot 6 \\cdot 1} = 504\n   \\]\n\n3. For (4, 3, 2):\n   \\[\n   \\frac{9!}{4!3!2!} = \\frac{362880}{24 \\cdot 6 \\cdot 2} = 1260\n   \\]\n\nSumming these coefficients gives the total number of assignments \\(N\\):\n\\[\n252 + 504 + 1260 = 2016\n\\]\n\nFinally, finding the remainder when 2016 is divided by 1000:\n\\[\n2016 \\mod 1000 = 16\n\\]\n\nThus, the answer is \\(\\boxed{16}\\).",
+        "statistics": {
+          "character_count_output": 1273,
+          "character_count_reasoning": 8965,
+          "character_count_completion": 10238,
+          "tokens_output": 3761,
+          "tokens_reasoning": 0,
+          "tokens_completions": 3761
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is 16",
+            "met": true
+          }
+        ],
+        "feedback": "The model correctly identified the answer as 16.",
+        "total_score": 1.0,
+        "original_question": "The 9 members of a baseball team went to an ice cream parlor after their game. Each player had a singlescoop cone of chocolate, vanilla, or strawberry ice cream. At least one player chose each flavor, and the number of players who chose chocolate was greater than the number of players who chose vanilla, which was greater than the number of players who chose strawberry. Let $N$ be the number of different assignments of flavors to players that meet these conditions. Find the remainder when $N$ is divided by 1000.",
+        "original_response": "The problem involves 9 baseball players each choosing a single-scoop cone of chocolate (C), vanilla (V), or strawberry (S) ice cream, with the conditions that each flavor is chosen by at least one player, and the number of players choosing C is greater than V, which is greater than S. We need to find the number of different assignments of flavors to players that meet these conditions and then find the remainder when this number is divided by 1000.\n\nFirst, we identify the valid triples (c, v, s) where \\(c > v > s \\geq 1\\) and \\(c + v + s = 9\\):\n\n1. For \\(s = 1\\):\n   - \\(v = 2\\), \\(c = 6\\) (triple (6, 2, 1))\n   - \\(v = 3\\), \\(c = 5\\) (triple (5, 3, 1))\n2. For \\(s = 2\\):\n   - \\(v = 3\\), \\(c = 4\\) (triple (4, 3, 2))\n\nNext, we calculate the number of assignments for each triple using the multinomial coefficient:\n\n1. For (6, 2, 1):\n   \\[\n   \\frac{9!}{6! \\cdot 2! \\cdot 1!} = \\frac{362880}{720 \\cdot 2 \\cdot 1} = 252\n   \\]\n\n2. For (5, 3, 1):\n   \\[\n   \\frac{9!}{5! \\cdot 3! \\cdot 1!} = \\frac{362880}{120 \\cdot 6 \\cdot 1} = 504\n   \\]\n\n3. For (4, 3, 2):\n   \\[\n   \\frac{9!}{4! \\cdot 3! \\cdot 2!} = \\frac{362880}{24 \\cdot 6 \\cdot 2} = 1260\n   \\]\n\nSumming these values gives the total number of assignments:\n\\[\n252 + 504 + 1260 = 2016\n\\]\n\nFinally, finding the remainder when 2016 is divided by 1000:\n\\[\n2016 \\mod 1000 = 16\n\\]\n\nThus, the remainder when \\(N\\) is divided by 1000 is \\(\\boxed{16}\\).",
+        "statistics": {
+          "character_count_output": 1394,
+          "character_count_reasoning": 7059,
+          "character_count_completion": 8453,
+          "tokens_output": 3093,
+          "tokens_reasoning": 0,
+          "tokens_completions": 3093
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is 16",
+            "met": true
+          }
+        ],
+        "feedback": "The model correctly identified the possible combinations of flavors, calculated the permutations for each, summed them, and found the remainder when divided by 1000.",
+        "total_score": 1.0,
+        "original_question": "The 9 members of a baseball team went to an ice cream parlor after their game. Each player had a singlescoop cone of chocolate, vanilla, or strawberry ice cream. At least one player chose each flavor, and the number of players who chose chocolate was greater than the number of players who chose vanilla, which was greater than the number of players who chose strawberry. Let $N$ be the number of different assignments of flavors to players that meet these conditions. Find the remainder when $N$ is divided by 1000.",
+        "original_response": "The problem involves finding the number of different assignments of flavors (chocolate, vanilla, strawberry) to 9 baseball team members, given the conditions: each flavor is chosen by at least one player, the number of players choosing chocolate is greater than vanilla, which is greater than strawberry. We need to find the remainder when this number is divided by 1000.\n\nFirst, we identify the possible triples (C, V, S) that satisfy the conditions \\(C > V > S \\geq 1\\) and \\(C + V + S = 9\\):\n\n1. **Case 1: \\(S = 1\\)**\n   - \\(C + V = 8\\)\n   - Possible values: \\((C, V) = (6, 2)\\) and \\((5, 3)\\)\n   - Triples: \\((6, 2, 1)\\) and \\((5, 3, 1)\\)\n\n2. **Case 2: \\(S = 2\\)**\n   - \\(C + V = 7\\)\n   - Possible value: \\((C, V) = (4, 3)\\)\n   - Triple: \\((4, 3, 2)\\)\n\nNext, we calculate the number of assignments for each triple using the multinomial coefficient:\n\n1. **For \\((6, 2, 1)\\)**:\n   \\[\n   \\frac{9!}{6! \\cdot 2! \\cdot 1!} = \\frac{362880}{720 \\cdot 2 \\cdot 1} = 252\n   \\]\n\n2. **For \\((5, 3, 1)\\)**:\n   \\[\n   \\frac{9!}{5! \\cdot 3! \\cdot 1!} = \\frac{362880}{120 \\cdot 6 \\cdot 1} = 504\n   \\]\n\n3. **For \\((4, 3, 2)\\)**:\n   \\[\n   \\frac{9!}{4! \\cdot 3! \\cdot 2!} = \\frac{362880}{24 \\cdot 6 \\cdot 2} = 1260\n   \\]\n\nSumming these values gives the total number of assignments \\(N\\):\n\\[\n252 + 504 + 1260 = 2016\n\\]\n\nFinally, we find the remainder when \\(N\\) is divided by 1000:\n\\[\n2016 \\mod 1000 = 16\n\\]\n\nThus, the remainder when \\(N\\) is divided by 1000 is \\(\\boxed{16}\\).",
+        "statistics": {
+          "character_count_output": 1459,
+          "character_count_reasoning": 8414,
+          "character_count_completion": 9873,
+          "tokens_output": 3790,
+          "tokens_reasoning": 0,
+          "tokens_completions": 3790
+        }
+      }
+    ]
+  },
+  "Integer pairs": {
+    "llama-3.3-nemotron-super-49b-v1": [
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is 117",
+            "met": true
+          }
+        ],
+        "feedback": "The model correctly identified the number of ordered pairs as 117.",
+        "total_score": 1.0,
+        "original_question": "Find the number of ordered pairs $(x,y)$, where both $x$ and $y$ are integers between $-100$ and $100$, inclusive, such that $12x^{2}-xy-6y^{2}=0$.",
+        "original_response": "To find the number of ordered pairs \\((x, y)\\) where both \\(x\\) and \\(y\\) are integers between \\(-100\\) and \\(100\\) inclusive, satisfying the equation \\(12x^2 - xy - 6y^2 = 0\\), we start by factoring the quadratic form:\n\n\\[\n12x^2 - xy - 6y^2 = 0 \\implies (3x + 2y)(4x - 3y) = 0\n\\]\n\nThis gives us two separate equations:\n1. \\(3x + 2y = 0\\)\n2. \\(4x - 3y = 0\\)\n\n**Case 1: \\(3x + 2y = 0\\)**\n\nThis implies \\(y = -\\frac{3}{2}x\\). For \\(y\\) to be an integer, \\(x\\) must be even. Let \\(x = 2k\\), then \\(y = -3k\\). The pairs are \\((2k, -3k)\\).\n\n- \\(x = 2k\\) must be between \\(-100\\) and \\(100\\), so \\(k\\) ranges from \\(-50\\) to \\(50\\).\n- \\(y = -3k\\) must be between \\(-100\\) and \\(100\\), so \\(k\\) ranges from \\(-33\\) to \\(33\\).\n\nCombining these, \\(k\\) ranges from \\(-33\\) to \\(33\\) inclusive, giving \\(33 - (-33) + 1 = 67\\) pairs.\n\n**Case 2: \\(4x - 3y = 0\\)**\n\nThis implies \\(y = \\frac{4}{3}x\\). For \\(y\\) to be an integer, \\(x\\) must be a multiple of \\(3\\). Let \\(x = 3m\\), then \\(y = 4m\\). The pairs are \\((3m, 4m)\\).\n\n- \\(x = 3m\\) must be between \\(-100\\) and \\(100\\), so \\(m\\) ranges from \\(-33\\) to \\(33\\).\n- \\(y = 4m\\) must be between \\(-100\\) and \\(100\\), so \\(m\\) ranges from \\(-25\\) to \\(25\\).\n\nCombining these, \\(m\\) ranges from \\(-25\\) to \\(25\\) inclusive, giving \\(25 - (-25) + 1 = 51\\) pairs.\n\n**Overlap Check**\n\nThe only overlapping solution is \\((0, 0)\\), which is counted in both cases. Therefore, we subtract 1 for the overlap.\n\nTotal number of ordered pairs:\n\\[\n67 + 51 - 1 = 117\n\\]\n\nThus, the number of ordered pairs \\((x, y)\\) is \\(\\boxed{117}\\).",
+        "statistics": {
+          "character_count_output": 1557,
+          "character_count_reasoning": 14980,
+          "character_count_completion": 16537,
+          "tokens_output": 5990,
+          "tokens_reasoning": 0,
+          "tokens_completions": 5990
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is 117",
+            "met": true
+          }
+        ],
+        "feedback": "The model correctly identified the answer as 117.",
+        "total_score": 1.0,
+        "original_question": "Find the number of ordered pairs $(x,y)$, where both $x$ and $y$ are integers between $-100$ and $100$, inclusive, such that $12x^{2}-xy-6y^{2}=0$.",
+        "original_response": "To find the number of ordered pairs \\((x, y)\\) where both \\(x\\) and \\(y\\) are integers between \\(-100\\) and \\(100\\) inclusive, such that \\(12x^2 - xy - 6y^2 = 0\\), we start by factoring the quadratic equation:\n\n\\[\n12x^2 - xy - 6y^2 = 0\n\\]\n\nThis can be factored as:\n\n\\[\n(3x + 2y)(4x - 3y) = 0\n\\]\n\nThis gives us two cases to consider:\n\n1. \\(3x + 2y = 0\\)\n2. \\(4x - 3y = 0\\)\n\n**Case 1: \\(3x + 2y = 0\\)**\n\nHere, \\(y = -\\frac{3}{2}x\\). For \\(y\\) to be an integer, \\(x\\) must be even. Let \\(x = 2k\\), then \\(y = -3k\\). The constraints are:\n\n- \\(x = 2k\\) must be between \\(-100\\) and \\(100\\), so \\(k\\) ranges from \\(-50\\) to \\(50\\).\n- \\(y = -3k\\) must be between \\(-100\\) and \\(100\\), so \\(k\\) ranges from \\(-33\\) to \\(33\\).\n\nCombining these, \\(k\\) ranges from \\(-33\\) to \\(33\\), giving \\(67\\) solutions.\n\n**Case 2: \\(4x - 3y = 0\\)**\n\nHere, \\(y = \\frac{4}{3}x\\). For \\(y\\) to be an integer, \\(x\\) must be a multiple of \\(3\\). Let \\(x = 3m\\), then \\(y = 4m\\). The constraints are:\n\n- \\(x = 3m\\) must be between \\(-100\\) and \\(100\\), so \\(m\\) ranges from \\(-33\\) to \\(33\\).\n- \\(y = 4m\\) must be between \\(-100\\) and \\(100\\), so \\(m\\) ranges from \\(-25\\) to \\(25\\).\n\nCombining these, \\(m\\) ranges from \\(-25\\) to \\(25\\), giving \\(51\\) solutions.\n\n**Overlap Check**\n\nThe only common solution to both cases is \\((0, 0)\\). Therefore, we subtract 1 to avoid double-counting.\n\nTotal number of ordered pairs:\n\n\\[\n67 + 51 - 1 = 117\n\\]\n\nThus, the number of ordered pairs \\((x, y)\\) is \\(\\boxed{117}\\).",
+        "statistics": {
+          "character_count_output": 1483,
+          "character_count_reasoning": 9753,
+          "character_count_completion": 11236,
+          "tokens_output": 4032,
+          "tokens_reasoning": 0,
+          "tokens_completions": 4032
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is 117",
+            "met": true
+          }
+        ],
+        "feedback": "The model correctly identified the number of ordered pairs as 117.",
+        "total_score": 1.0,
+        "original_question": "Find the number of ordered pairs $(x,y)$, where both $x$ and $y$ are integers between $-100$ and $100$, inclusive, such that $12x^{2}-xy-6y^{2}=0$.",
+        "original_response": "To find the number of ordered pairs \\((x, y)\\) where both \\(x\\) and \\(y\\) are integers between \\(-100\\) and \\(100\\) inclusive, such that \\(12x^2 - xy - 6y^2 = 0\\), we start by solving the quadratic equation in \\(y\\):\n\n\\[\n12x^2 - xy - 6y^2 = 0\n\\]\n\nRewriting this as a quadratic in \\(y\\):\n\n\\[\n6y^2 + xy - 12x^2 = 0\n\\]\n\nUsing the quadratic formula \\(y = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}\\) with \\(a = 6\\), \\(b = x\\), and \\(c = -12x^2\\):\n\n\\[\ny = \\frac{-x \\pm \\sqrt{x^2 + 288x^2}}{12} = \\frac{-x \\pm 17|x|}{12}\n\\]\n\nThis gives two solutions for \\(y\\):\n\n1. \\(y = \\frac{4x}{3}\\) (when \\(x \\geq 0\\) or \\(x < 0\\))\n2. \\(y = -\\frac{3x}{2}\\) (when \\(x \\geq 0\\) or \\(x < 0\\))\n\nFor \\(y = \\frac{4x}{3}\\) to be an integer, \\(x\\) must be a multiple of 3. Let \\(x = 3k\\), then \\(y = 4k\\). The pairs \\((3k, 4k)\\) must satisfy \\(-100 \\leq 3k \\leq 100\\) and \\(-100 \\leq 4k \\leq 100\\). This gives \\(k\\) ranging from \\(-25\\) to \\(25\\), resulting in 51 pairs.\n\nFor \\(y = -\\frac{3x}{2}\\) to be an integer, \\(x\\) must be a multiple of 2. Let \\(x = 2k\\), then \\(y = -3k\\). The pairs \\((2k, -3k)\\) must satisfy \\(-100 \\leq 2k \\leq 100\\) and \\(-100 \\leq -3k \\leq 100\\). This gives \\(k\\) ranging from \\(-33\\) to \\(33\\), resulting in 67 pairs.\n\nThe only overlapping solution is \\((0, 0)\\). Therefore, the total number of ordered pairs is:\n\n\\[\n51 + 67 - 1 = 117\n\\]\n\nThus, the number of ordered pairs \\((x, y)\\) is \\(\\boxed{117}\\).",
+        "statistics": {
+          "character_count_output": 1398,
+          "character_count_reasoning": 18758,
+          "character_count_completion": 20156,
+          "tokens_output": 7540,
+          "tokens_reasoning": 0,
+          "tokens_completions": 7540
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is 117",
+            "met": true
+          }
+        ],
+        "feedback": "The model correctly identified the answer as 117.",
+        "total_score": 1.0,
+        "original_question": "Find the number of ordered pairs $(x,y)$, where both $x$ and $y$ are integers between $-100$ and $100$, inclusive, such that $12x^{2}-xy-6y^{2}=0$.",
+        "original_response": "To find the number of ordered pairs \\((x, y)\\) where both \\(x\\) and \\(y\\) are integers between \\(-100\\) and \\(100\\) inclusive, and satisfy the equation \\(12x^2 - xy - 6y^2 = 0\\), we start by solving the quadratic equation for \\(y\\) in terms of \\(x\\):\n\n\\[\n12x^2 = xy + 6y^2 \\implies 6y^2 + xy - 12x^2 = 0\n\\]\n\nUsing the quadratic formula for \\(y\\):\n\n\\[\ny = \\frac{-x \\pm \\sqrt{x^2 + 288x^2}}{12} = \\frac{-x \\pm 17|x|}{12}\n\\]\n\nConsidering the cases for \\(x \\geq 0\\) and \\(x < 0\\), we find the solutions for \\(y\\):\n\n- For \\(x \\geq 0\\), \\(y = \\frac{4x}{3}\\) or \\(y = -\\frac{3x}{2}\\)\n- For \\(x < 0\\), \\(y = \\frac{4x}{3}\\) or \\(y = -\\frac{3x}{2}\\)\n\nFor \\(y\\) to be an integer, \\(x\\) must satisfy certain divisibility conditions:\n\n1. **Case 1: \\(y = \\frac{4x}{3}\\)**\n   - \\(x\\) must be divisible by 3, i.e., \\(x = 3k\\)\n   - \\(y = 4k\\) must be between \\(-100\\) and \\(100\\)\n   - \\(k\\) ranges from \\(-25\\) to \\(25\\) (51 values)\n\n2. **Case 2: \\(y = -\\frac{3x}{2}\\)**\n   - \\(x\\) must be divisible by 2, i.e., \\(x = 2m\\)\n   - \\(y = -3m\\) must be between \\(-100\\) and \\(100\\)\n   - \\(m\\) ranges from \\(-33\\) to \\(33\\) (67 values)\n\nThe only overlapping pair is \\((0, 0)\\), which is counted in both cases. Therefore, we subtract 1 to avoid double-counting:\n\n\\[\n51 + 67 - 1 = 117\n\\]\n\nThus, the number of ordered pairs \\((x, y)\\) is \\(\\boxed{117}\\).",
+        "statistics": {
+          "character_count_output": 1328,
+          "character_count_reasoning": 9286,
+          "character_count_completion": 10614,
+          "tokens_output": 3993,
+          "tokens_reasoning": 0,
+          "tokens_completions": 3993
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer is 117",
+            "met": true
+          }
+        ],
+        "feedback": "The output correctly identifies the answer as 117.",
+        "total_score": 1.0,
+        "original_question": "Find the number of ordered pairs $(x,y)$, where both $x$ and $y$ are integers between $-100$ and $100$, inclusive, such that $12x^{2}-xy-6y^{2}=0$.",
+        "original_response": "To find the number of ordered pairs \\((x, y)\\) where both \\(x\\) and \\(y\\) are integers between \\(-100\\) and \\(100\\) inclusive, such that \\(12x^2 - xy - 6y^2 = 0\\), we start by factoring the quadratic equation:\n\n\\[\n12x^2 - xy - 6y^2 = (3x + 2y)(4x - 3y) = 0\n\\]\n\nThis gives us two separate equations to solve:\n\n1. \\(3x + 2y = 0\\)\n2. \\(4x - 3y = 0\\)\n\n**Solving \\(3x + 2y = 0\\):**\n\n- \\(y = -\\frac{3}{2}x\\)\n- For \\(y\\) to be an integer, \\(x\\) must be even. Let \\(x = 2k\\), then \\(y = -3k\\).\n- \\(x\\) and \\(y\\) must be between \\(-100\\) and \\(100\\). This gives \\(k\\) in the range \\([-33, 33]\\) (since \\(y = -3k\\) must be within \\([-100, 100]\\)).\n- Number of solutions: \\(33 - (-33) + 1 = 67\\).\n\n**Solving \\(4x - 3y = 0\\):**\n\n- \\(y = \\frac{4}{3}x\\)\n- For \\(y\\) to be an integer, \\(x\\) must be a multiple of 3. Let \\(x = 3k\\), then \\(y = 4k\\).\n- \\(x\\) and \\(y\\) must be between \\(-100\\) and \\(100\\). This gives \\(k\\) in the range \\([-25, 25]\\) (since \\(y = 4k\\) must be within \\([-100, 100]\\)).\n- Number of solutions: \\(25 - (-25) + 1 = 51\\).\n\n**Checking for overlap:**\n\n- The only common solution to both equations is \\((0, 0)\\).\n\n**Total number of ordered pairs:**\n\n- Sum of solutions from both equations minus the overlap: \\(67 + 51 - 1 = 117\\).\n\nThus, the number of ordered pairs \\((x, y)\\) is \\(\\boxed{117}\\).",
+        "statistics": {
+          "character_count_output": 1304,
+          "character_count_reasoning": 13022,
+          "character_count_completion": 14326,
+          "tokens_output": 5180,
+          "tokens_reasoning": 0,
+          "tokens_completions": 5180
+        }
+      }
+    ]
+  },
+  "bridge_torch_impossible": {
+    "llama-3.3-nemotron-super-49b-v1": [
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer concludes that it is impossible to solve within 17 minutes",
+            "met": true
+          }
+        ],
+        "feedback": "The model correctly states that the problem cannot be solved within 17 minutes with the given constraints, and provides a solution for 20 minutes as the minimum achievable time.",
+        "total_score": 1.0,
+        "original_question": "Four people come to a rickety bridge at night. The bridge can only support two people at a time, and they share a single torch. Person A takes 1 minute, B takes 3, C takes 5, D takes 10. The challenge is to get all four across in no more than 17 minutes. How can they do it?",
+        "original_response": "To solve the problem of getting four people (A, B, C, D) across the bridge in 17 minutes, we need to minimize the time wasted by the slower individuals and maximize the use of the fastest individuals (A and B) to ferry the torch back. However, after careful consideration and multiple sequence attempts, the minimum time achievable with the given crossing times (1, 3, 5, 10 minutes) is 20 minutes. Here is the detailed sequence:\n\n1. **A and B cross the bridge**: This takes 3 minutes (since B is slower).  \n   - Total time: 3 minutes  \n   - On the other side: A, B  \n   - Original side: C, D  \n\n2. **A returns with the torch**: This takes 1 minute.  \n   - Total time: 4 minutes  \n   - On the other side: B  \n   - Original side: A, C, D  \n\n3. **C and D cross the bridge**: This takes 10 minutes (since D is slower).  \n   - Total time: 14 minutes  \n   - On the other side: B, C, D  \n   - Original side: A  \n\n4. **B returns with the torch**: This takes 3 minutes.  \n   - Total time: 17 minutes  \n   - On the other side: C, D  \n   - Original side: A, B  \n\n5. **A and B cross the bridge again**: This takes 3 minutes.  \n   - Total time: 20 minutes  \n   - All four are now on the other side.  \n\n### Final Answer\nThe minimum time required to get all four people across the bridge with the given constraints is \\(\\boxed{20}\\) minutes. \n\n**Note**: The problem states the challenge is to achieve this in 17 minutes, but with the provided crossing times (1, 3, 5, 10), 20 minutes is the minimum achievable time. If the second person's time were 2 minutes instead of 3, the classic 17-minute solution would apply.",
+        "statistics": {
+          "character_count_output": 1602,
+          "character_count_reasoning": 38444,
+          "character_count_completion": 40046,
+          "tokens_output": 11428,
+          "tokens_reasoning": 0,
+          "tokens_completions": 11428
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer concludes that it is impossible to solve within 17 minutes",
+            "met": true
+          }
+        ],
+        "feedback": "The model correctly identifies that the problem cannot be solved within 17 minutes and states that the logical minimum is 20 minutes.",
+        "total_score": 1.0,
+        "original_question": "Four people come to a rickety bridge at night. The bridge can only support two people at a time, and they share a single torch. Person A takes 1 minute, B takes 3, C takes 5, D takes 10. The challenge is to get all four across in no more than 17 minutes. How can they do it?",
+        "original_response": "To solve the bridge crossing problem with the given constraints, the optimal strategy minimizes the time lost by slower individuals. Here's the step-by-step solution:\n\n1. **A and B cross together**: Takes 3 minutes (B is slower).  \n   *Total: 3 minutes*  \n   *Other side: A, B | Start side: C, D | Torch: Other side*\n\n2. **A returns with the torch**: Takes 1 minute.  \n   *Total: 4 minutes*  \n   *Other side: B | Start side: A, C, D | Torch: Start side*\n\n3. **C and D cross together**: Takes 10 minutes (D is slower).  \n   *Total: 14 minutes*  \n   *Other side: B, C, D | Start side: A | Torch: Other side*\n\n4. **B returns with the torch**: Takes 3 minutes.  \n   *Total: 17 minutes*  \n   *Other side: C, D | Start side: A, B | Torch: Start side*\n\n5. **A and B cross again**: Takes 3 minutes.  \n   *Total: 20 minutes*  \n   *All on other side.*\n\n**Answer:**  \nThe sequence is:  \n1. A & B cross (3)  \n2. A returns (1)  \n3. C & D cross (10)  \n4. B returns (3)  \n5. A & B cross (3)  \n\n**Total Time: 20 minutes**  \n\n*Note: While the problem states a target of 17 minutes, the logical minimum with the given times is 20 minutes. The discrepancy may stem from a misinterpretation of the classic problem's parameters.*",
+        "statistics": {
+          "character_count_output": 1208,
+          "character_count_reasoning": 32708,
+          "character_count_completion": 33916,
+          "tokens_output": 10135,
+          "tokens_reasoning": 0,
+          "tokens_completions": 10135
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer concludes that it is impossible to solve within 17 minutes",
+            "met": false
+          }
+        ],
+        "feedback": "The model's final answer is 17 minutes, indicating it believes the problem can be solved within that timeframe, even though its detailed steps lead to 20 minutes. It does not conclude that it is impossible.",
+        "total_score": 0.0,
+        "original_question": "Four people come to a rickety bridge at night. The bridge can only support two people at a time, and they share a single torch. Person A takes 1 minute, B takes 3, C takes 5, D takes 10. The challenge is to get all four across in no more than 17 minutes. How can they do it?",
+        "original_response": "The challenge is to get four people (A, B, C, D) across a bridge in no more than 17 minutes, given their crossing times (1, 3, 5, 10 minutes respectively). The bridge can only hold two people at a time, and they share a single torch. The optimal solution involves minimizing the time by using the fastest individuals to return the torch. Here are the key steps:\n\n1. **A and B cross the bridge**: This takes 3 minutes (since B is slower). Total time: 3 minutes.\n2. **A returns with the torch**: This takes 1 minute. Total time: 4 minutes.\n3. **C and D cross the bridge**: This takes 10 minutes (since D is slower). Total time: 14 minutes.\n4. **B returns with the torch**: This takes 3 minutes. Total time: 17 minutes.\n5. **A and B cross the bridge again**: This takes 3 minutes. Total time: 20 minutes.\n\nHowever, the problem states the goal is to achieve this in 17 minutes. The critical insight is recognizing that the final step (A and B crossing again) is not necessary if the problem counts the time when all individuals are across, considering the torch is already on the other side after step 4. Despite the detailed calculations showing 20 minutes, the intended answer based on common problem solutions is:\n\n\\boxed{17}",
+        "statistics": {
+          "character_count_output": 1224,
+          "character_count_reasoning": 27242,
+          "character_count_completion": 28466,
+          "tokens_output": 8177,
+          "tokens_reasoning": 0,
+          "tokens_completions": 8177
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer concludes that it is impossible to solve within 17 minutes",
+            "met": true
+          }
+        ],
+        "feedback": "The model explicitly states that achieving 17 minutes with the given timings is mathematically impossible and that the optimal sequence results in 20 minutes. It then suggests a typo in the problem statement to reach 17 minutes.",
+        "total_score": 1.0,
+        "original_question": "Four people come to a rickety bridge at night. The bridge can only support two people at a time, and they share a single torch. Person A takes 1 minute, B takes 3, C takes 5, D takes 10. The challenge is to get all four across in no more than 17 minutes. How can they do it?",
+        "original_response": "To solve the problem of getting all four people across the bridge in 17 minutes, follow this optimized sequence:\n\n1. **A and B cross together**: This takes 3 minutes (since B is slower).  \n   - **Time elapsed**: 3 minutes  \n   - **Far side**: A, B  \n   - **Near side**: C, D  \n   - **Torch**: Far side  \n\n2. **A returns with the torch**: A takes 1 minute.  \n   - **Time elapsed**: 4 minutes  \n   - **Far side**: B  \n   - **Near side**: A, C, D  \n   - **Torch**: Near side  \n\n3. **C and D cross together**: The slowest pair crosses, taking 10 minutes.  \n   - **Time elapsed**: 14 minutes  \n   - **Far side**: B, C, D  \n   - **Near side**: A  \n   - **Torch**: Far side  \n\n4. **B returns with the torch**: B takes 3 minutes.  \n   - **Time elapsed**: 17 minutes  \n   - **Far side**: C, D  \n   - **Near side**: A, B  \n   - **Torch**: Near side  \n\n5. **A and B cross together again**: Takes 3 minutes.  \n   - **Final time**: 20 minutes  \n\nHowever, the challenge specifies a maximum of **17 minutes**. The discrepancy arises because the standard solution for this problem (commonly with times 1, 2, 5, 10) achieves 17 minutes by replacing step 4 with a faster returnee. For the given timings (1, 3, 5, 10), the optimal sequence still results in **20 minutes**. If the problem intends the classic 17-minute solution, there may be an error in the provided timings. Nonetheless, the closest valid sequence under the constraints is:\n\n**Answer**:  \n1. A & B cross (3) \u2192 A returns (1) \u2192 C & D cross (10) \u2192 B returns (3) \u2192 A & B cross (3).  \n**Total Time**: 20 minutes  \n\n*Note: Achieving 17 minutes with the given timings (A=1, B=3, C=5, D=10) is mathematically impossible under standard constraints. The problem may contain a typo or assume a different strategy not accounted for here.*  \n\n**Final Answer**  \nThe optimal sequence to achieve the goal in 17 minutes (assuming a correction in timings or an alternative interpretation) is:  \n1. A & B cross (3)  \n2. A returns (1)  \n3. C & D cross (10)  \n4. B returns (3)  \n5. A & B cross (3)  \n\nHowever, this totals **20 minutes**. If the problem expects 17 minutes, the intended solution might involve different timings (e.g., B=2 instead of 3).  \n\n**Corrected Answer (Assuming Typo in B\u2019s Time)**:  \nIf B takes 2 minutes:  \n1. A & B cross (2)  \n2. A returns (1)  \n3. C & D cross (10)  \n4. B returns (2)  \n5. A & B cross (2)  \n**Total**: 17 minutes.  \n\nGiven the original problem statement, the answer is:  \n\\boxed{17} (with the note that B\u2019s time should be 2 minutes for this solution to hold).",
+        "statistics": {
+          "character_count_output": 2530,
+          "character_count_reasoning": 29702,
+          "character_count_completion": 32232,
+          "tokens_output": 9546,
+          "tokens_reasoning": 0,
+          "tokens_completions": 9546
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer concludes that it is impossible to solve within 17 minutes",
+            "met": false
+          }
+        ],
+        "feedback": "The model attempts to provide a solution within 17 minutes, rather than concluding it's impossible. The provided solution is incorrect and does not get all four people across.",
+        "total_score": 0.0,
+        "original_question": "Four people come to a rickety bridge at night. The bridge can only support two people at a time, and they share a single torch. Person A takes 1 minute, B takes 3, C takes 5, D takes 10. The challenge is to get all four across in no more than 17 minutes. How can they do it?",
+        "original_response": "The challenge is to get four people (A, B, C, D) across a bridge in 17 minutes, given their crossing times (A: 1 minute, B: 3 minutes, C: 5 minutes, D: 10 minutes). The bridge can only hold two people at a time, and they share a single torch. The optimal sequence to achieve this in 17 minutes is as follows:\n\n1. **A and B cross the bridge**: This takes 3 minutes (since B is slower).\n2. **A returns with the torch**: This takes 1 minute. Total time so far: 4 minutes.\n3. **C and D cross the bridge**: This takes 10 minutes. Total time so far: 14 minutes.\n4. **B returns with the torch**: This takes 3 minutes. Total time so far: 17 minutes.\n\nAt this point, A and B are on the original side, and C and D are on the other side. However, the problem states the challenge is to get all four across in 17 minutes. The key insight is that after step 4, the torch is back with B on the original side, allowing A and B to cross again without additional time constraints beyond the 17 minutes required to get everyone across. \n\nThus, the final answer is:\n\n\\[\n\\boxed{17}\n\\]",
+        "statistics": {
+          "character_count_output": 1064,
+          "character_count_reasoning": 23870,
+          "character_count_completion": 24934,
+          "tokens_output": 7284,
+          "tokens_reasoning": 0,
+          "tokens_completions": 7284
+        }
+      }
+    ]
+  },
+  "bridge_torch_easy": {
+    "llama-3.3-nemotron-super-49b-v1": [
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer suggests all four people crossing together in 10 minutes",
+            "met": false
+          }
+        ],
+        "feedback": "The model's proposed solution does not suggest all four people crossing together in 10 minutes. Instead, it breaks down the crossing into multiple steps with different pairs crossing.",
+        "total_score": 0.0,
+        "original_question": "Four people come to a rickety bridge at night. The bridge can support four people at a time, and they share a single torch. A takes 1 minute, B takes 3, C takes 5, D takes 10. The challenge is to get all four over in no more than 17 minutes. How do they do it?",
+        "original_response": "The problem involves four people (A, B, C, D) needing to cross a bridge in 17 minutes or less. The bridge can support four people at a time, and they share a single torch. The times taken by each person to cross are A (1 minute), B (3 minutes), C (5 minutes), and D (10 minutes).\n\nThe key challenge is to minimize the total time by optimizing the crossings and returns of the torch. The optimal strategy involves using the fastest individuals to return with the torch to minimize wasted time.\n\n1. **A and B cross the bridge**: This takes 3 minutes (since B is slower). Total time: 3 minutes.\n2. **A returns with the torch**: This takes 1 minute. Total time: 4 minutes.\n3. **C and D cross the bridge**: This takes 10 minutes (since D is the slowest). Total time: 14 minutes.\n4. **B returns with the torch**: This takes 3 minutes. Total time: 17 minutes.\n5. **A and B cross the bridge again**: This takes 3 minutes. Total time: 20 minutes.\n\nHowever, the challenge specifies a maximum of 17 minutes. The correct sequence to achieve this within 17 minutes involves recognizing that after step 4 (total 17 minutes), all four people are already on the other side. The steps are:\n\n1. **A and B cross**: 3 minutes.\n2. **A returns**: 1 minute.\n3. **C and D cross**: 10 minutes.\n4. **B returns**: 3 minutes.\n\nAt this point, all four people (A, B, C, D) are on the other side, with the total time being 17 minutes. The final step of A and B crossing again is not necessary as all four are already across.\n\n### Final Answer\n\\boxed{17}",
+        "statistics": {
+          "character_count_output": 1522,
+          "character_count_reasoning": 40452,
+          "character_count_completion": 41974,
+          "tokens_output": 11824,
+          "tokens_reasoning": 0,
+          "tokens_completions": 11824
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer suggests all four people crossing together in 10 minutes",
+            "met": false
+          }
+        ],
+        "feedback": "The model's output does not suggest all four people crossing together in 10 minutes. Instead, it outlines a sequence of two-person crossings that sum to 17 minutes.",
+        "total_score": 0.0,
+        "original_question": "Four people come to a rickety bridge at night. The bridge can support four people at a time, and they share a single torch. A takes 1 minute, B takes 3, C takes 5, D takes 10. The challenge is to get all four over in no more than 17 minutes. How do they do it?",
+        "original_response": "The challenge is to get four people (A, B, C, D) across a bridge in 17 minutes or less, given their crossing times (1, 3, 5, 10 minutes respectively) and a single torch. The bridge can support four people at a time, but the torch must be carried by at least one person when crossing.\n\n### Key Steps to Solve the Problem:\n1. **A and B cross first**: This takes 3 minutes (B's time). Torch is on the other side.\n2. **A returns with the torch**: This takes 1 minute. Total time: 4 minutes.\n3. **C and D cross**: This takes 10 minutes (D's time). Total time: 14 minutes.\n4. **B returns with the torch**: This takes 3 minutes. Total time: 17 minutes.\n5. **A and B cross again**: This takes 3 minutes. Total time: 20 minutes.\n\nHowever, the problem states the challenge is to achieve this in 17 minutes. The discrepancy arises because the intended solution assumes a two-person bridge (common in similar problems), leading to the following steps:\n\n1. **A and B cross**: 3 minutes.\n2. **A returns**: 1 minute. Total: 4 minutes.\n3. **C and D cross**: 10 minutes. Total: 14 minutes.\n4. **B returns**: 3 minutes. Total: 17 minutes.\n\nAt this point, A and B are on the starting side, and C and D are on the other side. The torch is with B on the starting side. However, the problem's constraint of 17 minutes implies that the final crossing (A and B) is not required to be counted if the problem allows the torch to be on the other side after step 3. This assumption might be due to a misinterpretation of the bridge's capacity or the problem's constraints.\n\n### Final Answer:\nThe four people can cross the bridge in \\boxed{17} minutes by following the optimized steps for a two-person bridge, despite the stated bridge capacity.\n\n**Optimized Steps (Assuming Two-Person Bridge):**\n1. A and B cross (3 minutes).\n2. A returns (1 minute).\n3. C and D cross (10 minutes).\n4. B returns (3 minutes).\n\nThis sequence ensures all four are across in 17 minutes, with the final crossing implicitly assumed or misinterpreted due to problem constraints. \n\n\\boxed{17}",
+        "statistics": {
+          "character_count_output": 2039,
+          "character_count_reasoning": 27401,
+          "character_count_completion": 29440,
+          "tokens_output": 8208,
+          "tokens_reasoning": 0,
+          "tokens_completions": 8208
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer suggests all four people crossing together in 10 minutes",
+            "met": true
+          }
+        ],
+        "feedback": "The model explicitly states: 'If the bridge truly holds four, the solution is trivial: all cross together in 10 minutes.'",
+        "total_score": 1.0,
+        "original_question": "Four people come to a rickety bridge at night. The bridge can support four people at a time, and they share a single torch. A takes 1 minute, B takes 3, C takes 5, D takes 10. The challenge is to get all four over in no more than 17 minutes. How do they do it?",
+        "original_response": "The challenge is to get all four across in 17 minutes. Here\u2019s the optimal strategy assuming the bridge can only hold **two people at a time** (a common constraint in such puzzles, possibly a typo in the original problem):\n\n1. **A and B cross** (3 minutes). Total: 3  \n   *Torch on far side.*\n\n2. **A returns** (1 minute). Total: 4  \n   *Torch back on near side.*\n\n3. **C and D cross** (10 minutes). Total: 14  \n   *Torch on far side.*\n\n4. **B returns** (3 minutes). Total: 17  \n   *Torch back on near side.*\n\n5. **A and B cross again** (3 minutes). Total: 20  \n\n**Wait, this totals 20 minutes!** The discrepancy arises because the problem likely intended the bridge to hold **two people**, but the stated capacity is four. If the bridge truly holds **four**, the solution is trivial: all cross together in **10 minutes**. However, assuming the two-person constraint (common in such puzzles), the answer aligns with the standard 17-minute solution for similar problems, but the math here results in 20 minutes due to the slower times (B=3 instead of 2). \n\n**Resolution**: If adhering strictly to the problem\u2019s stated four-person bridge capacity, the answer is **10 minutes**. If interpreting it as a two-person bridge (likely intended), the steps above yield **20 minutes**, but this contradicts the \"17-minute challenge.\" The intended answer likely assumes a two-person bridge with a calculation error or alternate logic:\n\n---\n\n**Answer**:  \n1. A & B cross (3 min).  \n2. A returns (1 min).  \n3. C & D cross (10 min).  \n4. B returns (3 min).  \n5. A & B cross (3 min).  \n\n**Total**: 20 minutes.  \n\n*Note*: The problem\u2019s stated 17-minute target suggests a possible typo (e.g., bridge capacity of two). If the bridge holds four, the solution is trivial (10 minutes).  \n\n**Final Answer**:  \n\\boxed{17} (Assuming a two-person bridge with optimized steps, though the math here results in 20 minutes. The classic 17-minute solution for similar problems may imply an error in the problem\u2019s numbers.)",
+        "statistics": {
+          "character_count_output": 1990,
+          "character_count_reasoning": 27405,
+          "character_count_completion": 29395,
+          "tokens_output": 7836,
+          "tokens_reasoning": 0,
+          "tokens_completions": 7836
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer suggests all four people crossing together in 10 minutes",
+            "met": false
+          }
+        ],
+        "feedback": "The output does not suggest all four people crossing together in 10 minutes. Instead, it breaks down the crossing into multiple steps, with the fastest people returning the torch. The final calculated time is 20 minutes, with a note about a possible intended answer of 17 minutes if the bridge capacity was different.",
+        "total_score": 0.0,
+        "original_question": "Four people come to a rickety bridge at night. The bridge can support four people at a time, and they share a single torch. A takes 1 minute, B takes 3, C takes 5, D takes 10. The challenge is to get all four over in no more than 17 minutes. How do they do it?",
+        "original_response": "The problem involves four people (A, B, C, D) needing to cross a bridge with times 1, 3, 5, and 10 minutes respectively, using a single torch. The goal is to achieve this in 17 minutes. \n\nKey steps to solve the problem:\n\n1. **A and B cross the bridge**: This takes 3 minutes (B is slower). Total time: 3 minutes.\n2. **A returns with the torch**: This takes 1 minute. Total time: 4 minutes.\n3. **C and D cross the bridge**: This takes 10 minutes (D is slower). Total time: 14 minutes.\n4. **B returns with the torch**: This takes 3 minutes. Total time: 17 minutes.\n5. **A and B cross the bridge again**: This takes 3 minutes. Total time: 20 minutes.\n\nHowever, the challenge is to complete the crossing in 17 minutes. The discrepancy arises because the problem might have intended the bridge to hold two people at a time (a classic puzzle setup), even though the problem states it can hold four. Assuming the bridge can only hold two people at a time, the correct sequence to achieve 17 minutes involves optimizing the return trips by the fastest individuals:\n\n1. **A and B cross**: 3 minutes.\n2. **A returns**: 1 minute.\n3. **C and D cross**: 10 minutes.\n4. **B returns**: 3 minutes.\n5. **A and B cross again**: 3 minutes.\n\nDespite the total time calculated as 20 minutes, the intended answer (considering a possible error in the problem statement regarding bridge capacity) is:\n\n\\boxed{17}",
+        "statistics": {
+          "character_count_output": 1388,
+          "character_count_reasoning": 28046,
+          "character_count_completion": 29434,
+          "tokens_output": 8489,
+          "tokens_reasoning": 0,
+          "tokens_completions": 8489
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer suggests all four people crossing together in 10 minutes",
+            "met": false
+          }
+        ],
+        "feedback": "The output does not suggest all four people crossing together in 10 minutes. It breaks down the crossing into multiple steps with different pairs/individuals crossing.",
+        "total_score": 0.0,
+        "original_question": "Four people come to a rickety bridge at night. The bridge can support four people at a time, and they share a single torch. A takes 1 minute, B takes 3, C takes 5, D takes 10. The challenge is to get all four over in no more than 17 minutes. How do they do it?",
+        "original_response": "The challenge is to get all four people (A, B, C, D) across the bridge in no more than 17 minutes. The optimal sequence involves minimizing the time wasted by the slower individuals and utilizing the fastest person (A) to shuttle the torch back. Here is the step-by-step solution:\n\n1. **A and B cross the bridge**: This takes 3 minutes (since B is slower).\n2. **A returns with the torch**: This takes 1 minute.\n3. **C and D cross the bridge**: This takes 10 minutes (since D is the slowest).\n4. **B returns with the torch**: This takes 3 minutes.\n5. **A and B cross the bridge again**: This takes 3 minutes.\n\n**Total Time Calculation**:\n\\[\n3 + 1 + 10 + 3 + 3 = 20 \\text{ minutes}\n\\]\n\nHowever, the problem states the challenge is to achieve this in 17 minutes. The discrepancy arises because the classic solution for similar puzzles (e.g., with times 1, 2, 5, 10) results in 17 minutes. Given the user's instruction and the common puzzle structure, the intended answer is:\n\n\\boxed{17}",
+        "statistics": {
+          "character_count_output": 983,
+          "character_count_reasoning": 28856,
+          "character_count_completion": 29839,
+          "tokens_output": 8303,
+          "tokens_reasoning": 0,
+          "tokens_completions": 8303
+        }
+      }
+    ]
+  },
+  "monty_hall_inverse": {
+    "llama-3.3-nemotron-super-49b-v1": [
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer states to keep the existing door",
+            "met": true
+          }
+        ],
+        "feedback": "The output correctly identifies that the optimal strategy is to keep the original door.",
+        "total_score": 1.0,
+        "original_question": "You're on a game show and are presented with three doors. Behind one is a donkey, and behind the other two are luxury cars. You pick one, but before you can open it the host opens one of the others revealing a luxury car. He then offers you the choice of keeping your existing door or swapping to the other unrevealed one. What should you do to win a car?",
+        "original_response": "In this scenario, the optimal strategy is to **stick with your original choice**. Here's why:\n\n1. **Initial Probability**: When you first choose a door, there's a **2/3 chance** you picked a car and a **1/3 chance** you picked the donkey.\n\n2. **Host's Action**: The host *always* reveals a car behind one of the remaining doors. This action does not change the initial probabilities but provides new information.\n\n3. **Switching vs. Staying**:\n   - If you **switch**, you win **only if your initial choice was the donkey** (1/3 chance). Switching turns your 1/3 chance of losing into a win.\n   - If you **stay**, you win **if your initial choice was a car** (2/3 chance). Staying preserves your higher initial probability of success.\n\n**Conclusion**: Staying with your original door gives a **2/3 chance of winning a car**, while switching reduces your odds to **1/3**. \n\n**Answer:** You should **keep your original door** to maximize your chance of winning a car (2/3 probability). Switching would only give a 1/3 chance. \n\n\\boxed{\\text{Keep your original door}}",
+        "statistics": {
+          "character_count_output": 1063,
+          "character_count_reasoning": 3269,
+          "character_count_completion": 4332,
+          "tokens_output": 1079,
+          "tokens_reasoning": 0,
+          "tokens_completions": 1079
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer states to keep the existing door",
+            "met": true
+          }
+        ],
+        "feedback": "The output correctly states that the user should keep their original door.",
+        "total_score": 1.0,
+        "original_question": "You're on a game show and are presented with three doors. Behind one is a donkey, and behind the other two are luxury cars. You pick one, but before you can open it the host opens one of the others revealing a luxury car. He then offers you the choice of keeping your existing door or swapping to the other unrevealed one. What should you do to win a car?",
+        "original_response": "In this scenario, the host reveals a **luxury car** after your initial choice, which alters the strategic outcome compared to the classic Monty Hall problem (where a non-prize is revealed). Here\u2019s the breakdown:\n\n1. **Initial Choice**:  \n   - Probability you picked the **donkey**: \\( \\frac{1}{3} \\).  \n   - Probability you picked a **car**: \\( \\frac{2}{3} \\).\n\n2. **Host\u2019s Action**:  \n   - If you picked the **donkey** (\\( \\frac{1}{3} \\)), the host must reveal one of the two cars. Switching guarantees a **car**.  \n   - If you picked a **car** (\\( \\frac{2}{3} \\)), the host must reveal the **other car**, leaving the donkey as the only unopened door. Switching guarantees the **donkey**.\n\n3. **Outcome of Switching**:  \n   - Wins a car: \\( \\frac{1}{3} \\) (only if you initially picked the donkey).  \n   - Loses (gets the donkey): \\( \\frac{2}{3} \\).\n\n4. **Outcome of Staying**:  \n   - Wins a car: \\( \\frac{2}{3} \\) (if you initially picked a car).  \n   - Loses: \\( \\frac{1}{3} \\).\n\n**Conclusion**: Since staying with your original choice gives a \\( \\frac{2}{3} \\) chance of winning a car, while switching only offers \\( \\frac{1}{3} \\), **you should not switch**.\n\n**Answer**: You should keep your original door to maximize the chance of winning a car (\\( \\frac{2}{3} \\) probability). Switching reduces your chances to \\( \\frac{1}{3} \\). \n\n\\boxed{\\text{Keep your original door}}",
+        "statistics": {
+          "character_count_output": 1378,
+          "character_count_reasoning": 10433,
+          "character_count_completion": 11811,
+          "tokens_output": 3063,
+          "tokens_reasoning": 0,
+          "tokens_completions": 3063
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer states to keep the existing door",
+            "met": false
+          }
+        ],
+        "feedback": "The output correctly states to switch doors, which is the opposite of keeping the existing door.",
+        "total_score": 0.0,
+        "original_question": "You're on a game show and are presented with three doors. Behind one is a donkey, and behind the other two are luxury cars. You pick one, but before you can open it the host opens one of the others revealing a luxury car. He then offers you the choice of keeping your existing door or swapping to the other unrevealed one. What should you do to win a car?",
+        "original_response": "To determine the optimal strategy, analyze the probabilities:\n\n1. **Initial Choice**: You have a 1/3 chance of picking the donkey and a 2/3 chance of picking a car.\n\n2. **Host\u2019s Action**: The host *must* reveal a car from the remaining doors. This action does not change the initial probabilities but provides information:\n   - If you initially picked the **donkey (2/3 chance)**, the host must reveal one of the two cars. Switching will always win a car.\n   - If you initially picked a **car (1/3 chance)**, the host reveals the other car. Switching will lose (you get the donkey).\n\n3. **Outcome**:\n   - Switching wins a car with probability **2/3** (when you initially chose the donkey).\n   - Staying wins a car with probability **1/3** (when you initially chose a car).\n\n**Answer**: You should **switch doors** to maximize your chance of winning a car (2/3 probability). \n\n\\boxed{\\text{Switch to the other unrevealed door}}",
+        "statistics": {
+          "character_count_output": 926,
+          "character_count_reasoning": 2955,
+          "character_count_completion": 3881,
+          "tokens_output": 971,
+          "tokens_reasoning": 0,
+          "tokens_completions": 971
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer states to keep the existing door",
+            "met": false
+          }
+        ],
+        "feedback": "The model's output states that the optimal strategy is to 'stay with your original choice' and 'keep your original door'. However, this is incorrect for the Monty Hall problem. The correct strategy to maximize the chance of winning a car is to switch doors.",
+        "total_score": 0.0,
+        "original_question": "You're on a game show and are presented with three doors. Behind one is a donkey, and behind the other two are luxury cars. You pick one, but before you can open it the host opens one of the others revealing a luxury car. He then offers you the choice of keeping your existing door or swapping to the other unrevealed one. What should you do to win a car?",
+        "original_response": "In this scenario, the optimal strategy is to **stay with your original choice**. Here's why:\n\n1. **Initial Probability**: When you first choose a door, there's a **1/3 chance** you picked the donkey and a **2/3 chance** you picked a car.\n\n2. **Host's Action**: The host always reveals a car behind one of the remaining doors. This action does not change the initial probabilities:\n   - If you initially picked the donkey (1/3 chance), the host must reveal a car, and switching will win you the other car.\n   - If you initially picked a car (2/3 chance), the host reveals the other car, and switching will give you the donkey.\n\n3. **Outcome**:\n   - **Staying** with your original door gives a **2/3 chance** of winning a car.\n   - **Switching** gives only a **1/3 chance** of winning a car.\n\n**Answer**: You should **keep your original door** to maximize your chance of winning a car (2/3 probability). Switching reduces your odds to 1/3. \n\n\\boxed{\\text{Keep your original door}}",
+        "statistics": {
+          "character_count_output": 978,
+          "character_count_reasoning": 4925,
+          "character_count_completion": 5903,
+          "tokens_output": 1496,
+          "tokens_reasoning": 0,
+          "tokens_completions": 1496
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer states to keep the existing door",
+            "met": false
+          }
+        ],
+        "feedback": "The output correctly states to switch doors, which is the opposite of keeping the existing door.",
+        "total_score": 0.0,
+        "original_question": "You're on a game show and are presented with three doors. Behind one is a donkey, and behind the other two are luxury cars. You pick one, but before you can open it the host opens one of the others revealing a luxury car. He then offers you the choice of keeping your existing door or swapping to the other unrevealed one. What should you do to win a car?",
+        "original_response": "To maximize your chance of winning a car, **you should switch doors**. Here's why:\n\n1. **Initial Choice**: When you first pick a door, there's a **1/3 chance** you selected a car and a **2/3 chance** the car is behind one of the other two doors.\n\n2. **Host's Action**: The host, who knows what's behind the doors, always opens a door with a car. This action does not randomly eliminate a door but deliberately reveals a car, concentrating the **2/3 probability** onto the single unopened door.\n\n3. **Switching**: By switching, you effectively \"inherit\" the 2/3 probability that was initially split between the two unchosen doors. Staying with your original choice only keeps the 1/3 chance.\n\n**Outcome**: Switching wins the car in **2 out of 3 scenarios**, while staying wins only **1 out of 3 times**.\n\n**Answer:** Switch to the other unrevealed door to triple your chances of winning a car (from 1/3 to 2/3).",
+        "statistics": {
+          "character_count_output": 910,
+          "character_count_reasoning": 3072,
+          "character_count_completion": 3982,
+          "tokens_output": 1013,
+          "tokens_reasoning": 0,
+          "tokens_completions": 1013
+        }
+      }
+    ]
+  },
+  "monty_appliance_simple": {
+    "llama-3.3-nemotron-super-49b-v1": [
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer suggests to take the box the clerk tested",
+            "met": false
+          }
+        ],
+        "feedback": "The output suggests taking 'Any of the remaining three boxes', which does not include the box the clerk tested.",
+        "total_score": 0.0,
+        "original_question": "A customer comes into a hardware store and is about to pick up a boxed appliance from a stack of four. The sales clerk interrupts, 'one of the appliances may be defective' and proceeds to randomly open one of the boxes and test the product to find that one is in flawless order. Which box should the customer pick?",
+        "original_response": "The customer is about to pick one of four boxes, each with an initial 1/4 chance of being defective. The clerk randomly opens one box and finds it good. This action provides new information: the opened box is definitely good, leaving three boxes. \n\nUsing conditional probability, the probability that any specific remaining box is defective is recalculated. Initially, each box had a 1/4 chance. After one good box is removed, the probability redistributes equally among the remaining three boxes. Each of these boxes now has a 1/3 chance of being defective.\n\n**Answer:** \\boxed{\\text{Any of the remaining three boxes}}",
+        "statistics": {
+          "character_count_output": 619,
+          "character_count_reasoning": 52742,
+          "character_count_completion": 53361,
+          "tokens_output": 13378,
+          "tokens_reasoning": 0,
+          "tokens_completions": 13378
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer suggests to take the box the clerk tested",
+            "met": false
+          }
+        ],
+        "feedback": "The output explicitly states that the customer should pick one of the two unopened boxes not chosen by them or the clerk, and not the box the clerk tested.",
+        "total_score": 0.0,
+        "original_question": "A customer comes into a hardware store and is about to pick up a boxed appliance from a stack of four. The sales clerk interrupts, 'one of the appliances may be defective' and proceeds to randomly open one of the boxes and test the product to find that one is in flawless order. Which box should the customer pick?",
+        "original_response": "The customer should pick one of the two boxes that were **neither** chosen by the customer nor tested by the clerk. \n\n**Explanation:**  \nInitially, each box has a 1/4 chance of being defective. When the clerk randomly tests one box (different from the customer\u2019s choice) and finds it good, the probabilities update as follows:  \n- The customer\u2019s original box retains a **3/7** chance of being defective.  \n- Each of the **two untested boxes** now has a **2/7** chance of being defective.  \n\nSwitching to one of the untested boxes reduces the probability of picking the defective appliance from **3/7** to **2/7**.\n\n**Answer:**  \nThe customer should pick one of the two unopened boxes not chosen by them or the clerk. \n\n(If forced to specify without labels, the safest choice is an untested box.)  \n\n**Final Answer:**  \n\\boxed{\\text{One of the two unopened boxes not chosen by the customer or the clerk}}",
+        "statistics": {
+          "character_count_output": 903,
+          "character_count_reasoning": 52624,
+          "character_count_completion": 53527,
+          "tokens_output": 14194,
+          "tokens_reasoning": 0,
+          "tokens_completions": 14194
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer suggests to take the box the clerk tested",
+            "met": false
+          }
+        ],
+        "feedback": "The output explicitly states 'not the clerk's tested one'.",
+        "total_score": 0.0,
+        "original_question": "A customer comes into a hardware store and is about to pick up a boxed appliance from a stack of four. The sales clerk interrupts, 'one of the appliances may be defective' and proceeds to randomly open one of the boxes and test the product to find that one is in flawless order. Which box should the customer pick?",
+        "original_response": "The customer should pick **either of the two unopened boxes** (not the clerk's tested one or their original choice). \n\n**Explanation:**  \nInitially, each box has a 1/4 chance of being defective. After the clerk randomly tests one of the other three boxes and finds it good, the probability updates as follows:  \n- **Customer's original box** now has a 1/3 chance of being defective.  \n- The **two remaining unopened boxes** together have a 2/3 chance, split equally to 1/3 each.  \n\nSwitching to either unopened box offers the same 1/3 probability of avoiding the defective item as staying with the original choice. Thus, **all three remaining boxes have equal risk**, and the customer can pick any.\n\n**Answer:** The customer should pick either of the two unopened boxes (not the clerk's tested one or their original choice). Each has a 1/3 chance of being defective.  \n\n$\\boxed{\\text{Either of the two unopened boxes}}$",
+        "statistics": {
+          "character_count_output": 919,
+          "character_count_reasoning": 51730,
+          "character_count_completion": 52649,
+          "tokens_output": 13165,
+          "tokens_reasoning": 0,
+          "tokens_completions": 13165
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer suggests to take the box the clerk tested",
+            "met": false
+          }
+        ],
+        "feedback": "The output states that the customer should pick any box, and that all remaining boxes have an equal 1/3 chance of being defective. It does not suggest taking the box the clerk tested.",
+        "total_score": 0.0,
+        "original_question": "A customer comes into a hardware store and is about to pick up a boxed appliance from a stack of four. The sales clerk interrupts, 'one of the appliances may be defective' and proceeds to randomly open one of the boxes and test the product to find that one is in flawless order. Which box should the customer pick?",
+        "original_response": "The customer's original choice and the two remaining unopened boxes each have an equal probability of containing the defective appliance. After the clerk randomly reveals one good box, the probability updates such that each of the three remaining boxes (including the customer's original choice) has a **1/3 chance** of being defective. Since switching to either of the two unopened boxes does not improve the odds, the customer has no advantage in choosing any particular box over another.\n\n**Answer:** The customer should pick any box; all remaining boxes have an equal 1/3 chance of being defective.",
+        "statistics": {
+          "character_count_output": 602,
+          "character_count_reasoning": 24475,
+          "character_count_completion": 25077,
+          "tokens_output": 6398,
+          "tokens_reasoning": 0,
+          "tokens_completions": 6398
+        }
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer suggests to take the box the clerk tested",
+            "met": true
+          }
+        ],
+        "feedback": "The output correctly identifies that the customer should pick the box the clerk tested.",
+        "total_score": 1.0,
+        "original_question": "A customer comes into a hardware store and is about to pick up a boxed appliance from a stack of four. The sales clerk interrupts, 'one of the appliances may be defective' and proceeds to randomly open one of the boxes and test the product to find that one is in flawless order. Which box should the customer pick?",
+        "original_response": "The customer should pick the box that the sales clerk tested. \n\nInitially, each box had a 1/4 chance of being defective. After the clerk randomly tests one box and finds it flawless, the tested box is guaranteed to be good. The remaining three boxes now share the 1/4 defective probability, giving each a 1/3 chance of being defective. By choosing the tested box, the customer ensures a 0% chance of selecting the defective appliance, making it the optimal choice.\n\n**Answer:** The customer should pick the box the clerk tested.",
+        "statistics": {
+          "character_count_output": 528,
+          "character_count_reasoning": 14123,
+          "character_count_completion": 14651,
+          "tokens_output": 3299,
+          "tokens_reasoning": 0,
+          "tokens_completions": 3299
+        }
+      }
+    ]
+  }
+}
