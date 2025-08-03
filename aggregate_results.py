@@ -121,6 +121,20 @@ def calculate_compression_ratios(original_length: int, compressed_length: int, e
     return bzip2_ratio, entropy_ratio
 
 
+def extract_lab_from_model_path(model_path: str) -> str:
+    """Extract lab/organization from model path."""
+    # Special case for models containing "hermes" (case insensitive)
+    if "hermes" in model_path.lower():
+        return "nous"
+    
+    # Standard case: extract lab from path (e.g., "mistralai/model" -> "mistralai")
+    if "/" in model_path:
+        return model_path.split("/")[0]
+    
+    # Fallback: return "unknown" if no "/" separator found
+    return "unknown"
+
+
 def load_json_file(file_path: Path) -> Dict[str, Any]:
     """Load and parse a JSON file."""
     try:
@@ -217,8 +231,10 @@ def create_model_config_dict(config_data: Dict[str, Any]) -> Dict[str, Dict[str,
     """Create a lookup dictionary for model configurations."""
     model_config = {}
     for model in config_data.get('llms', []):
+        model_path = model.get('model', '')
         model_config[model['name']] = {
-            'model_path': model.get('model', ''),
+            'model_path': model_path,
+            'lab': extract_lab_from_model_path(model_path),
             'open_weights': model.get('open_weights', False),
             'full_cot': model.get('full_cot', False),
             'max_tokens': model.get('max_tokens', 0),
@@ -389,6 +405,7 @@ def process_detailed_evaluations(detailed_evaluations: Dict[str, Any],
                     
                     # Model information
                     'model_name': model_name,
+                    'lab': model_meta.get('lab', 'unknown'),
                     'run_number': run_idx + 1,
                     'open_weights': model_meta.get('open_weights', False),
                     'full_cot': model_meta.get('full_cot', False),
