@@ -1,0 +1,177 @@
+{
+  "llms": [    
+         {
+        "name": "o4-mini-high-long",
+        "model": "openai/o4-mini-high",
+        "open_weights": false,
+        "full_cot": false,
+        "max_tokens": 30000,
+        "temperature": 0.7,
+        "top_p": 1.0,
+        "repetition_penalty": 1,
+        "reasoning": {
+          "effort": "high",
+          "exclude": false
+        }    
+      },
+      {
+      "name": "claude-4-sonnet-0522-thinking",
+      "model": "anthropic/claude-4-sonnet-20250522",
+      "open_weights": false,
+      "full_cot": false,
+      "max_tokens": 30000,
+      "temperature": 0.9,
+      "top_p": 0.9,
+      "repetition_penalty": 1,
+      "reasoning": {
+        "effort": "high",
+        "exclude": false
+      }
+    },
+    {
+      "name": "grok-3-mini-think",
+      "model": "x-ai/grok-3-mini",
+      "open_weights": false,
+      "full_cot": true,
+      "max_tokens": 30000,
+      "temperature": 0.7,
+      "top_p": 0.95,
+      "repetition_penalty": 1,
+      "reasoning": {
+        "effort": "high",
+        "exclude": false
+      } 
+    },
+     
+         {
+      "name": "deepseek-r1-0528",
+      "model": "deepseek/deepseek-r1-0528",
+      "open_weights": true,
+      "full_cot": true,
+      "max_tokens": 60000,
+      "temperature": 1.0,
+      "provider": [ "parasail/fp8"],
+      "top_p": 1.0,
+      "repetition_penalty": 1
+    },
+
+           {
+        "name": "deepseek-r1",
+        "model": "deepseek/deepseek-r1",
+      "open_weights": true,
+      "full_cot": true,
+        "max_tokens": 60000,
+        "temperature": 1.0,
+        "provider" : ["nebius/base","inference-net/fp8"],
+        "top_p": 1.0,
+        "repetition_penalty": 1
+      },
+       {
+      "name": "claude-3-7-sonnet-20250219",
+      "model": "anthropic/claude-3-7-sonnet-20250219:thinking",
+      "open_weights": false,
+      "full_cot": true,
+      "max_tokens": 30000,
+      "temperature": 0.9,
+      "top_p": 0.9,
+      "repetition_penalty": 1,
+      "reasoning": {
+        "effort": "high",
+        "exclude": false
+      }
+    },
+        {
+      "name": "grok-4-07-09",
+      "model": "x-ai/grok-4-07-09",
+      "open_weights": false,
+      "full_cot": false,
+      "max_tokens": 30000,
+      "temperature": 0.7,
+      "top_p": 0.95,
+      "repetition_penalty": 1,
+      "reasoning": {
+        "effort": "high",
+        "exclude": false
+      } 
+    },
+             {
+        "name": "o3-mini-high",
+        "model": "openai/o3-mini-high",
+        "open_weights": false,
+        "full_cot": false,
+        "max_tokens": 30000,
+        "temperature": 0.7,
+        "top_p": 1.0,
+        "repetition_penalty": 1,
+        "reasoning": {
+          "effort": "high",
+          "exclude": false
+        }    
+      },
+        {
+        "name": "o1-mini",
+        "model": "openai/o1-mini-2024-09-12",
+        "open_weights": false,
+        "full_cot": false,
+        "max_tokens": 30000,
+        "temperature": 0.7,
+        "top_p": 1.0,
+        "repetition_penalty": 1           
+      },
+             {
+      "name": "claude-opus-4",
+      "model": "anthropic/claude-opus-4",
+      "open_weights": false,
+      "full_cot": false,
+      "max_tokens": 30000,
+      "temperature": 0.9,
+      "top_p": 0.9,
+      "repetition_penalty": 1,
+      "reasoning": {
+        "effort": "high",
+        "exclude": false
+      }
+    },
+                {
+        "name": "qwen3-235b-a22b-thinking-2507",
+        "model": "qwen/qwen3-235b-a22b-thinking-2507",
+      "open_weights": true,
+      "full_cot": true,
+        "max_tokens": 30000,
+        "temperature": 0.6,
+        "top_p": 0.95,
+        "top_k": 20,
+        "min_p": 0,
+        "provider" : ["parasail/fp8"],
+        "repetition_penalty": 1
+      },
+            {
+        "name": "qwen3-235b-a22b-think",
+        "model": "qwen/qwen3-235b-a22b",
+      "open_weights": true,
+      "full_cot": true,
+        "max_tokens": 30000,
+        "temperature": 0.6,
+        "top_p": 0.95,
+        "top_k": 20,
+        "min_p": 0,
+        "provider" : ["nebius/fp8"],
+        "system_prompt": "/think",
+        "repetition_penalty": 1
+      },
+            {
+      "name": "gemini-2.5-flash-high",
+      "model": "google/gemini-2.5-flash",
+      "open_weights": false,
+      "full_cot": false,
+       "max_tokens": 30000,
+      "temperature": 0.7,
+      "top_p": 0.95,
+      "repetition_penalty": 1,
+      "reasoning": {
+        "effort": "high",
+        "exclude": false
+      }    
+    }
+  ] 
+}
