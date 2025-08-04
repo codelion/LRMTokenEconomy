@@ -22,7 +22,7 @@ Our investigation addresses three key questions:
 
 ## How can we measure token efficiency? 
 
-Measuring the length of the thinking process, the Chain-of-Though presents some issues, because most recent closed source models will not share their raw reasoning traces. The rationale behind this is prevent competitors from finetuning on their reasoning traces. Instead, they use smaller language models to transcribe the chain of thought into summaries or compressed representations. This means the original reasoning process remains hidden, with only the final answer and a transcribed version of the CoT available for analysis.
+Measuring the length of the thinking process, the Chain-of-Thought, presents some issues, because most recent closed source models will not share their raw reasoning traces. The rationale behind this is prevent competitors from finetuning on their reasoning traces. Instead, they use smaller language models to transcribe the chain of thought into summaries or compressed representations. This means the original reasoning process remains hidden, with only the final answer and a transcribed version of the CoT available for analysis.
 
 However, since models are usually billed by the number of output tokens for the full prompt completion (thinking and final answer output), we can use the number of completion tokens as a proxy for the total effort required to generate an answer.
 
@@ -53,9 +53,9 @@ Based on these findings, we use completion tokens to assess overall effort, supp
 
 To systematically evaluate token efficiency across different reasoning domains, we curated a dataset consisting of three categories:
 
-    - *Knowledge questions*: These can be answered in one sentence from the models pre-training corpus and usually no reasoning is required. 
-    - *Math problems*: Most reasoning models are especially trained for math benchmarks, so they usually perform well on math problems. 
-    - *Logic puzzles*: logic puzzles requires both semantic understanding and logical reasoning.
+- *Knowledge questions*: Can be answered in one sentence from the models pre-training corpus.
+- *Math problems*: Math problems should exhibit the most optimized behavior of reasoning models.
+- *Logic puzzles*: logic puzzles requires both semantic understanding and logical reasoning.
 
 The questions were chosen to be solvable within the 30000 token limit to avoid truncated responses.
 
@@ -90,7 +90,7 @@ To better quantify the excess token ratio, we normalized the token count for eac
 
 [Figure 5](#fig5) shows the mean excess token ratio for different llm. The recently released Magistral models are an extreme outlier with up to 10x excess tokens. We also see that most other open weight models show an excess token ratio of around 4, meaning that they use four times as many tokens as the most optimized closed weight models.
 
-How does this affect inference costs? [Figure 6](#fig6) shows the mean cost per model for knowledge questions, based on minimum and maximum completion pricing on the OpenRouter API in July 2025. The better token efficiency of closed weight models mostly compensates for higher API pricing of those models.
+How does this affect inference costs? [Figure 6](#fig6) shows the mean cost per model for knowledge questions, based on minimum and maximum completion pricing on the OpenRouter API in July 2025. The better token efficiency of closed weight models often compensates for higher API pricing of those models.
 
 <div align="center" id="fig6">
 <img src="./images/knowledge/mean_cost_knowledge.png" alt="Figure 6: Mean inference cost for knowledge questions by model" style="width: 40%; gap: 10px;">
@@ -99,28 +99,22 @@ How does this affect inference costs? [Figure 6](#fig6) shows the mean cost per 
  
 ### Math problems
 
-Most reasoning models are specifically trained to solve mathematical problems. One reason for this is that math problems are usually easily verifiable, which is a key advantage for reinforcement learning training. Furthermore, math problems are also an easy benchmark target for reasoning models.
+Most reasoning models are specifically trained to solve mathematical problems. One reason for this is that math problems are usually easily verifiable, which is a key advantage for reinforcement learning. Furthermore, math problems are also an easy benchmark target for reasoning models as there are many widely available problem sets.
 
-For this study, we selected a set of six problems to test token efficiency in the math domain. Three problems were sourced from [AIME](https://artofproblemsolving.com/wiki/index.php/American_Invitational_Mathematics_Examination) 2025, and one problem was taken from AIME 2023. Easier problems were chosen to prevent models from exceeding the 30000 token limit. To further investigate the role of memorization in problem-solving, we created two modified problems by changing the variables in one AIME 2025 problem and the AIME 2023 problem. The rationale behind this approach is that unknown problems may require a longer chain of thought, as the model cannot rely on memorized solutions. The AIME 2025 problems are too new to be in the pretraining data of any model, while some may have seen the AIME 2023 problems during pretraining. 
+For this study, we selected a set of six problems to test token efficiency in the math domain. Three problems were sourced from [AIME](https://artofproblemsolving.com/wiki/index.php/American_Invitational_Mathematics_Examination) 2025, and one problem was taken from AIME 2023. Easier problems were chosen to prevent models from exceeding the 30000 token limit. To further investigate the role of memorization in problem-solving, we created two modified problems by changing the variables in one AIME 2025 problem and the AIME 2023 problem. The rationale behind this approach is that unknown problems may require a longer chain of thought, as the model cannot rely on memorized solutions. The AIME 2025 problems are too new to be in the pre-training data of any model, while some may have seen the AIME 2023 problems during pre-training. 
 
 Example:
 
-*AIME2025I Problem 2* (Original)
-
-> Find the sum of all positive integers $n$ such that $n+2$ divides the product $3(n+3)(n^2+9).$
-
-*AIME2025I P2 Modified*
-
-> Find the sum of all positive integers $n$ such that $n+2$ divides the product $3(n+3)(n^2+7).$
+*AIME2025I Problem 2* (Original): **"Find the sum of all positive integers $n$ such that $n+2$ divides the product $3(n+3)(n^2+9).$"**
+*AIME2025I Problem 2* (Modified): **"Find the sum of all positive integers $n$ such that $n+2$ divides the product $3(n+3)(n^2+7).$"**
  
 <div align="center" id="fig7">
-<br>
-<img src="./images/math/success_rate_heatmap.png" alt="Success rate All Math Prompts" style="width: 70%;">
+<img src="./images/math/success_rate_heatmap.png" alt="Success rate All Math Prompts" style="width: 60%;">
 </div>
 
 With a few exceptions, all models were able to solve the math problems correctly [Figure 7](#fig7).
 
-We can see that, on average, less than 10000 tokens are required to solve the selected problems ([Figure 8](#fig8)). The more complex problems from the AIME2025 set will easily required more than 30000 tokens in some models and were therefore not used for this evaluation to avoid skewing the distribution.
+We can see that, on average, less than 10000 tokens are required to solve the selected problems ([Figure 8](#fig8)). The more complex problems from the AIME2025 set will easily require more than 30000 tokens in some models and were therefore not used for this evaluation to avoid skewing the distribution due to truncation.
 
 <div align="center" id="fig8">
 <img src="./images/math/token_composition_by_prompt_chart.png" alt="Token Composition by Math Prompt" style="width: 70%;">
@@ -135,26 +129,30 @@ Remarkably, the number of tokens required to solve the pairs of original and mod
 <img src="./images/math/average_relative_completion_tokens_chart.png" alt="Average Relative Completion Tokens Across All Math Prompts" style="width: 70%;">
 </div>
 
-[Figure 9](#fig9) shows the relative excess token ratio compared to the reference. In contrast to the trends observed for knowledge questions, the relative ratio between models is much lower. `o4-mini-high` is a notable outlier with a surprisingly low token count—3x fewer tokens than the next most efficient model. This suggests that o4-mini has been specifically optimized for token efficiency in mathematical problems. `magistral-small` and `magistral-medium` remain the highest token count models, but show only 3x the ratio of the reference models. Another notable change is the significant increase from `deepseek-r1` to the latest checkpoint `deepseek-r1-0528`. This suggests the model was trained to reason for longer periods to improve performance on math benchmarks. The opposite trend can be observed between `sonnet-3.7` and `sonnet-4.0`, which significantly improved in token efficiency.
+[Figure 9](#fig9) shows the relative excess token ratio compared to the reference. In contrast to the trends observed for knowledge questions, the relative ratio between models is much lower. `o4-mini-high-long` is a notable outlier with a surprisingly low token count — 3x fewer tokens than other commercial models. This suggests that o4-mini has been specifically optimized for token efficiency in mathematical problems. The recently released `grok-4` also seems to have been optimized for token efficiency in math problems. The most efficient open weight model is `llama-3.3-nemotron-super-49b-v1`, uses less tokens than most closed weight models. `magistral-small` and `magistral-medium` remain the highest token count models, but show only 3x the ratio of the reference models.
+
+Generally, there is a very clear trend towards higher reasoning token usage for open weight models in math problem, compared to closed weight models. This may suggest an optimization toward benchmarking performance rather than production efficiency.
 
 <div align="center">
-<img src="./images/math/mean_cost_math.png" alt="Min/Max Completion Cost - Math Prompts" style="width: 70%;">
+<img src="./images/math/mean_cost_math.png" alt="Min/Max Completion Cost - Math Prompts" style="width: 60%;">
 </div>
 
-Examining completion costs reveals that since token consumption is relatively similar across most models, those with higher per-token pricing naturally incur the highest completion costs. However, the exceptional token efficiency of `o4-mini-high` enables it to outperform many open-source models in total completion cost despite potentially higher per-token rates.
+Examining completion costs reveals that since token consumption is relatively similar across most models for math problems, those with higher per-token pricing naturally incur the highest completion costs. However, the exceptional token efficiency of `o4-mini-high-long` enables it to achieve very competitive total completion costs despite potentially higher per-token rates, demonstrating how optimization can offset pricing disadvantages. 
 
 ### Logic puzzles
 
-[This section is a slop placeholder, need to add more details]
+Logic puzzles are a curious domain for reasoning models. They require a combination of semantic understanding and logical reasoning, making them an interesting test case for evaluating reasoning capabilities. 
 
-A special challenge with logic puzzles is that they are often represented in pretraining data and hence the model may be able to answer them without reasoning. To avoid this, modified problems from the [misguided attention](https://github.com/cpldcpu/MisguidedAttention) dataset were used.
+However, they also present a challenge: many well known logic puzzles are commonly found in pre-training data which will cause models to be over-fit on specific solutions. Non-reasoning models will often have difficulty recognizing small changes to logic problems and tend to answer them based on memorization of the original problem. The [misguided attention](https://github.com/cpldcpu/MisguidedAttention) evaluation dataset showcases this issue. Reasoning models can often overcome the bias of their pre-training data in the CoT and solve modified problems correctly.
+
+
+
+The logic puzzle 
 
 Our logic puzzle evaluation included eight different problems designed to test reasoning capabilities while avoiding memorization:
 
 - **Bridge and torch problems** with varying constraints (impossible, easy, and standard versions)
 - **Monty Hall variations** including both the classic problem and an inverse version
-- **Logical deduction puzzles** such as the roses and flowers problem
-- **Strategic reasoning problems** like the defective appliance scenario
 
 These problems were specifically chosen to require genuine logical reasoning rather than pattern matching from training data.
 
@@ -187,6 +185,11 @@ Similar to the patterns observed in other categories, [Figure 12](#fig12) shows 
 </div>
 
 The cost analysis for logic puzzles reveals interesting trade-offs. While some open-weight models have lower per-token costs, their higher token consumption means the total inference cost can be competitive with or exceed that of more token-efficient closed-weight models. The exceptional token efficiency of `o4-mini-high` again translates to very competitive costs despite potentially higher per-token rates.
+
+## Model evolution
+
+Another notable change is the significant increase from `deepseek-r1` to the latest checkpoint `deepseek-r1-0528`. This suggests the model was trained to reason for longer periods to improve performance on math benchmarks. The opposite trend can be observed between `sonnet-3.7` and `sonnet-4.0`, which significantly improved in token efficiency.
+
 
 ## Summary
 
