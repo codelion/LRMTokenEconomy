@@ -1,0 +1,180 @@
+{
+  "llms": [    
+         {
+        "name": "o4-mini-high-long",
+        "model": "openai/o4-mini-high",
+        "open_weights": false,
+        "full_cot": false,
+        "max_tokens": 30000,
+        "temperature": 0.7,
+        "top_p": 1.0,
+        "repetition_penalty": 1,
+        "reasoning": {
+          "effort": "high",
+          "exclude": false
+        }    
+      },
+              {
+      "name": "gemini-2.5-pro",
+      "model": "google/gemini-2.5-pro",
+      "open_weights": false,
+       "full_cot": false,
+       "max_tokens": 30000,
+      "temperature": 0.7,
+      "top_p": 0.95,
+      "repetition_penalty": 1,
+      "reasoning": {
+        "effort": "high",
+        "exclude": false
+      }
+     },
+      {
+      "name": "claude-4-sonnet-0522-thinking",
+      "model": "anthropic/claude-4-sonnet-20250522",
+      "open_weights": false,
+      "full_cot": false,
+      "max_tokens": 30000,
+      "temperature": 0.9,
+      "top_p": 0.9,
+      "repetition_penalty": 1,
+      "reasoning": {
+        "effort": "high",
+        "exclude": false
+      }
+    },
+      {
+      "name": "gemini-2.5-flash-high",
+      "model": "google/gemini-2.5-flash",
+      "open_weights": false,
+      "full_cot": false,
+       "max_tokens": 30000,
+      "temperature": 0.7,
+      "top_p": 0.95,
+      "repetition_penalty": 1,
+      "reasoning": {
+        "effort": "high",
+        "exclude": false
+      }    
+    },
+            {
+      "name": "magistral-medium-2506-thinking",
+      "model": "mistralai/magistral-medium-2506:thinking",
+      "open_weights": true,
+      "full_cot": true,
+       "max_tokens": 30000,
+      "temperature": 0.7,
+      "top_p": 0.95,
+      "repetition_penalty": 1
+    },
+
+         {
+      "name": "deepseek-r1-0528",
+      "model": "deepseek/deepseek-r1-0528",
+      "open_weights": true,
+      "full_cot": true,
+      "max_tokens": 60000,
+      "temperature": 1.0,
+      "provider": [ "parasail/fp8"],
+      "top_p": 1.0,
+      "repetition_penalty": 1
+    },
+
+        {
+        "name": "DeepHermes-3-Mistral-24B-Pre",
+        "model": "DeepHermes-3-Mistral-24B-Preview",
+        "open_weights": true,
+        "full_cot": true,
+        "max_tokens": 30000,
+        "temperature": 0.7,
+        "top_p": 1.0,
+        "repetition_penalty": 1,
+        "system_prompt": "You are a deep thinking AI, you may use extremely long chains of thought to deeply consider the problem and deliberate with yourself via systematic reasoning processes to help come to a correct solution prior to answering. You should enclose your thoughts and internal monologue inside <think> </think> tags, and then provide your solution or response to the problem."
+      },
+        {
+      "name": "magistral-small-2506",
+      "model": "mistralai/magistral-small-2506",
+      "open_weights": true,
+      "full_cot": true,
+       "max_tokens": 30000,
+      "temperature": 0.7,
+      "top_p": 0.95,
+      "system_prompt": "<s>[SYSTEM_PROMPT]system_prompt\nA user will ask you to solve a task. You should first draft your thinking process (inner monologue) until you have derived the final answer. Afterwards, write a self-contained summary of your thoughts (i.e. your summary should be succinct but contain all the critical steps you needed to reach the conclusion). You should use Markdown to format your response. Write both your thoughts and summary in the same language as the task posed by the user. NEVER use \boxed{} in your response.\nYour thinking process must follow the template below:\n<think>\nYour thoughts or/and draft, like working through an exercise on scratch paper. Be as casual and as long as you want until you are confident to generate a correct answer.\n</think>\nHere, provide a concise summary that reflects your reasoning and presents a clear final answer to the user. Don't mention that this is a summary.\nProblem:\n[/SYSTEM_PROMPT][INST]user_message[/INST]<think>\nreasoning_traces\n</think>\nassistant_response</s>[INST]user_message[/INST]",
+      "repetition_penalty": 1
+    },
+
+    {
+      "name": "minimax-m1",
+      "model": "minimax/minimax-m1",
+      "open_weights": true,
+      "full_cot": true,
+      "max_tokens": 50000,
+      "temperature": 1.0,
+      "provider": [ "minimax"],
+      "top_p": 0.95,
+      "repetition_penalty": 1
+    },
+        {
+      "name": "grok-4-07-09",
+      "model": "x-ai/grok-4-07-09",
+      "open_weights": false,
+      "full_cot": false,
+      "max_tokens": 30000,
+      "temperature": 0.7,
+      "top_p": 0.95,
+      "repetition_penalty": 1,
+      "reasoning": {
+        "effort": "high",
+        "exclude": false
+      } 
+    },
+         
+            {
+        "name": "qwen3-235b-a22b-thinking-2507",
+        "model": "qwen/qwen3-235b-a22b-thinking-2507",
+      "open_weights": true,
+      "full_cot": true,
+        "max_tokens": 30000,
+        "temperature": 0.6,
+        "top_p": 0.95,
+        "top_k": 20,
+        "min_p": 0,
+        "provider" : ["parasail/fp8"],
+        "repetition_penalty": 1
+      },
+             {
+      "name": "claude-opus-4",
+      "model": "anthropic/claude-opus-4",
+      "open_weights": false,
+      "full_cot": false,
+      "max_tokens": 30000,
+      "temperature": 0.9,
+      "top_p": 0.9,
+      "repetition_penalty": 1,
+      "reasoning": {
+        "effort": "high",
+        "exclude": false
+      }
+    },
+       {
+        "name": "llama-3.3-nemotron-super-49b-v1",
+        "model": "nvidia/llama-3.3-nemotron-super-49b-v1",
+        "open_weights": true,
+        "full_cot": true,
+        "max_tokens": 30000,
+        "temperature": 0.6,
+        "top_p": 0.95,
+        "repetition_penalty": 1,
+        "system_prompt": "detailed thinking on"
+      },
+     {
+      "name": "glm-4.5",
+      "model": "z-ai/glm-4.5",
+      "open_weights": true,
+      "full_cot": true,
+      "max_tokens": 30000,
+      "temperature": 0.6,
+      "top_p": 0.95,
+      "repetition_penalty": 1
+    }
+  ] 
+}
