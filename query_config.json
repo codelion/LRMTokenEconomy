@@ -1,11 +1,11 @@
 {
   "llms": [
           
-       {
-      "name": "claude-opus-4",
-      "model": "anthropic/claude-opus-4",
+             {
+      "name": "claude-opus-4.1",
+      "model": "anthropic/claude-opus-4.1",
       "open_weights": false,
-      "full_cot": true,
+      "full_cot": false,
       "max_tokens": 30000,
       "temperature": 0.9,
       "top_p": 0.9,
