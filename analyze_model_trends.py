@@ -430,7 +430,12 @@ def create_grouped_token_composition_chart(metrics_data: List[Dict[str, Any]], o
     # Plot grouped bars for each lab (only labs with multiple models)
     for i, lab in enumerate(labs_to_display):
         models = lab_model_averages[lab]
-        sorted_models = sorted(models.keys(), key=lambda x: models[x]['completion'], reverse=True)
+        
+        # Sort models: alphabetically for specific labs, by completion tokens for others
+        if lab.lower() in ['qwen', 'openai', 'deepseek']:
+            sorted_models = sorted(models.keys())
+        else:
+            sorted_models = sorted(models.keys(), key=lambda x: models[x]['completion'], reverse=True)
         
         if not sorted_models:
             continue
@@ -638,7 +643,12 @@ def create_grouped_relative_tokens_chart(metrics_data: List[Dict[str, Any]], out
     # Plot grouped bars for each lab (only labs with multiple models)
     for i, lab in enumerate(labs_to_display):
         models = lab_model_data[lab]
-        sorted_models = sorted(models.keys(), key=lambda x: models[x]['relative_tokens'], reverse=True)
+        
+        # Sort models: alphabetically for specific labs, by relative tokens for others
+        if lab.lower() in ['qwen', 'openai', 'deepseek']:
+            sorted_models = sorted(models.keys())
+        else:
+            sorted_models = sorted(models.keys(), key=lambda x: models[x]['relative_tokens'], reverse=True)
         
         if not sorted_models:
             continue
