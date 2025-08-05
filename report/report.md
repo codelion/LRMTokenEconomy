@@ -230,7 +230,11 @@ We find that open-weight models use consistently more tokens than closed-weight 
 
 `llama-3.3-nemotron-super-49b-v1` stands out as the most token efficient open weight model across all domains, while the Magistral models represent an unusual outlier towards the high end.
 
-We note the continued trend of closed weight reasoning models to improve token efficiency also in non-benchmark domains and suggest this as an important avenue for future open weight models.
+We note the continued trend of closed weight reasoning models to improve token efficiency also in non-benchmark domains and suggest this as an important avenue for future open weight models. A more densified CoT will also allow for more efficient context usage and may counter context degradation during challenging reasoning tasks.
+
+## Acknowledgments
+
+[to be added after final layout]
 
 # Methods
 
