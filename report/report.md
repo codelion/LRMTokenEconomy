@@ -8,6 +8,8 @@ Anecdotal evidence suggests open weight models produce significantly more tokens
 
 This report systematically investigates these observations. We confirm this trend to be generally true, but observe significant differences depending on problem domain.
 
+TL;DR: *Closed models (OpenAI, Grok-4) optimize for fewer tokens to cut costs, while open models (Deepseek, Qwen) use more tokens, possibly for better reasoning. Open weight models use 1.5-4x more tokens than closed ones (up to 10x for simple knowledge questions), making them sometimes more expensive per query despite lower per token cost. OpenAI leads in token efficiency for math. Among open models, llama-3.3-nemotron-super-49b-v1 is most efficient, while Magistral models are outliers with exceptionally high token usage*
+
 ## Why is it of interest to measure token efficiency?
 
 Token efficiency is a critical metric for several practical reasons:
@@ -96,7 +98,7 @@ How does this affect inference costs? [Figure 6](#fig6) shows the mean cost per 
 <img src="./images/knowledge/mean_cost_knowledge.png" alt="Figure 6: Mean inference cost for knowledge questions by model" style="width: 40%; gap: 10px;">
 <img src="./images/model_pricing_comparison.png" alt="Figure A: Model pricing comparison showing min/max costs per million tokens" style="width: 40%;">
 </div>
- 
+
 ### Math problems
 
 Most reasoning models are specifically trained to solve mathematical problems. One reason for this is that math problems are usually easily verifiable, which is a key advantage for reinforcement learning. Furthermore, math problems are also an easy benchmark target for reasoning models as there are many widely available problem sets.
@@ -143,60 +145,92 @@ Examining completion costs reveals that since token consumption is relatively si
 
 Logic puzzles are a curious domain for reasoning models. They require a combination of semantic understanding and logical reasoning, making them an interesting test case for evaluating reasoning capabilities. 
 
-However, they also present a challenge: many well known logic puzzles are commonly found in pre-training data which will cause models to be over-fit on specific solutions. Non-reasoning models will often have difficulty recognizing small changes to logic problems and tend to answer them based on memorization of the original problem. The [misguided attention](https://github.com/cpldcpu/MisguidedAttention) evaluation dataset showcases this issue. Reasoning models can often overcome the bias of their pre-training data in the CoT and solve modified problems correctly.
+However, many well known logic puzzles are commonly found in pre-training data which will cause models to be over-fit on specific solutions. Non-reasoning models will often have difficulty recognizing small changes to logic problems and tend to answer them based on memorization of the original problem. The [Misguided Attention](https://github.com/cpldcpu/MisguidedAttention) evaluation showcases this issue. Reasoning models can often overcome the bias of their pre-training data in the CoT and solve modified problems correctly.
 
+To explore the effect of memorization, variants of two well-known logic puzzles were selected in addition to a generic logic puzzle (roses problem)
 
+#### Bridge and torch problem
 
-The logic puzzle 
+The [bridge and torch problem](https://en.wikipedia.org/wiki/Bridge_and_torch_problem) requires finding the minimum time for four people with a torch to cross a bridge at night. The original problem and three variants were included:
 
-Our logic puzzle evaluation included eight different problems designed to test reasoning capabilities while avoiding memorization:
+| Problem Variant | Description |
+|------------------|-------------|
+| bridge_torch_default | The *unmodified problem* in its most well-known version with a 17 minute solution |
+| bridge_torch_easy | *Ambiguous* version where two solutions exist: 10 and 17 minutes|
+| bridge_torch_easy_10m | *Simplified* version with a 10 minute solution |
+| bridge_torch_impossible | Constraints that make the problem *impossible* to solve. |
 
-- **Bridge and torch problems** with varying constraints (impossible, easy, and standard versions)
-- **Monty Hall variations** including both the classic problem and an inverse version
+Generally, we found that even more recent reasoning models struggle with logic problems that have ambiguous or impossible solutions.
 
-These problems were specifically chosen to require genuine logical reasoning rather than pattern matching from training data.
+#### Monty Hall problem
+
+The [Monty Hall problem](https://en.wikipedia.org/wiki/Monty_Hall_problem) is a very well known and famously unintuitive probability puzzle. All base models used for reasoning models are severely over-fit on this problem and are biased towards solutions of the Monty Hall problem even for remotely similar scenarios.
+
+The original problem and two variants were included:
+
+| Problem Variant | Description |
+|------------------|-------------|
+| monty_hall_default | The *unmodified* Monty Hall problem |
+| monty_hall_inverse | A *modified* version of the Monty Hall problem with the opposite solution |
+| monty_appliance_simple | An *ambiguous* problem that can be easily answered by humans, but is usually answered in the context of the Monty Hall problem by reasoning models. |
 
 <div align="center" id="fig10">
 <img src="./images/logic_puzzles/success_rate_heatmap.png" alt="Figure 10: Success rate for logic puzzle prompts by model" style="width: 70%;">
 </div>
 
-[Figure 10](#fig10) shows the success rates across different logic puzzle problems. Unlike the math problems, success rates vary significantly across both models and problem types. Some models struggle with certain logical reasoning tasks, particularly the more complex bridge and torch problems and Monty Hall variations.
+[Figure 10](#fig10) shows the success rates across different logic puzzle problems. Unlike the math problems, success rates vary significantly across both models and problem types. Only the default problems were solved by all models, while many models struggle with modified problems, indicating strong influence of pre-existing bias in the model.
 
 <div align="center" id="fig11">
-<img src="./images/logic_puzzles/token_composition_by_prompt_chart.png" alt="Figure 11: Token composition by logic puzzle prompt" style="width: 70%;">
+<img src="./images/logic_puzzles/token_composition_by_prompt_chart.png" alt="Figure 11: Token composition by logic puzzle prompt" style="width: 60%;">
 </div>
 
-[Figure 11](#fig11) reveals that logic puzzles generally require fewer tokens than math problems but more than knowledge questions. The token requirements vary significantly depending on the specific puzzle type, with bridge and torch problems typically requiring the most reasoning tokens.
+[Figure 11](#fig11) shows the average token consumption for all prompts. Remarkably, the number of reasoning tokens is the lowest for the default problems, while it significantly increases for modified problems. This is unlike the observation for math problems and suggests that pre-existing bias allows to solve the problems with a shorter CoT for the default problems. The impossible problem generates the longest CoT as the models tend to try many solutions before giving up.
 
 <div align="center" id="fig12">
-<img src="./images/logic_puzzles/token_composition_stacked_chart.png" alt="Figure 12: Token composition breakdown by model for logic puzzles" style="width: 70%;">
+<img src="./images/logic_puzzles/token_composition_stacked_chart.png" alt="Figure 12: Token composition breakdown by model for logic puzzles" style="width: 60%;">
+<img src="./images/logic_puzzles/average_relative_completion_tokens_chart.png" alt="Figure 13: Average relative completion tokens for logic puzzles by model" style="width: 60%;">
 </div>
 
-Similar to the patterns observed in other categories, [Figure 12](#fig12) shows that open-weight models consistently use more tokens than closed-weight models for logic puzzles. However, the gap is less pronounced than in knowledge questions, suggesting that the reasoning complexity of logic puzzles may naturally require more tokens even from efficient models.
+Similar to the patterns observed in other categories, [Figure 12](#fig12) shows that open-weight models use more tokens than closed-weight models for logic puzzles. However, the gap is far less pronounced than for math and knowledge questions. `magistral-small` and `magistral-medium` still present an exception for high token usages. `claude-opus-4` uses the least reasoning tokens, a trend generally observed across problem domains. The extreme tokens optimization that was observed for  `o4-mini-high` cannot be seen for logic puzzles.
 
-<div align="center" id="fig13">
-<img src="./images/logic_puzzles/average_relative_completion_tokens_chart.png" alt="Figure 13: Average relative completion tokens for logic puzzles by model" style="width: 70%;">
+Similar to the math domain, Nvidias model `llama-3.3-nemotron-super-49b-v1` stands out as the most token efficient open weight model.
+
+<div align="center" id="fig14">
+<img src="./images/logic_puzzles/mean_cost_logic_puzzle.png" alt="Figure 14: Mean inference cost for logic puzzles by model" style="width: 50%;">
 </div>
 
-[Figure 13](#fig13) shows the relative token efficiency for logic puzzles. The pattern is consistent with our other findings: open-weight models like `magistral-small` and `magistral-medium` show the highest token usage, while models like `o4-mini-high` and `claude-4-sonnet` demonstrate superior token efficiency. Notably, the efficiency gap between open and closed-weight models is smaller for logic puzzles than for knowledge questions, suggesting that the inherent reasoning complexity may level the playing field somewhat.
-
-<div align="center">
-<img src="./images/logic_puzzles/mean_cost_logic_puzzle.png" alt="Figure 14: Mean inference cost for logic puzzles by model" style="width: 70%;">
-</div>
-
-The cost analysis for logic puzzles reveals interesting trade-offs. While some open-weight models have lower per-token costs, their higher token consumption means the total inference cost can be competitive with or exceed that of more token-efficient closed-weight models. The exceptional token efficiency of `o4-mini-high` again translates to very competitive costs despite potentially higher per-token rates.
+The cost analysis for the logic puzzle prompt reveals few surprises; since the variation of tokens is modest for knowledge prompts, the completion cost mostly scaled with token pricing.
 
 ## Model evolution
 
-Another notable change is the significant increase from `deepseek-r1` to the latest checkpoint `deepseek-r1-0528`. This suggests the model was trained to reason for longer periods to improve performance on math benchmarks. The opposite trend can be observed between `sonnet-3.7` and `sonnet-4.0`, which significantly improved in token efficiency.
+While we have only look at recent model variants above, it is also of interest to look at the historic evolution between different reasoning model variants. 
 
+The figures below show how the relative completion tokens changed across the different problem domains for iterations of models with the labs.
+
+<div align="center" id="fig15">
+<img src="./images/knowledge/grouped_relative_tokens_chart.png" alt="Figure 14: Mean inference cost for logic puzzles by model" style="width: 70%;">
+<img src="./images/math/grouped_relative_tokens_chart.png" alt="Figure 14: Mean inference cost for logic puzzles by model" style="width: 70%;">
+<img src="./images/logic_puzzles/grouped_relative_tokens_chart.png" alt="Figure 14: Mean inference cost for logic puzzles by model" style="width: 70%;">
+</div>
+
+We can observe three key trends:
+
+- Closed weight models have been iteratively optimized to use fewer tokens to reduce inference cost. This is especially obvious for knowledge questions, that are not relevant for benchmarks but likely present a significant part of inference workload in production.
+- The open weight models (*Deepseek* and *Qwen*) have increased their token usage for newer versions, possibly reflecting a priority toward better reasoning performance.
+- Openai models stand out for extreme token efficiency in math problems, even beginning with o1. It appears that X-ai is taking a similar approach with `grok-4`, with significant improvements compared to `grok 3-mini`.
 
 ## Summary
 
-We find that open-weight models use consistently more tokens than closed-weight models for equivalent tasks. However, the efficiency gap depends on the work load and is most pronounced for simple knowledge questions where no reasoning is required. On average 3x more tokens are required for knowlege prompts. The gap reduces to less than 2x for math problems and logic puzzles. 
+<div align="center" id="fig16">
+<img src="./images/average_relative_completion_tokens_chart.png" alt="Figure 16: Relative tokens across all domains" style="width: 90%;">
 
-Current open-weight reasoning models appear to focus less on domain specific optimization than closed-weight models to minimize unnecessary token generation during inference. To address these efficiency gaps, improving token efficiency for simple knowledge tasks outside of typical benchmarking domains is necessary. In addition, many closed-weight models implement mechanisms to steer the length of the CoT, which is still largely absent in open-weight models. These optimizations could significantly improve the cost-effectiveness of open-weight reasoning models.
+</div>
 
+We find that open-weight models use consistently more tokens than closed-weight models for equivalent tasks. However, the efficiency gap depends on the work load and is most pronounced for simple knowledge questions where no reasoning is required. On average 3x more tokens are required for knowledge prompts. The gap reduces to less than 2x for math problems and logic puzzles. 
+
+`llama-3.3-nemotron-super-49b-v1` stands out as the most token efficient open weight model across all domains, while the Magistral models represent an unsual outlier towards the high end.
+
+We note the continued trend of closed weight reasoning models to improve token efficiency also in non-benchmark domains and suggest this as a important avenue for future open weight models.
 
 # Methods
 
@@ -223,6 +257,6 @@ Pricing data for completion tokens (measured in $/1M tokens) was automatically e
 <img src="./images/model_pricing_comparison.png" alt="Figure A: Model pricing comparison showing min/max costs per million tokens" style="width: 70%;">
 </div>
 
-## Data processing and figure generation
+## Dataset, harness and evaluation code
 
-All datasets and code can be found in this repository: [xxx]. The python scripts for data evaluation were largely writting with code agent support.
+All datasets and code can be found in this repository: [(https://github.com/cpldcpu/LRMTokenEconomy/)](https://github.com/cpldcpu/LRMTokenEconomy/).
