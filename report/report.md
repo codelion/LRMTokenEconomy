@@ -379,6 +379,8 @@ All models were accessed through OpenRouter, with the exception of Deephermes, w
 
 Statistical analysis was conducted with N=5 samples for each prompt and language model combination.
 
+The `gpt-oss-120b` and `gpt-oss-20b` models were accessed through the OpenAI API on the day of their first release using Groq as a provider. There is some uncertainty in the way the API interprets the reasoning effort settings, which may lead to deviations in the number of reasoning tokens generated. We will monitor the situation and update the report if necessary.
+
 ## Acquiring response and thinking token data
 
 While many models directly provide reasoning token counts through their API responses, we found these numbers to be unreliable in numerous cases. For instance, Anthropic models would only return the length of the transcribed Chain of Thought rather than the actual CoT lengths, while other models would occasionally report CoT lengths that exceeded the total completion length—a logical impossibility.
