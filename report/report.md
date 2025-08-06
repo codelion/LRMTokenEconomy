@@ -357,6 +357,8 @@ We can observe four key trends:
 
 We find that open-weight models use consistently more tokens than closed-weight models for equivalent tasks. However, the efficiency gap depends on the workload and is most pronounced for superfluous reasoning in knowledge questions. On average, 3x more tokens are required for knowledge prompts. The gap reduces to less than 2x for math problems and logic puzzles. 
 
+Furthermore, many closed weight models allow steering of the reasoning effort, which provides an effective way to reduce token usage for simple tasks. 
+
 `llama-3.3-nemotron-super-49b-v1` stands out as the most token efficient open weight model across all domains prior to the release of the `gpt-oss` models, while the Magistral models represent an unusual outlier toward the high end.
 
 The recent release of `gpt-oss-120b` and `gpt-oss-20b` as open weight and state-of-the-art token efficient reasoning models with **freely accessible CoT** can serve as a reference for further optimization of other models.
