@@ -343,7 +343,7 @@ The figures below show how the relative completion tokens changed across the dif
 
 We can observe four key trends:
 
-- Closed weight models have been iteratively optimized to use fewer tokens to reduce inference cost. This is especially obvious for knowledge questions, which are not relevant for benchmarks but likely represent a significant part of the inference workload in production.
+- Closed weight models have been iteratively optimized to use fewer tokens to reduce inference cost. 
 - The open weight models (*DeepSeek* and *Qwen*) have increased their token usage for newer versions, possibly reflecting a priority toward better reasoning performance.
 - OpenAI models stand out for extreme token efficiency in math problems, even beginning with o1. It appears that X-AI is taking a similar approach with `grok-4`, with significant improvements compared to `grok-3-mini`.
 - The recently released `gpt-oss-120b` and `gpt-oss-20b` seem to inherit the CoT density optimization from the o-mini models.
@@ -355,7 +355,7 @@ We can observe four key trends:
 
 </div>
 
-We find that open-weight models use consistently more tokens than closed-weight models for equivalent tasks. However, the efficiency gap depends on the workload and is most pronounced for superfluous reasoning tasks like knowledge questions. On average, 3x more tokens are required for knowledge prompts. The gap reduces to less than 2x for math problems and logic puzzles. 
+We find that open-weight models use consistently more tokens than closed-weight models for equivalent tasks. However, the efficiency gap depends on the workload and is most pronounced for superfluous reasoning in knowledge questions. On average, 3x more tokens are required for knowledge prompts. The gap reduces to less than 2x for math problems and logic puzzles. 
 
 `llama-3.3-nemotron-super-49b-v1` stands out as the most token efficient open weight model across all domains prior to the release of the `gpt-oss` models, while the Magistral models represent an unusual outlier toward the high end.
 
