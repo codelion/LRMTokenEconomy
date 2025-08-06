@@ -1,5 +1,7 @@
 # Do Open Weight Reasoning Models Think Less Efficiently?
 
+*August 6, 2025*
+
 Large Reasoning Models (LRMs) employ a novel paradigm known as test-time scaling, leveraging reinforcement learning to teach the models to generate extended chains of thought (CoT) during reasoning tasks. This enhances their problem-solving capabilities beyond what their base models could achieve independently.
 
 While cost and efficiency trade-off curves ("the Pareto frontier") typically focus on model intelligence versus cost per million completion tokens, token efficiency — the number of tokens used for reasoning relative to the solution — is a critical factor that is recently receiving more attention. 
