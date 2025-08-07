@@ -1,16 +1,16 @@
 # Do Open Weight Reasoning Models Think Less Efficiently?
 
-*August 6, 2025*
+*[Tim (@cpldcpu)](https://github.com/cpldcpu/)* - *August 6, 2025* 
 
 Large Reasoning Models (LRMs) employ a novel paradigm known as test-time scaling, leveraging reinforcement learning to teach the models to generate extended chains of thought (CoT) during reasoning tasks. This enhances their problem-solving capabilities beyond what their base models could achieve independently.
 
-While cost and efficiency trade-off curves ("the Pareto frontier") typically focus on model intelligence versus cost per million completion tokens, token efficiency — the number of tokens used for reasoning relative to the solution — is a critical factor that is recently receiving more attention. 
+While cost and efficiency trade-off curves ("the Pareto frontier") typically focus on model intelligence versus cost per million completion tokens, token efficiency is a critical factor that is recently receiving more attention. 
 
 Anecdotal evidence suggests open weight models produce significantly more tokens for similar tasks than closed weight models. 
 
-This report systematically investigates these observations. We confirm this trend to be generally true, but observe significant differences depending on problem domain.
+This report investigates these observations. We confirm this trend to be generally true, but observe significant differences depending on problem domain.
 
-TL;DR: *Closed models (OpenAI, Grok-4) optimize for fewer tokens to cut costs, while open models (DeepSeek, Qwen) use more tokens, possibly for better reasoning. Open weight models use 1.5-4x more tokens than closed ones (up to 10x for simple knowledge questions), making them sometimes more expensive per query despite lower per-token costs. OpenAI leads in token efficiency for math. Among open models, `llama-3.3-nemotron-super-49b-v1` is most efficient, while Magistral models are outliers with exceptionally high token usage. The release of OpenAI's `gpt-oss` open weight models with extremely short CoT can serve as a reference to optimize token usage in other open weight models.*
+In short: *Closed models (OpenAI, Grok-4) optimize for fewer tokens to cut costs, while open models (DeepSeek, Qwen) use more tokens, possibly for better reasoning. Open weight models use 1.5-4x more tokens than closed ones (up to 10x for simple knowledge questions), making them sometimes more expensive per query despite lower per-token costs. OpenAI leads in token efficiency for math. Among open models, `llama-3.3-nemotron-super-49b-v1` is most efficient, while Magistral models are outliers with exceptionally high token usage. The release of OpenAI's `gpt-oss` open weight models with extremely short CoT could be a reference to optimize token usage in other open weight models.*
 
 ## Why is it of interest to measure token efficiency?
 
@@ -18,7 +18,7 @@ Token efficiency is a critical metric for several practical reasons:
 
 First, while hosting open weight models may be cheaper, this cost advantage could be easily offset if they require more tokens to reason about a given problem. Second, an increased number of tokens will lead to longer generation times and increased latency. Finally, inefficient token usage may exhaust the available context window, limiting the model's ability to process complex queries effectively.
 
-Our investigation addresses three key questions:
+We address three questions:
 
 1. Do open weight models systematically require more tokens than closed weight models for comparable tasks?
 2. What are the cost implications when token efficiency is factored into total inference expenses?
@@ -26,11 +26,11 @@ Our investigation addresses three key questions:
 
 ## How can we measure token efficiency? 
 
-Measuring the length of the thinking process, the Chain-of-Thought, presents some issues because most recent closed source models will not share their raw reasoning traces. The rationale behind this is to prevent competitors from fine-tuning on their reasoning traces. Instead, they use smaller language models to transcribe the chain of thought into summaries or compressed representations. This means the original reasoning process remains hidden, with only the final answer and a transcribed version of the CoT available for analysis.
+Measuring the length of the thinking process, the Chain-of-Thought, is challenging because most recent closed source models will not share their raw reasoning traces. The rationale behind this is to prevent competitors from fine-tuning on their reasoning traces. Instead, they use smaller language models to transcribe the chain of thought into summaries or compressed representations. This means the original reasoning process remains hidden, with only the final answer and a transcribed version of the CoT available for analysis.
 
 However, since models are usually billed by the number of output tokens for the full prompt completion (thinking and final answer output), we can use the number of completion tokens as a proxy for the total effort required to generate an answer.
 
-To investigate which models transcribe the CoT and which make them directly available, we analyzed the relationship between total characters for completion (the sum of thinking trace and final output) versus the number of tokens billed for completion across all prompts in this study.
+To see which models transcribe the CoT and which make them directly available, we analyzed the relationship between total characters for completion (the sum of thinking trace and final output) versus the number of tokens billed for completion across all prompts in this study.
 
 <div align="center" id="fig1">
 <img src="./images/tokens_vs_characters_selected_models.png" alt="Figure 1: Relationship between completion tokens and total characters across models" style="width: 70%;">
@@ -42,7 +42,7 @@ To investigate which models transcribe the CoT and which make them directly avai
 <img src="./images/characters_per_token_by_model.png" alt="Figure 2: Slopes of characters per completion vs. billed tokens for each model" style="width: 70%;">
 </div>
 
-[Figure 2](#fig2) presents the extracted slopes for each model, revealing interesting patterns. 
+[Figure 2](#fig2) presents the extracted slopes for each model, revealing patterns. 
 
 - **Open weight models** show a consistent character-to-token ratio of approximately 3-3.4, which is typical for tokenizers. This suggests that no transcription took place for these models.
 - **Claude 3.7 Sonnet** exhibits a ratio of 2.8, suggesting that the CoT is mostly intact, but the lower ratio may indicate that some filtering took place, possibly through simple word filtering or substitution.
@@ -145,7 +145,7 @@ Examining completion costs reveals that since token consumption is relatively si
 
 ### Logic puzzles
 
-Logic puzzles are a curious domain for reasoning models. They require a combination of semantic understanding and logical reasoning, making them an interesting test case for evaluating reasoning capabilities. 
+Logic puzzles are a challenging domain for reasoning models. They require a combination of semantic understanding and logical reasoning, making them an interesting test case for evaluating reasoning capabilities. 
 
 However, many well-known logic puzzles are commonly found in pre-training data, which causes models to be over-fitted on specific solutions. Non-reasoning models will often have difficulty recognizing small changes to logic problems and tend to answer them based on memorization of the original problem. The [Misguided Attention](https://github.com/cpldcpu/MisguidedAttention) evaluation showcases this issue. Reasoning models can often overcome the bias of their pre-training data in the CoT and solve modified problems correctly.
 
@@ -363,15 +363,13 @@ Furthermore, many closed weight models allow steering of the reasoning effort, w
 
 `llama-3.3-nemotron-super-49b-v1` stands out as the most token efficient open weight model across all domains prior to the release of the `gpt-oss` models, while the Magistral models represent an unusual outlier toward the high end.
 
-The recent release of `gpt-oss-120b` and `gpt-oss-20b` as open weight and state-of-the-art token efficient reasoning models with **freely accessible CoT** could serve as a reference for further optimization of other models.
+The recent release of `gpt-oss-120b` and `gpt-oss-20b` as open weight and state-of-the-art token efficient reasoning models with **freely accessible CoT** could be a reference for further optimization of other models.
 
 We note the continued trend of closed weight reasoning models to improve token efficiency also in non-benchmark domains and suggest this as an important avenue for future open weight models. A more densified CoT will also allow for more efficient context usage and may counter context degradation during challenging reasoning tasks.
 
 ## Acknowledgments
 
 Thanks to Teknium and Billy for providing feedback on early drafts of this report and encouragement for its creation. Nous Research is acknowledged for providing tokens for this investigation. 
-
-Also, lesson learned: *Do not work for more than one week on a model benchmarking problem or you may spend countless hours integrating results from newly released models.*
 
 # Methods
     
