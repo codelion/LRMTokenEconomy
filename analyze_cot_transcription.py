@@ -156,7 +156,7 @@ def create_slope_bar_chart(slopes: Dict[str, float], model_groups: Dict[str, boo
     colors = []
     for model in models:
         is_open = model_groups.get(model, False)
-        colors.append('#2E8B57' if is_open else '#B22222')  # Green for open, red for closed
+        colors.append('#2F85A7' if is_open else '#8095A3')  # Green for open, red for closed
     
     # Create the plot
     fig, ax = plt.subplots(figsize=figsize)
@@ -182,8 +182,8 @@ def create_slope_bar_chart(slopes: Dict[str, float], model_groups: Dict[str, boo
     # Create custom legend
     from matplotlib.patches import Patch
     legend_elements = [
-        Patch(facecolor='#2E8B57', alpha=0.8, label='Open Weights'),
-        Patch(facecolor='#B22222', alpha=0.8, label='Closed Weights')
+        Patch(facecolor='#2F85A7', alpha=0.8, label='Open Weights'),
+        Patch(facecolor='#8095A3', alpha=0.8, label='Closed Weights')
     ]
     ax.legend(handles=legend_elements, loc='upper left', fontsize=10)
     

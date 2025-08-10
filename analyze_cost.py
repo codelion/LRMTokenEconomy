@@ -94,9 +94,10 @@ def create_pricing_bar_chart(df: pd.DataFrame, output_path: Path, figsize: Tuple
     x_pos = np.arange(len(df_sorted))
     bar_width = 0.8
     
+
     # Define colors based on open_weights status
-    open_colors = {'max': 'lightgreen', 'min': 'darkgreen'}
-    closed_colors = {'max': 'lightcoral', 'min': 'darkred'}
+    open_colors = {'max': '#7EB2C7', 'min': '#2F85A7'}
+    closed_colors = {'max': '#8095A3', 'min': '#5C6B75'}
     
     # Create bars with different colors for open/closed weights
     for i, (_, row) in enumerate(df_sorted.iterrows()):
@@ -120,10 +121,10 @@ def create_pricing_bar_chart(df: pd.DataFrame, output_path: Path, figsize: Tuple
     # Create custom legend
     from matplotlib.patches import Patch
     legend_elements = [
-        Patch(facecolor='lightgreen', alpha=0.6, label='Open Weights (Max)'),
-        Patch(facecolor='darkgreen', alpha=0.8, label='Open Weights (Min)'),
-        Patch(facecolor='lightcoral', alpha=0.6, label='Closed Weights (Max)'),
-        Patch(facecolor='darkred', alpha=0.8, label='Closed Weights (Min)')
+        Patch(facecolor='#7EB2C7', alpha=0.6, label='Open Weights (Max)'),
+        Patch(facecolor='#2F85A7', alpha=0.8, label='Open Weights (Min)'),
+        Patch(facecolor='#8095A3', alpha=0.6, label='Closed Weights (Max)'),
+        Patch(facecolor='#5C6B75', alpha=0.8, label='Closed Weights (Min)')
     ]
     ax.legend(handles=legend_elements, loc='upper left', fontsize=9)
     
@@ -138,15 +139,15 @@ def create_pricing_bar_chart(df: pd.DataFrame, output_path: Path, figsize: Tuple
         if row['completion_min'] == row['completion_max']:
             # If min=max, only add one label
             ax.text(i, row['completion_max'] + 0.2, f'${row["completion_max"]:.2f}', 
-                    ha='center', va='bottom', fontsize=8, fontweight='bold')
+                    ha='center', va='bottom', fontsize=8, rotation=45)
         else:
             # Add max value label
             ax.text(i, row['completion_max'] + 0.2, f'${row["completion_max"]:.2f}', 
-                    ha='center', va='bottom', fontsize=8, fontweight='bold')
+                    ha='center', va='bottom', fontsize=8, rotation=45)
             
             # Add min value label
             ax.text(i, row['completion_min'] + 0.1, f'${row["completion_min"]:.2f}', 
-                    ha='center', va='bottom', fontsize=8, fontweight='bold')
+                    ha='center', va='bottom', fontsize=8, rotation=45)
     
     # Adjust layout
     plt.tight_layout()
@@ -375,18 +376,30 @@ def create_mean_cost_bar_chart(df_pricing: pd.DataFrame, output_path: Path, figs
         model_overall_costs = cost_stats.groupby('model_name')['min_cost'].mean().sort_values()
         models = list(model_overall_costs.index)
         
-        # Get unique types and assign more saturated colors
+        # Get unique types and assign colors based on open/closed weights
         types = sorted(cost_stats['type'].unique())
-        # Use more saturated color schemes
-        type_colors = {
-            'Math': '#FF6B6B',           # Bright red
-            'knowledge': '#4ECDC4',       # Bright teal
-            'logic puzzle': '#45B7D1'    # Bright blue
-        }
-        # Fallback colors if we have different types
-        if len(types) > len(type_colors):
-            colors = plt.cm.Dark2(np.linspace(0, 1, len(types)))
-            type_colors = dict(zip(types, colors))
+        
+        # Define base colors from create_pricing_bar_chart
+        open_base_min, open_base_max = '#2F85A7', '#7EB2C7'
+        closed_base_min, closed_base_max = '#5C6B75', '#8095A3'
+        
+        # Create shades for each prompt type
+        import matplotlib.colors as mcolors
+        
+        def get_shades(base_color, n_shades):
+            rgb = mcolors.to_rgb(base_color)
+            shades = [tuple(min(1.0, c * (1 - i * 0.2)) for c in rgb) for i in range(n_shades)]
+            return shades
+
+        open_min_shades = get_shades(open_base_min, len(types))
+        open_max_shades = get_shades(open_base_max, len(types))
+        closed_min_shades = get_shades(closed_base_min, len(types))
+        closed_max_shades = get_shades(closed_base_max, len(types))
+
+        type_colors = {ptype: {
+            'open_min': open_min_shades[i], 'open_max': open_max_shades[i],
+            'closed_min': closed_min_shades[i], 'closed_max': closed_max_shades[i]
+        } for i, ptype in enumerate(types)}
         
         # Create figure
         fig, ax = plt.subplots(figsize=figsize)
@@ -413,37 +426,42 @@ def create_mean_cost_bar_chart(df_pricing: pd.DataFrame, output_path: Path, figs
                 min_costs_valid = [min_costs[j] for j in valid_indices]
                 additional_heights_valid = [additional_heights[j] for j in valid_indices]
                 
-                # Determine edge colors based on open/closed weights
-                edge_colors = []
+                # Determine bar colors based on open/closed weights
+                min_bar_colors = []
+                max_bar_colors = []
                 for j in valid_indices:
                     model = models[j]
                     is_open = model_open_weights.get(model, False)
-                    edge_colors.append('darkgreen' if is_open else 'darkred')
+                    colors = type_colors[ptype]
+                    min_bar_colors.append(colors['open_min'] if is_open else colors['closed_min'])
+                    max_bar_colors.append(colors['open_max'] if is_open else colors['closed_max'])
                 
-                # Create base bars (min values) with base color
+                # Create base bars (min values)
                 bars_min = ax.bar(x_valid, min_costs_valid, bar_width, 
-                                 color=type_colors[ptype], 
-                                 label=f'{ptype} (Min)' if i == 0 else "",
-                                 linewidth=1.5)
+                                 color=min_bar_colors,
+                                 edgecolor='black', linewidth=0.5)
                 
-                # Create lighter shade for max bars
-                import matplotlib.colors as mcolors
-                base_color = mcolors.to_rgb(type_colors[ptype])
-                light_color = tuple(min(1.0, c + 0.3) for c in base_color)  # Lighter shade
-                
-                # Create additional bars (max - min) with lighter color
+                # Create additional bars (max - min)
                 bars_max = ax.bar(x_valid, additional_heights_valid, bar_width, 
                                  bottom=min_costs_valid,
-                                 color=light_color, 
-                                 label=f'{ptype} (Max)' if i == 0 else "",
-                                 linewidth=1.5)
-                
-                # Set individual edge colors for each bar
-                for bar, edge_color in zip(bars_min, edge_colors):
-                    bar.set_edgecolor(edge_color)
-                for bar, edge_color in zip(bars_max, edge_colors):
-                    bar.set_edgecolor(edge_color)
-        
+                                 color=max_bar_colors,
+                                 edgecolor='black', linewidth=0.5)
+
+                # Add value labels
+                for bar_idx, (bar_min, bar_max) in enumerate(zip(bars_min, bars_max)):
+                    h_min = bar_min.get_height()
+                    h_max = h_min + bar_max.get_height()
+                    
+                    if abs(h_min - h_max) < 1e-6: # If min and max are the same
+                        ax.text(bar_max.get_x() + bar_max.get_width() / 2., h_max, f'${h_max:.3f}',
+                                ha='center', va='bottom', fontsize=7, rotation=45)
+                    else:
+                        ax.text(bar_max.get_x() + bar_max.get_width() / 2., h_max, f'${h_max:.3f}',
+                                ha='center', va='bottom', fontsize=7, rotation=45)
+                        if h_min > 0:
+                             ax.text(bar_min.get_x() + bar_min.get_width() / 2., h_min, f'${h_min:.3f}',
+                                     ha='center', va='bottom', fontsize=7, rotation=45)
+
         # Customize plot
         ax.set_xlabel('LLM Model', fontsize=12, fontweight='bold')
         ax.set_ylabel('Completion Cost ($)', fontsize=12, fontweight='bold')
@@ -455,25 +473,22 @@ def create_mean_cost_bar_chart(df_pricing: pd.DataFrame, output_path: Path, figs
         
         # Create custom legend for both prompt type and open/closed weights
         from matplotlib.patches import Patch
-        from matplotlib.lines import Line2D
         
-        # Prompt type legend elements (show both min and max)
+        # Prompt type legend elements
         type_legend_elements = []
-        for ptype in types:
-            # Dark shade for min
-            type_legend_elements.append(Patch(facecolor=type_colors[ptype], alpha=0.9, label=f'{ptype} (Min)'))
-            # Light shade for max
-            type_legend_elements.append(Patch(facecolor=type_colors[ptype], alpha=0.5, label=f'{ptype} (Max)'))
-        
-        # Open/closed weights legend elements
-        weight_legend_elements = [
-            Line2D([0], [0], color='darkgreen', linewidth=3, label='Open Weights'),
-            Line2D([0], [0], color='darkred', linewidth=3, label='Closed Weights')
+        for i, ptype in enumerate(types):
+            type_legend_elements.append(Patch(facecolor=open_min_shades[i], label=f'{ptype} (Open)'))
+            type_legend_elements.append(Patch(facecolor=closed_min_shades[i], label=f'{ptype} (Closed)'))
+
+        # Min/Max legend elements
+        cost_legend_elements = [
+            Patch(facecolor='gray', alpha=0.8, label='Min Cost'),
+            Patch(facecolor='lightgray', alpha=0.8, label='Max Cost')
         ]
         
         # Combine legends
-        all_legend_elements = type_legend_elements + weight_legend_elements
-        ax.legend(handles=all_legend_elements, fontsize=9, title='Prompt Type & Model Type', title_fontsize=10)
+        all_legend_elements = type_legend_elements + cost_legend_elements
+        ax.legend(handles=all_legend_elements, fontsize=9, title='Prompt Type & Cost', title_fontsize=10, ncol=2)
         
         # Add grid
         ax.grid(True, alpha=0.3, axis='y')
@@ -560,12 +575,9 @@ def create_individual_type_bar_charts(df_pricing: pd.DataFrame, output_dir: Path
         # Get unique types
         types = sorted(eval_df['type'].unique())
         
-        # Define colors for each type
-        type_colors = {
-            'Math': '#FF6B6B',           # Bright red
-            'knowledge': '#4ECDC4',       # Bright teal
-            'logic puzzle': '#45B7D1'    # Bright blue
-        }
+        # Define colors based on open_weights status from create_pricing_bar_chart
+        open_colors = {'max': '#7EB2C7', 'min': '#2F85A7'}
+        closed_colors = {'max': '#8095A3', 'min': '#5C6B75'}
         
         # Create individual charts for each type
         for ptype in types:
@@ -608,12 +620,9 @@ def create_individual_type_bar_charts(df_pricing: pd.DataFrame, output_dir: Path
             max_colors = []
             for model in models:
                 is_open = model_open_weights.get(model, False)
-                if is_open:
-                    min_colors.append('darkgreen')
-                    max_colors.append('lightgreen')
-                else:
-                    min_colors.append('darkred')
-                    max_colors.append('lightcoral')
+                colors = open_colors if is_open else closed_colors
+                min_colors.append(colors['min'])
+                max_colors.append(colors['max'])
             
             # Create stacked bars - min values
             bars_min = ax.bar(range(len(models)), min_costs, 
@@ -640,12 +649,12 @@ def create_individual_type_bar_charts(df_pricing: pd.DataFrame, output_dir: Path
             # Create legend for both cost type and open/closed weights
             from matplotlib.patches import Patch
             legend_elements = [
-                Patch(facecolor='gray', label='Min Cost'),
-                Patch(facecolor='lightgray', label='Max Cost'),
-                Patch(facecolor='#2E8B57', label='Open Weights'),
-                Patch(facecolor='#B22222', label='Closed Weights')
+                Patch(facecolor=open_colors['max'], label='Open Weights (Max)'),
+                Patch(facecolor=open_colors['min'], label='Open Weights (Min)'),
+                Patch(facecolor=closed_colors['max'], label='Closed Weights (Max)'),
+                Patch(facecolor=closed_colors['min'], label='Closed Weights (Min)')
             ]
-            ax.legend(handles=legend_elements, fontsize=10, title='Cost Type & Model Type', title_fontsize=11)
+            ax.legend(handles=legend_elements, fontsize=10, title='Cost & Model Type', title_fontsize=11)
             
             # Add grid
             ax.grid(True, alpha=0.3, axis='y')
