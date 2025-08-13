@@ -369,7 +369,7 @@ We note the continued trend of closed weight reasoning models to improve token e
 
 ## Acknowledgments
 
-Thanks to Teknium and Billy for providing feedback on early drafts of this report and encouragement for its creation. Nous Research is acknowledged for providing tokens for this investigation. 
+Thanks to Teknium and Billy for providing feedback on early drafts of this report and encouragement for its creation. Also thanks to Rishav for preparation of the web version from the draft. Nous Research is acknowledged for providing tokens for this investigation.
 
 # Methods
     
