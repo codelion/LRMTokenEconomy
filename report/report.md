@@ -1,6 +1,6 @@
-# Do Open Weight Reasoning Models Think Less Efficiently?
+# Measuring Thinking Efficiency in Reasoning Models: The Missing Benchmark
 
-*[Tim (@cpldcpu)](https://github.com/cpldcpu/)* - *August 6, 2025* 
+*[Tim (@cpldcpu)](https://github.com/cpldcpu/)* - *August 14, 2025* 
 
 Large Reasoning Models (LRMs) employ a novel paradigm known as test-time scaling, leveraging reinforcement learning to teach the models to generate extended chains of thought (CoT) during reasoning tasks. This enhances their problem-solving capabilities beyond what their base models could achieve independently.
 
