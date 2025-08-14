@@ -8,6 +8,10 @@ An analysis of token efficiency in Large Reasoning Models (LRMs), investigating 
 <img src="./report/images/average_relative_completion_tokens_chart.png" style="width: 90%;">
 </div>
 
+## Dataset
+
+The dataset is also [available on Huggingface](https://huggingface.co/datasets/cpldcpu/TokenEconomy_V1)
+
 ## Overview
 
 This repository contains the pipeline used to generate the data and figures for our analysis of token efficiency patterns across different categories of large language models. 
