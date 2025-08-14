@@ -83,7 +83,7 @@ If you use this research or data in your work, please cite:
 
 ```bibtex
 @misc{lrm_token_economy_2025,
-  title={Do Open Weight Reasoning Models Think Less Efficiently?},
+  title={Measuring Thinking Efficiency in Reasoning Models: The Missing Benchmark},
   author={TSB},
   year={2025},
   month={August},
