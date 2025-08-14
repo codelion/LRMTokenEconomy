@@ -80,7 +80,7 @@ def get_model_open_weights(df_pricing: pd.DataFrame) -> pd.DataFrame:
         return df_pricing
 
 def create_pricing_bar_chart(df: pd.DataFrame, output_path: Path, figsize: Tuple[float, float]) -> None:
-    """Create bar chart showing completion token pricing with min/max shades and mean lines."""
+    """Create bar chart showing completion token pricing (USD / 1M tokens) with min/max."""
     
     # Prepare data - extract model names for better display
     df['short_name'] = df['model_name'].str.split('/').str[-1]
@@ -104,17 +104,15 @@ def create_pricing_bar_chart(df: pd.DataFrame, output_path: Path, figsize: Tuple
         is_open = row['open_weights']
         colors = open_colors if is_open else closed_colors
         
-        # Max value bar
-        ax.bar(i, row['completion_max'], width=bar_width, 
-              color=colors['max'], alpha=0.6, 
-              edgecolor='black', linewidth=0.5)
-        
-        # Min value bar (overlay)
-        ax.bar(i, row['completion_min'], width=bar_width, 
-              color=colors['min'], alpha=0.8, 
-              edgecolor='black', linewidth=0.5)
+        # Revert to dollars (remove cents scaling)
+        ax.bar(i, row['completion_max'], width=bar_width,
+               color=colors['max'], alpha=0.6,
+               edgecolor='black', linewidth=0.5)
+        ax.bar(i, row['completion_min'], width=bar_width,
+               color=colors['min'], alpha=0.8,
+               edgecolor='black', linewidth=0.5)
     
-    ax.set_ylabel('$/1M tokens', fontsize=12, fontweight='bold')
+    ax.set_ylabel('USD / 1M tokens', fontsize=12, fontweight='bold')
     # ax.set_xlabel('LLM Model', fontsize=12, fontweight='bold')
     ax.set_title('Completion Token Pricing', fontsize=14, fontweight='bold')
     
@@ -137,17 +135,23 @@ def create_pricing_bar_chart(df: pd.DataFrame, output_path: Path, figsize: Tuple
     # Add value labels for both min and max values
     for i, (_, row) in enumerate(df_sorted.iterrows()):
         if row['completion_min'] == row['completion_max']:
-            # If min=max, only add one label
-            ax.text(i, row['completion_max'] + 0.2, f'${row["completion_max"]:.2f}', 
+            ax.text(i, row['completion_max'] + 0.2, f'${row["completion_max"]:.2f}',
                     ha='center', va='bottom', fontsize=8, rotation=45)
         else:
-            # Add max value label
-            ax.text(i, row['completion_max'] + 0.2, f'${row["completion_max"]:.2f}', 
-                    ha='center', va='bottom', fontsize=8, rotation=45)
-            
-            # Add min value label
-            ax.text(i, row['completion_min'] + 0.1, f'${row["completion_min"]:.2f}', 
-                    ha='center', va='bottom', fontsize=8, rotation=45)
+            # Check if labels would overlap
+            max_val = df_sorted['completion_max'].max()
+            label_spacing_threshold = max_val * 0.15  # 15% of max value as threshold
+            if (row['completion_max'] - row['completion_min']) > label_spacing_threshold:
+                # Enough space for both labels
+                ax.text(i, row['completion_max'] + 0.2, f'${row["completion_max"]:.2f}',
+                        ha='center', va='bottom', fontsize=8, rotation=45)
+                ax.text(i, row['completion_min'] + 0.1, f'${row["completion_min"]:.2f}',
+                        ha='center', va='bottom', fontsize=8, rotation=45)
+            else:
+                # Not enough space, show only min label
+                ax.text(i, row['completion_min'] + (row['completion_max'] - row['completion_min']) * 0.5, 
+                        f'${row["completion_min"]:.2f}',
+                        ha='center', va='bottom', fontsize=8, rotation=45)
     
     # Adjust layout
     plt.tight_layout()
@@ -159,7 +163,7 @@ def create_pricing_bar_chart(df: pd.DataFrame, output_path: Path, figsize: Tuple
     print(f"Created pricing bar chart: {output_path.name}")
 
 def create_cost_heatmap(df_pricing: pd.DataFrame, output_path: Path, figsize: Tuple[float, float]) -> None:
-    """Create heatmap showing completion cost by prompt type and LLM model."""
+    """Create heatmap showing completion cost (USD cents) by prompt type and LLM model."""
     
     try:
         # Load evaluation data
@@ -224,8 +228,10 @@ def create_cost_heatmap(df_pricing: pd.DataFrame, output_path: Path, figsize: Tu
             suffixes=('', '_pricing')
         )
         
-        # Calculate completion cost: mean_tokens * (min_cost_per_million / 1M)
+        # Calculate completion cost in dollars first
         completion_stats['completion_cost'] = completion_stats['tokens_completion'] * completion_stats['completion_min'] / 1_000_000
+        # Convert to cents
+        completion_stats['completion_cost'] = completion_stats['completion_cost'] * 100.0
         
         # Create pivot table for heatmap
         heatmap_data = completion_stats.pivot_table(
@@ -255,13 +261,13 @@ def create_cost_heatmap(df_pricing: pd.DataFrame, output_path: Path, figsize: Tu
         fig, ax = plt.subplots(figsize=(fig_width, figsize[1]))
         
         # Create heatmap
-        sns.heatmap(heatmap_data, 
-                   annot=True, 
-                   fmt='.4f', 
-                   cmap='YlOrRd',
-                   cbar_kws={'label': 'Completion Cost ($)'},
-                   ax=ax,
-                   linewidths=0.5)
+        sns.heatmap(heatmap_data,
+                    annot=True,
+                    fmt='.2f',
+                    cmap='YlOrRd',
+                    cbar_kws={'label': 'Completion Cost (USD cents)'},
+                    ax=ax,
+                    linewidths=0.5)
         
         ax.set_title('Completion Cost by Model and Prompt', fontsize=14, fontweight='bold')
         ax.set_xlabel('Prompt ID', fontsize=12, fontweight='bold')
@@ -290,7 +296,7 @@ def create_cost_heatmap(df_pricing: pd.DataFrame, output_path: Path, figsize: Tu
         plt.close(fig)
         
         print(f"Created cost heatmap: {output_path.name}")
-        print(f"  Cost range: ${heatmap_data.min().min():.4f} - ${heatmap_data.max().max():.4f}")
+        print(f"  Cost range: {heatmap_data.min().min():.2f}¢ - {heatmap_data.max().max():.2f}¢")
         
     except FileNotFoundError:
         print("Warning: evaluation_stats.csv not found, skipping heatmap creation")
@@ -298,7 +304,7 @@ def create_cost_heatmap(df_pricing: pd.DataFrame, output_path: Path, figsize: Tu
         print(f"Error creating heatmap: {e}")
 
 def create_mean_cost_bar_chart(df_pricing: pd.DataFrame, output_path: Path, figsize: Tuple[float, float]) -> None:
-    """Create stacked bar chart showing min and max completion costs by LLM and type."""
+    """Create stacked bar chart showing min and max completion costs (USD cents) by LLM and type."""
     
     try:
         # Load evaluation data
@@ -367,6 +373,10 @@ def create_mean_cost_bar_chart(df_pricing: pd.DataFrame, output_path: Path, figs
         cost_stats['min_cost'] = cost_stats['mean_tokens'] * cost_stats['completion_min'] / 1_000_000
         cost_stats['max_cost'] = cost_stats['mean_tokens'] * cost_stats['completion_max'] / 1_000_000
         
+        # Convert to cents
+        cost_stats['min_cost_cents'] = cost_stats['min_cost'] * 100.0
+        cost_stats['max_cost_cents'] = cost_stats['max_cost'] * 100.0
+        
         # Get open_weights information for models
         model_open_weights = {}
         for _, row in eval_df[['model_name', 'open_weights']].drop_duplicates().iterrows():
@@ -411,8 +421,8 @@ def create_mean_cost_bar_chart(df_pricing: pd.DataFrame, output_path: Path, figs
         for i, ptype in enumerate(types):
             type_data = cost_stats[cost_stats['type'] == ptype].set_index('model_name')
             
-            min_costs = [type_data.loc[model, 'min_cost'] if model in type_data.index else 0 for model in models]
-            max_costs = [type_data.loc[model, 'max_cost'] if model in type_data.index else 0 for model in models]
+            min_costs = [type_data.loc[model, 'min_cost_cents'] if model in type_data.index else 0 for model in models]
+            max_costs = [type_data.loc[model, 'max_cost_cents'] if model in type_data.index else 0 for model in models]
             
             # Calculate the additional height for max (max - min)
             additional_heights = [max_cost - min_cost for min_cost, max_cost in zip(min_costs, max_costs)]
@@ -452,19 +462,26 @@ def create_mean_cost_bar_chart(df_pricing: pd.DataFrame, output_path: Path, figs
                     h_min = bar_min.get_height()
                     h_max = h_min + bar_max.get_height()
                     
-                    if abs(h_min - h_max) < 1e-6: # If min and max are the same
-                        ax.text(bar_max.get_x() + bar_max.get_width() / 2., h_max, f'${h_max:.3f}',
+                    if abs(h_min - h_max) < 1e-6:
+                        # Single value, show only one label
+                        ax.text(bar_max.get_x() + bar_max.get_width()/2., h_max, f'{h_max:.3f}¢',
                                 ha='center', va='bottom', fontsize=7, rotation=45)
                     else:
-                        ax.text(bar_max.get_x() + bar_max.get_width() / 2., h_max, f'${h_max:.3f}',
-                                ha='center', va='bottom', fontsize=7, rotation=45)
-                        if h_min > 0:
-                             ax.text(bar_min.get_x() + bar_min.get_width() / 2., h_min, f'${h_min:.3f}',
-                                     ha='center', va='bottom', fontsize=7, rotation=45)
+                        # Check if labels would overlap (if difference is small relative to max value)
+                        label_spacing_threshold = max(max_costs) * 0.15  # 15% of max value as threshold
+                        if (h_max - h_min) > label_spacing_threshold:
+                            # Enough space for both labels
+                            ax.text(bar_max.get_x() + bar_max.get_width()/2., h_max, f'{h_max:.3f}¢',
+                                    ha='center', va='bottom', fontsize=7, rotation=45)
+                            ax.text(bar_min.get_x() + bar_min.get_width()/2., h_min, f'{h_min:.3f}¢',
+                                    ha='center', va='bottom', fontsize=7, rotation=45)
+                        else:
+                            # Not enough space, show only min label
+                            ax.text(bar_min.get_x() + bar_min.get_width()/2., h_min, f'{h_min:.3f}¢',
+                                    ha='center', va='bottom', fontsize=7, rotation=45)
 
-        # Customize plot
+        ax.set_ylabel('Completion Cost (USD cents)', fontsize=12, fontweight='bold')
         ax.set_xlabel('LLM Model', fontsize=12, fontweight='bold')
-        ax.set_ylabel('Completion Cost ($)', fontsize=12, fontweight='bold')
         ax.set_title('Min/Max Completion Cost by Model and Prompt Type', fontsize=14, fontweight='bold')
         
         # Set x-axis
@@ -503,13 +520,13 @@ def create_mean_cost_bar_chart(df_pricing: pd.DataFrame, output_path: Path, figs
         print(f"Created min/max cost bar chart: {output_path.name}")
         
         # Print summary statistics
-        overall_stats = cost_stats.groupby('type')[['min_cost', 'max_cost']].agg(['mean', 'min', 'max'])
-        print(f"\nCost Summary by Type:")
+        overall_stats = cost_stats.groupby('type')[['min_cost_cents', 'max_cost_cents']].agg(['mean', 'min', 'max'])
+        print(f"\nCost Summary by Type (USD cents):")
         for ptype in types:
             if ptype in overall_stats.index:
-                min_stats = overall_stats.loc[ptype, 'min_cost']
-                max_stats = overall_stats.loc[ptype, 'max_cost']
-                print(f"  {ptype}: Min=${min_stats['min']:.4f}-${min_stats['max']:.4f}, Max=${max_stats['min']:.4f}-${max_stats['max']:.4f}")
+                min_stats = overall_stats.loc[ptype, 'min_cost_cents']
+                max_stats = overall_stats.loc[ptype, 'max_cost_cents']
+                print(f"  {ptype}: Min={min_stats['min']:.2f}¢-{min_stats['max']:.2f}¢, Max={max_stats['min']:.2f}¢-{max_stats['max']:.2f}¢")
         
     except FileNotFoundError:
         print("Warning: evaluation_stats.csv not found, skipping min/max cost bar chart creation")
@@ -517,7 +534,7 @@ def create_mean_cost_bar_chart(df_pricing: pd.DataFrame, output_path: Path, figs
         print(f"Error creating min/max cost bar chart: {e}")
 
 def create_individual_type_bar_charts(df_pricing: pd.DataFrame, output_dir: Path, figsize: Tuple[float, float]) -> None:
-    """Create separate bar charts for each prompt type."""
+    """Create separate bar charts (USD cents) for each prompt type."""
     
     try:
         # Load evaluation data
@@ -600,6 +617,9 @@ def create_individual_type_bar_charts(df_pricing: pd.DataFrame, output_dir: Path
             # Calculate min and max costs using mean tokens but min/max pricing
             cost_stats['min_cost'] = cost_stats['mean_tokens'] * cost_stats['completion_min'] / 1_000_000
             cost_stats['max_cost'] = cost_stats['mean_tokens'] * cost_stats['completion_max'] / 1_000_000
+            # Convert to cents for plotting
+            cost_stats['min_cost_cents'] = cost_stats['min_cost'] * 100.0
+            cost_stats['max_cost_cents'] = cost_stats['max_cost'] * 100.0
             cost_stats['count'] = type_data.groupby('model_name').size().values
             
             # Sort by min cost
@@ -609,8 +629,8 @@ def create_individual_type_bar_charts(df_pricing: pd.DataFrame, output_dir: Path
             fig, ax = plt.subplots(figsize=figsize)
             
             models = cost_stats['model_name'].tolist()
-            min_costs = cost_stats['min_cost'].tolist()
-            max_costs = cost_stats['max_cost'].tolist()
+            min_costs = cost_stats['min_cost_cents'].tolist()
+            max_costs = cost_stats['max_cost_cents'].tolist()
             
             # Calculate the additional height for max (max - min)
             additional_heights = [max_cost - min_cost for min_cost, max_cost in zip(min_costs, max_costs)]
@@ -639,7 +659,7 @@ def create_individual_type_bar_charts(df_pricing: pd.DataFrame, output_dir: Path
             
             # Customize plot
             ax.set_xlabel('LLM Model', fontsize=12, fontweight='bold')
-            ax.set_ylabel('Completion Cost ($)', fontsize=12, fontweight='bold')
+            ax.set_ylabel('Completion Cost (USD cents)', fontsize=12, fontweight='bold')
             ax.set_title(f'Min/Max Completion Cost - {ptype.title()} Prompts', fontsize=14, fontweight='bold')
             
             # Set x-axis
@@ -659,18 +679,24 @@ def create_individual_type_bar_charts(df_pricing: pd.DataFrame, output_dir: Path
             # Add grid
             ax.grid(True, alpha=0.3, axis='y')
             
-            # Add value labels on bars (show both min and max)
+            # Add value labels on bars (avoid overlap)
             for i, (min_cost, max_cost) in enumerate(zip(min_costs, max_costs)):
                 if min_cost == max_cost:
-                    # If min=max, only show one label
-                    ax.text(i, max_cost + max(max_costs) * 0.01, 
-                           f'${max_cost:.4f}', ha='center', va='bottom', fontsize=9, fontweight='bold')
+                    ax.text(i, max_cost + max(max_costs) * 0.01,
+                            f'{max_cost:.2f}¢', ha='center', va='bottom', fontsize=9, fontweight='bold')
                 else:
-                    # Show both min and max labels
-                    ax.text(i, max_cost + max(max_costs) * 0.01, 
-                           f'${max_cost:.4f}', ha='center', va='bottom', fontsize=8, fontweight='bold')
-                    ax.text(i, min_cost + (max_cost - min_cost) * 0.1, 
-                           f'${min_cost:.4f}', ha='center', va='bottom', fontsize=8, fontweight='bold')
+                    # Check if labels would overlap
+                    label_spacing_threshold = max(max_costs) * 0.15  # 15% of max value as threshold
+                    if (max_cost - min_cost) > label_spacing_threshold:
+                        # Enough space for both labels
+                        ax.text(i, max_cost + max(max_costs) * 0.01,
+                                f'{max_cost:.2f}¢', ha='center', va='bottom', fontsize=8, fontweight='bold')
+                        ax.text(i, min_cost + (max_cost - min_cost) * 0.1,
+                                f'{min_cost:.2f}¢', ha='center', va='bottom', fontsize=8, fontweight='bold')
+                    else:
+                        # Not enough space, show only min label
+                        ax.text(i, min_cost + (max_cost - min_cost) * 0.5,
+                                f'{min_cost:.2f}¢', ha='center', va='bottom', fontsize=8, fontweight='bold')
             
             # Adjust layout
             plt.tight_layout()
@@ -682,7 +708,7 @@ def create_individual_type_bar_charts(df_pricing: pd.DataFrame, output_dir: Path
             plt.close(fig)
             
             print(f"Created individual cost chart for {ptype}: {output_path.name}")
-            print(f"  Models: {len(models)}, Cost range: ${min(min_costs):.4f} - ${max(max_costs):.4f}")
+            print(f"  Models: {len(models)}, Cost range: {min(min_costs):.2f}¢ - {max(max_costs):.2f}¢")
         
         print(f"Created {len(types)} individual prompt type charts")
         
