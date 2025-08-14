@@ -179,6 +179,10 @@ def create_slope_bar_chart(slopes: Dict[str, float], model_groups: Dict[str, boo
         ax.text(bar.get_x() + bar.get_width()/2, bar.get_height() + 0.1, 
                f'{value:.1f}', ha='center', va='bottom', fontsize=9, fontweight='bold')
     
+    # Scale y-axis to accommodate labels - add 15% padding above the highest bar
+    max_value = max(slope_values)
+    ax.set_ylim(0, max_value * 1.15)
+    
     # Create custom legend
     from matplotlib.patches import Patch
     legend_elements = [

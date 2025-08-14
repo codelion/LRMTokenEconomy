@@ -153,6 +153,10 @@ def create_pricing_bar_chart(df: pd.DataFrame, output_path: Path, figsize: Tuple
                         f'${row["completion_min"]:.2f}',
                         ha='center', va='bottom', fontsize=8, rotation=45)
     
+    # Adjust y-axis to ensure labels are within plot area
+    max_val = df_sorted['completion_max'].max()
+    ax.set_ylim(0, max_val * 1.25)  # Add 25% padding above max value
+    
     # Adjust layout
     plt.tight_layout()
     
@@ -480,6 +484,11 @@ def create_mean_cost_bar_chart(df_pricing: pd.DataFrame, output_path: Path, figs
                             ax.text(bar_min.get_x() + bar_min.get_width()/2., h_min, f'{h_min:.3f}¢',
                                     ha='center', va='bottom', fontsize=7, rotation=45)
 
+        # Adjust y-axis to ensure labels are within plot area
+        if max_costs:
+            overall_max = max([max(costs) for costs in [max_costs] if costs])
+            ax.set_ylim(0, overall_max * 1.25)  # Add 25% padding above max value
+
         ax.set_ylabel('Completion Cost (USD cents)', fontsize=12, fontweight='bold')
         ax.set_xlabel('LLM Model', fontsize=12, fontweight='bold')
         ax.set_title('Min/Max Completion Cost by Model and Prompt Type', fontsize=14, fontweight='bold')
@@ -698,6 +707,10 @@ def create_individual_type_bar_charts(df_pricing: pd.DataFrame, output_dir: Path
                         ax.text(i, min_cost + (max_cost - min_cost) * 0.5,
                                 f'{min_cost:.2f}¢', ha='center', va='bottom', fontsize=8, fontweight='bold')
             
+            # Adjust y-axis to ensure labels are within plot area
+            if max_costs:
+                ax.set_ylim(0, max(max_costs) * 1.25)  # Add 25% padding above max value
+            
             # Adjust layout
             plt.tight_layout()
             
@@ -718,7 +731,7 @@ def create_individual_type_bar_charts(df_pricing: pd.DataFrame, output_dir: Path
         print(f"Error creating individual type charts: {e}")
 
 def main():
-    """Main function to create cost analysis plots."""
+    """Main function to create cost analysis plots"""
     parser = argparse.ArgumentParser(
         description="Create LLM cost analysis plots",
         formatter_class=argparse.RawDescriptionHelpFormatter,
