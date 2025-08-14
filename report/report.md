@@ -375,7 +375,7 @@ Thanks to Teknium and Billy for providing feedback on early drafts of this repor
     
 ## General
 
-All models were accessed through OpenRouter, with the exception of Deephermes, which was accessed via the Nous API, and DeepSeek R1-524, which was accessed through the DeepSeek API. Generation limits were set to 30,000 tokens with reasoning effort configured to "high" in the OpenRouter API. In cases where models timed out before generating the full 30,000 tokens, queries were restarted and the provider was adjusted as needed to ensure completion when the query did not complete initially. Typical reasons for failure to complete were timeouts.
+All models were accessed through OpenRouter, with the exception of Deephermes, which was accessed via the Nous API, and DeepSeek R1-528, which was accessed through the DeepSeek API. Generation limits were set to 30,000 tokens with reasoning effort configured to "high" in the OpenRouter API. In cases where models timed out before generating the full 30,000 tokens, queries were restarted and the provider was adjusted as needed to ensure completion when the query did not complete initially. Typical reasons for failure to complete were timeouts.
 
 Statistical analysis was conducted with N=5 samples for each prompt and language model combination.
 
