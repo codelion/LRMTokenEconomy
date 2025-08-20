@@ -1,19 +1,16 @@
 {
   "llms": [
           
-             {
-      "name": "claude-opus-4.1",
-      "model": "anthropic/claude-opus-4.1",
-      "open_weights": false,
-      "full_cot": false,
+         {
+      "name": "deepseek-V3.1",
+      "model": "deepseek-reasoner",
+      "open_weights": true,
+      "full_cot": true,
       "max_tokens": 30000,
-      "temperature": 0.9,
-      "top_p": 0.9,
-      "repetition_penalty": 1,
-      "reasoning": {
-        "effort": "high",
-        "exclude": false
-      }
+      "temperature": 1.0,
+      "top_p": 1.0,
+      "timeout" : 3000,
+      "repetition_penalty": 1
     }
   ]
 }

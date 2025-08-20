@@ -95,11 +95,16 @@ async def query_llm_async(session, prompt, llm_config, temperature_override, cot
         # wait for 6s to avoid rate limiting
         await asyncio.sleep(6)
         try:
+            request_options = {}
+            if "timeout" in llm_config and isinstance(llm_config["timeout"], int):
+                request_options["timeout"] = llm_config["timeout"]
+
             response = model.generate_content(
                 prompt_text,
                 generation_config=genai.types.GenerationConfig(
                     temperature=temperature_override if temperature_override > 0 else llm_config.get("temperature", 1.0)
-                )
+                ),
+                request_options=request_options if request_options else None
             )
             
             response_text = response.text
@@ -150,7 +155,7 @@ async def query_llm_async(session, prompt, llm_config, temperature_override, cot
             "max_tokens": llm_config.get("max_tokens", 4000),
             "usage" : True
         }
-    elif "d33pseek" in llm_config["model"].lower():
+    elif "deepseek" in llm_config["model"].lower():
         api_key = DEEPSEEK_API_KEY    
         base_url = "https://api.deepseek.com/v1/chat/completions"
         if not api_key:
@@ -165,8 +170,10 @@ async def query_llm_async(session, prompt, llm_config, temperature_override, cot
         
         data = {
             "model": llm_config["model"],
+            "max_tokens": llm_config.get("max_tokens", 4000),
             "messages": messages,
             "temperature": temperature_override if temperature_override > 0 else llm_config.get("temperature", 1.0),
+            "usage": True
         }
     else:
         api_key = OPENROUTER_API_KEY or OPENAI_API_KEY
@@ -210,18 +217,24 @@ async def query_llm_async(session, prompt, llm_config, temperature_override, cot
         if "reasoning" in llm_config:
             data["reasoning"] = llm_config["reasoning"]
         else:
-            # Fallback for older configs or if reasoning is desired by default
+            # Fallback for older configs or if a reasoning is desired by default
             data["include_reasoning"] = True
+
+    # Check for a model-specific timeout
+    request_timeout = None
+    if "timeout" in llm_config and isinstance(llm_config["timeout"], int):
+        request_timeout = aiohttp.ClientTimeout(total=llm_config["timeout"])
 
     for attempt in range(max_retries):
         try:
-            async with session.post(base_url, headers=headers, json=data) as response:
+            async with session.post(base_url, headers=headers, json=data, timeout=request_timeout) as response:
                 response.raise_for_status()
                 response_json = await response.json()
 
                 if response_json is None:
                     raise ValueError("API returned an empty JSON response")
 
+                # print(f"Response from {llm_config['name']} received: {response_json}")
                 # Check for error in response
                 if 'error' in response_json:
                     error = response_json['error']
@@ -465,9 +478,8 @@ async def main_async(args):
     # Create semaphore for concurrency control
     semaphore = asyncio.Semaphore(args.concurrency)
     
-    # Create aiohttp session with timeout
-    timeout = aiohttp.ClientTimeout(total=600)  # 10 minute timeout
-    async with aiohttp.ClientSession(timeout=timeout) as session:
+    # Create aiohttp session
+    async with aiohttp.ClientSession() as session:
         # Create tasks for all prompt-LLM combinations
         tasks = []
         for llm in config["llms"]:
@@ -525,3 +537,4 @@ if __name__ == "__main__":
 
     args = parser.parse_args()
     main(args)
+
